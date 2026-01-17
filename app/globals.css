@@ -63,9 +63,9 @@
   --color-text-heading: var(--text-heading);
   --color-text-body: var(--text-body);
   --color-primary: var(--primary);
-  --font-sans: "Poppins", sans-serif;
-  --font-heading: "Neue Montreal", sans-serif;
-  --font-gilroy-black: "Gilroy-Black", sans-serif;
+  --font-sans: "Poppins";
+  --font-heading: "Neue Montreal";
+  --font-gilroy-black: "Gilroy-Black";
   --font-playfair: "Playfair Display";
 }
 
