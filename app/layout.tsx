@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Home/Navbar";
 import Preloader from "@/components/Preloader";
 import { LoadingProvider } from "@/contexts/LoadingContext";
+import Footer from "@/components/Home/Footer";
 
 export const metadata: Metadata = {
   title: "Flower Grid",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <SmoothScroll />
           <Navbar />
           {children}
+          <Footer />
         </LoadingProvider>
       </body>
     </html>

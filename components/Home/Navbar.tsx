@@ -1,11 +1,14 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Menu, X, Search } from "lucide-react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -18,10 +21,16 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLunaHovered, setIsLunaHovered] = useState(false);
-  const container = useRef(null);
+
+  const container = useRef<HTMLElement>(null);
   const menuRef = useRef(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
 
+  const isMenuOpenRef = useRef(isOpen);
+
+  useEffect(() => {
+    isMenuOpenRef.current = isOpen;
+  }, [isOpen]);
 
   useGSAP(() => {
     tl.current = gsap.timeline({ paused: true })
@@ -37,6 +46,31 @@ export default function Navbar() {
         stagger: 0.05,
         ease: "power2.out",
       }, "-=0.2");
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      onUpdate: (self) => {
+        if (isMenuOpenRef.current) return;
+
+        if (self.direction === -1) {
+          gsap.to(container.current, {
+            yPercent: 0,
+            duration: 0.3,
+            ease: "power2.out",
+            overwrite: true
+          });
+        } else if (self.direction === 1 && self.scroll() > 50) {
+          gsap.to(container.current, {
+            yPercent: -100,
+            duration: 0.3,
+            ease: "power2.out",
+            overwrite: true
+          });
+        }
+      }
+    });
+
   }, { scope: container });
 
   const toggleMenu = () => {
@@ -50,7 +84,10 @@ export default function Navbar() {
   };
 
   return (
-    <header ref={container} className="fixed top-0 left-0 w-full z-50 px-10 py-4 flex justify-between items-center text-white">
+    <header
+      ref={container}
+      className="fixed top-0 left-0 w-full z-50 px-10 py-4 flex justify-between items-center text-white bg-transparent transition-colors duration-300"
+    >
 
       <Link href="/" className="z-50 relative w-20 h-20">
         <Image

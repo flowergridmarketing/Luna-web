@@ -46,7 +46,6 @@ const services = [
 export default function TransformationService() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Text Refs
   const leftTextRef = useRef<HTMLSpanElement>(null);
   const oLetterRef = useRef<HTMLSpanElement>(null);
   const rightTextRef = useRef<HTMLSpanElement>(null);
