@@ -5,12 +5,12 @@ interface ConnectProps {
     image: string;
     title: string;
     description: string;
+    btnText?: string;
 }
 
-const Connect = ({ image, title, description }: ConnectProps) => {
+const Connect = ({ image, title, description, btnText = "Schedule Appointment" }: ConnectProps) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[500px] overflow-hidden p-10 rounded-2xl">
-            {/* Left side - Image */}
             <div className="relative h-full min-h-[400px] md:min-h-[500px] rounded-t-2xl md:rounded-t-none md:rounded-l-2xl md:rounded overflow-hidden">
                 <Image
                     src={image}
@@ -25,11 +25,13 @@ const Connect = ({ image, title, description }: ConnectProps) => {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-medium text-[#2d3e2d] mb-4">
                     {title}
                 </h2>
-                <p className="text-base md:text-lg font-body text-[#2d3e2d]/80 leading-relaxed mb-8 max-w-md">
-                    {description}
-                </p>
-                <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 py-4 rounded-full text-base md:text-lg shadow-md">
-                    Schedule Appointment
+                {description && (
+                    <p className="text-base md:text-lg font-body text-[#2d3e2d]/80 leading-relaxed mb-8 max-w-md">
+                        {description}
+                    </p>
+                )}
+                <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 lg:px-20 py-4 rounded-full text-base md:text-lg shadow-md">
+                    {btnText}
                 </button>
             </div>
         </div>
