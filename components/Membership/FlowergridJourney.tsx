@@ -167,7 +167,7 @@ export default function FlowergridJourney() {
                                     src={step.image}
                                     alt={step.title}
                                     fill
-                                    className="object-contain shadow-xl"
+                                    className="object-contain"
                                 />
                             </div>
                         </div>
