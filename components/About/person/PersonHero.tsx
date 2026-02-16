@@ -87,8 +87,8 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
           className="
           relative z-20 mx-auto
           max-w-6xl
-          pt-8 md:pt-20 lg:pt-22
-          px-4 sm:px-6 md:px-12 lg:px-24 lg:pr-24
+          pt-8 md:pt-26 lg:pt-22
+          px-4 sm:px-6 md:pl-14 lg:px-24 lg:pr-24
           text-center
           flex flex-col justify-start
         "
