@@ -37,17 +37,17 @@ const coreValues = [
 const ServiceTestimonials = [
   {
     id: 5,
-    quote: "“I had been trying to manage physical symptoms, stress and low mood in separate boxes for years. Flowergrid’s integrative wellness model brought everything together. Coaching, therapeutic support and holistic treatments were coordinated, so I did not have to keep repeating my story. Over time I have felt a real shift in my energy, focus and self-belief, and it finally feels like my mind, body and spirit are working in the same direction.”",
+    quote: "“I had been trying to manage physical symptoms, stress and low mood in separate boxes for years. Flowergrid’s integrative wellness model brought everything together. Coaching, therapeutic support and holistic treatments were coordinated, so I did not have to keep repeating my story. Over time I have felt a real shift in my energy, focus and self-belief, and it finally feels like my mind, body, and spirit are working in the same direction.”",
     author: "Helen Green, HR Director, Manchester",
-    image: getImageUrl("home/H5 c.png"),
+    image: "https://images.unsplash.com/photo-1591461283504-48919ae873f8?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
 
   },
   {
     id: 1,
-    quote: "“On paper I was successful, but inside I felt completely lost. Working with Flowergrid’s life and transformation coaching helped me reconnect with what I actually want from my career and relationships. Their holistic wellness services gave me structure, reflection, and very human support at a time when I felt like I was falling apart quietly.”",
+    quote: "“On paper I was successful, but inside I feel completely lost. Working with Flowergrid’s life and transformation coaching helped me reconnect with what I actually want from my career and relationships. Their holistic wellness services gave me structure, reflection, and very human support at a time when I felt like I was falling apart quietly.”",
     author: "Rachael Moore, Senior Project Manager, London",
-    image: getImageUrl("home/H5 a.png"),
+    image: "https://images.unsplash.com/photo-1637722881530-97871cfab220?q=80&w=387&auto=format&fit=crop",
     rating: 5
 
   },
@@ -55,7 +55,7 @@ const ServiceTestimonials = [
     id: 2,
     quote: "“I came to Flowergrid exhausted by anxiety and constant overthinking. The blend of anxiety and stress management techniques, NLP and gentle therapeutic support helped me feel calmer and more grounded. Over a few months my holistic wellbeing improved noticeably, and I finally had tools to manage difficult days rather than being consumed by them.”",
     author: "David Patel, Secondary School Teacher, Croydon",
-    image: getImageUrl("home/H5 b.png"),
+    image: "https://images.unsplash.com/photo-1539904720061-539f33782f9c?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
 
   },
@@ -63,7 +63,7 @@ const ServiceTestimonials = [
     id: 3,
     quote: "“I had ignored my own health for years while running my business. The medical checks, nutritional consulting and aesthetic advice I received as part of Flowergrid’s holistic wellness services helped me reset my habits without judgement. I feel more energised, more confident in my body, and much clearer about how to look after my health long term.”",
     author: "Sophie Turner, Small Business Owner, Surrey",
-    image: getImageUrl("home/H5 c.png"),
+    image: "https://images.unsplash.com/photo-1653691040409-793d2c22ed69?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
 
   },
@@ -71,11 +71,10 @@ const ServiceTestimonials = [
     id: 4,
     quote: "“I originally booked Reiki out of curiosity, but the combination of energy work, meditation and soul reflection sessions helped me in ways I did not expect. Flowergrid’s mind body spirit wellness approach made me feel seen as a whole person, not just a set of symptoms. I left each session feeling lighter, clearer and more connected to myself.”",
     author: "Amir Hussain, Software Engineer, Birmingham",
-    image: getImageUrl("home/H5 d.png"),
+    image: "https://images.unsplash.com/photo-1575264821278-fd76711cd1b8?q=80&w=435&auto=format&fit=crop",
     rating: 5
 
   },
-
 ]
 
 const faqs = [
