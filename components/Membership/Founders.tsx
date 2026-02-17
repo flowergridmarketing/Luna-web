@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 import Link from "next/link";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -63,11 +64,11 @@ export default function Founders() {
 
                     <div className="image-block w-full lg:flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-[450px] aspect-3/5 md:aspect-3/4 lg:aspect-6/8 md:max-h-[600px] lg:mb-0">                            <Image
-                                src={`${process.env.NEXT_PUBLIC_IMGURL}about/person1/Samina.png`}
-                                alt="Samina Khan"
-                                fill
-                                className="object-cover rounded-2xl"
-                            />
+                            src={getImageUrl("about/person1/samina-pic.png")}
+                            alt="Samina Khan"
+                            fill
+                            className="object-cover rounded-2xl"
+                        />
                         </div>
                     </div>
 
@@ -91,7 +92,7 @@ export default function Founders() {
                     <div className="image-block w-full lg:flex-1 order-1 flex justify-center lg:justify-start">
                         <div className="relative w-full max-w-[450px] aspect-square md:aspect-3/4 max-h-[400px] md:max-h-[600px] mb-4 lg:mb-0">
                             <Image
-                                src={`${process.env.NEXT_PUBLIC_IMGURL}about/person2/monira.png`}
+                                src={getImageUrl("about/person2/monira.png")}
                                 alt="Monira Ahmed"
                                 fill
                                 className="object-cover rounded-2xl"

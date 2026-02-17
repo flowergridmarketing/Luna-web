@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 import { motion, type Variants } from "framer-motion";
 
 export default function BlogHero() {
@@ -28,42 +29,42 @@ export default function BlogHero() {
 
     return (
         <section className="relative h-screen w-full overflow-hidden">
-        
-                    <div className="absolute inset-0">
-                        <Image
-                            src={`/blog/bloghero.png`}
-                            alt="blog page Hero Image"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                    </div>
-        
-                    <motion.div
-                        className="relative z-10 h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col justify-center"
-                        variants={containerVariants}
-                        initial="hidden"
-                        animate="visible"
+
+            <div className="absolute inset-0">
+                <Image
+                    src={getImageUrl("blog/bloghero.png")}
+                    alt="blog page Hero Image"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+            </div>
+
+            <motion.div
+                className="relative z-10 h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 flex flex-col justify-center"
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+            >
+                <div className="max-w-6xl">
+
+                    <motion.h1
+                        variants={itemVariants}
+                        className="text-white! text-3xl md:text-4xl lg:text-6xl font-heading font-medium leading-[1.1] mb-6 tracking-wide"
                     >
-                        <div className="max-w-6xl">
-        
-                            <motion.h1
-                                variants={itemVariants}
-                                className="text-white! text-3xl md:text-4xl lg:text-6xl font-heading font-medium leading-[1.1] mb-6 tracking-wide"
-                            >
-                                Holistic Journals
-                            </motion.h1>
-        
-                            <motion.p
-                                variants={itemVariants}
-                                className="text-white/90! text-lg md:text-2xl mb-10 tracking-wide font-sans font-light"
-                            >
+                        Holistic Journals
+                    </motion.h1>
+
+                    <motion.p
+                        variants={itemVariants}
+                        className="text-white/90! text-lg md:text-2xl mb-10 tracking-wide font-sans font-light"
+                    >
                         Discover thoughtful insights, mindful practices, and expert guidance on holistic healing, emotional wellbeing, and conscious living.
-                            </motion.p>
-    
-        
-                        </div>
-                    </motion.div>
-                </section>
+                    </motion.p>
+
+
+                </div>
+            </motion.div>
+        </section>
     );
 }

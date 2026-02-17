@@ -1,14 +1,14 @@
 import React from 'react'
+import { getImageUrl } from '@/lib/utils'
 
 
 const TeamHero = () => {
-  const imageUrl = process.env.NEXT_PUBLIC_IMGURL
 
 
   return (
     <section
       style={{
-        backgroundImage: `url('${imageUrl}about/team/teamhero.jpg')`,
+        backgroundImage: `url(${getImageUrl('about/team/teamhero.jpg')})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
         backgroundPosition: 'center top', // important for mobile

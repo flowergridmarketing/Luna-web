@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 import { motion, type Variants } from "framer-motion";
 
 export default function Hero() {
@@ -32,7 +33,7 @@ export default function Hero() {
 
             <div className="absolute inset-0">
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}membership/membershiphero.jpeg`}
+                    src={getImageUrl("membership/membershiphero.jpeg")}
                     alt="Membership Hero"
                     fill
                     className="object-cover"

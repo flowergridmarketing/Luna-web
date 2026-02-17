@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -104,7 +105,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
                 className="absolute left-1/2 -translate-x-1/2 z-20 w-12 md:w-16 lg:w-20 pointer-events-none"
             >
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`}
+                    src={getImageUrl("home/leaf.png")}
                     alt="Leaf"
                     width={100}
                     height={100}

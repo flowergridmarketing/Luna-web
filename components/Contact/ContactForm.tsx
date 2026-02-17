@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import { getImageUrl } from "@/lib/utils";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -151,7 +152,7 @@ export default function ContactForm() {
       }
     }, containerRef);
 
-    return () => ctx.revert(); 
+    return () => ctx.revert();
   }, { scope: containerRef });
 
   return (
@@ -163,7 +164,7 @@ export default function ContactForm() {
     <div ref={imageRef} className="w-full md:w-1/2 h-[40vh] md:h-auto md:min-h-screen shrink-0 p-4 sm:p-6 md:p-8">
         <div className="relative w-full h-full">
           <Image
-            src={`${process.env.NEXT_PUBLIC_IMGURL}contact/form-img.png`}
+            src={getImageUrl("contact/form-img.png")}
             alt="Hands holding a crystal"
             fill
             className="object-cover rounded-2xl sm:rounded-3xl md:rounded-4xl"

@@ -6,13 +6,14 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getImageUrl } from "@/lib/utils";
 import { Menu, X, ArrowRight, Calendar } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const navLinks = [
-  { title: "Home", href: "/", image: `/n1.png` },
+  { title: "Home", href: "/", image: getImageUrl("n1.png") },
   {
     title: "About",
     href: "/our-team",
@@ -20,22 +21,22 @@ const navLinks = [
       {
         title: "Samina Khan",
         href: "/samina-khan-holistic-life-coach",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
+        image: getImageUrl("about/person1/saminahalf.png"),
       },
       {
         title: "Monira Ahmed",
         href: "/monira-ahmed-hypnotherapist",
-        image: `/about/person2/1.png`,
+        image: getImageUrl("about/person2/1.png"),
       },
       {
         title: "Team",
         href: "/our-team",
-        image: `/b2b/4.jpg`,
+        image: getImageUrl("b2b/4.jpg"),
       },
     ],
   },
-  { title: "Services", href: "/holistic-wellness-services", image: `/n2.jpeg` },
-  { title: "Membership", href: "/holistic-wellness-membership", image: `/n3.png` },
+  { title: "Services", href: "/holistic-wellness-services", image: getImageUrl("n2.jpeg") },
+  { title: "Membership", href: "/holistic-wellness-membership", image: getImageUrl("n3.png") },
   {
     title: "Programmes",
     href: "/holistic-wellness-programme",
@@ -43,17 +44,17 @@ const navLinks = [
       {
         title: "Workshops",
         href: "/holistic-wellness-programme",
-        image: `/n4.png`,
+        image: getImageUrl("n4.png"),
       },
       {
         title: "Corporate Programmes",
         href: "/corporate-wellbeing-programmes",
-        image: `/n5.png`,
-      },
+        image: getImageUrl("n5.png"),
+      },  
     ],
   },
-  { title: "Journals", href: "/blogs", image: `/n6.png` },
-  { title: "Contact Us", href: "/contact-us", image: `/n7.png` },
+  { title: "Journals", href: "/blogs", image: getImageUrl("n6.png") },
+  { title: "Contact Us", href: "/contact-us", image: getImageUrl("n7.png") },
 ];
 
 export default function Navbar() {
@@ -223,7 +224,7 @@ export default function Navbar() {
     >
       <Link href="/" className="z-50 relative w-16 h-16 md:w-20 md:h-20">
         <Image
-          src={`/home/fulllogo.png`}
+          src={getImageUrl("logo/Flowergrid-logo.png")}
           alt="Luna Logo"
           width={58}
           height={58}
@@ -245,8 +246,8 @@ export default function Navbar() {
             <Image
               src={
                 isLunaHovered
-                  ? `/logo/Luna eyes open.png`
-                  : `/logo/Header Luna.png`
+                  ? getImageUrl("logo/Luna eyes open.png")
+                  : getImageUrl("logo/Header Luna.png")
               }
               alt="Luna Logo"
               width={60}

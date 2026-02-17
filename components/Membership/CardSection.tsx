@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -116,7 +117,7 @@ const CardSection = () => {
                             >
 
                                 <div className="card-icon mb-2">
-                                    <Image src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`} alt="Sprig" className="w-12 h-12" width={40} height={40} />
+                                    <Image src={getImageUrl("home/leaf.png")} alt="Sprig" className="w-12 h-12" width={40} height={40} />
                                 </div>
 
 
@@ -134,7 +135,7 @@ const CardSection = () => {
                                         </li>
                                     ))}
                                 </ul>
-                            </div> 
+                            </div>
                         </div>
                     ))}
                 </div>

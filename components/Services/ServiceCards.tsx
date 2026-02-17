@@ -2,97 +2,98 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 
 const serviceCardData = [
     {
         title: "Personal & Professional Growth Coaching",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/s5.jpg`,
+        image: getImageUrl("about/person1/s5.jpg"),
         desc: "Build confidence, clarity, and purpose in every aspect of life."
 
     },
     {
         title: "Leadership & Soft Skills Coaching",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/s4.jpg`,
+        image: getImageUrl("about/person1/s4.jpg"),
         desc: "Enhance emotional intelligence, leadership, and communication for success."
     },
     {
         title: "Neuro-Linguistic Programming",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/s3.jpg`,
+        image: getImageUrl("about/person1/s3.jpg"),
         desc: "Tailored plans to optimise nutrition, metabolism, and energy."
     },
     {
         title: "Soul Reflection & Transformation Work",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/s2.jpg`,
+        image: getImageUrl("about/person1/s2.jpg"),
         desc: "Dive deep into self-awareness, ego work, and soul growth."
     },
     {
         title: "Reiki Healing",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/s1.jpg`,
+        image: getImageUrl("about/person1/s1.jpg"),
         desc: "Channel universal energy to clear blockages and renew your emotional state."
     },
     {
         title: "Hypnotherapy",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person2/ps3.jpg`,
+        image: getImageUrl("about/person2/ps3.jpg"),
         desc: "Access your subconscious to overcome blocks and instill confidence."
     },
     {
         title: "Nuero-Linguistic Programming (NLP)",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/s3.jpg`,
+        image: getImageUrl("about/person1/s3.jpg"),
         desc: "Rewire patterns of thought and behaviour to achieve positive change."
     },
     {
         title: "Anxiety & Stress Management Techniques",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person2/ps1.jpg`,
+        image: getImageUrl("about/person2/ps1.jpg"),
         desc: "Learn evidence-based tools to calm the mind and regulate emotions."
     },
     {
         title: "Soul Reflection & Transformation Work",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/s2.jpg`,
+        image: getImageUrl("about/person1/s2.jpg"),
         desc: "Dive deep into self-awareness, ego work, and soul growth."
     },
     {
         title: "Relationship Coaching",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc1.jpg`,
+        image: getImageUrl("services/sc1.jpg"),
         desc: "Strengthen communication, compassion, and connection in your relationships."
     },
     {
         title: "Conscious Living Coaching",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc2.jpg`,
+        image: getImageUrl("services/sc2.jpg"),
         desc: "Align your thoughts and habits with your soul’s purpose."
     },
     {
         title: "Psychological Therapy",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc3.jpg`,
+        image: getImageUrl("services/sc3.jpg"),
         desc: "Receive compassionate support to process emotions and heal from within."
     },
     {
         title: "Doctor Consultations",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc4.jpg`,
+        image: getImageUrl("services/sc4.jpg"),
         desc: "Access our network of integrative practitioners for personalised health insights."
     },
     {
         title: "Medical Checks, Treatments & Aesthetics",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc5.jpg`,
+        image: getImageUrl("services/sc5.jpg"),
         desc: "Comprehensive assessments and aesthetic services guided by healthcare professionals."
     },
     {
         title: "Nutritional Consulting",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc6.jpg`,
+        image: getImageUrl("services/sc6.jpg"),
         desc: "Tailored plans to optimise nutrition, metabolism, and energy."
     },
     {
         title: "Integrative Health & Fitness Plans",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc7.jpg`,
+        image: getImageUrl("services/sc7.jpg"),
         desc: "Custom wellness programme combining fitness, nutrition, and mindfulness."
     },
     {
         title: "Meditation, Mindfulness & Breathing",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc8.jpg`,
+        image: getImageUrl("services/sc8.jpg"),
         desc: "Restore presence and balance through guided stillness."
     },
     {
         title: "Colour Therapy / Auricular Acupuncture",
-        image: `${process.env.NEXT_PUBLIC_IMGURL}services/sc9.jpg`,
+        image: getImageUrl("services/sc9.jpg"),
         desc: "Experience subtle energy realignment for mind–body rejuvenation."
     }
 ]

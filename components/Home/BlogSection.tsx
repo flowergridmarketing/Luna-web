@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { extractTldrText } from "@/lib/utils";
+import { extractTldrText, getImageUrl } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,7 +101,7 @@ export default function BlogSection() {
       >
         <div className="relative w-6 h-6 md:w-20 md:h-20">
           <Image
-            src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`}
+            src={getImageUrl("home/leaf.png")}
             alt="Leaf"
             fill
             className="object-contain opacity-80"
@@ -124,7 +124,7 @@ export default function BlogSection() {
           )}
 
           {!loading && blogs.map((blog) => {
-            const coverImage = extractCoverImage(blog.content) || `${process.env.NEXT_PUBLIC_IMGURL}home/H8 a.png`;
+            const coverImage = extractCoverImage(blog.content) || getImageUrl("home/H8 a.png");
             const tldrText = extractTldrText(blog.tldr);
 
             return (

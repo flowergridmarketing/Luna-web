@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getImageUrl } from '@/lib/utils';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -104,7 +105,7 @@ export default function MeetExperts() {
                             className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] aspect-3/4 rounded-2xl sm:rounded-3xl overflow-hidden bg-[#D4C4A8] shadow-lg"
                         >
                             <Image
-                                src={`${process.env.NEXT_PUBLIC_IMGURL}services/s2.png`}
+                                src={getImageUrl("services/s2.png")}
                                 alt="Meet our experts"
                                 fill
                                 className="object-cover"

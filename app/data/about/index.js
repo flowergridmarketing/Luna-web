@@ -1,7 +1,7 @@
 import { i, image } from "framer-motion/client";
 import { title } from "process";
+import { getImageUrl } from "@/lib/utils";
 
-const imageUrl = process.env.NEXT_PUBLIC_IMGURL;
 export const personsData = {
     "person1": {
         slug: "person1",
@@ -9,14 +9,14 @@ export const personsData = {
 
         // PersonHero component data
         hero: {
-            imageSrc: `${imageUrl}about/person1/Samina.png`,
+            imageSrc: getImageUrl("about/person1/samina-pic.png"),
             text: "Hi, I’m Samina Khan, a holistic life coach in Croydon, specialising in integrative mind and body wellbeing practices."
         },
 
         // PersonBio component data
         bio: {
             title: "A Little About Me",
-            imageSrc: `${imageUrl}about/person1/saminahalf.png`,
+            imageSrc: getImageUrl("about/person1/saminahalf.png"),
             bioText: [
                 "Over the past 12 years, I've supported individuals through mental health initiatives, helping them navigate life's challenges with clarity. Based in South London, I work as a Holistic Life Coach in Croydon and online, bringing over 20 years of experience in business and startups to help people and ideas come together in meaningful ways.",
                 "I'm also a mother of three and a sister who cares deeply about my family and community. Balancing multiple roles has taught me how to create harmony in life, and I use this experience to provide holistic wellbeing support that helps my clients do the same.",
@@ -42,25 +42,25 @@ export const personsData = {
             steps: [
                 {
                     title: "Body",
-                    image: `${imageUrl}about/person1/2c.png`,
+                    image: getImageUrl("about/person1/2c.png"),
                     description: "Aligning your physical health, energy, and lifestyle habits"
                 },
                 {
                     title: "Mind",
-                    image: `${imageUrl}about/person1/2b.png`,
+                    image: getImageUrl("about/person1/2b.png"),
                     description: "Helping you gain clarity, build resilience, and develop a positive mindset"
 
                 },
                 {
                     title: "Spirit",
-                    image: `${imageUrl}about/person1/2a.png`,
+                    image: getImageUrl("about/person1/2a.png"),
                     description: "Fostering purpose, presence, and inner balance"
                 }
             ]
         },
 
         flowerWithText: {
-            image: `${imageUrl}about/person1/4.png`,
+            image: getImageUrl("about/person1/4.png"),
             description: "I'm proud to be part of Flowergrid, where a team of 15 skilled practitioners provides integrated support for mind, body and spirit. Together, we offer coaching, counselling, nutrition guidance, and medical support alongside my work as a Holistic Life Coach in Croydon."
         },
         // JourneySection component data
@@ -76,7 +76,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person1/3a.png`,
+                    "image": getImageUrl("about/person1/3a.png"),
                     "alt": "Peony Sketch"
                 },
                 {
@@ -87,12 +87,12 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person1/3b.png`,
+                    "image": getImageUrl("about/person1/3b.png"),
                     "alt": "Coneflower Sketch"
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person1/3c.png`,
+                    "image": getImageUrl("about/person1/3c.png"),
                     "alt": "Dahlia Sketch"
                 },
                 {
@@ -103,7 +103,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person1/3d.png`,
+                    "image": getImageUrl("about/person1/3d.png"),
                     "alt": "Magnolia Sketch"
                 },
                 {
@@ -115,7 +115,7 @@ export const personsData = {
             ]
         },
         connect: {
-            image: `${imageUrl}about/person1/5.png`,
+            image: getImageUrl("about/person1/5.png"),
             title: "Take The First Step",
             description: "If you're ready to find balance, clarity, and personal growth through life and transformation coaching, I'd love to work with you."
         },
@@ -148,23 +148,23 @@ export const personsData = {
         ],
         support: [
             {
-                image: `${imageUrl}about/person1/s1.jpg`,
+                image: getImageUrl("about/person1/s1.jpg"),
                 title: "Personal & Professional Growth Coaching",
             },
             {
-                image: `${imageUrl}about/person1/s2.jpg`,
+                image: getImageUrl("about/person1/s2.jpg"),
                 title: "Leadership & Soft Skills Coaching",
             },
             {
-                image: `${imageUrl}about/person1/s3.jpg`,
+                image: getImageUrl("about/person1/s3.jpg"),
                 title: "Neuro-Linguistic Programming",
             },
             {
-                image: `${imageUrl}about/person1/s4.jpg`,
+                image: getImageUrl("about/person1/s4.jpg"),
                 title: "Soul Reflection & Transformation Work"
             },
             {
-                image: `${imageUrl}about/person1/s5.jpg`,
+                image: getImageUrl("about/person1/s5.jpg"),
                 title: "Rekhi Healing"
             }
         ]
@@ -177,7 +177,7 @@ export const personsData = {
 
         // PersonHero component data
         hero: {
-            imageSrc: `${imageUrl}about/person2/monira.png`,
+            imageSrc: getImageUrl("about/person2/monira.png"),
             text: "Hi, I'm Monira Ahmed, a global strategist and hypnotherapist in Croydon specialising in conscious leadership and subconscious transformation.",
             imageSize: "mb-10 w-[300px] sm:w-[480px] md:w-[520px] lg:w-[580px] xl:w-[650px]"
         },
@@ -185,7 +185,7 @@ export const personsData = {
         // PersonBio component data
         bio: {
             title: "My Journey",
-            imageSrc: `${imageUrl}about/person2/1.png`,
+            imageSrc: getImageUrl("about/person2/1.png"),
             bioText: [
                 "My journey has taken me through the worlds of business, education, and community development. I began my career with a degree in International Business and Economics, which opened my eyes to how people learn, lead, and adapt in different cultures.",
                 "Today, I work as a hypnotherapist in Croydon and global strategist. Along the way, I trained as a Master NLP Coach and became a certified trainer in nutrition and soft skills. These disciplines gave me the tools to understand human behaviour and guide others through meaningful transformation.",
@@ -202,24 +202,24 @@ export const personsData = {
             steps: [
                 {
                     title: "Strategic Insight",
-                    image: `${imageUrl}about/person2/2a.png`,
+                    image: getImageUrl("about/person2/2a.png"),
                     description: "Developed through years in business and education"
                 },
                 {
                     title: "Psychological Techniques Insight",
-                    image: `${imageUrl}about/person2/2b.png`,
+                    image: getImageUrl("about/person2/2b.png"),
                     description: " Using my expertise as an NLP coach in Croydon and RTT practitioner to shift mindsets."
 
                 },
                 {
                     title: "Wellbeing Practices",
-                    image: `${imageUrl}about/person2/2c.png`,
+                    image: getImageUrl("about/person2/2c.png"),
                     description: "Such as nutrition, mindfulness and energy balance"
                 }
             ]
         },
         flowerWithText: {
-            image: `${imageUrl}about/person2/4.png`,
+            image: getImageUrl("about/person2/4.png"),
             description: "I believe leadership should feel fair as well as successful. My work bridges minds, markets and generations, rooting growth in empathy and real wellbeing. Through Flowergrid, I help people lead with clarity and courage, uplifting themselves and their communities."
         },
         // JourneySection component data
@@ -235,7 +235,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person2/3a.png`,
+                    "image": getImageUrl("about/person2/3a.png"),
                     "alt": "Flower Sketch"
                 },
                 {
@@ -246,12 +246,12 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person2/3b.png`,
+                    "image": getImageUrl("about/person2/3b.png"),
                     "alt": "Coneflower Sketch"
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person2/3c.png`,
+                    "image": getImageUrl("about/person2/3c.png"),
                     "alt": "Dahlia Sketch"
                 },
                 {
@@ -262,7 +262,7 @@ export const personsData = {
                 },
                 {
                     "type": "flower",
-                    "image": `${imageUrl}about/person2/3d.png`,
+                    "image": getImageUrl("about/person2/3d.png"),
                     "alt": "Magnolia Sketch"
                 },
                 {
@@ -275,7 +275,7 @@ export const personsData = {
         },
 
         connect: {
-            image: `${imageUrl}about/person2/5.png`,
+            image: getImageUrl("about/person2/5.png"),
             title: "Begin Your Journey with a Hypnotherapist in Croydon",
             description: "If you are ready to explore your potential, strengthen your mindset and live with greater purpose, I would love to connect.",
 
@@ -284,7 +284,7 @@ export const personsData = {
         // Vision component data
         vision: {
             title: "Leadership with Purpose",
-            image: `${imageUrl}home/connection-logo.png`, // Assuming a similar asset exists or using a placeholder
+            image: getImageUrl("home/connection-logo.png"), // Assuming a similar asset exists or using a placeholder
             text: [
                 "My vision is to inspire leadership that values empathy, awareness and purpose. I want to see workplaces and communities where wellbeing is part of success, not separate from it. Through Flowergrid and my coaching work",
                 "I help people lead with confidence, clarity and compassion. True leadership begins from within, and my goal is to help more people discover that strength."
@@ -319,23 +319,23 @@ export const personsData = {
         support: [
 
             {
-                image: `${imageUrl}about/person2/ps3.jpg`,
+                image: getImageUrl("about/person2/ps3.jpg"),
                 title: "Hypnotherapy",
             },
             {
-                image: `${imageUrl}about/person2/ps2.png`,
+                image: getImageUrl("about/person2/ps2.png"),
                 title: "Rapid Transformational Therapy (RTT)",
             },
             {
-                image: `${imageUrl}about/person1/s3.jpg`,
+                image: getImageUrl("about/person1/s3.jpg"),
                 title: "Neuro-Linguistic Programming (NLP)",
             },
             {
-                image: `${imageUrl}about/person2/ps1.jpg`,
+                image: getImageUrl("about/person2/ps1.jpg"),
                 title: "Anxiety & Stress Management Techniques",
             },
             {
-                image: `${imageUrl}about/person1/s4.jpg`,
+                image: getImageUrl("about/person1/s4.jpg"),
                 title: "Soul Reflection & Transformation Work"
             }
         ]
@@ -351,7 +351,7 @@ export const teamTree = [
             {
                 "name": "Dr. Hana Patel",
                 "role": "General Practitioner, Medical Exert Witness & Family Doctor",
-                "image": `${imageUrl}about/team/hana.png`,
+                "image": getImageUrl("about/team/hana.png"),
                 "description": "Dr. Hana, our skilled and acclaimed doctor in wellness, specializes in assessing and reviewing chronic conditions. Whether you are managing a chronic illness or seeking active improvement, Dr. Hana provides expert guidance. With a focus on holistic wellness, she helps individuals refine their health goals and achieve optimal well-being. Trust Dr. Hana to support you in your journey towards better health and vitality"
             }
         ]
@@ -363,13 +363,13 @@ export const teamTree = [
             {
                 "name": "Tamkin",
                 "role": "Trained Counselling Services & Career Education Direction",
-                "image": `${imageUrl}about/team/tamkin.png`,
+                "image": getImageUrl("about/team/tamkin.png"),
                 "description": "Wanting a listening ear on relationships, guidance, career, Education, Social improvement. Serving the community, individuals in a journey to link needs and solutions"
             },
             {
                 "name": "Yvonne Hewitt",
                 "role": "Hypnotherapist, RTT",
-                "image": `${imageUrl}about/team/yvonne.png`,
+                "image": getImageUrl("about/team/yvonne.png"),
                 "description": "Yvonne, our skilled specialist, excels in hypnotherapy and harnessing the power of the mind. With expertise in Rapid Transformational Therapy (RTT) and energy work, she guides you towards profound personal breakthroughs. Yvonne's holistic approach helps you unlock your inner potential, overcome limiting beliefs, and achieve lasting change. Trust her to empower you on your journey to mental clarity and emotional well-being."
             }
         ]
@@ -381,7 +381,7 @@ export const teamTree = [
             {
                 "name": "Dr. Ravinder",
                 "role": "Auricular Acupuncturist, Colour Therapist, Angel Healer & Reiki Grand Master",
-                "image": `${imageUrl}about/team/ravinder.png`,
+                "image": getImageUrl("about/team/ravinder.png"),
                 "description": "Dr. Ravinder is a licensed Auricular Acupuncturist & accredited Reiki Grand Master offering holistic healing. He utilizes reiki, energy, color therapy, & angelic healing to enhance overall well-being. With professional memberships in Microsystems Acupuncture Society, CNHC, & The Acupuncture Society, his comprehensive care blends ancient healing traditions with modern modalities to relieve physical pain, heal emotionally, & improve vitality."
             }
         ]
@@ -393,13 +393,13 @@ export const teamTree = [
             {
                 "name": "Dr. Renuka Marley",
                 "role": "Healthcare Consultant and Lifecoach",
-                "image": `${imageUrl}about/team/renuka.png`,
+                "image": getImageUrl("about/team/renuka.png"),
                 "description": "Dr. Renu offers comprehensive body scans to analyze mineral & vitamin levels, utilizing functional nutrition to address deficiencies. With expertise in personalized supplementation and dietary recommendations, she helps clients optimize their nutritional intake. Dr. Renu goes beyond the basics, incorporating additional elements to support overall health & wellness. Trust Dr. Renu for a tailored approach to enhancing your well-being through nutrient balancing with Dr. Renu."
             },
             {
                 "name": "Runa Boolaky",
                 "role": "NLP Practitioner, Lifecoach & Mental First Aider",
-                "image": `${imageUrl}about/team/runa.png`,
+                "image": getImageUrl("about/team/runa.png"),
                 "description": "Runa is your guide to leadership development, goal achievement, and the cultivation of healthy habits. She offers support with a range of products designed to enhance your financial health and investment strategies. Runa's holistic approach empowers you to evolve personally and professionally, helping you build a balanced and prosperous life. Trust her expertise to unlock your potential and achieve lasting success.  "
             }
         ]
@@ -411,7 +411,7 @@ export const teamTree = [
             {
                 "name": "Rico Wagner Caleep",
                 "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
-                "image": `${imageUrl}about/team/rico.png`,
+                "image": getImageUrl("about/team/rico.png"),
                 "description": "Rico supports executives and leaders in navigating high-pressure roles with clarity and resilience. Using the Wagner Method, he blends cognitive behavioural strategies, emotional intelligence, and holistic coaching to enhance performance, balance, and wellbeing. Trust Rico to guide you towards sustainable growth and empowered leadership."
             }
         ]
@@ -423,17 +423,16 @@ export const teamTree = [
             {
                 "name": "Rebecca",
                 "role": "The Nutrition And Fitness Coach",
-                "image": `${imageUrl}about/team/rebecca.png`,
+                "image": getImageUrl("about/team/rebecca.png"),
                 "description": "Rebecca the nutrition and fitness coach trained in nutrition and training. Taylored nutrition plans, strength training and Pilates, balancing cardio and Tonning to get results. We are running boot camps for women, menopause programmes, and specializing in fitness and body strength still being individual."
             },
             {
                 "name": "Husna Hoque",
                 "role": "Personal Trainer & Wellness Coach",
-                "image": `${imageUrl}about/team/husna.png`,
+                "image": getImageUrl("about/team/husna.png"),
                 "description": "Trainer Husna specializes in creating customized workout routines and managing your macros to help you adopt healthier habits. With a focus on personalized fitness plans, she guides clients towards achieving their goals effectively. Trust in Trainer Husna to design workouts tailored to your needs and support you in making positive lifestyle changes. Elevate your fitness journey with Husna's expertise and commitment to your well-being."
             }
         ]
-
     },
     {
         "id": "row-7",
@@ -442,13 +441,13 @@ export const teamTree = [
             {
                 "name": "Samin Khan",
                 "role": "Lifecoach & Reiki Healer",
-                "image": `${imageUrl}about/person1/saminahalf.png`,
+                "image": getImageUrl("about/person1/saminahalf.png"),
                 "description": "Simmi, your dedicated life coach councilor, healer & holistic therapist specializing in integrating personalized plans into your daily routine. With a focus on holistic modalities, she selects practices to support your overall health and mental well-being. Simmi brings a unique approach to inner healing, consciousness, and mindfulness, guiding you towards a more balanced and mindful lifestyle. Trust in Simmi to help you cultivate inner peace, develop greater self-awareness, and foster positive habits for sustainable well-being."
             },
             {
                 "name": "Munira",
                 "role": "NLP Practitioner, Hypnotherapist, RTT",
-                "image": `${imageUrl}about/team/munira.png`,
+                "image": getImageUrl("about/team/munira.png"),
                 "description": "Munira, our alchemist, specializes in transforming mindsets into positive habits through the potent tools of NLP, hypnotherapy, and RTT. With a focus on elevating consciousness and refining your internal being, she guides you on a journey of self-discovery and empowerment. Trust her expertise to unlock your fullest potential and cultivate lasting change from within."
             }
         ]

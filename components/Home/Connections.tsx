@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react'
+import { getImageUrl } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useGSAP } from '@gsap/react'
@@ -53,7 +54,7 @@ const Connections = () => {
                     </div>
                     <div>
                         <Image
-                            src={`${process.env.NEXT_PUBLIC_IMGURL}home/connection-logo.png`}
+                            src={getImageUrl("home/connection-logo.png")}
                             alt="Flowergrid Logo"
                             width={100}
                             height={100}
