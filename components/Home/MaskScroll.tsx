@@ -58,8 +58,6 @@ const MaskScroll = () => {
             const q = gsap.utils.selector(container);
             const texts = q(".reveal-text") as HTMLElement[];
 
-            // Transitions for Background (only if on desktop)
-            if (isDesktop) {
                 tl.to(bgImageRef.current, {
                     xPercent: 3,
                     yPercent: 3,
@@ -68,7 +66,6 @@ const MaskScroll = () => {
                     ease: "power1.inOut",
                     force3D: true,
                 }, "scene1");
-            }
 
             tl.fromTo(texts[0],
                 { y: 50, opacity: 0 },
@@ -79,7 +76,6 @@ const MaskScroll = () => {
             tl.addLabel("scene2");
             tl.to(texts[0], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene2");
 
-            if (isDesktop) {
                 tl.to(bgImageRef.current, {
                     xPercent: -3,
                     yPercent: 3,
@@ -88,7 +84,7 @@ const MaskScroll = () => {
                     ease: "power1.inOut",
                     force3D: true,
                 }, "scene2");
-            }
+            
 
             tl.fromTo(texts[1],
                 { y: 50, opacity: 0 },
@@ -99,7 +95,6 @@ const MaskScroll = () => {
             tl.addLabel("scene3");
             tl.to(texts[1], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene3");
 
-            if (isDesktop) {
                 tl.to(bgImageRef.current, {
                     xPercent: 3,
                     yPercent: 3,
@@ -108,7 +103,7 @@ const MaskScroll = () => {
                     ease: "power1.inOut",
                     force3D: true,
                 }, "scene3");
-            }
+            
 
             tl.fromTo(texts[2],
                 { y: 50, opacity: 0 },
@@ -119,7 +114,6 @@ const MaskScroll = () => {
             tl.addLabel("scene4");
             tl.to(texts[2], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene4");
 
-            if (isDesktop) {
                 tl.to(bgImageRef.current, {
                     xPercent: 2,
                     yPercent: -3,
@@ -128,7 +122,7 @@ const MaskScroll = () => {
                     ease: "power1.inOut",
                     force3D: true,
                 }, "scene4");
-            }
+            
 
             tl.fromTo(texts[3],
                 { y: 50, opacity: 0 },
@@ -139,7 +133,6 @@ const MaskScroll = () => {
             tl.addLabel("scene5");
             tl.to(texts[3], { y: -30, opacity: 0, duration: 0.5, force3D: true }, "scene5");
 
-            if (isDesktop) {
                 tl.to(bgImageRef.current, {
                     xPercent: 0,
                     yPercent: 0,
@@ -148,7 +141,7 @@ const MaskScroll = () => {
                     ease: "power1.inOut",
                     force3D: true,
                 }, "scene5");
-            }
+            
 
             tl.fromTo(texts[4],
                 { y: 50, opacity: 0 },
