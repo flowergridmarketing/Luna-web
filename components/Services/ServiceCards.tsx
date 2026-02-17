@@ -97,20 +97,34 @@ const serviceCardData = [
     }
 ]
 
-// ... serviceCardData remains the same ...
-
 const ServiceCards: React.FC = () => {
     // Track which specific card is open (null means all closed)
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     const handleTouch = (index: number) => {
+        console.log(activeIndex)
         // Toggle: if same index is clicked, close it. Otherwise, open new one.
         setActiveIndex(activeIndex === index ? null : index);
+    };
+
+    const handlePointerEnter = (index: number, e: React.PointerEvent) => {
+        // Only trigger hover on non-touch devices (mouse/trackpad)
+        if (e.pointerType !== 'touch') {
+            setActiveIndex(index);
+        }
+    };
+
+    const handlePointerLeave = (e: React.PointerEvent) => {
+        // Only trigger hover on non-touch devices (mouse/trackpad)
+        if (e.pointerType !== 'touch') {
+            setActiveIndex(null);
+        }
     };
 
     return (
         <section className="bg-background py-16 md:py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-[1440px] mx-auto">
+
                 <h2 className="text-5xl md:text-5xl lg:text-[76px] text-text-heading font-heading mb-12 md:mb-16 tracking-wide font-normal uppercase">
                     Our Services
                 </h2>
@@ -123,10 +137,9 @@ const ServiceCards: React.FC = () => {
                             <div
                                 key={index}
                                 onClick={() => handleTouch(index)}
-                                // Mouse events for desktop hover
-                                onMouseEnter={() => setActiveIndex(index)}
-                                onMouseLeave={() => setActiveIndex(null)}
-                                className="group relative h-[420px] md:h-[550px] lg:h-[500px] w-full overflow-hidden rounded-[2rem] cursor-pointer touch-manipulation"
+                                onPointerEnter={(e) => handlePointerEnter(index, e)}
+                                onPointerLeave={handlePointerLeave}
+                                className="group relative h-[420px] md:h-[550px] lg:h-[500px] w-full overflow-hidden rounded-4xl cursor-pointer touch-manipulation"
                             >
                                 <div className="absolute inset-0 w-full h-full">
                                     <Image
@@ -140,29 +153,28 @@ const ServiceCards: React.FC = () => {
                                     />
                                 </div>
 
-                                {/* Gradient overlay */}
-                                <div className={`absolute inset-0 transition-all duration-300 bg-gradient-to-t 
-                                    ${isThisOpen 
-                                        ? 'from-black/95 via-black/40 to-transparent' 
-                                        : 'from-black/90 via-black/30 to-transparent'}`} 
+                                <div className={`absolute inset-0 transition-all duration-300 bg-linear-to-t 
+                                    ${isThisOpen
+                                        ? 'from-black/95 via-black/40 to-transparent'
+                                        : 'from-black/90 via-black/30 to-transparent'}`}
                                 />
 
                                 <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 flex flex-col items-start justify-end h-full z-10">
-                                    <h3 className="text-2xl md:text-3xl lg:text-[32px] !text-white font-heading font-normal leading-[1.2] mb-3 w-[90%] transition-all duration-300">
+                                    <h3 className="text-2xl md:text-3xl lg:text-[32px] text-white! font-heading font-normal leading-[1.2] mb-3 w-[90%] transition-all duration-300">
                                         {item.title}
                                     </h3>
 
                                     {item.desc && (
-                                        <p className={`text-sm md:text-base lg:text-lg !text-white/90 font-light leading-relaxed w-[90%] transition-all duration-500 ease-out overflow-hidden
-                                            ${isThisOpen 
-                                                ? 'max-h-40 opacity-100 mb-6' 
+                                        <p className={`text-sm md:text-base lg:text-lg text-white/90! font-light leading-relaxed w-[90%] transition-all duration-500 ease-out overflow-hidden
+                                            ${isThisOpen
+                                                ? 'max-h-40 opacity-100 mb-6'
                                                 : 'max-h-0 opacity-0 mb-0'
                                             }`}
                                         >
                                             {item.desc}
                                         </p>
                                     )}
-                                    
+
                                     <div className={`md:hidden text-white/50 text-xs uppercase tracking-widest transition-opacity duration-300 ${isThisOpen ? 'opacity-0' : 'opacity-100'}`}>
                                         Tap to learn more
                                     </div>

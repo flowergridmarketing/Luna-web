@@ -160,14 +160,16 @@ export default function ContactForm() {
 
       <ToastContainer position="top-left" theme="colored" />
 
-      <div ref={imageRef} className="relative w-full md:w-1/2 h-[40vh] md:h-auto md:min-h-screen shrink-0">
-        <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}contact/form-img.png`}
-          alt="Hands holding a crystal"
-          fill
-          className="object-contain md:object-cover rounded-2xl md:rounded-4xl md:drop-shadow md:m-4 p-4 md:p-0"
-          priority
-        />
+    <div ref={imageRef} className="w-full md:w-1/2 h-[40vh] md:h-auto md:min-h-screen shrink-0 p-4 sm:p-6 md:p-8">
+        <div className="relative w-full h-full">
+          <Image
+            src={`${process.env.NEXT_PUBLIC_IMGURL}contact/form-img.png`}
+            alt="Hands holding a crystal"
+            fill
+            className="object-cover rounded-2xl sm:rounded-3xl md:rounded-4xl"
+            priority
+          />
+        </div>
       </div>
 
       <div className="w-full md:w-1/2 h-full bg-[#F3EAD8] flex flex-col justify-center">
