@@ -63,31 +63,31 @@ const ProgramTestimonials = [
     id: 2,
     quote: "I joined a six week Flowergrid holistic wellness programme after years of starting and abandoning self help plans. The mix of coaching, reflection and practical tools helped me build simple habits and keep them. I feel steadier, more organised and less at war with myself.",
     author: "Tom, Financial Analyst, Manchester",
-    image: "https://images.unsplash.com/photo-1661851896711-a0f5460f413f?q=80&w=200&h=200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1627753779220-387ca0a1d952?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
-
+    
   },
   {
     id: 3,
     quote: "“I booked a Power Hour because I was stuck on one decision that was eating up all my energy. In that one session I felt properly listened to, and left with clear options, next steps and a lot less noise in my head.",
     author: "Rina, Freelance Designer, Birmingham",
-    image: "https://images.unsplash.com/photo-1593614202631-c29a06abba1d?q=80&w=200&h=200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1629224181689-3fa4e728d5ef?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
-
+    
   },
   {
     id: 4,
     quote: "“I went to a one day workshop expecting theory. Instead I left with three or four specific practices I now use when stress spikes at work and at home. The day was honest, grounded and surprisingly practical, not just talk about wellbeing.”",
     author: "Hassan, Team Leader, Croydon",
-    image: "https://images.unsplash.com/photo-1629224181689-3fa4e728d5ef?q=80&w=200&h=200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1593614202631-c29a06abba1d?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 4
-
+    
   },
   {
     id: 5,
     quote: "“Our team was burnt out and communication had become tense. The Flowergrid holistic wellness programmes for our organisation gave us a shared language for stress, simple regulation tools and space to speak honestly. Meetings feel calmer and people seem more human with each other again.”",
     author: "Laura, Head of People, Surrey",
-    image: "https://images.unsplash.com/photo-1627753779220-387ca0a1d952?q=80&w=200&h=200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1661851896711-a0f5460f413f?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
 
   },

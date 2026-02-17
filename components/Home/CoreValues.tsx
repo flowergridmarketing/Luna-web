@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from 'react';
+import { getImageUrl } from '@/lib/utils';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -26,8 +27,8 @@ interface CoreValuesProps {
 const CoreValues = ({
     values,
     backgroundColor = "transparent",
-    leftLeafImage = `/home/left-leaf.png`,
-    rightLeafImage = `/home/right-leaf.png`,
+    leftLeafImage = getImageUrl("programme/left-leaf.png"),
+    rightLeafImage = getImageUrl("programme/right-leaf.png"),
     iconBgColor = "#ECDCC5"
 }: CoreValuesProps) => {
     const container = useRef(null)
