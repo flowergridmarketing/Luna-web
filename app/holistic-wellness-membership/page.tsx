@@ -8,6 +8,7 @@ import Founders from '@/components/Membership/Founders'
 import Hero from '@/components/Membership/Hero'
 import MembershipHelp from '@/components/Membership/MembershipHelp'
 import Plans from '@/components/Membership/Plans'
+import { getImageUrl } from '@/lib/utils'
 import React from 'react'
 
 const membershipFaqs = [
@@ -60,7 +61,7 @@ const MembershipPage = () => {
       <HeroTestimonials title='Stories from Our Members' />
       <Founders />
       <FaqSection faqs={membershipFaqs} />
-      <Connect image={`/membership/connection.jpg`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
+      <Connect image={getImageUrl("membership/connection.jpg")} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
     </div>
   )
 }
