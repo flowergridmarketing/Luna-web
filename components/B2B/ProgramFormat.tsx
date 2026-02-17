@@ -2,25 +2,26 @@
 
 import React from "react";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 const sections = [
     {
         id: "intensive",
         title: "5-Day Intensive Programme",
-        thumb: `/b2b/7.png`,
+        thumb: getImageUrl("b2b/7.png"),
         details: "A guided wellbeing and leadership experience for teams seeking sustainable transformation. Includes personalised assessments, group coaching, and integrated mind-body workshops."
     },
     {
         id: "power",
         title: "Power Hour Sessions",
-        thumb: `/b2b/8.png`,
+        thumb: getImageUrl("b2b/8.png"),
         details: "Short, focused sessions offering immediate clarity and practical strategies for managers or teams facing specific challenges."
     },
     {
         id: "workshops",
         title: "Workshops and Events",
-        thumb: `/b2b/9.png`,
+        thumb: getImageUrl("b2b/9.png"),
         details: "Half-day or full-day group sessions designed to enhance emotional wellbeing, address anxiety and build a culture of open communication."
     },
 ];
@@ -124,9 +125,9 @@ export default function ProgramFormat() {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <Link href={"/contact-us"} >
-                <button className="bg-primary text-white px-8 py-4 md:px-10 md:py-5 rounded-full text-sm md:text-base font-semibold tracking-wide uppercase hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    Request a Tailored Proposal
-                </button>
+                    <button className="bg-primary text-white px-8 py-4 md:px-10 md:py-5 rounded-full text-sm md:text-base font-semibold tracking-wide uppercase hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Request a Tailored Proposal
+                    </button>
                 </Link>
             </motion.div>
 

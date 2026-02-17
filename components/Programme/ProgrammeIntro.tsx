@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import { getImageUrl } from "@/lib/utils";
 
 export default function ProgramIntro() {
     const containerVariants: Variants = {
@@ -29,7 +30,7 @@ export default function ProgramIntro() {
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image
-                    src={`/programme/h1.png`}
+                    src={getImageUrl("/programme/h1.png")}
                     alt="Programmes Hero"
                     fill
                     priority

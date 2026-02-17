@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { getImageUrl } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,29 +19,29 @@ export default function FlowergridJourney() {
             title: "Awakening",
             description:
                 "Discover your current patterns, habits, and blocks. Gain insight into what’s holding you back and where your energy is focused.",
-            image: "/membership/f1.png",
+            image: getImageUrl("membership/f1.png"),
         },
         {
             title: "Alignment",
             description:
                 "Integrate mind, body, and spirit practices. Learn to harmonise daily routines, mindset, and lifestyle for balanced energy and focus.",
-            image: "/membership/f2.png",
+            image: getImageUrl("membership/f2.png"),
         },
         {
             title: "Healing",
             description:
                 "Release emotional and subconscious blocks through coaching, hypnotherapy, and holistic techniques. Restore inner calm and resilience.",
-            image: "/membership/f3.png",
+            image: getImageUrl("membership/f3.png"),
         },
         {
             title: "Transformation",
             description:
                 "Adopt new habits, behaviours, and perspectives. Build confidence, clarity, and direction to move forward with purpose.",
-            image: "/membership/f4.png",
+            image: getImageUrl("membership/f4.png"),
         }, {
             title: "Integration",
             description: "Embed sustainable change into your daily life. Maintain long-term wellbeing, conscious living, and a sense of empowered alignment Through this journey, the Flowergrid Holistic Transformation Programme helps you reconnect, heal, and grow into the most aligned, empowered version of yourself.",
-            image: "/membership/f1.png",
+            image: getImageUrl("membership/f1.png"),
         }
     ];
 
