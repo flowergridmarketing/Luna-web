@@ -93,7 +93,7 @@ export default function Home() {
       <MaskScroll />
       <Connections />
       <CoreValues values={coreValues} />
-      {/* <TransformationServices /> */}
+      <TransformationServices />
       <LeafScrollText lines={lines} />
       <DesktopOnlyFadeInText />
       <CorporateProgram />
