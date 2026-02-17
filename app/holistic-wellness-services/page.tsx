@@ -55,7 +55,7 @@ const ServiceTestimonials = [
     id: 2,
     quote: "“I came to Flowergrid exhausted by anxiety and constant overthinking. The blend of anxiety and stress management techniques, NLP and gentle therapeutic support helped me feel calmer and more grounded. Over a few months my holistic wellbeing improved noticeably, and I finally had tools to manage difficult days rather than being consumed by them.”",
     author: "David Patel, Secondary School Teacher, Croydon",
-    image: "https://images.unsplash.com/photo-1539904720061-539f33782f9c?q=80&w=200&h=200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1627346980717-02226f9ff7f6?q=80&w=387&auto=format&fit=crop",
     rating: 5
 
   },

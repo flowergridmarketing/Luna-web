@@ -98,7 +98,7 @@ const B2bValues = () => {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <Image
-                    src={getImageUrl("home/left-leaf.png")}
+                    src={getImageUrl("programme/left-leaf.png")}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
@@ -114,7 +114,7 @@ const B2bValues = () => {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <Image
-                    src={getImageUrl("home/right-leaf.png")}
+                    src={getImageUrl("programme/right-leaf.png")}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
