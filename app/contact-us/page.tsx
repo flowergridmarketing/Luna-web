@@ -53,36 +53,42 @@ const contactTestimonials = [
         id: 1,
         quote: "Samina’s Reiki sessions helped me release emotional blockages and restore calm. I left feeling lighter, centred, and more balanced. Her guidance made a noticeable difference in my holistic wellbeing.",
         author: "Teresa Cramer, London",
+        image: "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 2,
         quote: "Through guided mindfulness and meditation with Munira, I’ve learned to stay present and manage daily stress. These practices have significantly improved my mental clarity and overall mind body spirit wellness.",
         author: "Nina Morrison, Manchester",
+        image: "https://images.unsplash.com/photo-1671656349322-41de944d259b?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 3,
         quote: "The life coaching sessions at Flowergrid with Samina helped me gain clarity in my personal and professional life. I now approach challenges with confidence and feel more aligned with my purpose.",
         author: "Reggie Harper, Surrey",
+        image: "https://images.unsplash.com/photo-1530268729831-4b0b9e170218?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 4,
         quote: "Munira’s NLP and hypnotherapy techniques taught me to reframe negative thought patterns. I feel calmer, more resilient, and better equipped to handle stress and anxiety.",
         author: "Emma Pemma, Brighton",
+        image: "https://images.unsplash.com/photo-1690587673708-d6ba8a1579a5?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 5,
         quote: "The integrative health programme combining doctor consultations, nutritional guidance, and fitness planning was exceptional. My energy levels, physical health, and overall holistic wellbeing have improved dramatically.",
         author: "Nicole Benford-Beck, London",
+        image: "https://images.unsplash.com/photo-1672794444732-e007954a177c?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 6,
         quote: "The Soul Reflection sessions with Samina encouraged deep self-awareness and personal growth. I’ve gained clarity on life choices and feel more connected to my mind, body, and spirit.",
         author: "Kate Downey, Kent",
+        image: "https://images.unsplash.com/photo-1561740303-a0fd9fabc646?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     }
 ];

@@ -54,30 +54,35 @@ const b2bTestimonials = [
         id: 1,
         quote: "We have engaged with several providers in the past, but Flowergrid’s corporate wellbeing programmes offered the strategic depth we were missing. Their focus on leadership and emotional intelligence coaching has transformed how our managers handle pressure. We aren't just seeing happier staff; we are seeing leaders who can spot burnout before it happens and support their teams effectively.",
         author: "Sarah Thomson., Head of People & Culture, Financial Services",
+        image: "https://images.unsplash.com/photo-1681218034100-801ebcbc0221?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 2,
         quote: "In our high-pressure industry, generic wellness perks don't cut it. Flowergrid delivered stress resilience training that actually stuck. It wasn't just a one-off workshop; it was a cultural shift towards holistic workplace wellness. Our team now has a shared language for managing stress, and the energy in the office has moved from frantic to focused. A truly worthwhile investment.",
         author: "James Turner, CEO, Tech Start-up",
+        image: "https://images.unsplash.com/photo-1705866000578-b3539e588f46?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 3,
         quote: "Before working with Flowergrid, our departments were operating in silos with frequent miscommunication. The communication and relationship coaching helped bridge that gap immediately. It is rare to find corporate wellbeing coaching that balances psychological insight with practical business application so well. Our team cohesion has never been stronger.",
         author: "Sarah Malik, Operations Director, Healthcare Sector",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 4,
         quote: "Our staff needed a safe space to navigate recent changes, and Flowergrid provided exactly that. Their trauma-informed workplace support was handled with incredible sensitivity and professionalism. It gave our team the tools to build psychological safety and trust again. I would highly recommend their bespoke approach to any educational institution.",
         author: "Dr. David Reynolds., Dean of Student Services, London University",
+        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     },
     {
         id: 5,
         quote: "“Our teams were under pressure and struggling to communicate well. The corporate wellbeing programme delivered by Flowergrid helped us rebuild trust and cohesion in a very grounded way. Colleagues now have a shared language around stress, boundaries, and wellbeing, and we are already noticing better collaboration and fewer conflicts.”",
         author: "Elena Rico, Operations Manager, Techminds",
+        image: "https://images.unsplash.com/photo-1590086782792-42dd2350140d?q=80&w=200&h=200&auto=format&fit=crop",
         rating: 5,
     }
 ];
