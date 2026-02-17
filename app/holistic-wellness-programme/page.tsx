@@ -9,6 +9,7 @@ import ProgramCarousel from '@/components/Programme/ProgramCarousal'
 import Achievement from '@/components/Programme/Achievement'
 import ProgramCards from '@/components/Programme/ProgrammeCards'
 import ProgramIntro from '@/components/Programme/ProgrammeIntro'
+import { getImageUrl } from '@/lib/utils'
 
 
 const faqs = [
@@ -103,7 +104,7 @@ const page = () => {
       <CurvedPathAnimation />
       <Achievement />
       <FaqSection title='Your Questions About Flowergrid Programmes Answered' faqs={faqs} />
-      <Connect image={`/about/person2/5.png`} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
+      <Connect image={getImageUrl("about/person2/5.png")} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
     </>
   )
 }
