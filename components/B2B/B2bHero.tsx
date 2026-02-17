@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 
@@ -33,7 +34,7 @@ export default function B2bHero() {
     <section className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src={`/b2b/hero.jpg`}
+          src={getImageUrl("b2b/hero.jpg")}
           alt="Wellness session"
           fill
           className="object-cover"

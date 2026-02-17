@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { getImageUrl } from "@/lib/utils";
 import Image from "next/image";
 
 const workshops = [
@@ -8,37 +9,37 @@ const workshops = [
     id: 1,
     title: "Leadership and Emotional Intelligence Coaching",
     desc: "Empower leaders to manage with empathy and self-awareness. We help managers understand their own drivers to build psychological safety and trust within their teams.",
-    image: "/b2b/1.jpg" // Ensure these paths are correct or use your env variable
+    image: getImageUrl("b2b/1.jpg") // Ensure these paths are correct or use your env variable
   },
   {
     id: 2,
     title: "Mindfulness and Stress Resilience Training",
     desc: "Practical tools to help employees manage high-pressure environments. We teach nervous system regulation and focus techniques to reduce burnout.",
-    image: "/b2b/2.jpg"
+    image: getImageUrl("b2b/2.jpg")
   },
   {
     id: 3,
     title: "Trauma-Informed Workplace Wellbeing Workshops",
     desc: "Create a supportive environment. We guide organisations on how to support staff through personal crises and societal stress without overstepping professional boundaries.",
-    image: "/b2b/3.jpg"
+    image: getImageUrl("b2b/3.jpg")
   },
   {
     id: 4,
     title: "Communication and Relationship Coaching",
     desc: "Resolve conflict and silence silos. Using NLP and transactional analysis, we improve how teams listen, speak, and collaborate for smoother workflows.",
-    image: "/b2b/4.jpg"
+    image: getImageUrl("b2b/4.jpg")
   },
   {
     id: 5,
     title: "Team Cohesion and Cultural Alignment",
     desc: "Move beyond basic team building. We facilitate deep work to align your team’s personal values with the organisation’s mission, fostering genuine loyalty.",
-    image: "/b2b/5.jpg"
+    image: getImageUrl("b2b/5.jpg")
   },
   {
     id: 6,
     title: "Corporate Wellness Retreats and Immersive Sessions",
     desc: "Immersive off-site or on-site sessions designed to reset collective energy, combining strategic planning with holistic restoration.",
-    image: "/b2b/6.jpg"
+    image: getImageUrl("b2b/6.jpg")
   }
 ];
 
@@ -107,8 +108,8 @@ export default function OfferSection() {
               {/* Accordion Content */}
               <div
                 className={`grid transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${activeIndex === index
-                    ? "grid-rows-[1fr] opacity-100 pb-8"
-                    : "grid-rows-[0fr] opacity-0 pb-0"
+                  ? "grid-rows-[1fr] opacity-100 pb-8"
+                  : "grid-rows-[0fr] opacity-0 pb-0"
                   }`}
               >
                 <div className="overflow-hidden">
