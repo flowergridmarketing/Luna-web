@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from 'react';
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
@@ -161,7 +162,7 @@ const MaskScroll = () => {
             <div className="">
                 <Image
                     ref={bgImageRef}
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/maskscrollfit.svg%2Bxml`}
+                    src={getImageUrl('home/maskscrollfit.svg+xml')}
                     alt="BG"
                     fill
                     priority

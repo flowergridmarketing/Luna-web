@@ -16,10 +16,10 @@ export function extractTldrText(tldr: any): string {
             }
             return '';
         }).join(' ')
-        .replace(/<[^>]*>?/gm, '')
-        .replace(/&nbsp;/g, ' ')
-        .replace(/\u00A0/g, ' ')
-        .trim();
+            .replace(/<[^>]*>?/gm, '')
+            .replace(/&nbsp;/g, ' ')
+            .replace(/\u00A0/g, ' ')
+            .trim();
     }
 
     return '';
@@ -35,4 +35,20 @@ export function extractImageUrls(content: any): string[] {
     return content.blocks
         .filter((block: any) => block.type === 'image' && block.data?.file?.url)
         .map((block: any) => block.data.file.url);
+}
+
+/**
+ * @param path - Image path
+ * @returns Full image URL
+ */
+export function getImageUrl(path: string): string {
+    const baseUrl = process.env.NEXT_PUBLIC_IMGURL || '';
+    if (!path) return '';
+    if (path.startsWith('http') || path.startsWith('data:')) return path;
+
+    // Ensure baseUrl ends with / and path doesn't start with / to avoid //
+    const cleanBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+    const cleanPath = path.startsWith('/') ? path : `/${path}`;
+
+    return `${cleanBase}${cleanPath}`;
 }

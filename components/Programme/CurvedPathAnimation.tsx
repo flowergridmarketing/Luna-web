@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import { getImageUrl } from '@/lib/utils';
 import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -208,28 +209,28 @@ export default function CurvedPathAnimation() {
       {/* Decorative Leaves (Desktop) */}
       <div className="hidden lg:block">
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/left-leaf.png`}
+          src={getImageUrl("programme/left-leaf.png")}
           alt="leaf"
           className="absolute top-[23%] left-0 w-44"
           width={100}
           height={100}
         />
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/right-leaf2.png`}
+          src={getImageUrl("programme/right-leaf2.png")}
           alt="leaf"
           className="absolute bottom-[10%] right-0 opacity-80 w-44"
           width={100}
           height={100}
         />
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/right-leaf.png`}
+          src={getImageUrl("programme/right-leaf.png")}
           alt="leaf"
           className="absolute top-[45%] right-0 w-38 rotate-45"
           width={100}
           height={100}
         />
         <Image
-          src={`${process.env.NEXT_PUBLIC_IMGURL}programme/left-leaf2.png`}
+          src={getImageUrl("programme/left-leaf2.png")}
           alt="leaf"
           className="absolute top-[60%] left-1 w-38 opacity-60 "
           width={100}

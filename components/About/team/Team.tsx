@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { teamTree } from '@/app/data/about'
+import { getImageUrl } from '@/lib/utils'
 import Link from 'next/link'
 
 const TeamTreeSection = () => {
@@ -14,7 +15,7 @@ const TeamTreeSection = () => {
 
   return (
     <div
-      style={{ background: `url('/about/team/bg.png') no-repeat center center/cover` }}
+      style={{ background: `url(${getImageUrl('/about/team/bg.png')}) no-repeat center center/cover` }}
       // Changed p-10 to py-10 px-4 for better mobile spacing
       className='flex flex-col items-center py-10 px-4 mb-10 lg:px-12 md:px-20 min-h-screen relative overflow-hidden'
     >
@@ -23,28 +24,28 @@ const TeamTreeSection = () => {
 
       {/* -- Decorative Leaves (Adjusted positions slightly for safety) -- */}
       <Image
-        src={`${process.env.NEXT_PUBLIC_IMGURL}home/left-leaf.png`}
+        src={getImageUrl("home/left-leaf.png")}
         width={120}
         height={120}
         alt=""
         className='absolute top-24 left-[-20px] md:top-8 md:left-1 opacity-70 w-[80px] md:w-[120px]'
       />
       <Image
-        src={`${process.env.NEXT_PUBLIC_IMGURL}home/right-leaf.png`}
+        src={getImageUrl("home/right-leaf.png")}
         width={120}
         height={120}
         alt=""
         className='absolute top-36 right-[-20px] md:top-8 md:right-1 opacity-70 w-[80px] md:w-[120px]'
       />
       <Image
-        src={`${process.env.NEXT_PUBLIC_IMGURL}home/right-leaf.png`}
+        src={getImageUrl("home/right-leaf.png")}
         width={120}
         height={120}
         alt=""
         className='absolute bottom-4 left-[-20px] md:bottom-8 md:left-0 opacity-70 rotate-180 w-[80px] md:w-[120px]'
       />
       <Image
-        src={`${process.env.NEXT_PUBLIC_IMGURL}home/left-leaf.png`}
+        src={getImageUrl("home/left-leaf.png")}
         width={120}
         height={120}
         alt=""
@@ -63,7 +64,7 @@ const TeamTreeSection = () => {
                 ${row.type === 'single' ? 'md:justify-center' : 'md:justify-between'}
               `}
             >
-              
+
               {row.members.map((member, mIndex) => {
                 const cardId = `${row.id}-${mIndex}`
                 const isExpanded = expandedCard === cardId

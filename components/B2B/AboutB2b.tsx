@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { getImageUrl } from '@/lib/utils'
 import { motion, Variants } from 'framer-motion'
 
 const AboutB2b = () => {
@@ -43,7 +44,7 @@ const AboutB2b = () => {
                         About Our Corporate Wellbeing programmes
                     </h2>
                     <Image
-                        src={`${process.env.NEXT_PUBLIC_IMGURL}home/connection-logo.png`}
+                        src={getImageUrl("home/connection-logo.png")}
                         alt="Flowergrid Logo"
                         width={100}
                         height={100}

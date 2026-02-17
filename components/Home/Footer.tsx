@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 import Link from "next/link";
 import { Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
 
@@ -17,24 +18,24 @@ const TikTokIcon = ({ className }: { className?: string }) => (
 
 const navLinks = [
     { title: "Home", href: "/" },
-    {   
+    {
         title: "About",
         href: "/our-team",
         subLinks: [
             {
                 title: "Samina Khan",
                 href: "/samina-khan-holistic-life-coach",
-                image: `${process.env.NEXT_PUBLIC_IMGURL}about/person1/saminahalf.png`,
+                image: getImageUrl("about/person1/saminahalf.png"),
             },
             {
                 title: "Monira Ahmed",
                 href: "/monira-ahmed-hypnotherapist",
-                image: `/about/person2/1.png`,
+                image: getImageUrl("about/person2/1.png"),
             },
             {
                 title: "Team",
                 href: "/our-team",
-                image: `/b2b/4.jpg`,
+                image: getImageUrl("b2b/4.jpg"),
             },
         ],
     },
@@ -51,7 +52,7 @@ const navLinks = [
             {
                 title: "Corporate Programmes",
                 href: "/corporate-wellbeing-programmes",
-                image: `/b2b/1.jpg`,
+                image: getImageUrl("b2b/1.jpg"),
             },
         ],
     },
@@ -73,17 +74,17 @@ export default function Footer() {
                     <div className="lg:col-span-5 flex flex-col justify-between relative h-[400px] lg:h-auto order-3 lg:order-1 mt-10 lg:mt-0">
                         <div className="absolute bottom-[-40px] z-20 left-[17px] md:left-11 w-[280px] md:w-[350px] lg:w-[450px] pointer-events-none opacity-90">
                             <Image
-                                src={`${process.env.NEXT_PUBLIC_IMGURL}logo/footer flower.png`}
+                                src={getImageUrl("logo/footer flower.png")}
                                 alt="Magnolia"
                                 width={500}
                                 height={800}
                                 className="object-contain w-full h-120"
                             />
                         </div>
-                        <div className="absolute -bottom-13 z-20 flex items-center gap-4 md:gap-6 pl-4 md:pl-8">
-                            <div className="relative w-16 h-16 md:w-24 md:h-24 shrink-0">
+                        <div className="absolute -bottom-11 z-20 flex items-center gap-4 md:gap-6 pl-4 md:pl-8">
+                            <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0">
                                 <Image
-                                    src={`${process.env.NEXT_PUBLIC_IMGURL}logo/Flowergrid-logo.png`}
+                                    src={getImageUrl("logo/Flowergrid-logo.png")}
                                     alt="Luna Logo"
                                     className="object-contain w-full h-full"
                                     fill

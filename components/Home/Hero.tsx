@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
@@ -70,7 +71,7 @@ export default function Hero() {
         <section ref={container} className="relative w-full min-h-screen flex flex-col bg-background overflow-x-hidden">
             <div ref={heroImageRef} className="relative w-full h-[50vh] md:h-[65vh] lg:h-[82vh]">
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/H1.png`}
+                    src={getImageUrl("home/H1.png")}
                     alt="Hero Image"
                     fill
                     className="object-cover object-top"
@@ -81,7 +82,7 @@ export default function Hero() {
             <div className="relative w-full flex-1 px-6 md:px-12 lg:px-14 pb-20 pt-0">
                 <div ref={flowerRef} className="absolute -top-5 right-5 w-40 md:top-10 md:right-3 md:w-100 lg:w-150 pointer-events-none z-0">
                     <Image
-                        src={`${process.env.NEXT_PUBLIC_IMGURL}home/hero-flower.png`}
+                        src={getImageUrl("home/hero-flower.png")}
                         width={600}
                         height={600}
                         alt="Decorative Flower"

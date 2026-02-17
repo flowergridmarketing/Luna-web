@@ -1,6 +1,7 @@
 "use client"
 
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 import { motion, Variants } from 'framer-motion';
 
 const B2bValues = () => {
@@ -65,22 +66,22 @@ const B2bValues = () => {
 
     const values = [
         {
-            icon: `/home/i3.png`,
+            icon: getImageUrl("home/i3.png"),
             title: "Holistic and Practical",
             desc: "Our approach bridges psychology, mindfulness and real workplace challenges."
         },
         {
-            icon: `/home/i4.png`,
+            icon: getImageUrl("home/i4.png"),
             title: "Tailored for Every Culture",
             desc: "We design each corporate wellbeing programme to fit your specific structure, pace, and strategic objectives."
         },
         {
-            icon: `/home/i1.png`,
+            icon: getImageUrl("home/i1.png"),
             title: "Led by Experienced Practitioners",
             desc: "Our multi-disciplinary team of 15+ certified coaches, therapists and wellbeing experts bring both professional insight and human understanding."
         },
         {
-            icon: `/home/i2.png`,
+            icon: getImageUrl("home/i2.png"),
             title: "Sustainable Results",
             desc: "We focus on measurable impact, not quick fixes. Our programmes help create lasting behavioural and cultural change."
         }
@@ -97,7 +98,7 @@ const B2bValues = () => {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/left-leaf.png`}
+                    src={getImageUrl("home/left-leaf.png")}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}
@@ -113,7 +114,7 @@ const B2bValues = () => {
                 viewport={{ once: true, amount: 0.3 }}
             >
                 <Image
-                    src={`${process.env.NEXT_PUBLIC_IMGURL}home/right-leaf.png`}
+                    src={getImageUrl("home/right-leaf.png")}
                     alt="Decorative Leaf"
                     width={200}
                     height={200}

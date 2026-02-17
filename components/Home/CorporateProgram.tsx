@@ -4,31 +4,32 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
+import { getImageUrl } from "@/lib/utils";
 
 const workshops = [
   {
     id: 1,
     title: "Be a leader of you own life",
     desc: "Empower your leaders to inspire and guide teams with confidence, empathy, and clarity. Our workshops develop decision-making, resilience, and emotional intelligence to foster high-performing, motivated, and collaborative leaders.",
-    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 a.png`
+    image: getImageUrl("home/H5 a.png")
   },
   {
     id: 2,
     title: "Communication Skills Training",
     desc: "Enhance team collaboration and workplace clarity through practical communication strategies. Participants learn to listen actively, articulate ideas effectively, and resolve conflicts, improving productivity, engagement, and overall team cohesion.",
-    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 b.png`
+    image: getImageUrl("home/H5 b.png")
   },
   {
     id: 3,
     title: "Wellbeing Programmes",
     desc: "Support staff and students to achieve mental, emotional, and physical balance. Our holistic approach integrates relaxation, stress management, and wellness practices to boost energy, focus, and sustained performance.",
-    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 c.png`
+    image: getImageUrl("home/H5 c.png")
   },
   {
     id: 4,
     title: "Mental Health Awareness",
     desc: "Provide teams and students with practical tools to recognise, manage, and reduce stress and anxiety. These sessions promote resilience, emotional stability, and a supportive, psychologically safe environment.",
-    image: `${process.env.NEXT_PUBLIC_IMGURL}home/H5 d.png`
+    image: getImageUrl("home/H5 d.png")
   }
 ];
 

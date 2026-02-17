@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 import Link from 'next/link';
 
 interface BlogPost {
@@ -14,13 +15,13 @@ interface BlogListingSidebarProps {
 }
 
 const CATEGORIES = [
-    { name: 'Holistic Wellness', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c1.png` },
-    { name: 'Mindfulness & Meditation', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c2.png`},
-    { name: 'Healing Therapies', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c3.png` },
-    { name: 'Emotional Wellbeing', image: `${process.env.NEXT_PUBLIC_IMGURL}blog/c4.png` },
-    { name: 'Nutrition & Lifestyle', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c5.png`},
-    { name: 'Eco-conscious Living', image: `${process.env.NEXT_PUBLIC_IMGURL}blog/c6.png` },
-    { name: 'Workplace Wellness', image:`${process.env.NEXT_PUBLIC_IMGURL}blog/c7.png`},
+    { name: 'Holistic Wellness', image: getImageUrl("blog/c1.png") },
+    { name: 'Mindfulness & Meditation', image: getImageUrl("blog/c2.png") },
+    { name: 'Healing Therapies', image: getImageUrl("blog/c3.png") },
+    { name: 'Emotional Wellbeing', image: getImageUrl("blog/c4.png") },
+    { name: 'Nutrition & Lifestyle', image: getImageUrl("blog/c5.png") },
+    { name: 'Eco-conscious Living', image: getImageUrl("blog/c6.png") },
+    { name: 'Workplace Wellness', image: getImageUrl("blog/c7.png") },
 ];
 
 export default function BlogListingSidebar({ topPosts }: BlogListingSidebarProps) {

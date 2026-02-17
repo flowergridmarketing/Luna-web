@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 import { Clock, Calendar } from 'lucide-react';
 import BlogRenderer from '@/components/BlogRenderer';
 
@@ -63,7 +64,7 @@ export default function BlogPostHero({
             <div className="relative h-screen w-full overflow-hidden">
                 {/* Background Image */}
                 <Image
-                    src={'/blog/individualblogpost.png'}
+                    src={getImageUrl('blog/individualblogpost.png')}
                     alt={title}
                     fill
                     priority

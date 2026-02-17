@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import { getImageUrl } from "@/lib/utils";
 import Image from "next/image";
 import gsap from "gsap";
 // import { useGSAP } from "@gsap/react";
@@ -129,7 +130,7 @@ const programCards: React.FC<programCardsProps> = ({ cards = defaultCards }) => 
                                     {/* Leaf decoration - Inside the card at top */}
                                     <div className="flex justify-center mb-4">
                                         <Image
-                                            src={`${process.env.NEXT_PUBLIC_IMGURL}home/leaf.png`}
+                                            src={getImageUrl("home/leaf.png")}
                                             alt="Leaf decoration"
                                             width={50}
                                             height={50}

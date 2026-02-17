@@ -2,6 +2,7 @@
 
 import React, { useRef, useLayoutEffect } from 'react';
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PracticesSection from './PracticesSection';
@@ -12,17 +13,17 @@ const practices = [
   {
     "id": "mind",
     "title": "Mind",
-    "image": `${process.env.NEXT_PUBLIC_IMGURL}home/mind.jpg`
+    "image": getImageUrl("home/mind.jpg")
   },
   {
     "id": "body",
     "title": "Body",
-    "image": `/home/body.jpeg`
+    "image": getImageUrl("home/body.jpeg")
   },
   {
     "id": "spirit",
     "title": "Spirit",
-    "image": `${process.env.NEXT_PUBLIC_IMGURL}home/spirit.jpg`
+    "image": getImageUrl("home/spirit.jpg")
   }
 ];
 
@@ -162,14 +163,14 @@ export default function TransformationService() {
         ref={containerRef}
         className="relative w-full h-screen overflow-hidden bg-[#F3EAD8]"
         style={{
-          backgroundImage: `url('/home/service-bg.png')`,
+          backgroundImage: `url(${getImageUrl('/home/service-bg.png')})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div ref={leafRef} className="absolute top-10 -left-1 md:top-8 md:-left-2 z-10">
           <Image
-            src={`/home/service-leaf.png`}
+            src={getImageUrl("home/service-leaf.png")}
             alt="Leaf"
             width={80}
             height={80}
@@ -199,7 +200,7 @@ export default function TransformationService() {
             className="absolute bottom-35 -right-3 md:right-10 lg:right-20 md:-bottom-40 -translate-y-1/2 z-10"
           >
             <Image
-              src={`${process.env.NEXT_PUBLIC_IMGURL}home/women-line-art.png`}
+              src={getImageUrl("home/women-line-art.png")}
               alt="Woman"
               width={400}
               height={400}

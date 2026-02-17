@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
+import { getImageUrl } from '@/lib/utils';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -16,7 +17,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const lampRef = useRef<HTMLDivElement>(null);
-  console.log(imageClassName,'image width')
+  console.log(imageClassName, 'image width')
 
   useGSAP(() => {
     // TEXT ANIMATION
@@ -111,7 +112,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
             w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[320px]
           "
         >
-          <Image src={`${process.env.NEXT_PUBLIC_IMGURL}about/lamp.png`} alt="Lamp" width={360} height={200} className="object-contain w-full h-auto" />
+          <Image src={getImageUrl("about/lamp.png")} alt="Lamp" width={360} height={200} className="object-contain w-full h-auto" />
         </div>
 
         <div
@@ -139,7 +140,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
             marginLeft: "34px"
           }}
         >
-          <Image src={`${process.env.NEXT_PUBLIC_IMGURL}about/tree.png`} alt="Plant" width={400} height={400} className="w-full h-auto" />
+          <Image src={getImageUrl("about/tree.png")} alt="Plant" width={400} height={400} className="w-full h-auto" />
 
         </div>
 
@@ -152,7 +153,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
           "
         >
           <Image
-            src={`${process.env.NEXT_PUBLIC_IMGURL}about/tablewithplant.png`}
+            src={getImageUrl("about/tablewithplant.png")}
             alt="Table"
             width={420}
             height={200}
