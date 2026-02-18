@@ -28,7 +28,7 @@ export default function ContactInfoSection() {
 
     useGSAP(() => {
         const tl = gsap.timeline({
-            scrollTrigger: {
+            scrollTrigger: {    
                 trigger: sectionRef.current,
                 start: "top center",
                 toggleActions: "play none none reverse",
