@@ -33,7 +33,7 @@ export default function Hero() {
 
             <div className="absolute inset-0">
                 <Image
-                    src={getImageUrl("membership/membershiphero.jpeg")}
+                    src={getImageUrl("contact/contactHero.jpg")}
                     alt="Membership Hero"
                     fill
                     className="object-cover"
