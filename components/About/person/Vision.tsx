@@ -74,7 +74,7 @@ export default function VisionSection() {
         </div>
         {/* Button */}
         <div className="vision-animate flex justify-center">
-          <Link href="/holistic-wellness-membership" className="px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors">
+          <Link href="/holistic-wellness-membership" className="px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors whitespace-nowrap">
             Discover The Flowergrid Philosophy
           </Link>
         </div>

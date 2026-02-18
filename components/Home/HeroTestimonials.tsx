@@ -28,7 +28,7 @@ const defaultTestimonials: Testimonial[] = [
         id: 3,
         quote: "My holistic wellbeing has improved significantly since joining Flowergrid. I feel calmer, more focused, and better equipped to manage my mind, body, and spirit.",
         author: "Emily Carter, Manchester",
-        image: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=200&h=200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=688&auto=format&fit=crop",
         rating: 5,
     },
     {
@@ -49,7 +49,7 @@ const defaultTestimonials: Testimonial[] = [
         id: 6,
         quote: "Flowergrid's integrative wellness approach reminded me that healing is a personal journey. Their support allowed me to progress at my own pace and feel fully restored.",
         author: "Michael Foster, Brighton",
-        image: "https://images.unsplash.com/photo-1531123414780-f74242c2b052?q=80&w=200&h=200&auto=format&fit=crop",
+        image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=687&auto=format&fit=crop",
         rating: 5,
     },
     {

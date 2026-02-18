@@ -72,7 +72,7 @@ const MembershipAbout = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <Link href="/holistic-wellness-membership" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors">
+                    <Link href="/holistic-wellness-membership" className="connection-button px-10 py-4 bg-primary text-white rounded-full font-medium text-base md:text-lg hover:bg-primary/90 transition-colors whitespace-nowrap">
                         Discover The Flowergrid Philosophy
                     </Link>
                 </div>
