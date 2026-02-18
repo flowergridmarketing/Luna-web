@@ -39,7 +39,7 @@ const Qualifications: React.FC<QualificationsProps> = ({ qualifications = [], ed
             {/* Vision Section */}
             {vision && (
                 <div className='flex flex-col px-6 md:px-12 lg:px-20 py-12 md:py-16'>
-                    <h1 className='flex flex-wrap items-center text-3xl md:text-4xl lg:text-5xl font-heading font-normal leading-tight gap-4'>
+                    <h1 className='flex items-center text-3xl md:text-4xl lg:text-5xl font-heading font-normal leading-tight gap-4'>
                         {vision.title}
                         {vision.image && (
                             <Image
