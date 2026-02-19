@@ -12,9 +12,66 @@ import Qualifications from '@/components/About/person/Qualifications'
 import Support from '@/components/About/person/Support'
 
 export const metadata: Metadata = {
-    title: "Samina Khan | Holistic Life Coach & Energy Healer - Flowergrid",
-    description: "Empower your journey with Samina Khan. Offering holistic life coaching and energy healing to unlock your true potential and inner peace.",
-}
+    metadataBase: new URL("https://flowergrid.co.uk"),
+
+    title: "Samina Khan | Holistic Life Coach in Croydon | Flowergrid",
+
+    description:
+        "Meet Samina Khan, a Holistic Life Coach in Croydon with 20+ years of experience. Specialising in life and transformation coaching, NLP, and emotional wellbeing.",
+
+    keywords: [
+        "Holistic Life Coach in Croydon",
+        "Life and Transformation Coaching",
+        "Mind Body Spirit Coaching",
+        "Emotional Wellbeing Coaching",
+        "NLP Coaching Croydon",
+        "Samina Khan Coach"
+    ],
+
+    authors: [{ name: "Samina Khan" }],
+
+    alternates: {
+        canonical:
+            "https://flowergrid.co.uk/samina-khan-holistic-life-coach",
+    },
+
+    openGraph: {
+        title:
+            "Samina Khan | Holistic Life Coach in Croydon | Flowergrid",
+        description:
+            "Holistic life coach in Croydon offering life and transformation coaching, NLP, and emotional wellbeing support for mind, body and spirit.",
+        url: "https://flowergrid.co.uk/samina-khan-holistic-life-coach",
+        siteName: "Flowergrid",
+        locale: "en_GB",
+        type: "profile",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    category: "Holistic Life Coaching",
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Samina Khan",
+    jobTitle: "Holistic Life Coach",
+    worksFor: {
+        "@type": "Organization",
+        name: "Flowergrid",
+        url: "https://flowergrid.co.uk"
+    },
+    url: "https://flowergrid.co.uk/samina-khan-holistic-life-coach",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Croydon",
+        addressCountry: "GB"
+    },
+    sameAs: []
+};
 
 const SaminaPage = () => {
     const slug = 'person1';
@@ -33,6 +90,10 @@ const SaminaPage = () => {
 
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <PersonHero
                 imageSrc={personData.hero.imageSrc}
                 text={personData.hero.text}

@@ -117,13 +117,102 @@ const faqs = [
 ]
 
 export const metadata: Metadata = {
-  title: "Our Holistic Services | Hypnotherapy, Coaching & Healing - Flowergrid",
-  description: "Explore our diverse range of holistic services including hypnotherapy, life coaching, and energy work tailored to your unique needs.",
-}
+  metadataBase: new URL("https://flowergrid.co.uk"),
+
+  title: "Holistic Wellness Services | Mind Body Spirit Transformation | Flowergrid",
+
+  description:
+    "Explore Flowergrid’s holistic wellness services. We combine medical science, life coaching, and mind body spirit healing for lasting balance and clarity.",
+
+  keywords: [
+    "Holistic Wellness Services",
+    "Mind Body Spirit Wellness",
+    "Life and Transformation Coaching",
+    "Therapeutic Mental Wellness",
+    "Medical and Aesthetic Wellness",
+    "Energy Healing Services",
+    "Integrative Wellness UK"
+  ],
+
+  authors: [{ name: "Flowergrid" }],
+
+  alternates: {
+    canonical:
+      "https://flowergrid.co.uk/holistic-wellness-services",
+  },
+
+  openGraph: {
+    title:
+      "Holistic Wellness Services | Mind Body Spirit Transformation | Flowergrid",
+    description:
+      "Integrative holistic wellness services combining medical science, therapy, coaching and energy healing for balanced mind, body and spirit.",
+    url: "https://flowergrid.co.uk/holistic-wellness-services",
+    siteName: "Flowergrid",
+    locale: "en_GB",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  category: "Holistic Wellness Services",
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Holistic Wellness Services",
+  provider: {
+    "@type": "Organization",
+    name: "Flowergrid",
+    url: "https://flowergrid.co.uk"
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "United Kingdom"
+  },
+  description:
+    "Integrated holistic wellness services combining life coaching, therapeutic mental wellness, energy healing and medical expertise."
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://flowergrid.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Services",
+      "item": "https://flowergrid.co.uk/holistic-wellness-services"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Holistic Wellness Services",
+      "item": "https://flowergrid.co.uk/holistic-wellness-services"
+    }
+  ]
+};
 
 const page = () => {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Intro />
       <ServiceCards />
       <MeetExperts />

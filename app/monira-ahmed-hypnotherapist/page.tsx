@@ -13,9 +13,67 @@ import Qualifications from '@/components/About/person/Qualifications'
 import Support from '@/components/About/person/Support'
 
 export const metadata: Metadata = {
-    title: "Monira Ahmed | Clinical Hypnotherapist & Holistic Wellness Coach - Flowergrid",
-    description: "Experience transformative healing with Monira Ahmed. Specializing in clinical hypnotherapy and holistic wellness to align your mind, body, and spirit.",
-}
+    metadataBase: new URL("https://flowergrid.co.uk"),
+
+    title: "Monira Ahmed | Hypnotherapist in Croydon & NLP Coach | Flowergrid",
+
+    description:
+        "Meet Monira Ahmed, a Hypnotherapist in Croydon and Master NLP Coach. Combining global strategy with RTT and hypnotherapy for deep personal transformation.",
+
+    keywords: [
+        "Hypnotherapist in Croydon",
+        "NLP Coach Croydon",
+        "Rapid Transformational Therapy",
+        "RTT Practitioner Croydon",
+        "Subconscious Transformation",
+        "Anxiety and Stress Management Croydon",
+        "Monira Ahmed Hypnotherapist"
+    ],
+
+    authors: [{ name: "Monira Ahmed" }],
+
+    alternates: {
+        canonical:
+            "https://flowergrid.co.uk/monira-ahmed-hypnotherapist",
+    },
+
+    openGraph: {
+        title:
+            "Monira Ahmed | Hypnotherapist in Croydon & NLP Coach | Flowergrid",
+        description:
+            "Hypnotherapist in Croydon and Master NLP Coach offering RTT, mindset transformation and conscious leadership development.",
+        url: "https://flowergrid.co.uk/monira-ahmed-hypnotherapist",
+        siteName: "Flowergrid",
+        locale: "en_GB",
+        type: "profile",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    category: "Hypnotherapy and NLP Coaching",
+};
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Monira Ahmed",
+    jobTitle: "Hypnotherapist and NLP Coach",
+    worksFor: {
+        "@type": "Organization",
+        name: "Flowergrid",
+        url: "https://flowergrid.co.uk"
+    },
+    url: "https://flowergrid.co.uk/monira-ahmed-hypnotherapist",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Croydon",
+        addressCountry: "GB"
+    },
+    areaServed: "United Kingdom"
+};
 
 const MoniraPage = () => {
     const slug = 'person2';
@@ -34,6 +92,10 @@ const MoniraPage = () => {
 
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <PersonHero
                 imageSrc={personData.hero.imageSrc}
                 text={personData.hero.text}

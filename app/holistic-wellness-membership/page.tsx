@@ -51,13 +51,115 @@ const membershipFaqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Holistic Wellness Membership | Exclusive Community & Support - Flowergrid",
-  description: "Join the Flowergrid membership for ongoing support, exclusive resources, and a community dedicated to holistic growth and wellbeing.",
-}
+  title: {
+    default: "Flowergrid Holistic Wellness Membership | Mind Body Spirit Transformation",
+    template: "%s | Flowergrid Holistic Wellness",
+  },
+  description: "Join the Flowergrid Holistic Wellness Membership. A guided holistic wellness membership for mind, body, and soul alignment with coaching, therapy, and community support.",
+  keywords: [
+    "Holistic Wellness",
+    "Holistic wellbeing",
+    "Mind Body Spirit Wellness",
+    "Life and Transformation Coaching",
+    "Integrative wellness",
+    "Holistic membership",
+    "Mind-body-soul transformation",
+    "Flowergrid membership"
+  ],
+  authors: [{ name: "Samina Khan" }],
+  openGraph: {
+    title: "Flowergrid Holistic Wellness Membership | Mind Body Spirit Transformation",
+    description: "Join the Flowergrid Holistic Wellness Membership. A guided holistic wellness membership for mind, body, and soul alignment with coaching, therapy, and community support.",
+    url: "https://flowergrid.co.uk/membership",
+    siteName: "Flowergrid",
+    type: "website",
+    images: [
+      {
+        url: "https://flowergrid.co.uk/membership-og.jpg", // replace with actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Flowergrid Holistic Wellness Membership",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flowergrid Holistic Wellness Membership | Mind Body Spirit Transformation",
+    description: "Join the Flowergrid Holistic Wellness Membership. A guided holistic wellness membership for mind, body, and soul alignment with coaching, therapy, and community support.",
+    images: ["https://flowergrid.co.uk/membership-og.jpg"], // same as OG image
+    site: "@flowergrid", // optional Twitter handle
+    creator: "@saminaKhan", // optional
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://flowergrid.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Membership",
+      "item": "https://flowergrid.co.uk/membership"
+    }
+  ]
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Flowergrid Holistic Wellness Membership",
+  "url": "https://flowergrid.co.uk/membership",
+  "description": "A guided holistic wellness membership for mind, body, and soul alignment with coaching, therapy, and community support.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Flowergrid",
+    "url": "https://flowergrid.co.uk/",
+    "logo": "https://flowergrid.co.uk/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fz6xh4w9tp%2Flogo%2FFlowergrid-logo.png&w=1920&q=75",
+    "sameAs": [
+      "https://www.instagram.com/flowergrid",
+      "https://www.facebook.com/flowergrid",
+      "https://www.linkedin.com/company/flowergrid"
+    ]
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "serviceType": "Holistic Wellness Membership",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Individuals seeking mind, body, and spirit wellbeing"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://flowergrid.co.uk/membership",
+    "priceCurrency": "GBP",
+    "availability": "https://schema.org/InStock"
+  }
+};
 
 const MembershipPage = () => {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Hero />
       <MembershipAbout />
       <CardSection />

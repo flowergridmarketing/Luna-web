@@ -94,13 +94,134 @@ const ProgramTestimonials = [
   },
 ]
 export const metadata: Metadata = {
-  title: "Holistic Wellness Programme | Comprehensive Transformation - Flowergrid",
-  description: "Embark on a structured holistic wellness programme designed to harmonize your mind, body, and spirit for lasting change.",
-}
+  title: {
+    default: "Flowergrid Holistic Wellness Programmes | Transform Mind, Body & Spirit",
+    template: "%s | Flowergrid Holistic Wellness",
+  },
+  description: "Explore Flowergrid holistic wellness programmes. From 5-day intensives to 12-week coaching, our holistic wellness programmes support mind, body, and spirit transformation.",
+  keywords: [
+    "Holistic Wellness",
+    "Holistic wellbeing",
+    "Mind Body Spirit Wellness",
+    "Life and Transformation Coaching",
+    "Integrative wellness",
+    "Holistic Programmes",
+    "Mind-body-soul transformation",
+    "Wellness Coaching",
+    "Flowergrid Programmes"
+  ],
+  authors: [{ name: "Samina Khan" }],
+  openGraph: {
+    title: "Flowergrid Holistic Wellness Programmes | Transform Mind, Body & Spirit",
+    description: "Explore Flowergrid holistic wellness programmes. From 5-day intensives to 12-week coaching, our holistic wellness programmes support mind, body, and spirit transformation.",
+    url: "https://flowergrid.co.uk/holistic-wellness-programmes",
+    siteName: "Flowergrid",
+    type: "website",
+    images: [
+      {
+        url: "https://flowergrid.co.uk/programmes-og.jpg", // replace with your actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Flowergrid Holistic Wellness Programmes",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Flowergrid Holistic Wellness Programmes | Transform Mind, Body & Spirit",
+    description: "Explore Flowergrid holistic wellness programmes. From 5-day intensives to 12-week coaching, our holistic wellness programmes support mind, body, and spirit transformation.",
+    images: ["https://flowergrid.co.uk/programmes-og.jpg"],
+    site: "@flowergrid", // optional
+    creator: "@saminaKhan", // optional
+  },
+};
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Flowergrid Holistic Wellness Programmes",
+  "url": "https://flowergrid.co.uk/holistic-wellness-programmes",
+  "description": "Explore Flowergrid holistic wellness programmes. From 5-day intensives to 12-week coaching, our holistic wellness programmes support mind, body, and spirit transformation.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Flowergrid",
+    "url": "https://flowergrid.co.uk/",
+    "logo": "https://flowergrid.co.uk/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fz6xh4w9tp%2Flogo%2FFlowergrid-logo.png&w=1920&q=75",
+    "sameAs": [
+      "https://www.instagram.com/flowergrid",
+      "https://www.facebook.com/flowergrid",
+      "https://www.linkedin.com/company/flowergrid"
+    ]
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "serviceType": "Holistic Wellness Programmes",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Flowergrid Programmes",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "5-Day Inner Transform Programme",
+          "description": "Dive deep into a complete mind-body-spirit transformation.",
+          "url": "https://flowergrid.co.uk/holistic-wellness-programmes#5-day-inner-transform"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Power Hour Sessions",
+          "description": "Supercharge your journey with a dedicated one-on-one session.",
+          "url": "https://flowergrid.co.uk/holistic-wellness-programmes#power-hour"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "1-Day Workshops",
+          "description": "Immerse yourself in a full-day workshop designed to restore balance.",
+          "url": "https://flowergrid.co.uk/holistic-wellness-programmes#workshops"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Tailored Coaching Programmes",
+          "description": "Experience deep, lasting transformation with personalised coaching.",
+          "url": "https://flowergrid.co.uk/holistic-wellness-programmes#coaching"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Corporate & Community programmes",
+          "description": "Empower your teams and communities with workshops designed to enhance leadership.",
+          "url": "https://flowergrid.co.uk/corporate-wellbeing-programmes"
+        }
+      }
+    ]
+  }
+};
 
 const page = () => {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <ProgramIntro />
       <ProgramCards />
       <HeroTestimonials title='Client Experiences with Flowergrid Holistic Wellness Programmes' testimonials={ProgramTestimonials} />

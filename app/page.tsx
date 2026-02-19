@@ -88,9 +88,54 @@ const coreValues = [
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://flowergrid.co.uk"),
+
   title: "Flowergrid Holistic Wellness | Mind Body Spirit Transformation",
-  description: "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity.",
-}
+
+  description:
+    "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity in Croydon, UK.",
+
+  keywords: [
+    "Holistic Wellness",
+    "Holistic Wellbeing",
+    "Mind Body Spirit Wellness",
+    "Life and Transformation Coaching",
+    "Integrative Wellness",
+    "Holistic Wellness Croydon",
+    "Emotional Wellbeing Support UK"
+  ],
+
+  authors: [{ name: "Samina Khan" }],
+
+  alternates: {
+    canonical: "https://flowergrid.co.uk/",
+  },
+
+  openGraph: {
+    title:
+      "Flowergrid Holistic Wellness | Mind Body Spirit Transformation",
+    description:
+      "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity.",
+    url: "https://flowergrid.co.uk/",
+    siteName: "Flowergrid",
+    locale: "en_GB",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  category: "Holistic Wellness",
+};
 
 const jsonLd = {
   "@context": "https://schema.org",

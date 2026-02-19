@@ -95,13 +95,165 @@ const contactTestimonials = [
 ];
 
 export const metadata: Metadata = {
-    title: "Contact Us | Start Your Holistic Wellness Journey - Flowergrid",
-    description: "Get in touch with Flowergrid to discuss your wellness needs. We're here to support your path to transformation and balance.",
-}
+    title: {
+        default: "Contact Flowergrid | Holistic Wellness Mind, Body & Spirit",
+        template: "%s | Flowergrid Holistic Wellness",
+    },
+    description: "Get in touch with Flowergrid for holistic guidance in mind, body, and spirit wellbeing, personal growth, and integrative wellness support in Croydon and online.",
+    keywords: [
+        "Holistic Wellness",
+        "Mind Body Spirit",
+        "Integrative Wellness",
+        "Flowergrid Contact",
+        "Wellbeing Support",
+        "Life Coaching",
+        "Emotional Wellbeing"
+    ],
+    authors: [{ name: "Samina Khan" }],
+    openGraph: {
+        title: "Contact Flowergrid | Holistic Wellness Mind, Body & Spirit",
+        description: "Reach out to Flowergrid for holistic guidance, mind-body-spirit support, and personal growth coaching in Croydon or online.",
+        url: "https://flowergrid.co.uk/contact-us",
+        siteName: "Flowergrid",
+        type: "website",
+    },
+    robots: {
+        index: true,
+        follow: true,
+    },
+};
+
+const contactPageSchemas = {
+    "@context": "https://schema.org",
+    "@graph": [
+        // Breadcrumb Schema
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://flowergrid.co.uk/contact-us#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://flowergrid.co.uk/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Contact Us",
+                    "item": "https://flowergrid.co.uk/contact-us"
+                }
+            ]
+        },
+
+        // LocalBusiness / Organization Schema
+        {
+            "@type": "LocalBusiness",
+            "@id": "https://flowergrid.co.uk/contact-us#organization",
+            "name": "Flowergrid",
+            "url": "https://flowergrid.co.uk/",
+            "logo": "https://flowergrid.co.uk/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fz6xh4w9tp%2Flogo%2FFlowergrid-logo.png&w=1920&q=75",
+            "image": "https://flowergrid.co.uk/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fz6xh4w9tp%2Flogo%2FFlowergrid-logo.png&w=1920&q=75",
+            "sameAs": [
+                "https://www.instagram.com/flowergrid",
+                "https://www.facebook.com/flowergrid",
+                "https://www.linkedin.com/company/flowergrid",
+                "https://www.tiktok.com/@flowergrid",
+                "https://www.youtube.com/@flowergrid"
+            ],
+            "telephone": "+44 7432 211096",
+            "email": "sk@flowergrid.co.uk",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Coulsdon",
+                "addressLocality": "Surrey",
+                "postalCode": "CR5 2JA",
+                "addressCountry": "GB"
+            },
+            "openingHours": "Mo-Fr 09:00-18:00"
+        },
+
+        // FAQ Schema
+        {
+            "@type": "FAQPage",
+            "@id": "https://flowergrid.co.uk/contact-us#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "I am new to holistic wellness. Where is the best place to start?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Start with a complimentary discovery call to understand your personal goals and receive guidance on coaching, workshops, or wellness programmes."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I book a holistic wellness consultation at Flowergrid?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Book online, call +44 7432 211096, or email sk@flowergrid.co.uk. Free 30-minute discovery sessions are available."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What qualifications do your holistic wellness practitioners have?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Our team includes qualified doctors, certified life coaches, licensed therapists, and accredited holistic practitioners in NLP, hypnotherapy, Reiki, and more."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I combine different holistic wellbeing services in my programme?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Many clients pair life and transformation coaching with stress management or energy healing for complete mind, body, and spirit wellness."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Do you offer holistic wellness services in Croydon and South London?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Our centre in Coulsdon, CR5 2JA serves Croydon, Surrey, South London, and online sessions across the UK and internationally."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What are your fees for a discovery call or initial session?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The initial discovery call is free. Fees for subsequent sessions vary by practitioner and programme. Contact us for current rates."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What happens during a corporate wellness workshop?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Interactive workshops focus on resilience, leadership, communication, and stress management to give teams practical strategies for performance and wellbeing."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "What is your policy for cancelling or rescheduling an appointment?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We require at least 48 hours notice for cancellations or rescheduling to avoid fees, ensuring appointments are available for others."
+                    }
+                }
+            ]
+        }
+    ]
+};
 
 const ContactPage = () => {
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchemas) }}
+            />
             <div className="h-screen flex items-center justify-center" style={{ backgroundImage: `url(${getImageUrl('contact/contact-hero.png')})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                 <h1 className='text-6xl lg:text-8xl font-medium text-white! text-center'>Contact Us</h1>
             </div>
