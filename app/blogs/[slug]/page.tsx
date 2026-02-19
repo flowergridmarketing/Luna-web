@@ -3,6 +3,7 @@ import connectDB from '@/lib/db';
 import Blog from '@/models/Blog';
 import BlogPostLayout from './BlogPostLayout';
 import '@/models/Author';
+import type { Metadata, ResolvingMetadata } from 'next'
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -34,6 +35,42 @@ async function getFeaturedBlogs(excludeSlug: string) {
     } catch (error) {
         console.error('Failed to fetch featured blogs:', error);
         return [];
+    }
+}
+
+function extractCoverImage(content: any): string | null {
+    if (!content || !content.blocks) return null;
+    const imageBlock = content.blocks.find((block: any) => block.type === 'image');
+    return imageBlock?.data?.file?.url || null;
+}
+
+export async function generateMetadata(
+    { params }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const resolvedParams = await params
+    const blog = await getBlog(resolvedParams.slug)
+
+    if (!blog) {
+        return {
+            title: 'Blog Not Found',
+        }
+    }
+
+    const previousImages = (await parent).openGraph?.images || []
+    const coverImage = extractCoverImage(blog.content)
+
+    return {
+        title: `${blog.title} - Flowergrid`,
+        description: blog.description,
+        openGraph: {
+            title: blog.title,
+            description: blog.description,
+            images: coverImage ? [coverImage, ...previousImages] : previousImages,
+            type: 'article',
+            publishedTime: blog.createdAt,
+            authors: blog.author?.name ? [blog.author.name] : [],
+        },
     }
 }
 

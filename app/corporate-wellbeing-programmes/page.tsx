@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Connect from '@/components/About/person/Connect'
 import { getImageUrl } from '@/lib/utils'
 import AboutB2b from '@/components/B2B/AboutB2b'
@@ -86,6 +87,11 @@ const b2bTestimonials = [
         rating: 5,
     }
 ];
+
+export const metadata: Metadata = {
+    title: "Corporate Wellbeing Programmes & Leadership Coaching - Flowergrid",
+    description: "Elevate your organization with Flowergrid's corporate wellbeing programmes. Focusing on emotional intelligence, resilience, and sustainable leadership.",
+}
 
 const B2BPage = () => {
     return (

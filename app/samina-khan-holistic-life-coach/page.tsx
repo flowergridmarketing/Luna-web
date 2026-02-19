@@ -1,4 +1,4 @@
-"use client"
+import type { Metadata } from 'next'
 import React from 'react'
 import PersonHero from '@/components/About/person/PersonHero'
 import PersonBio from '@/components/About/person/Bio'
@@ -10,6 +10,11 @@ import JourneySection from '@/components/About/person/JourneySection'
 import Connect from '@/components/About/person/Connect'
 import Qualifications from '@/components/About/person/Qualifications'
 import Support from '@/components/About/person/Support'
+
+export const metadata: Metadata = {
+    title: "Samina Khan | Holistic Life Coach & Energy Healer - Flowergrid",
+    description: "Empower your journey with Samina Khan. Offering holistic life coaching and energy healing to unlock your true potential and inner peace.",
+}
 
 const SaminaPage = () => {
     const slug = 'person1';

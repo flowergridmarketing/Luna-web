@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import React from 'react'
 import { myPrograms } from '../data/programs'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
@@ -65,7 +66,7 @@ const ProgramTestimonials = [
     author: "Tom, Financial Analyst, Manchester",
     image: "https://images.unsplash.com/photo-1627753779220-387ca0a1d952?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
-    
+
   },
   {
     id: 3,
@@ -73,7 +74,7 @@ const ProgramTestimonials = [
     author: "Rina, Freelance Designer, Birmingham",
     image: "https://images.unsplash.com/photo-1629224181689-3fa4e728d5ef?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5
-    
+
   },
   {
     id: 4,
@@ -81,7 +82,7 @@ const ProgramTestimonials = [
     author: "Hassan, Team Leader, Croydon",
     image: "https://images.unsplash.com/photo-1593614202631-c29a06abba1d?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 4
-    
+
   },
   {
     id: 5,
@@ -92,6 +93,11 @@ const ProgramTestimonials = [
 
   },
 ]
+export const metadata: Metadata = {
+  title: "Holistic Wellness Programme | Comprehensive Transformation - Flowergrid",
+  description: "Embark on a structured holistic wellness programme designed to harmonize your mind, body, and spirit for lasting change.",
+}
+
 const page = () => {
   return (
     <>

@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Hero from "@/components/Home/Hero";
 import { getImageUrl } from "@/lib/utils";
 import MaskScroll from "@/components/Home/MaskScroll";
@@ -86,9 +87,38 @@ const coreValues = [
 ];
 
 
+export const metadata: Metadata = {
+  title: "Flowergrid Holistic Wellness | Mind Body Spirit Transformation",
+  description: "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity.",
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "Flowergrid",
+  image: "https://flowergrid.co.uk/og-image.jpg",
+  url: "https://flowergrid.co.uk",
+  telephone: "+44 7432 211096",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Coulsdon",
+    addressLocality: "Croydon",
+    postalCode: "CR5 2JA",
+    addressCountry: "GB"
+  },
+  founder: "Samina Khan",
+  areaServed: "United Kingdom"
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd)
+        }}
+      />
       <Hero />
       <MaskScroll />
       <Connections />
