@@ -10,14 +10,17 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { headers } from "next/headers";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const headersList = headers();
-  const host = (await headersList).get("host") || "";
+  const headersList = await headers();
+  const host = headersList.get("host") || "";
+  const pathname = headersList.get("x-pathname") || "";
 
   const isUK = host.includes("flowergrid.co.uk");
 
   const baseUrl = isUK
     ? "https://flowergrid.co.uk"
     : "https://flowergriid.com";
+
+  const canonicalUrl = `${baseUrl}${pathname}`;
 
   return {
     metadataBase: new URL(baseUrl),
@@ -30,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       : "Flowergrid offers holistic wellness, life and transformation coaching, emotional wellbeing support and mind body spirit healing for lasting balance and clarity worldwide.",
 
     alternates: {
-      canonical: baseUrl,
+      canonical: canonicalUrl,
       languages: {
         "en": "https://flowergriid.com",
         "en-GB": "https://flowergrid.co.uk",
@@ -43,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description: isUK
         ? "Holistic wellness and transformation coaching in Croydon, UK."
         : "Global holistic wellness and transformation coaching.",
-      url: baseUrl,
+      url: canonicalUrl,
       siteName: "Flowergrid",
       locale: isUK ? "en_GB" : "en_US",
       type: "website",
