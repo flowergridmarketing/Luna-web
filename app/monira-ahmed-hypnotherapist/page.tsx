@@ -1,4 +1,4 @@
-"use client"
+import type { Metadata } from 'next'
 import React from 'react'
 import PersonHero from '@/components/About/person/PersonHero'
 import PersonBio from '@/components/About/person/Bio'
@@ -11,6 +11,11 @@ import WorkSpecifications from '@/components/About/person/WorkSpecifications'
 import Vision from '@/components/About/person/Vision'
 import Qualifications from '@/components/About/person/Qualifications'
 import Support from '@/components/About/person/Support'
+
+export const metadata: Metadata = {
+    title: "Monira Ahmed | Clinical Hypnotherapist & Holistic Wellness Coach - Flowergrid",
+    description: "Experience transformative healing with Monira Ahmed. Specializing in clinical hypnotherapy and holistic wellness to align your mind, body, and spirit.",
+}
 
 const MoniraPage = () => {
     const slug = 'person2';

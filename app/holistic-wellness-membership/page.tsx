@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Connect from '@/components/About/person/Connect'
 import FaqSection from '@/components/Contact/FAQSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
@@ -48,6 +49,11 @@ const membershipFaqs = [
     answer: "Yes. programmes can be paid in full or via instalments, making it easier to invest in your personal growth at a pace that suits you."
   }
 ];
+
+export const metadata: Metadata = {
+  title: "Holistic Wellness Membership | Exclusive Community & Support - Flowergrid",
+  description: "Join the Flowergrid membership for ongoing support, exclusive resources, and a community dedicated to holistic growth and wellbeing.",
+}
 
 const MembershipPage = () => {
   return (

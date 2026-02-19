@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { getImageUrl } from '@/lib/utils'
 import ContactForm from '@/components/Contact/ContactForm'
 import ContactInfo from '@/components/Contact/ContactInfo'
@@ -92,6 +93,11 @@ const contactTestimonials = [
         rating: 5,
     }
 ];
+
+export const metadata: Metadata = {
+    title: "Contact Us | Start Your Holistic Wellness Journey - Flowergrid",
+    description: "Get in touch with Flowergrid to discuss your wellness needs. We're here to support your path to transformation and balance.",
+}
 
 const ContactPage = () => {
     return (

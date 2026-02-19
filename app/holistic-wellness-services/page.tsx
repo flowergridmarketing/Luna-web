@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import CoreValues from '@/components/Home/CoreValues'
 import FaqSection from '@/components/Contact/FAQSection'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
@@ -114,6 +115,11 @@ const faqs = [
     "answer": "Programme length depends on your goals. One-to-one coaching is often delivered in 6 or 12-week formats, while therapy and medical plans are tailored individually. Your practitioner will outline a clear structure during your consultation."
   }
 ]
+
+export const metadata: Metadata = {
+  title: "Our Holistic Services | Hypnotherapy, Coaching & Healing - Flowergrid",
+  description: "Explore our diverse range of holistic services including hypnotherapy, life coaching, and energy work tailored to your unique needs.",
+}
 
 const page = () => {
   return (
