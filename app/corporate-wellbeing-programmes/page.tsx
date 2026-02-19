@@ -89,13 +89,103 @@ const b2bTestimonials = [
 ];
 
 export const metadata: Metadata = {
-    title: "Corporate Wellbeing Programmes & Leadership Coaching - Flowergrid",
-    description: "Elevate your organization with Flowergrid's corporate wellbeing programmes. Focusing on emotional intelligence, resilience, and sustainable leadership.",
-}
+    metadataBase: new URL("https://flowergrid.co.uk"),
+
+    title: "Corporate Wellbeing Programmes & Leadership Coaching | Flowergrid",
+
+    description:
+        "Transform your workplace with Flowergrid's bespoke corporate wellbeing programmes. We combine emotional intelligence, resilience training, and holistic coaching.",
+
+    keywords: [
+        "Corporate Wellbeing Programmes",
+        "Corporate Wellness Programmes UK",
+        "Leadership Coaching for Organisations",
+        "Emotional Intelligence Training",
+        "Workplace Resilience Training",
+        "Corporate Mindfulness Training",
+        "Workplace Wellbeing Workshops"
+    ],
+
+    authors: [{ name: "Flowergrid" }],
+
+    alternates: {
+        canonical:
+            "https://flowergrid.co.uk/corporate-wellbeing-programmes",
+    },
+
+    openGraph: {
+        title:
+            "Corporate Wellbeing Programmes & Leadership Coaching | Flowergrid",
+        description:
+            "Bespoke corporate wellbeing programmes combining leadership coaching, emotional intelligence and resilience training for lasting cultural change.",
+        url: "https://flowergrid.co.uk/corporate-wellbeing-programmes",
+        siteName: "Flowergrid",
+        locale: "en_GB",
+        type: "website",
+    },
+
+    robots: {
+        index: true,
+        follow: true,
+    },
+
+    category: "Corporate Wellbeing and Leadership Coaching",
+};
+
+const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Corporate Wellbeing Programmes",
+    provider: {
+        "@type": "Organization",
+        name: "Flowergrid",
+        url: "https://flowergrid.co.uk"
+    },
+    areaServed: {
+        "@type": "Country",
+        name: "United Kingdom"
+    },
+    serviceType: "Corporate Wellbeing and Leadership Coaching",
+    description:
+        "Bespoke corporate wellbeing programmes combining emotional intelligence, resilience training and holistic coaching to create sustainable cultural change."
+};
+
+const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://flowergrid.co.uk/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://flowergrid.co.uk/holistic-wellness-services"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Corporate Wellbeing Programmes",
+            "item": "https://flowergrid.co.uk/corporate-wellbeing-programmes"
+        }
+    ]
+};
 
 const B2BPage = () => {
     return (
         <div>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
             <B2bHero />
             <AboutB2b />
             <OfferSection />
