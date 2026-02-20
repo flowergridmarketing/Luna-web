@@ -101,6 +101,7 @@ export default async function RootLayout({
             gtag('js', new Date());
 
             gtag('config', 'G-24E7DSZV1G');
+            gtag('config', 'AW-17963417861');
           `}
         </Script>
         <Script id="linkedin-insight" strategy="afterInteractive">
