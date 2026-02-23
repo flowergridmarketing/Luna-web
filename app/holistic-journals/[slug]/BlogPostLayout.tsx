@@ -3,13 +3,13 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import BlogRenderer from '@/components/BlogRenderer';
-import { TableOfContents } from '@/components/blog/BlogSidebar';
 import MobileTableOfContents from '@/components/blog/MobileTableOfContents';
 import AuthorSidebar from '@/components/blog/AuthorSidebar';
 import BlogPostHero from '@/components/blog/BlogPostHero';
 import BlogFeaturedSection from '@/components/blog/BlogFeaturedSection';
 import BlogFaq from '@/components/blog/BlogFaq';
 import { ArrowLeft, Maximize2, Minimize2 } from 'lucide-react';
+import { TableOfContents } from '@/components/blog/BlogSidebar';
 
 function extractCoverImage(content: any): string | null {
     if (!content || !content.blocks) return null;
@@ -58,7 +58,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
                     className={`flex justify-between items-center mb-6 ${isFocusMode ? 'pt-24' : ''}`}                  
                 >
                     <Link
-                        href="/blogs"
+                        href="/holistic-journals"
                         className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest"
                     >
                         <ArrowLeft className="w-4 h-4" />

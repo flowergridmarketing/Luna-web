@@ -35,7 +35,7 @@ export default function BlogFeaturedSection({ latestPost, featuredPosts }: BlogF
                 {latestPost && (
                     <div>
                         <h2 className="text-xl font-serif text-[#1C1C1C] mb-6">Latest Post</h2>
-                        <Link href={`/blogs/${latestPost.slug}`} className="block group">
+                        <Link href={`/holistic-journals/${latestPost.slug}`} className="block group">
                             <div className="bg-[#E6D7C3] rounded-3xl overflow-hidden mb-6 aspect-[4/3] relative">
                                 {extractCoverImage(latestPost.content) ? (
                                     <Image
@@ -73,7 +73,7 @@ export default function BlogFeaturedSection({ latestPost, featuredPosts }: BlogF
                         <h2 className="text-xl font-serif text-[#1C1C1C] mb-6">Featured Posts</h2>
                         <div className="space-y-8">
                             {featuredPosts.map((post) => (
-                                <Link key={post._id} href={`/blogs/${post.slug}`} className="flex gap-6 group items-start">
+                                <Link key={post._id} href={`/holistic-journals/${post.slug}`} className="flex gap-6 group items-start">
                                     {/* Thumbnail */}
                                     <div className="relative w-32 h-24 flex-shrink-0 rounded-xl overflow-hidden bg-[#E6D7C3]">
                                         {extractCoverImage(post.content) ? (

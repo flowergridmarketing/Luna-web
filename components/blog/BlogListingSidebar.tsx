@@ -63,7 +63,7 @@ export default function BlogListingSidebar({ topPosts }: BlogListingSidebarProps
                         <li key={post._id} className="pl-2">
                             <div className="flex flex-col gap-1 -mt-1.5">
                                 <Link
-                                    href={`/blogs/${post.slug}`}
+                                    href={`/holistic-journals/${post.slug}`}
                                     className="text-base font-medium text-[#1C1C1C] font-sans hover:text-[#8C7A65] transition-colors leading-snug"
                                 >
                                     {post.title}
