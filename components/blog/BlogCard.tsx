@@ -70,7 +70,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
                 {/* Title */}
                 <h3 className="text-xl md:text-2xl font-serif font-medium text-[#1C1C1C] mb-4 leading-tight group-hover:text-[#8C7A65] transition-colors">
-                    <Link href={`/blogs/${post.slug}`}>
+                    <Link href={`/holistic-journals/${post.slug}`}>
                         {post.title}
                     </Link>
                 </h3>
@@ -80,7 +80,7 @@ export default function BlogCard({ post }: { post: BlogPost }) {
 
                 {/* Explore Link */}
                 <Link
-                    href={`/blogs/${post.slug}`}
+                    href={`/holistic-journals/${post.slug}`}
                     className="inline-flex items-center gap-2 text-xs font-bold text-[#1C1C1C] uppercase tracking-widest hover:text-[#8C7A65] transition-colors mt-auto group/link"
                 >
                     Explore

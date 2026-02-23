@@ -130,7 +130,7 @@ export default function BlogSection() {
             return (
               <Link
                 key={blog._id}
-                href={`/blogs/${blog.slug}`}
+                href={`/holistic-journals/${blog.slug}`}
                 className="w-full h-full flex flex-col bg-[#ECDDC4]/40 border border-[#8C7A65]/10 rounded-3xl overflow-hidden hover:bg-[#ECDDC4] transition-colors duration-500 group cursor-pointer"
               >
 

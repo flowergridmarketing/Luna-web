@@ -6,16 +6,14 @@ import dynamic from 'next/dynamic';
 import type { OutputData } from '@editorjs/editorjs';
 import SuccessToast from '@/components/ui/SuccessToast';
 
-// Dynamic imports for Editor tools
 const Editor = dynamic(() => import('@/components/Editor'), { ssr: false });
 
-// TLDR Tools Configuration
 const TLDR_TOOLS = {
     header: {
         class: require('@editorjs/header'),
         inlineToolbar: true,
         config: {
-            levels: [2, 3], // Only H2 and H3 for TLDR
+            levels: [2, 3],
             defaultLevel: 2
         }
     },
@@ -55,10 +53,8 @@ function EditorPageContent() {
     const [loading, setLoading] = useState(false);
     const [isLoaded, setIsLoaded] = useState(false);
 
-    // Toast state
     const [toast, setToast] = useState({ show: false, message: '', type: 'success' as 'success' | 'error' });
 
-    // Fetch authors
     useEffect(() => {
         const fetchAuthors = async () => {
             try {
@@ -74,7 +70,6 @@ function EditorPageContent() {
         fetchAuthors();
     }, []);
 
-    // Load existing blog for editing
     useEffect(() => {
         if (id) {
             const fetchBlog = async () => {
@@ -88,7 +83,6 @@ function EditorPageContent() {
                         setAuthorId(data.data.author?._id || '');
                         setFaq(data.data.faq || []);
 
-                        // Handle TLDR: if string (legacy), convert to block; if object, use as is
                         if (typeof data.data.tldr === 'string') {
                             setTldr({
                                 time: new Date().getTime(),
@@ -110,7 +104,6 @@ function EditorPageContent() {
             };
             fetchBlog();
         } else {
-            // Load draft from localStorage
             const savedDraft = localStorage.getItem('blog-draft');
             if (savedDraft) {
                 try {
@@ -130,7 +123,6 @@ function EditorPageContent() {
         }
     }, [id]);
 
-    // Autosave to local storage
     useEffect(() => {
         if (!id && isLoaded) {
             const draft = { title, slug, description, authorId, tldr, content, faq };

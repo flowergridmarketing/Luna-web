@@ -56,7 +56,7 @@ const navLinks = [
             },
         ],
     },
-    { title: "Journals", href: "/blogs" },
+    { title: "Journals", href: "/holistic-journals" },
     { title: "Contact Us", href: "/contact-us" },
 ];
 
@@ -127,7 +127,7 @@ export default function Footer() {
                                 </ul>
 
                             </li>
-                            <li><Link href="/blogs" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Journals</Link></li>
+                            <li><Link href="/holistic-journals" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Journals</Link></li>
                             <li><Link href="/contact-us" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>

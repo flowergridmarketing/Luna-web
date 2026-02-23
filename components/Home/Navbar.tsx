@@ -53,7 +53,7 @@ const navLinks = [
       },  
     ],
   },
-  { title: "Journals", href: "/blogs", image: getImageUrl("n6.png") },
+  { title: "Journals", href: "/holistic-journals", image: getImageUrl("n6.png") },
   { title: "Contact Us", href: "/contact-us", image: getImageUrl("n7.png") },
 ];
 

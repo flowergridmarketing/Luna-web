@@ -62,7 +62,7 @@ export default function AdminBlogList() {
                 <div className="flex justify-between items-center mb-8">
                     <h1 className="text-3xl font-bold text-gray-800">Blog Management</h1>
                     <Link
-                        href="/blogs/editor"
+                        href="/holistic-journals/editor"
                         className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
                     >
                         + Create New Post
@@ -98,7 +98,7 @@ export default function AdminBlogList() {
                                     </td>
                                     <td className="px-6 py-4 text-right space-x-3">
                                         <Link
-                                            href={`/blogs/editor?id=${blog._id}`}
+                                            href={`/holistic-journals/editor?id=${blog._id}`}
                                             className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                                         >
                                             Edit
