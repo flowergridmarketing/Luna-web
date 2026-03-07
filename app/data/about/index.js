@@ -363,7 +363,7 @@ export const teamTree = [
             {
                 "name": "Tamkin",
                 "role": "Trained Counselling Services & Career Education Direction",
-                "image": getImageUrl("about/team/tamkin.png"),
+                "image": getImageUrl("about/team/tamkinnew.png"),
                 "description": "Wanting a listening ear on relationships, guidance, career, Education, Social improvement. Serving the community, individuals in a journey to link needs and solutions"
             },
             {

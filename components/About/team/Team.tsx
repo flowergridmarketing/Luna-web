@@ -16,7 +16,6 @@ const TeamTreeSection = () => {
   return (
     <div
       style={{ background: `url(${getImageUrl('/about/team/bg.png')}) no-repeat center center/cover` }}
-      // Changed p-10 to py-10 px-4 for better mobile spacing
       className='flex flex-col items-center py-10 px-4 mb-10 lg:px-12 md:px-20 min-h-screen relative overflow-hidden'
     >
       {/* Title responsive text size */}
