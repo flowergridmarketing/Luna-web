@@ -61,7 +61,7 @@ export async function generateMetadata(
   const url = `https://flowergrid.co.uk/holistic-journals/${blog.slug}`;
 
   return {
-    title: `${blog.title} | Flowergrid UK`,
+    title: `${blog.title}`,
     description: blog.description,
 
     alternates: {
