@@ -4,6 +4,7 @@ import Blog from '@/models/Blog';
 import BlogPostLayout from './BlogPostLayout';
 import '@/models/Author';
 import type { Metadata, ResolvingMetadata } from 'next';
+import StructuredData from '@/components/blog/StructuredData';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -101,7 +102,6 @@ export default async function IndividualBlogPage({ params }: Props) {
   const coverImage = extractCoverImage(blog.content);
   const url = `https://flowergrid.co.uk/holistic-journals/${blog.slug}`;
 
-  /* ✅ Article schema (NO @context here) */
   const articleSchema = {
     "@type": "Article",
     headline: blog.title,
@@ -133,7 +133,6 @@ export default async function IndividualBlogPage({ params }: Props) {
     },
   };
 
-  /* ✅ FAQ schema (only if exists, NO @context) */
   const faqSchema =
     blog.faq && blog.faq.length > 0
       ? {
@@ -149,7 +148,6 @@ export default async function IndividualBlogPage({ params }: Props) {
         }
       : null;
 
-  /* ✅ SINGLE STRUCTURED DATA GRAPH (VERY IMPORTANT FIX) */
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [articleSchema, ...(faqSchema ? [faqSchema] : [])],
@@ -157,12 +155,7 @@ export default async function IndividualBlogPage({ params }: Props) {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
-      />
+     <StructuredData data={structuredData} />
 
       <BlogPostLayout
         blog={blog}
