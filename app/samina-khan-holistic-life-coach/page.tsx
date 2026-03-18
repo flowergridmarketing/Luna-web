@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import React from 'react'
 import PersonHero from '@/components/About/person/PersonHero'
 import PersonBio from '@/components/About/person/Bio'
 import ScrollingTextReveal from '@/components/ui/ScrollingTextReveal'
