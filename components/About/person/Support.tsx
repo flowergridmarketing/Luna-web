@@ -13,9 +13,10 @@ interface SupportItem {
 
 interface SupportProps {
   data: SupportItem[];
+  title?: string;
 }
 
-const Support: React.FC<SupportProps> = ({ data }) => {
+const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
   const [visibleCards, setVisibleCards] = useState(3);
   const scrollRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
@@ -98,34 +99,34 @@ const Support: React.FC<SupportProps> = ({ data }) => {
   return (
     <section className="bg-background py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1440px] mx-auto">
-        <div className="mb-12 md:mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-[56px] text-text-heading font-heading tracking-wide font-normal">
-            How I Can Support You
+        <div className="mb-10 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-text-heading font-heading tracking-wide font-normal">
+            {title}
           </h2>
         </div>
 
         {/* Carousel Wrapper with Side Buttons */}
-        <div className="relative group/carousel px-4 md:px-0">
+        <div className="relative group/carousel px-0">
           {/* Navigation Controls - Left */}
           <button
             onClick={() => handleManualScroll('left')}
-            className="absolute left-2 lg:-left-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full border 
-            border-text-heading/20 bg-white/80 md:backdrop-blur-md text-text-heading hover:bg-[#A68653] hover:text-white 
-            transition-all duration-300 group flex items-center justify-center shadow-lg lg:hidden"
+            className="absolute left-2 lg:-left-20 top-1/2 -translate-y-1/2 z-20 p-2 md:p-4 rounded-full border 
+            border-text-heading/20 bg-white/90 md:backdrop-blur-md text-text-heading hover:bg-[#A68653] hover:text-white 
+            transition-all duration-300 group flex items-center justify-center shadow-md lg:hidden"
             aria-label="Previous slide"
           >
-            <ChevronLeft size={20} className="md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
+            <ChevronLeft size={18} className="md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
           </button>
 
           {/* Navigation Controls - Right */}
           <button
             onClick={() => handleManualScroll('right')}
-            className="absolute right-2 lg:-right-20 top-1/2 -translate-y-1/2 z-20 p-3 md:p-4 rounded-full
-             border border-text-heading/20 bg-white/80 md:backdrop-blur-md text-text-heading hover:bg-[#A68653]
-             hover:text-white transition-all duration-300 group flex items-center justify-center shadow-lg lg:hidden"
+            className="absolute right-2 lg:-right-20 top-1/2 -translate-y-1/2 z-20 p-2 md:p-4 rounded-full
+             border border-text-heading/20 bg-white/90 md:backdrop-blur-md text-text-heading hover:bg-[#A68653]
+             hover:text-white transition-all duration-300 group flex items-center justify-center shadow-md lg:hidden"
             aria-label="Next slide"
           >
-            <ChevronRight size={20} className="md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
+            <ChevronRight size={18} className="md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
           </button>
 
           {/* Auto‑scroll container */}
@@ -171,11 +172,7 @@ const Support: React.FC<SupportProps> = ({ data }) => {
                 data.map((item, index) => (
                   <motion.div
                     key={`${repeatIndex}-${index}`}
-                    style={{
-                      flex: `0 0 calc((100% - ${(visibleCards - 1) * (visibleCards >= 3 ? 32 : 24)}px) / ${visibleCards})`,
-                    }}
-                    className="group relative h-[450px] md:h-[550px] lg:h-[600px] overflow-hidden rounded-[2rem] cursor-pointer"
-
+                    className="group relative h-[400px] sm:h-[480px] md:h-[550px] lg:h-[600px] overflow-hidden rounded-3xl md:rounded-4xl cursor-pointer flex-none w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.33%-22px)]"
                   >
                     <div className="absolute inset-0 w-full h-full">
                       <Image
@@ -189,10 +186,10 @@ const Support: React.FC<SupportProps> = ({ data }) => {
                       />
                     </div>
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-300" />
 
                     <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 lg:p-10 flex flex-col items-start justify-end h-full z-10">
-                      <h3 className="text-2xl md:text-3xl lg:text-[32px] !text-white font-heading font-normal leading-[1.2] mb-8 lg:mb-10 w-[90%]">
+                      <h3 className="text-2xl md:text-3xl lg:text-[32px] text-white! font-heading font-normal leading-[1.2] mb-8 lg:mb-10 w-[90%]">
                         {item.title}
                       </h3>
 

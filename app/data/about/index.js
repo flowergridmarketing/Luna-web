@@ -470,3 +470,56 @@ export const getPersonBySlug = (slug) => {
 export const getAllPersonSlugs = () => {
     return Object.keys(personsData);
 };
+
+export const locationData = {
+    journeySection: {
+        title: "How to book a holistic wellness session at Flowergrid",
+        description: "",
+        flowerWithCard: [
+            {
+                type: "flower",
+                image: getImageUrl("about/person1/3a.png"),
+                alt: "Flower Sketch"
+            },
+            {
+                type: "card",
+                number: "",
+                title: "Choose your starting point",
+                description: "If you know what you want, explore our services and book directly. If you are unsure, start with a free consultation so we can understand what you need and guide you."
+            },
+            {
+                type: "flower",
+                image: getImageUrl("about/person1/3b.png"),
+                alt: "Flower Sketch"
+            },
+            {
+                type: "card",
+                number: "",
+                title: "Tell us what you need",
+                description: "Share a few details about what's been going on and what you want to change. You can contact us online, by email, or by phone, and let us know if you prefer online or in person support."
+            },
+            {
+                type: "card",
+                number: "",
+                title: "Get matched to the right practitioner",
+                description: "We will recommend the most suitable practitioner based on your goals, preferences, and availability. Our integrative approach means you can access joined up support when it's helpful."
+            },
+            {
+                type: "flower",
+                image: getImageUrl("about/person1/3c.png"),
+                alt: "Flower Sketch"
+            },
+            {
+                type: "card",
+                number: "",
+                title: "Confirm and begin your sessions",
+                description: "Once booked, you will receive confirmation and clear next steps. Sessions are available online across the UK or in person at our Coulsdon, Croydon centre."
+            },
+            {
+                type: "flower",
+                image: getImageUrl("about/person1/3d.png"),
+                alt: "Flower Sketch"
+            }
+        ]
+    }
+};
