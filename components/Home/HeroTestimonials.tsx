@@ -65,17 +65,26 @@ interface HeroTestimonialsProps {
     testimonials?: Testimonial[];
     title?: string;
     subtitle?: string;
+    textSize?: string;
 }
 
 export default function HeroTestimonials({
     testimonials = defaultTestimonials,
     title = "Client Experiences with Flowergrid",
-    subtitle = "Flowergrid's Testimonials"
+    subtitle = "Flowergrid's Testimonials",
+    textSize = "text-4xl md:text-6xl"
+
 }: HeroTestimonialsProps) {
+
+    if (title === "What clients say about Flowergrid in Croydon") {
+        textSize = "text-2xl md:text-4xl"
+    }
+
+
     return (
         <section className="w-full h-auto py-10 bg-[#F3EAD8] overflow-hidden">
             <div className="max-w-3xl mx-auto px-4 mb-30 md:mb-10 mt-5 text-center">
-                <h2 className="text-4xl md:text-6xl font-heading font-normal uppercase tracking-wide mt-30 md:mt-0 mb-4 text-center">
+                <h2 className={`${textSize} font-heading font-normal uppercase tracking-wide mt-30 md:mt-0 mb-4 text-center`}>
                     {title}
                 </h2>
                 <p className="text-black! text-lg md:text-xl font-sans uppercase tracking-widest text-center">

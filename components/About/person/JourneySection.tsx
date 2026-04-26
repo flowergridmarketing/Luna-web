@@ -68,9 +68,11 @@ export default function JourneySection({ title, description, items }: JourneySec
                                 <div className="w-full max-w-[280px] aspect-3/4 border-2 border-[#C4A484] rounded-2xl p-3 flex flex-col">
                                     <div className="w-full h-full bg-[#E5CCA1]! rounded-xl flex flex-col items-center justify-center p-6 text-center shadow-sm">
 
-                                        <span className="text-4xl font-heading text-[#171717] mb-4">
-                                            {item.number}
-                                        </span>
+                                        {item.number && (
+                                            <span className="text-4xl font-heading text-[#171717] mb-4">
+                                                {item.number}
+                                            </span>
+                                        )}
 
                                         <h3 className="text-xl font-bold text-[#171717] mb-4">
                                             {item.title}
