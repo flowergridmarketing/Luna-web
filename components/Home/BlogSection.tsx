@@ -60,7 +60,7 @@ const extractCoverImage = (editorData: any): string | null => {
   }
 };
 
-export default function BlogSection() {
+export default function BlogSection({headerTitle}: {headerTitle: string}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
@@ -108,7 +108,7 @@ export default function BlogSection() {
           />
         </div>
         <h2 className="text-[#1C1C1C] text-3xl md:text-5xl lg:text-[4rem] font-heading font-light tracking-wide leading-none">
-          Blog Articles
+          {headerTitle}
         </h2>
       </div>
 

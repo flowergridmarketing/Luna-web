@@ -104,8 +104,8 @@ const LocationPage = () => {
       <SupportSection />
       <DifferentSection />
       <Support data={supportData} title="Our Services" />
-      <HeroTestimonials 
-        testimonials={locationTestimonials} 
+      <HeroTestimonials
+        testimonials={locationTestimonials}
         title="What clients say about Flowergrid in Croydon" 
         subtitle="" 
       />
