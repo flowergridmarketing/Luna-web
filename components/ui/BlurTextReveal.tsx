@@ -44,7 +44,7 @@ export default function BlurTextReveal({ text }: { text: string }) {
 
     return (
         <div ref={containerRef} className="overflow-hidden">
-            <p className="text-3xl md:text-4xl lg:text-5xl font-light text-[#1a4122] leading-tight tracking-wide">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-light text-text-heading leading-tight tracking-wide">
                 {words.map((word, index) => (
                     <span key={index} className="word">
                         {word}

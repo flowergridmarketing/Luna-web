@@ -133,7 +133,7 @@ export default function Home() {
       <CorporateProgram />
       <HeroTestimonials />
       <Vision />
-      <BlogSection />
+      <BlogSection headerTitle='Blog Articles'/>
       <Connect
         image={getImageUrl("membership/connection.jpg")}
         title="Your Journey Begins"
