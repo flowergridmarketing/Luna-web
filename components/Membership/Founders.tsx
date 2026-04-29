@@ -10,112 +10,102 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Founders() {
+export interface Founder {
+    name: string;
+    role: string;
+    description: string;
+    image: string;
+    link: string;
+    firstName: string;
+    secondaryColor: string
+}
+
+interface FoundersProps {
+    bgColor?: string;
+    founders?: Founder[];
+}
+
+export default function Founders({ bgColor, founders = [] }: FoundersProps) {
     const sectionRef = useRef<HTMLElement>(null);
-    const saminaRef = useRef<HTMLDivElement>(null);
-    const moniraRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
-        const tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "top 70%",
-                toggleActions: "play none none reverse",
-            },
+        const rows = sectionRef.current?.querySelectorAll(".founder-row");
+        if (!rows) return;
+
+        rows.forEach((row, index) => {
+            const isEven = index % 2 === 0;
+            const content = row.querySelector(".content-block");
+            const image = row.querySelector(".image-block");
+
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: row,
+                    start: "top 70%",
+                    toggleActions: "play none none reverse",
+                },
+            });
+
+            if (content && image) {
+                tl.from(content, {
+                    x: isEven ? -50 : 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                }, 0)
+                .from(image, {
+                    x: isEven ? 50 : -50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                }, 0);
+            }
         });
+    }, { scope: sectionRef, dependencies: [founders] });
 
-
-        tl.from(saminaRef.current?.querySelector(".content-block")!, {
-            x: -50,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-        }, 0)
-            .from(saminaRef.current?.querySelector(".image-block")!, {
-                x: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out",
-            }, 0);
-
-
-        tl.from(moniraRef.current?.querySelector(".image-block")!, {
-            x: -50,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-        }, "-=0.5")
-            .from(moniraRef.current?.querySelector(".content-block")!, {
-                x: 50,
-                opacity: 0,
-                duration: 1,
-                ease: "power3.out",
-            }, "<");
-
-    }, { scope: sectionRef });
     return (
         <section
             ref={sectionRef}
-            className="w-full bg-[#F3EAD8] py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
+            className={`w-full py-20 ${bgColor || "bg-background"} px-6 md:px-12 lg:px-20 overflow-hidden`}
         >
             <div className="max-w-[1400px] mx-auto flex flex-col gap-20 lg:gap-32">
+                {founders.map((founder, index) => {
+                    const isEven = index % 2 === 0;
+                    return (
+                        <div 
+                            key={founder.name} 
+                            className="founder-row flex flex-col lg:flex-row items-center gap-10 lg:gap-20"
+                        >
+                            <div className={`image-block w-full lg:flex-1 order-1 ${isEven ? 'lg:order-2 flex justify-center lg:justify-end' : 'flex justify-center lg:justify-start'}`}>
+                                <div className={`relative w-full max-w-[450px] ${isEven ? 'aspect-3/5 md:aspect-3/4 lg:aspect-6/8' : 'aspect-square md:aspect-3/4'} md:max-h-[600px] lg:mb-0`}>
+                                    <Image
+                                        src={getImageUrl(founder.image)}
+                                        alt={founder.name}
+                                        fill
+                                        className="object-cover rounded-2xl"
+                                    />
+                                </div>
+                            </div>
 
-                <div ref={saminaRef} className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
-
-                    <div className="image-block w-full lg:flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
-                        <div className="relative w-full max-w-[450px] aspect-3/5 md:aspect-3/4 lg:aspect-6/8 md:max-h-[600px] lg:mb-0">                            <Image
-                            src={getImageUrl("about/person1/samina-pic.png")}
-                            alt="Samina Khan"
-                            fill
-                            className="object-cover rounded-2xl"
-                        />
+                            <div className={`content-block flex-1 order-2 ${isEven ? 'lg:order-1 text-center lg:text-left' : 'text-center lg:text-right'}`}>
+                                <h2 className="text-[#1C1C1C] text-4xl md:text-5xl lg:text-6xl font-heading font-normal mb-2">
+                                 <span className="font-medium">{founder.name}</span>
+                                </h2>
+                                <h3 className={`${ founder.secondaryColor || 'text-[#C19A6B]' } text-1xl md:text-2xl lg:text-3xl font-sans font-normal mb-6`} >
+                                    {founder.role}
+                                </h3>
+                                <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
+                                    {founder.description}
+                                </p>
+                                <Link 
+                                    href={founder.link} 
+                                    className="bg-primary text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md inline-block"
+                                >
+                                    Learn more about {founder.name}
+                                </Link>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="content-block flex-1 order-2 lg:order-1 text-center lg:text-left">
-                        <h2 className="text-[#1C1C1C] text-4xl md:text-5xl lg:text-6xl font-heading font-normal mb-2">
-                            Meet <span className="font-medium">Samina Khan</span>
-                        </h2>
-                        <h3 className="text-[#C19A6B] text-xl md:text-2xl font-sans font-light mb-6">
-                            Co-Founder & Wellness Strategist
-                        </h3>
-                        <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
-                            Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits. Through the FlowerGrid programmes, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.
-                        </p>
-                        <Link href="/samina-khan-holistic-life-coach" className="bg-primary text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
-                            Learn more about Samina Khan
-                        </Link>
-                    </div>
-                </div>
-                <div ref={moniraRef} className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
-
-                    <div className="image-block w-full lg:flex-1 order-1 flex justify-center lg:justify-start">
-                        <div className="relative w-full max-w-[450px] aspect-square md:aspect-3/4 max-h-[400px] md:max-h-[600px] mb-4 lg:mb-0">
-                            <Image
-                                src={getImageUrl("about/person2/monira.png")}
-                                alt="Monira Ahmed"
-                                fill
-                                className="object-cover rounded-2xl"
-                            />
-                        </div>
-                    </div>
-
-                    <div className="content-block flex-1 order-2 text-center lg:text-right">
-                        <h2 className="text-[#1C1C1C] text-4xl md:text-5xl lg:text-6xl font-heading font-normal mb-2">
-                            Meet <span className="font-medium">Monira Ahmed</span>
-                        </h2>
-                        <h3 className="text-[#C19A6B] text-xl md:text-2xl font-sans font-light mb-6">
-                            Co-Founder & Leadership Life Coach
-                        </h3>
-                        <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
-                            Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.
-                        </p>
-                        <Link href="/monira-ahmed-hypnotherapist" className="bg-primary text-white font-medium text-base md:text-lg px-8 py-4 rounded-full transition-colors duration-300 shadow-md">
-                            Learn more about Monira Ahmed
-                        </Link>
-                    </div>
-                </div>
-
+                    );
+                })}
             </div>
         </section>
     );

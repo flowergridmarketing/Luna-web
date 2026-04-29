@@ -1,17 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
+
 interface ConnectProps {
     image: string;
     title: string;
     description: string;
     btnText?: string;
+    redirectionLink?: string;
 }
 
-const Connect = ({ image, title, description, btnText = "Schedule Appointment" }: ConnectProps) => {
+const Connect = ({ 
+    image, 
+    title, 
+    description, 
+    btnText = "Schedule Appointment",
+    redirectionLink = 'https://calendly.com/flowergridmarketing/30min?month=2026-02'
+}: ConnectProps) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[500px] overflow-hidden p-10 rounded-2xl">
-            <div className="relative h-full min-h-[400px] md:min-h-[500px] rounded-t-2xl md:rounded-t-none md:rounded-l-2xl md:rounded overflow-hidden">
+            <div className="relative h-full min-h-[400px] md:min-h-[600px] rounded-t-2xl md:rounded-t-none md:rounded-l-2xl md:rounded overflow-hidden">
                 <Image
                     src={image}
                     alt={title}
@@ -28,8 +36,8 @@ const Connect = ({ image, title, description, btnText = "Schedule Appointment" }
                         {description}
                     </p>
                 )}
-                <Link href='https://calendly.com/flowergridmarketing/30min?month=2026-02' target='_blank' rel='noopener noreferrer' >
-                    <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 lg:px-20 py-4 mt-8 rounded-full text-sm md:text-base shadow-md">
+                <Link href={redirectionLink} target='_blank' rel='noopener noreferrer' >
+                    <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 mt-4 lg:px-20 py-4 rounded-full text-sm md:text-base shadow-md">
                         {btnText}
                     </button>
 

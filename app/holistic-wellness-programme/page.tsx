@@ -4,7 +4,7 @@ import { myPrograms } from '../data/programs'
 import HeroTestimonials from '@/components/Home/HeroTestimonials'
 import Connect from '@/components/About/person/Connect'
 import FaqSection from '@/components/Contact/FAQSection'
-import CurvedPathAnimation from '@/components/Programme/CurvedPathAnimation'
+import CurvedPathAnimation, { Step } from '@/components/Programme/CurvedPathAnimation'
 import HeaderSecrtion from '@/components/Programme/HeaderSecrtion'
 import ProgramCarousel from '@/components/Programme/ProgramCarousal'
 import Achievement from '@/components/Programme/Achievement'
@@ -215,6 +215,39 @@ const serviceSchema = {
   }
 };
 
+const steps: Step[] = [
+  {
+    id: 1,
+    title: "Initial Assessment & Consultation",
+    description: "Explore your goals, challenges, and personal needs with our experts. Your programme is designed specifically around you.",
+    position: "left"
+  },
+  {
+    id: 2,
+    title: "Expert-Led Personalised Sessions",
+    description: "One-on-one or group sessions with our panel deliver practical strategies and deep guidance for real transformation.",
+    position: "right"
+  },
+  {
+    id: 3,
+    title: "Access to Resources & Tools",
+    description: "Exercises, guides, and digital tools reinforce learning and keep your progress on track between sessions.",
+    position: "left"
+  },
+  {
+    id: 4,
+    title: "Regular Check-Ins & Progress Tracking",
+    description: "Monitor improvements through assessments and biomarkers, with adjustments made to keep your journey moving forward.",
+    position: "right"
+  },
+  {
+    id: 5,
+    title: "Ongoing Support for Sustainable Transformation",
+    description: "Continued guidance ensures new habits, skills, and energy alignment last well beyond the programme.",
+    position: "left"
+  }
+];
+
 const page = () => {
   return (
     <>
@@ -227,7 +260,7 @@ const page = () => {
       <HeroTestimonials title='Client Experiences with Flowergrid Holistic Wellness Programmes' testimonials={ProgramTestimonials} />
       <ProgramCarousel programs={myPrograms} />
       <HeaderSecrtion />
-      <CurvedPathAnimation />
+      <CurvedPathAnimation steps={steps} />
       <Achievement />
       <FaqSection title='Your Questions About Flowergrid Programmes Answered' faqs={faqs} />
       <Connect image={getImageUrl("about/person2/5.png")} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
