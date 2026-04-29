@@ -1,9 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Music, Dumbbell, Gamepad2 } from 'lucide-react';
+import { Music, Dumbbell, Gamepad2, MessageCircle } from 'lucide-react';
 
 const ACTIVITIES = [
+  {
+    title: 'Chat with Luna',
+    description: 'Connect with our conscious AI companion for personal guidance and healing.',
+    buttonText: 'Start Chat',
+    Icon: MessageCircle,
+  },
   {
     title: 'Chakra Alignment Test',
     description: 'Immerse yourself in curated soundscapes for relaxation and focus.',
@@ -15,12 +21,6 @@ const ACTIVITIES = [
     description: 'Follow a short, mindful breathing sequence designed to ground your energy.',
     buttonText: 'Begin Exercise',
     Icon: Dumbbell,
-  },
-  {
-    title: 'Mindful Mini-Game',
-    description: 'Play a light, reflective game to reset your mood and concentration.',
-    buttonText: 'Try Now',
-    Icon: Gamepad2,
   },
 ];
 

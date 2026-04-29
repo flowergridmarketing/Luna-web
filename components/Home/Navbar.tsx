@@ -14,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const navLinks = [
   { title: "Home", href: "/", image: getImageUrl("n1.png") },
+  { title: "Luna AI", href: "/luna-ai", image: getImageUrl("luna/luna-hero.png") },
   {
     title: "About",
     href: "/our-team",
@@ -54,6 +55,7 @@ const navLinks = [
     ],
   },
   { title: "Journals", href: "/holistic-journals", image: getImageUrl("n6.png") },
+  { title: "Location", href: "/location", image: getImageUrl("location/support.jpg.jpeg") },
   { title: "Contact Us", href: "/contact-us", image: getImageUrl("n7.png") },
 ];
 

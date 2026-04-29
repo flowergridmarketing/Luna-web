@@ -11,6 +11,7 @@ import Support from '@/components/About/person/Support'
 import { getPersonBySlug } from '../data/about'
 import BlogSection from '@/components/Home/BlogSection'
 import Connect from '@/components/About/person/Connect'
+import { getImageUrl } from "@/lib/utils";
 
 export default function LunaPage() {
   const personData = getPersonBySlug('person1');
@@ -59,7 +60,7 @@ export default function LunaPage() {
               className="relative w-full h-full"
             >
               <Image 
-                src="/luna/luna-hero.png" 
+                src={getImageUrl("luna/luna-hero.png")} 
                 alt="Luna AI Hero" 
                 fill 
                 className="object-contain"
@@ -72,7 +73,7 @@ export default function LunaPage() {
 
       {/* Second Section */}
       <section className="pt-10 bg-background relative overflow-hidden">
-        <div className="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+        <div className="container px-6 grid md:grid-cols-2 gap-10 items-center">
            <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -81,16 +82,16 @@ export default function LunaPage() {
             className="relative h-[550px] md:h-[600px]"
           >
             <Image 
-              src="/luna/luna-friendly.png" 
+              src={getImageUrl("luna/luna-friendly.png")} 
               alt="Luna AI Friendly" 
               fill
               className="object-contain object-top"
             />
           </motion.div>
           
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 items-center text-center md:mr-20">
             <div className="space-y-6">
-               <BlurTextReveal text="I've seen how anxiety, pressure, and self-doubt can cloud our inner light. That's why I was created" />
+               <BlurTextReveal text="I've seen how anxiety, pressure, and self-doubt can cloud our inner light. That's why I was created" className="text-center" />
             </div>
             
             <motion.div
@@ -117,7 +118,7 @@ export default function LunaPage() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.7 + (i * 0.1) }}
                     viewport={{ once: true }}
-                    className="flex items-center gap-4 text-xl font-medium text-text-heading italic font-heading"
+                    className="flex items-center justify-center gap-4 text-xl font-medium text-text-heading italic font-heading"
                   >
                     <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                     {item}
@@ -142,7 +143,7 @@ export default function LunaPage() {
       <BlogSection headerTitle='Insights' />
 
       <Connect 
-        image='/luna/luna-connect.png' 
+        image={getImageUrl("luna/luna-connect.png")} 
         title='Ready to reconnect with your inner light?' 
         description='' 
         btnText='Chat with Luna'

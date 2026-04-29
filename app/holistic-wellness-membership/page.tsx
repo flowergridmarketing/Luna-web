@@ -5,12 +5,33 @@ import HeroTestimonials from '@/components/Home/HeroTestimonials'
 import MembershipAbout from '@/components/Membership/About'
 import CardSection from '@/components/Membership/CardSection'
 import FlowergridJourney from '@/components/Membership/FlowergridJourney'
-import Founders from '@/components/Membership/Founders'
+import Founders, { Founder } from '@/components/Membership/Founders'
 import Hero from '@/components/Membership/Hero'
 import MembershipHelp from '@/components/Membership/MembershipHelp'
 import Plans from '@/components/Membership/Plans'
 import { getImageUrl } from '@/lib/utils'
 import React from 'react'
+
+const foundersData: Founder[] = [
+  {
+    name: "Meet Samina Khan",
+    role: "Co-Founder & Wellness Strategist",
+    description: "Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits.Through the FlowerGrid programmes, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.",
+    image: "about/person1/samina-pic.png",
+    link: "/samina-khan-holistic-life-coach",
+    firstName: "Samina",
+    secondaryColor: ""
+  },
+  {
+    name: "Meet Monira Ahmed",
+    role: "Co-Founder & Leadership Life Coach",
+    description: "Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind–body–soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.",
+    image: "about/person2/monira.png",
+    link: "/monira-ahmed-hypnotherapist",
+    firstName: "Monira",
+    secondaryColor: ""
+  }
+];
 
 const membershipFaqs = [
   {
@@ -167,7 +188,7 @@ const MembershipPage = () => {
       <FlowergridJourney />
       <Plans />
       <HeroTestimonials title='Stories from Our Members' />
-      <Founders />
+      <Founders founders={foundersData} bgColor='bg-[#F3EAD8]' />
       <FaqSection faqs={membershipFaqs} />
       <Connect image={getImageUrl("membership/connection.jpg")} title="Unlock your transformation. Start your new life today" btnText='Join The Membership' description='' />
     </div>

@@ -13,6 +13,7 @@ import Vision from '@/components/Home/Vision'
 import LocationFounders from '@/components/Location/LocationFounders'
 import FaqSection from '@/components/Contact/FAQSection'
 import Connect from '@/components/About/person/Connect'
+import { getImageUrl } from "@/lib/utils";
 
 const locationTestimonials: Testimonial[] = [
   {
@@ -124,7 +125,7 @@ const LocationPage = () => {
       <LocationFounders />
       <FaqSection faqs={locationFaqs} />
       <Connect
-        image={"/location/location-connect.jpg"}
+        image={getImageUrl("location/location-connect.jpg.jpeg")}
         title="Transform your mind, body, and spirit today"
         description="If you're ready to find balance, clarity, and personal growth through life and transformation coaching, I'd love to work with you."
       />

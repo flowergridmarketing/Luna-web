@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function BlurTextReveal({ text }: { text: string }) {
+export default function BlurTextReveal({ text, className = "" }: { text: string; className?: string }) {
     const containerRef = useRef<HTMLDivElement>(null);
     console.log("BlurTextReveal text:", text);
 
@@ -44,7 +44,7 @@ export default function BlurTextReveal({ text }: { text: string }) {
 
     return (
         <div ref={containerRef} className="overflow-hidden">
-            <p className="text-3xl md:text-4xl lg:text-5xl font-light text-text-heading leading-tight tracking-wide">
+            <p className={`text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-text-heading leading-tight tracking-wide ${className}`}>
                 {words.map((word, index) => (
                     <span key={index} className="word">
                         {word}
