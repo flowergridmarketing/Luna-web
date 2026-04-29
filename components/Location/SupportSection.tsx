@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getImageUrl } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +55,7 @@ const SupportSection = () => {
                 {/* Image Content */}
                 <div className="support-image relative w-full h-[500px] lg:h-[700px] rounded-2xl overflow-hidden shadow-xl">
                     <Image
-                        src={"/location/support.jpg"}
+                        src={getImageUrl("/location/support.jpg.jpeg")}
                         alt="Mind, Body and Spirit Wellness consultation"
                         fill
                         className="object-cover hover:scale-105 transition-transform duration-700"

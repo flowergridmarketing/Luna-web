@@ -69,7 +69,7 @@ export default function LocationFounders() {
                     <div className="image-block w-full lg:flex-1 order-1 flex justify-center lg:justify-start">
                         <div className="relative w-full max-w-[450px] aspect-3/5 md:aspect-3/4 lg:aspect-6/8 md:max-h-[600px] lg:mb-0">
                             <Image
-                                src={"/location/samina-khan.png"}
+                                src={getImageUrl("/location/samina-khan.png")}
                                 alt="Samina Khan"
                                 fill
                                 className="object-cover rounded-2xl mix-blend-color-burn"
@@ -111,7 +111,7 @@ export default function LocationFounders() {
                     <div className="image-block w-full lg:flex-1 order-1 lg:order-2 flex justify-center lg:justify-end">
                         <div className="relative w-full max-w-[450px] aspect-square md:aspect-3/4 max-h-[400px] md:max-h-[600px] mb-4 lg:mb-0">
                             <Image
-                                src={"/location/holding-hands.jpg"}
+                                src={getImageUrl("location/holding-hands.jpeg")}
                                 alt="Flowergrid Membership"
                                 fill
                                 className="object-cover rounded-2xl"

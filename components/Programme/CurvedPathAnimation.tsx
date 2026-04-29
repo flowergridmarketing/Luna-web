@@ -9,47 +9,18 @@ import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
-interface Step {
+export interface Step {
   id: number;
   title: string;
   description: string;
   position: 'left' | 'right';
 }
 
-const steps: Step[] = [
-  {
-    id: 1,
-    title: "Initial Assessment & Consultation",
-    description: "Explore your goals, challenges, and personal needs with our experts. Your programme is designed specifically around you.",
-    position: "left"
-  },
-  {
-    id: 2,
-    title: "Expert-Led Personalised Sessions",
-    description: "One-on-one or group sessions with our panel deliver practical strategies and deep guidance for real transformation.",
-    position: "right"
-  },
-  {
-    id: 3,
-    title: "Access to Resources & Tools",
-    description: "Exercises, guides, and digital tools reinforce learning and keep your progress on track between sessions.",
-    position: "left"
-  },
-  {
-    id: 4,
-    title: "Regular Check-Ins & Progress Tracking",
-    description: "Monitor improvements through assessments and biomarkers, with adjustments made to keep your journey moving forward.",
-    position: "right"
-  },
-  {
-    id: 5,
-    title: "Ongoing Support for Sustainable Transformation",
-    description: "Continued guidance ensures new habits, skills, and energy alignment last well beyond the programme.",
-    position: "left"
-  }
-];
+interface CurvedPathAnimationProps {
+  steps: Step[];
+}
 
-export default function CurvedPathAnimation() {
+export default function CurvedPathAnimation({ steps }: CurvedPathAnimationProps) {
   const [isMounted, setIsMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const pathRef = useRef<SVGPathElement>(null);

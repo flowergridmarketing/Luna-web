@@ -8,6 +8,8 @@ import {
   Brain, Activity, Heart, Zap, Send, CheckCircle2, User
 } from 'lucide-react';
 import Link from 'next/link';
+import { getImageUrl } from "@/lib/utils";
+
 // ─── Config ──────────────────────────────────────────────────────────────────
 const DURATION = 6000;
 
@@ -50,14 +52,20 @@ function Phone({ children }: { children: React.ReactNode }) {
     <div className="relative mx-auto" style={{ width: 280 }}>
       {/* Outer frame */}
       <div
-        className="rounded-[48px] overflow-hidden relative"
+        className="rounded-[48px] overflow-hidden relative bg-black p-[6px] isolation-isolate"
         style={{
-          background: '#000',
-          padding: 6,
+          transform: 'translateZ(0)',
         }}
       >
         {/* Inner screen */}
-        <div className="rounded-[42px] overflow-hidden relative" style={{ background: '#f5ebe0', minHeight: 540 }}>
+        <div 
+          className="rounded-[38px] overflow-hidden relative" 
+          style={{ 
+            background: '#f5ebe0', 
+            minHeight: 540,
+            transform: 'translateZ(0)',
+          }}
+        >
           {/* Status bar */}
           <div className="relative flex items-center justify-between px-7 pt-4 pb-2 z-20">
             <span className="text-[11px] font-bold text-[#2c1a0e]">7:13</span>
@@ -157,7 +165,7 @@ function ChatScreen({ active }: { active: boolean }) {
                 </div>
 
                 <div className="relative w-20 h-20 z-10" style={{ filter: 'drop-shadow(0 0 15px rgba(251,191,36,0.6)) drop-shadow(0 0 30px rgba(251,191,36,0.2))' }}>
-                  <Image src="/luna/luna-head.png" alt="Luna" fill className="object-contain" />
+                  <Image src={getImageUrl("luna/luna-head.png")} alt="Luna" fill className="object-contain" />
                 </div>
               </motion.div>
             )}

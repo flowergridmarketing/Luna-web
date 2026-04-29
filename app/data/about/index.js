@@ -436,23 +436,97 @@ export const teamTree = [
     },
     {
         "id": "row-7",
+        "type": "single",
+        "members": [
+            {
+                "name": "Aysha",
+                "role": "Communications Coach & Public Speaking Trainer",
+                "image": getImageUrl("about/team/aysha.jpg"),
+                "description": "Aysha is a former BBC and ITV News Anchor and founder of Wize Communications. She specialises in helping professionals communicate with confidence and impact through business pitching, public speaking, presentation skills, and leadership communication training delivered through Flowergrid."
+            }
+        ]
+    },
+    {
+        "id": "row-8",
         "type": "pair",
         "members": [
             {
-                "name": "Samin Khan",
-                "role": "Lifecoach & Reiki Healer",
-                "image": getImageUrl("about/person1/saminahalf.png"),
-                "description": "Simmi, your dedicated life coach councilor, healer & holistic therapist specializing in integrating personalized plans into your daily routine. With a focus on holistic modalities, she selects practices to support your overall health and mental well-being. Simmi brings a unique approach to inner healing, consciousness, and mindfulness, guiding you towards a more balanced and mindful lifestyle. Trust in Simmi to help you cultivate inner peace, develop greater self-awareness, and foster positive habits for sustainable well-being."
+                "name": "Nudrat",
+                "role": "Registered Nutritional Therapist & Health Coach",
+                "image": getImageUrl("about/team/nusratchangthai.jpg"),
+                "description": "Nudrat is a registered nutritional therapist specialising in blood sugar balance, metabolic health, women's health, and gut health. She delivers personalised nutrition plans and group education programmes through Flowergrid, with expertise in culturally-sensitive nutrition and sustainable lifestyle change."
             },
             {
-                "name": "Munira",
-                "role": "NLP Practitioner, Hypnotherapist, RTT",
-                "image": getImageUrl("about/team/munira.png"),
-                "description": "Munira, our alchemist, specializes in transforming mindsets into positive habits through the potent tools of NLP, hypnotherapy, and RTT. With a focus on elevating consciousness and refining your internal being, she guides you on a journey of self-discovery and empowerment. Trust her expertise to unlock your fullest potential and cultivate lasting change from within."
+                "name": "Tarun",
+                "role": "Reiki Grand Master & Holistic Energy Consultant",
+                "image": getImageUrl("about/team/Tarun Sharma.png"),
+                "description": "Tarun is a Reiki Grand Master and healer who brings deep expertise in Gayatri Reiki, Sujok therapy, and Mudras to Flowergrid. He blends ancient energy work with practical lifestyle habits, offering guidance on natural home remedies and daily nutrition to support your vitality. Through Nadi astrology and Vastu energy, Tarun helps you create lasting harmony within yourself and your environment."
+            }
+        ]
+    },
+    {
+        "id": "row-9",
+        "type": "single",
+        "members": [
+            {
+                "name": "Dr. Ayla", 
+                "role": "Aesthetic and Plastic Surgeon",
+                "image": getImageUrl("about/team/angleroc.jpg"),
+                "description": "Dr. Ayla is an expert aesthetic and plastic surgeon in London specializing in facial rejuvenation, breast surgery, and body contouring. Bringing surgical precision and an artistic eye to Flowergrid, she focuses on natural-looking results that enhance your unique features. Whether guiding you through a transformative procedure or a non-surgical treatment plan, Dr. Ayla prioritises safety, clarity, and long-term care."
+            }
+        ]
+    },
+    {
+        "id": "row-10",
+        "type": "pair",
+        "members": [
+            {
+                "name": "Uzma",
+                "role": "Life Coach & Neurodiversity Specialist",
+                "image": getImageUrl("about/team/uzma.png"),
+                "description": "Uzma brings over 20 years of experience in teaching and community welfare to Flowergrid. Specialising in life coaching and neurodiversity support, Uzma helps individuals and families navigate life’s challenges with practical tools and deep compassion. With a background rooted in education and family advocacy, Uzma is dedicated to helping people build resilience and find meaningful direction in their lives."
+            },
+            {
+                "name": "Angelina Ray",
+                "role": "Psychic Therapist, Integrative Counsellor & Reiki Practitioner",
+                "image": getImageUrl("about/team/Angelina Ray.jpg"),
+                "description": "Angelina is an independent integrative counsellor and Psychic Therapist in Croydon, offering grounded emotional support alongside optional psychic mediumship for deeper insight. She works with clients through inner child work, shadow work, unconscious pattern exploration, and Reiki healing to support clarity, healing, and forward movement. Angelina’s approach is professional, confidential, and always led by consent and client comfort."
+            }
+        ]
+    },
+    {
+        "id": "row-11",
+        "type": "single",
+        "members": [
+            {
+                "name": "Entwine",
+                "role": "Professional At-Home Salon Skincare Partner",
+                "image": getImageUrl("about/team/entwine.png"),
+                "description": "Entwine is our dedicated skincare partner providing professional at-home salon skincare results through supercharged, laboratory-formulated active ampoules. Specialising in glass skin treatments and radiant complexion maintenance, Entwine offers cruelty-free and sustainable beauty solutions that fit your lifestyle. Their range ensures that your physical self-care is high-performance, ethical, and fully integrated into your wider wellbeing journey."
             }
         ]
     }
+
 ]
+
+export const foundersData = [
+    {
+        name: "Samina Khan",
+        role: "Co-Founder & Wellness Strategist",
+        description: "Samina has over 12 years of experience supporting individuals through mental health and holistic wellness initiatives. She blends evidence-based coaching, energy work, and psychological techniques to help clients uncover patterns, release emotional blocks, and create sustainable habits. Through the FlowerGrid programmes, Samina guides members from self-discovery to transformation, ensuring each step integrates mind, body, and spirit. Her practical, compassionate approach helps you build clarity, resilience, and long-term wellbeing.",
+        image: "about/person1/samina-pic.png",
+        link: "/samina-khan-holistic-life-coach",
+        firstName: "Samina"
+    },
+    {
+        name: "Monira Ahmed",
+        role: "Co-Founder & Leadership Life Coach",
+        description: "Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.",
+        image: "about/person2/monira.png",
+        link: "/monira-ahmed-hypnotherapist",
+        firstName: "Monira"
+    }
+];
 
 export const lines = [
     "“THE SOUL ALWAYS KNOWS",
