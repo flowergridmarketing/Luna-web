@@ -90,7 +90,7 @@ const page = () => {
         <LunaTeamSection />
       </div>
       <LeafScrollText lines={lines} />
-      <Connect image={getImageUrl("about/team/team-conn.png")} title='Find Your Supportive Practitioner and Begin Your Journey' description='Book Your Discovery Session' btnText='Book Your Discovery Session'  />
+      <Connect image='about/team/team-conn.png' title='Find Your Supportive Practitioner and Begin Your Journey' description='Book Your Discovery Session' btnText='Book Your Discovery Session'  />
 
     </>
   )

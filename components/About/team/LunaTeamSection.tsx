@@ -1,10 +1,9 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { getImageUrl } from "@/lib/utils";
+import LunaTeamPhone from './LunaTeamPhone';
 
 const LunaTeamSection = () => {
   return (
@@ -41,14 +40,14 @@ const LunaTeamSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-8 bg-[#4a3422] text-[#f3e5cb] px-8 py-4 rounded-full font-heading font-medium text-lg shadow-lg hover:bg-[#3d2b1c] transition-all duration-300"
+              className="mt-8 bg-[#A67C52] text-[#f3e5cb] px-8 py-4 rounded-full font-heading font-medium text-lg shadow-lg hover:bg-[#8B6A45] transition-all duration-300"
             >
               Discover Luna and Start Your Journey
             </motion.button>
           </Link>
         </motion.div>
 
-        {/* Right Side: Phone Image */}
+        {/* Right Side: Phone Animation */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -56,15 +55,7 @@ const LunaTeamSection = () => {
           viewport={{ once: true }}
           className="relative flex justify-center items-center"
         >
-          <div className="relative w-full max-w-[500px] aspect-[4/5] md:aspect-square">
-            <Image
-              src={getImageUrl("about/team/luna-chat.png")}
-              alt="Luna AI Chat Interface"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
+          <LunaTeamPhone />
         </motion.div>
       </div>
     </section>
