@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
+import { getImageUrl } from '@/lib/utils';
 
 interface ConnectProps {
     image: string;
@@ -21,7 +22,7 @@ const Connect = ({
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[500px] overflow-hidden p-10 rounded-2xl">
             <div className="relative h-full min-h-[400px] md:min-h-[600px] rounded-t-2xl md:rounded-t-none md:rounded-l-2xl md:rounded overflow-hidden">
                 <Image
-                    src={image}
+                    src={getImageUrl(image)}
                     alt={title}
                     fill
                     className="object-cover rounded-t-2xl hover:scale-105 transition-all duration-300 md:rounded-t-none md:rounded-l-2xl"

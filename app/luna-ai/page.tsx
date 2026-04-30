@@ -73,7 +73,7 @@ export default function LunaPage() {
 
       {/* Second Section */}
       <section className="pt-10 bg-background relative overflow-hidden">
-        <div className="container px-6 grid md:grid-cols-2 gap-10 items-center">
+        <div className="container grid md:grid-cols-2 px-6 items-center">
            <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +89,7 @@ export default function LunaPage() {
             />
           </motion.div>
           
-          <div className="flex flex-col gap-10 items-center text-center md:mr-20">
+          <div className="flex flex-col gap-10 items-center text-center">
             <div className="space-y-6">
                <BlurTextReveal text="I've seen how anxiety, pressure, and self-doubt can cloud our inner light. That's why I was created" className="text-center" />
             </div>
