@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getImageUrl } from "@/lib/utils";
 
 const TESTS = [
   {
@@ -69,7 +70,7 @@ export default function LunaUnderstanding() {
               className="bg-[#E5D2AE]! rounded-[60px] p-8 flex flex-col items-center text-center group transition-all duration-500 hover:shadow-xl hover:-translate-y-2 min-h-[420px]"
             >
               <div className="mb-6 mt-4 relative w-12 h-12">
-                <Image src="/Home/leaf.png" alt="Leaf" fill className="object-contain" />
+                <Image src={getImageUrl("/home/leaf.png")} alt="Leaf" fill className="object-contain" />
               </div>
 
               <h3 className="text-2xl md:text-3xl text-[#171717] font-heading font-medium mb-6 leading-tight h-16 flex items-center justify-center">
