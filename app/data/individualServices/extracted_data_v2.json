@@ -1,0 +1,909 @@
+[
+  {
+    "name": "Relationship Coaching",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Nutritional Consulting",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "Start your Reiki journey to inner calm",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [
+      {
+        "question": "1. What is Reiki healing and how does it work?",
+        "answer": "Reiki healing is a gentle, non-invasive practice that supports relaxation and emotional balance. Through guided techniques, it helps restore harmony to the mind, body, and spirit."
+      },
+      {
+        "question": "2. How many Reiki sessions are typically needed?",
+        "answer": "The number of Reiki sessions varies depending on individual needs. Many clients notice benefits after 2\u20133 sessions, while a longer programme can support deeper emotional and energetic balance."
+      },
+      {
+        "question": "3. Does Reiki healing really work?",
+        "answer": "Reiki supports stress reduction, mental clarity, and emotional wellbeing. While results can vary, clients often report improved calm, focus, and overall vitality after sessions."
+      },
+      {
+        "question": "4. Can Reiki help with anxiety and stress?",
+        "answer": "Yes, Reiki is widely used to reduce anxiety and stress. By promoting relaxation and emotional balance, it can help clients feel calmer, more resilient, and centred."
+      },
+      {
+        "question": "5. What should I expect during a Reiki session?",
+        "answer": "Sessions are calm and personalised. You may feel deep relaxation, warmth, or gentle tingling. Guided meditation, mindafulness, and reflection help integrate the experience for lasting benefits."
+      },
+      {
+        "question": "6. Is Reiki suitable for everyone?",
+        "answer": "Reiki is suitable for adults, children, and even pets. It\u2019s gentle, safe, and supportive for anyone seeking relaxation, stress relief, or emotional harmony."
+      },
+      {
+        "question": "7. How much does Reiki healing cost at Flowergrid?",
+        "answer": "Prices vary depending on session length and programme choice. Please contact us to discuss options and book a session tailored to your needs. Services (Main Overview Page) \u2502 \u251c\u2500\u2500 Life Coaching & Transformation \u2502     \u251c\u2500\u2500 Professional development coaching personal development coaching \u2502     \u251c\u2500\u2500 Relationship Coaching \u2502     \u251c\u2500\u2500 Conscious Living Coaching \u2502     \u2514\u2500\u2500 Leadership & Soft Skills Coaching \u2502 \u251c\u2500\u2500 Therapeutic & Mental Wellness \u2502     \u251c\u2500\u2500 Anxiety & Stress Management Techniques \u2502     \u251c\u2500\u2500 Neuro-Linguistic Programming (NLP) \u2502     \u251c\u2500\u2500 Psychological Therapy \u2502     \u2514\u2500\u2500 Hypnotherapy \u2502 \u251c\u2500\u2500 Medical & Aesthetic Wellness \u2502     \u251c\u2500\u2500 Medical Checks, Treatments & Aesthetics \u2502     \u251c\u2500\u2500 Nutritional Consulting \u2502     \u251c\u2500\u2500 Doctor Consultations \u2502     \u2514\u2500\u2500 Integrative Health & Fitness Plans \u2502 \u2514\u2500\u2500 Holistic & Energy Healing \u251c\u2500\u2500 Meditation, Mindfulness & Breathing \u251c\u2500\u2500 Reiki Healing \u251c\u2500\u2500 Colour Therapy / Auricular Acupuncture \u2514\u2500\u2500 Soul Reflection & Transformation Work Meditation, Mindfulness and Breathing (service page)"
+      }
+    ],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Personal Development Coaching",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Professional development coaching",
+    "meta_title": "Professional Development Coaching UK | Flowergrid",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Relationship Coaching",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Conscious Living Coaching",
+    "meta_title": "Conscious Life Coaching UK | Intentional Living Support | Flowergrid",
+    "meta_description": "Conscious life coaching at Flowergrid helps you build clarity, boundaries and calm. Available online across the UK and in Croydon. Book a free consultation.",
+    "h1": "Conscious Living Coaching",
+    "intro_title": "Conscious Living Coaching Helps When You Feel Disconnected, Inauthentic, or Ready for Meaningful Change",
+    "intro_points": [
+      "You feel disconnected from your authentic self and true values",
+      "Life looks successful on paper but feels empty inside",
+      "You are living for others' expectations instead of your own purpose",
+      "Major life decisions feel overwhelming without clear direction",
+      "You want to align your daily choices with what actually matters to you"
+    ],
+    "intro_summary": "Conscious living coaching aligns your life with your values, builds authentic direction, and creates purposeful, fulfilling living.",
+    "approach_title": "Our Approach to Conscious Living Coaching",
+    "approach_description": "",
+    "approach_cards": [
+      {
+        "title": "H3 #1: Values-Centred, Not Symptom-Focused",
+        "text": "Conscious living coaching at Flowergrid starts with understanding your core values and what authenticity means for you. Rather than fixing problems, we help you build a life aligned with who you actually are and what genuinely matters."
+      },
+      {
+        "title": "H3 #2: Integrated Mind, Body, and Spirit Work",
+        "text": "We blend values clarification with emotional support, nervous system regulation, and practical grounding. This integration ensures your conscious living choices are embodied and sustainable, not just intellectual or aspirational ideas disconnected from real life."
+      },
+      {
+        "title": "H3 #3: Practical Authenticity, Not Just Reflection",
+        "text": "Conscious living coaching includes both deep self-discovery and concrete action steps. You gain clarity on your values and leave with a practical roadmap for living more authentically, making decisions consciously, and building sustainable change. Profile of Practitioner"
+      }
+    ],
+    "benefits_title": "Benefits of Conscious Living Coaching",
+    "benefits_description": "",
+    "benefits_items": [
+      {
+        "title": "H3 #1: Clarity on Core Values",
+        "text": "Gain deep understanding of what actually matters to you, not what you think should matter. Build clarity that guides every decision and choice with authentic confidence and purpose."
+      },
+      {
+        "title": "H3 #2: Authentic Living and Self-Expression",
+        "text": "Move from performing for others to showing up as your true self. Experience freedom and relief from living aligned with your values, not external expectations or inherited patterns."
+      },
+      {
+        "title": "H3 #3: Purposeful Direction and Meaning",
+        "text": "Build a clear sense of purpose and direction rooted in your values. Experience the fulfillment that comes from living consciously, not just successfully, with genuine meaning and passion."
+      },
+      {
+        "title": "H3 #4: Confident Decision-Making",
+        "text": "Make major life decisions from clarity rather than fear or obligation. Develop a values-based framework that helps you navigate choices with confidence and minimal regret in any situation."
+      },
+      {
+        "title": "H3 #5: Inner Peace and Integration",
+        "text": "Experience reduced internal conflict and wholeness when your beliefs, choices, and actions align. Feel grounded, present, and at peace knowing your life reflects who you truly are."
+      }
+    ],
+    "journey_steps": [],
+    "faq": [
+      {
+        "question": "1. What is conscious living coaching?",
+        "answer": "Conscious living coaching helps you clarify your core values, understand your authentic self, and build a life that genuinely reflects what matters to you. It combines self-discovery with practical tools to help you live purposefully, authentically, and aligned with your true beliefs."
+      },
+      {
+        "question": "2. How is conscious living coaching different from life coaching?",
+        "answer": "Life coaching often focuses on goals, productivity, and achievement. Conscious living coaching goes deeper, asking what you truly value and whether your current life reflects those values. It is about authentic alignment, not just external success or life hacks."
+      },
+      {
+        "question": "3. Who benefits from conscious living coaching?",
+        "answer": "Anyone seeking authenticity, clarity, or meaningful change can benefit. Whether you are navigating a major life transition, feeling empty despite external success, questioning inherited beliefs, or wanting to live more consciously and purposefully, this coaching offers genuine support."
+      },
+      {
+        "question": "4. What should I expect in a conscious living coaching session?",
+        "answer": "Sessions begin with exploration and self-discovery work. You will gain clarity on your values, examine where your life aligns or misaligns with those values, and develop practical strategies for living more consciously and authentically in daily life."
+      },
+      {
+        "question": "5. How long does conscious living coaching take to show results?",
+        "answer": "Many clients notice shifts in clarity and self-awareness within 2 to 3 sessions. Deeper values alignment and sustainable life changes typically take 6 to 12 weeks of consistent work. Your coach will help you understand realistic timelines based on your specific journey."
+      },
+      {
+        "question": "6. Can I do conscious living coaching online or does it need to be in person?",
+        "answer": "Both options are available. Flowergrid offers conscious living coaching online via secure video call and in-person sessions at our Coulsdon centre. Many clients find online sessions equally effective and more convenient for their schedule and lifestyle."
+      },
+      {
+        "question": "7. How do I book conscious living coaching at Flowergrid?",
+        "answer": "Booking is simple. Browse our coaches' profiles, select someone whose approach resonates with you, and reach out via their profile form or contact us at sk@flowergrid.co.uk or +44 7432 211096. We will confirm your session and guide you through the process."
+      }
+    ],
+    "related_services": [],
+    "testimonials": [
+      {
+        "text": "\"Conscious living coaching at Flowergrid helped me finally understand what I actually value versus what I thought I should want. I made a major career change and feel genuinely aligned for the first time.\"",
+        "name": "Nicholas Hart, London"
+      },
+      {
+        "text": "\"I came for clarity and left with a complete shift in how I approach life. The coaching helped me move from performing for others to living authentically. The difference in my wellbeing is remarkable.\"",
+        "name": "Jasmine Williams, Surrey"
+      },
+      {
+        "text": "\"After years of external success and internal emptiness, conscious living coaching gave me permission to build a life that actually reflects my values. The support and practical tools made real change possible.\"",
+        "name": "Oliver Chen, Croydon"
+      },
+      {
+        "text": "\"The coaching addressed not just my mindset but my whole life. I now make decisions from clarity instead of fear, and my relationships, work, and sense of peace have all transformed.\"",
+        "name": "Grace Patterson, Manchester"
+      },
+      {
+        "text": "\"Conscious living coaching helped me understand the cost of living inauthentically. With support, I made brave changes and now feel grounded, purposeful, and genuinely fulfilled in my daily life.\"",
+        "name": "Alexander Foster, Birmingham"
+      }
+    ]
+  },
+  {
+    "name": "Stress and Anxiety Support",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Neuro-Linguistic Programming (NLP)",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Psychological Therapy",
+    "meta_title": "Meta description: Psychological Therapy at Flowergrid supports anxiety, stress, low mood, grief and relationship struggles. Book a free consultation online across the UK or in Croydon.",
+    "meta_description": "",
+    "h1": "Psychological Therapy",
+    "intro_title": "Psychological Therapy supports you when life feels heavy, confusing, or hard to manage alone",
+    "intro_points": [],
+    "intro_summary": "Our approach to Psychological Therapy at Flowergrid",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "The Benefits of Psychological Therapy",
+    "benefits_description": "",
+    "benefits_items": [
+      {
+        "title": "Deeper Self-Understanding",
+        "text": "Gain clarity on why you think and feel the way you do. Understanding your emotional blueprints allows you to make conscious choices rather than reacting from old wounds or habits."
+      },
+      {
+        "title": "Healthy Emotional Processing",
+        "text": "Learn how to sit with and process difficult feelings like anger, sadness, or shame. Therapy provides the tools to manage these emotions without becoming overwhelmed or feeling the need to hide."
+      },
+      {
+        "title": "Improved Relationship Dynamics",
+        "text": "As you understand yourself better, your connections with others often improve. You learn to set clearer boundaries, communicate your needs effectively, and build more authentic, supportive relationships in your life."
+      },
+      {
+        "title": "Recovery from Trauma",
+        "text": "Gently work through the impact of past trauma in a safe environment. Therapy helps you integrate these experiences so they no longer hold the same power over your present emotional state."
+      },
+      {
+        "title": "Sustainable Inner Peace",
+        "text": "Develop a steadier sense of calm that remains even when life is challenging. You build the resilience and self-trust required to maintain your mental health and wellbeing over the long term. Start your journey toward healing at Flowergrid Holistic Wellness Centre. Our process is designed to be gentle and supportive, helping you find the right therapist for your specific emotional needs."
+      },
+      {
+        "title": "Choose Your Coach",
+        "text": "Our panel includes experienced psychologists and therapists with various specialities. Explore their profiles to find the practitioner whose background and therapeutic style feel like the best match for your journey."
+      },
+      {
+        "title": "Get in Touch",
+        "text": "Contact us directly via our website form, email us at sk@flowergrid.co.uk, or call +44 7432 211096. Share a little about what you are seeking so we can support you."
+      },
+      {
+        "title": "Confirm Your Session",
+        "text": "We will respond promptly to schedule your initial consultation. We ensure that every step of the booking process is handled with the utmost privacy, compassion, and professional care for your wellbeing."
+      },
+      {
+        "title": "Visit Us or Connect Online",
+        "text": "Visit our Coulsdon centre in London (CR5 2JA) for in-person therapy, or choose online sessions via secure video call. We provide professional psychological support accessible from anywhere in the UK. \u201cI did not realise how much I was holding in until I finally spoke it out loud. Therapy helped me feel calmer, and I am coping with stress in a completely different way now.\u201d Nadia Ali, London \u201cI came in feeling burnt out and numb. The sessions helped me understand my patterns and take small steps that actually stuck. I feel more like myself again.\u201d James Porter, Surrey \u201cI was struggling with anxiety and sleep for months. Therapy gave me a safe space and practical tools. It was not instant, but it was real progress.\u201d Sophie Grant, Croydon \u201cSamina helped me untangle what was really going on beneath my stress. I felt listened to properly, and I left with practical ways to cope that actually fit my day to day life.\u201d Emma Williams, UK \u201cIt helped me through a difficult transition. I felt listened to properly and supported without judgement. That alone made a difference.\u201d Daniel Okoye, Manchester"
+      }
+    ],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Hypnotherapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Aesthetic and Plastic Surgery",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Nutritional Consulting",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Psychological Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Hypnotherapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "How to book Aesthetic and Plastic Surgery at Flowergrid",
+    "intro_points": [],
+    "intro_summary": "What clients say about Aesthetic and Plastic Surgery at Flowergrid",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [
+      {
+        "question": "1) What is included in an Aesthetic and Plastic Surgery consultation at Flowergrid?",
+        "answer": "Your consultation includes a discussion of your goals, a professional assessment, and clear recommendations on suitable options. You will also receive guidance on safety, risks, recovery time, and realistic outcomes."
+      },
+      {
+        "question": "2) What procedures do you cover under Aesthetic and Plastic Surgery?",
+        "answer": "We cover facial procedures such as facelift, rhinoplasty and blepharoplasty, breast procedures such as augmentation, lift and reduction, and body contouring such as liposuction and tummy tuck. Non surgical options may also be discussed."
+      },
+      {
+        "question": "3) How do you ensure natural looking results?",
+        "answer": "We focus on proportion, harmony, and what will age well over time. The goal is to enhance your features while keeping you looking like yourself, not chasing trends or dramatic change."
+      },
+      {
+        "question": "4) Can I choose non surgical treatments instead of surgery?",
+        "answer": "Yes. During your consultation, we can discuss non surgical options such as Botox, fillers, thread lifts, and skin rejuvenation where appropriate. You will be guided towards what is most suitable and realistic."
+      },
+      {
+        "question": "5) What is recovery like after aesthetic or plastic surgery?",
+        "answer": "Recovery depends on the procedure. Your surgeon will explain expected downtime, aftercare steps, and follow up. Planning includes recovery timelines so you can prepare properly and feel supported."
+      },
+      {
+        "question": "6) Do you offer online consultations?",
+        "answer": "Yes. Online consultations are available for initial discussions and suitability. In person appointments can be arranged on request, depending on your goals and treatment plan."
+      },
+      {
+        "question": "7) How do I book Aesthetic and Plastic Surgery at Flowergrid?",
+        "answer": "You can book by emailing sk@flowergrid.co.uk or calling +44 7432 211096. If you are unsure where to start, we can guide you to the right consultation and practitioner."
+      }
+    ],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Nutritional Consulting",
+    "meta_title": "Meta description: Nutritional Consulting at Flowergrid supports energy, digestion, blood sugar and hormones with food first plans. Book a free consultation online or in Croydon.",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Craniosacral Therapy",
+    "meta_title": "Meta description: Craniosacral Therapy Croydon at Flowergrid offers gentle, non invasive support for stress, sleep, headaches and TMJ. Book a free consultation in Croydon.",
+    "meta_description": "",
+    "h1": "Craniosacral Therapy",
+    "intro_title": "Craniosacral Therapy supports you when your body has forgotten how to properly rest",
+    "intro_points": [],
+    "intro_summary": "Our approach to Craniosacral Therapy at Flowergrid",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Psychological Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Hypnotherapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Reiki Healing",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Nutritional Consulting",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "How to book Craniosacral Therapy at Flowergrid",
+    "intro_points": [],
+    "intro_summary": "What clients say about Craniosacral Therapy at Flowergrid",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Auricular Acupuncture",
+    "meta_title": "Meta description: Auricular Acupuncture at Flowergrid Holistic Wellness Centre in Croydon supports stress, sleep, pain and habit change using ear acupuncture and seeds. Book a free consultation.",
+    "meta_description": "",
+    "h1": "Auricular Acupuncture at Flowergrid.",
+    "intro_title": "Auricular Acupuncture supports you when you need a practical way to reset your internal balance",
+    "intro_points": [],
+    "intro_summary": "The benefits of professional Auricular Acupuncture",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Craniosacral Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Hypnotherapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Psychological Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Reiki Healing",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Nutritional Consulting",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "What clients say about Auricular Acupuncture at Flowergrid",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Sound Therapy",
+    "meta_title": "Meta description: Sound Therapy at Flowergrid Holistic Wellness Centre Croydon supports stress relief, sleep and emotional balance through guided sound sessions. Book a free consultation.",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Reiki Healing",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Craniosacral Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Stress and Anxiety Support",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Psychological Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Hypnotherapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "How to book Sound Therapy at Flowergrid",
+    "intro_points": [],
+    "intro_summary": "What clients say about Sound Therapy at Flowergrid",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Aromatherapy",
+    "meta_title": "Meta description: Discover Aromatherapy in Croydon at Flowergrid Holistic Wellness Centre. Custom botanical blends for stress, sleep and hormonal health. Book your free discovery call.",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Craniosacral Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Nutritional Consulting",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Reiki Healing",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Sound Therapy",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "",
+    "intro_points": [],
+    "intro_summary": "",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  },
+  {
+    "name": "Stress and Anxiety Support",
+    "meta_title": "",
+    "meta_description": "",
+    "h1": "",
+    "intro_title": "How to book Aromatherapy in Croydon",
+    "intro_points": [],
+    "intro_summary": "What clients say about Sound Therapy at Flowergrid",
+    "approach_title": "",
+    "approach_description": "",
+    "approach_cards": [],
+    "benefits_title": "",
+    "benefits_description": "",
+    "benefits_items": [],
+    "journey_steps": [],
+    "faq": [],
+    "related_services": [],
+    "testimonials": []
+  }
+]

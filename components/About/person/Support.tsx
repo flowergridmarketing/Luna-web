@@ -50,7 +50,6 @@ const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
     const animate = (time: number) => {
       const singleSetWidth = container.scrollWidth / 2;
 
-      // Resume scroll after 1 second of no interaction
       const shouldScroll = !isHovered.current && (time - lastInteractionTime.current > 1000);
 
       if (shouldScroll && singleSetWidth > 0) {
@@ -60,7 +59,6 @@ const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
         }
         container.scrollLeft = scrollAmountRef.current;
       } else if (!shouldScroll) {
-        // Keep scrollAmountRef in sync with manual scrolling
         scrollAmountRef.current = container.scrollLeft;
       }
 
@@ -70,7 +68,6 @@ const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
     animationRef.current = requestAnimationFrame(animate);
 
     return () => {
-      // ✅ CRITICAL: Cancel requestAnimationFrame to prevent memory leak
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
         animationRef.current = null;
@@ -97,7 +94,7 @@ const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
   if (!data || data.length === 0) return null;
 
   return (
-    <section className="bg-background py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-background pt-4 pb-16 md:pb-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1440px] mx-auto">
         <div className="mb-10 md:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-text-heading font-heading tracking-wide font-normal">
