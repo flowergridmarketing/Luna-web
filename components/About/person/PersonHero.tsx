@@ -6,13 +6,29 @@ import { getImageUrl } from '@/lib/utils';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 
+import Link from 'next/link';
+
 interface IntroProps {
   imageSrc: string;
   text: string;
+  subtext?: string;
+  duration?: string;
+  ctaText?: string;
+  ctaLink?: string;
   imageClassName?: string;
+  badges?: string[];
 }
 
-export default function PersonHero({ imageSrc, text, imageClassName }: IntroProps) {
+export default function PersonHero({
+  imageSrc,
+  text,
+  subtext,
+  duration,
+  ctaText,
+  ctaLink,
+  imageClassName,
+  badges
+}: IntroProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -75,33 +91,62 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[850px] w-full overflow-hidden
-                  bg-linear-to-r from-[#ECDDC6] to-[#a27f45]"
+      className={`relative w-full overflow-hidden bg-linear-to-r from-[#ECDDC6] to-[#a27f45] ${ctaText ? 'min-h-[950px]' : 'min-h-[850px]'}`}
     >
 
-      <div className="mx-auto flex flex-col min-h-screen max-w-7xl items-center justify-center md:justify-start px-4 sm:px-6 md:px-8 lg:px-12
-          md:flex-col md:h-[850px] lg:max-h-[850px]
-      ">
+      <div className={`mx-auto flex flex-col max-w-7xl items-center justify-center md:justify-start px-4 sm:px-6 md:px-8 lg:px-12
+          md:flex-col ${ctaText ? 'min-h-[950px] md:h-[950px]' : 'min-h-screen md:h-[850px] lg:max-h-[850px]'}
+      `}>
 
         <div
           ref={textRef}
-          className="
-          relative z-20 mx-auto
+          className={`
+          relative z-30 mx-auto
           max-w-6xl
-          pt-8 md:pt-26 lg:pt-22
+          ${ctaText ? 'pt-6 md:pt-10 lg:pt-12 items-center' : 'pt-8 md:pt-26 lg:pt-22'}
           px-4 sm:px-6 md:pl-14 lg:px-24 lg:pr-24
           text-center
           flex flex-col justify-start
-        "
+        `}
         >
-          <h1 className="
-          text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl
+          <h1 className={`
+          ${ctaText ? 'text-3xl sm:text-4xl md:text-5xl whitespace-pre-line' : 'text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl'}
           font-normal text-black
           leading-tight sm:leading-tight md:leading-snug lg:leading-snug
-          md:px-20 lg:mt-8 mb-8 sm:mb-12 md:mb-16 md:ml-4"
+          max-w-4xl
+          ${ctaText ? 'mb-4' : 'mb-8 sm:mb-12 md:mb-16 md:px-20 lg:mt-8 md:ml-4'}
+          `}
           >
             {text}
           </h1>
+
+          {subtext && (
+            <p className="max-w-3xl text-base md:text-lg text-black/80 mb-6 font-light leading-relaxed">
+              {subtext}
+            </p>
+          )}
+
+          {badges && badges.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2 mb-6">
+              {badges.map((badge, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-1.5 border border-black/30 rounded-full text-xs md:text-sm text-black/80 font-light backdrop-blur-xs"
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {ctaText && ctaLink && (
+            <Link
+              href={ctaLink}
+              className="bg-[#433327] text-white px-8 py-3 rounded-full text-base md:text-lg font-medium transition-transform hover:scale-105 shadow-md mb-4"
+            >
+              {ctaText}
+            </Link>
+          )}
         </div>
 
         <div
@@ -117,7 +162,7 @@ export default function PersonHero({ imageSrc, text, imageClassName }: IntroProp
 
         <div
           ref={imageRef}
-          className="absolute -bottom-10 left-1/2 z-10 h-full w-full -translate-x-1/2">
+          className="absolute -bottom-10 left-1/2 z-30 h-full w-full -translate-x-1/2">
           <Image
             src={imageSrc}
             alt="trainer img"
