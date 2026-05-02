@@ -5,12 +5,25 @@ import Image from 'next/image'
 import { teamTree } from '@/app/data/about'
 import { getImageUrl } from '@/lib/utils'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const TeamTreeSection = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
+  const router = useRouter()
 
-  const handleCardClick = (cardId: string) => {
-    setExpandedCard(expandedCard === cardId ? null : cardId)
+  const handleCardClick = (cardId: string, slug?: string) => {
+    // If on mobile and not expanded, expand it
+    // If already expanded and has slug, redirect
+    // On desktop, expansion is handled by hover, so click should redirect
+    if (expandedCard === cardId && slug) {
+      router.push(`/practitioner/${slug}`)
+    } else {
+      setExpandedCard(expandedCard === cardId ? null : cardId)
+      // Check if it's desktop (using window width as a hint, or just assuming hover handled it)
+      if (window.innerWidth >= 768 && slug) {
+        router.push(`/practitioner/${slug}`)
+      }
+    }
   }
 
   return (
@@ -79,7 +92,7 @@ const TeamTreeSection = () => {
 
                       {/* Image Container - Expands on hover */}
                       <div
-                        onClick={() => handleCardClick(cardId)}
+                        onClick={() => handleCardClick(cardId, member.slug)}
                         className={`relative rounded-[120px] bg-[#D7C3A3] overflow-hidden shadow-md cursor-pointer transition-all duration-500 ease-in-out
                         ${isExpanded
                             ? 'w-[220px] h-[650px] md:w-[320px] md:h-[800px]'
@@ -108,26 +121,31 @@ const TeamTreeSection = () => {
                             {member.description}
                           </p>
 
-                          {/* Book Consultation Button */}
-                          <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target="_blank" rel="noopener noreferrer" className="bg-[#A67C52] hover:bg-[#8B6A45] text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6">
-                            Book Consultation
+                          {/* View Profile Button */}
+                          <Link 
+                            href={member.slug ? `/practitioner/${member.slug}` : "/contact"} 
+                            className="bg-[#A67C52] hover:bg-[#8B6A45] text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6"
+                          >
+                            View Profile
                           </Link>
                         </div>
                       </div>
                     </div>
 
-                    {/* Name and Role - Hidden on hover */}
-                    <div className={`mt-4 transition-opacity duration-300
-                    ${isExpanded ? 'opacity-0' : 'opacity-100'}
-                    md:group-hover:opacity-0
-                  `}>
+                    <Link 
+                      href={member.slug ? `/practitioner/${member.slug}` : "#"}
+                      className={`mt-4 transition-opacity duration-300 block
+                        ${isExpanded ? 'opacity-0 pointer-events-none' : 'opacity-100'}
+                        md:group-hover:opacity-0 md:group-hover:pointer-events-none
+                      `}
+                    >
                       <h3 className="text-base md:text-lg font-semibold text-[#2C1810] leading-snug mb-1">
                         {member.name}
                       </h3>
                       <p className="text-xs md:text-lg xl:text-xl  text-[#714C24]! leading-relaxed font-normal px-2 max-w-[160px] md:max-w-[240px]">
                         {member.role}
                       </p>
-                    </div>
+                    </Link>
 
                   </div>
                 )

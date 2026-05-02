@@ -1,5 +1,3 @@
-import { i, image } from "framer-motion/client";
-import { title } from "process";
 import { getImageUrl } from "@/lib/utils";
 
 export const personsData = {
@@ -352,6 +350,7 @@ export const teamTree = [
                 "name": "Dr. Hana Patel",
                 "role": "General Practitioner, Medical Exert Witness & Family Doctor",
                 "image": getImageUrl("about/team/hana.png"),
+                "slug": "dr-hana-patel-gp-mental-health-coach",
                 "description": "Dr. Hana, our skilled and acclaimed doctor in wellness, specializes in assessing and reviewing chronic conditions. Whether you are managing a chronic illness or seeking active improvement, Dr. Hana provides expert guidance. With a focus on holistic wellness, she helps individuals refine their health goals and achieve optimal well-being. Trust Dr. Hana to support you in your journey towards better health and vitality"
             }
         ]
@@ -364,12 +363,14 @@ export const teamTree = [
                 "name": "Tamkin",
                 "role": "Trained Counselling Services & Career Education Direction",
                 "image": getImageUrl("about/team/tamkinnew.png"),
+                "slug": "tamkin-riaz-career-development-coach-in-croydon",
                 "description": "Wanting a listening ear on relationships, guidance, career, Education, Social improvement. Serving the community, individuals in a journey to link needs and solutions"
             },
             {
                 "name": "Yvonne Hewitt",
                 "role": "Hypnotherapist, RTT",
                 "image": getImageUrl("about/team/yvonne.png"),
+                "slug": "yvonne-hewitt-rtt-hypnotherapist-in-croydon",
                 "description": "Yvonne, our skilled specialist, excels in hypnotherapy and harnessing the power of the mind. With expertise in Rapid Transformational Therapy (RTT) and energy work, she guides you towards profound personal breakthroughs. Yvonne's holistic approach helps you unlock your inner potential, overcome limiting beliefs, and achieve lasting change. Trust her to empower you on your journey to mental clarity and emotional well-being."
             }
         ]
@@ -382,6 +383,7 @@ export const teamTree = [
                 "name": "Dr. Ravinder",
                 "role": "Auricular Acupuncturist, Colour Therapist, Angel Healer & Reiki Grand Master",
                 "image": getImageUrl("about/team/ravinder.png"),
+                "slug": "dr-ravinder-auricular-acupuncturist-croydon",
                 "description": "Dr. Ravinder is a licensed Auricular Acupuncturist & accredited Reiki Grand Master offering holistic healing. He utilizes reiki, energy, color therapy, & angelic healing to enhance overall well-being. With professional memberships in Microsystems Acupuncture Society, CNHC, & The Acupuncture Society, his comprehensive care blends ancient healing traditions with modern modalities to relieve physical pain, heal emotionally, & improve vitality."
             }
         ]
@@ -394,12 +396,14 @@ export const teamTree = [
                 "name": "Dr. Renuka Marley",
                 "role": "Healthcare Consultant and Lifecoach",
                 "image": getImageUrl("about/team/renuka.png"),
+                "slug": "dr-renuka-marley-healthcare-consultant-croydon",
                 "description": "Dr. Renu offers comprehensive body scans to analyze mineral & vitamin levels, utilizing functional nutrition to address deficiencies. With expertise in personalized supplementation and dietary recommendations, she helps clients optimize their nutritional intake. Dr. Renu goes beyond the basics, incorporating additional elements to support overall health & wellness. Trust Dr. Renu for a tailored approach to enhancing your well-being through nutrient balancing with Dr. Renu."
             },
             {
                 "name": "Runa Boolaky",
                 "role": "NLP Practitioner, Lifecoach & Mental First Aider",
                 "image": getImageUrl("about/team/runa.png"),
+                "slug": "runa-boolaky-nlp-practitioner-in-croydon",
                 "description": "Runa is your guide to leadership development, goal achievement, and the cultivation of healthy habits. She offers support with a range of products designed to enhance your financial health and investment strategies. Runa's holistic approach empowers you to evolve personally and professionally, helping you build a balanced and prosperous life. Trust her expertise to unlock your potential and achieve lasting success.  "
             }
         ]
@@ -412,6 +416,7 @@ export const teamTree = [
                 "name": "Rico Wagner Caleep",
                 "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
                 "image": getImageUrl("about/team/rico.png"),
+                "slug": "rico-wagner-caleap-executive-coach-london",
                 "description": "Rico supports executives and leaders in navigating high-pressure roles with clarity and resilience. Using the Wagner Method, he blends cognitive behavioural strategies, emotional intelligence, and holistic coaching to enhance performance, balance, and wellbeing. Trust Rico to guide you towards sustainable growth and empowered leadership."
             }
         ]
@@ -424,12 +429,14 @@ export const teamTree = [
                 "name": "Rebecca",
                 "role": "The Nutrition And Fitness Coach",
                 "image": getImageUrl("about/team/rebecca.png"),
+                "slug": "rebecca-nutrition-and-fitness-coach-london",
                 "description": "Rebecca the nutrition and fitness coach trained in nutrition and training. Taylored nutrition plans, strength training and Pilates, balancing cardio and Tonning to get results. We are running boot camps for women, menopause programmes, and specializing in fitness and body strength still being individual."
             },
             {
                 "name": "Husna Hoque",
                 "role": "Personal Trainer & Wellness Coach",
                 "image": getImageUrl("about/team/husna.png"),
+                "slug": "husna-hoque-personal-trainer-wellness-coach-london",
                 "description": "Trainer Husna specializes in creating customized workout routines and managing your macros to help you adopt healthier habits. With a focus on personalized fitness plans, she guides clients towards achieving their goals effectively. Trust in Trainer Husna to design workouts tailored to your needs and support you in making positive lifestyle changes. Elevate your fitness journey with Husna's expertise and commitment to your well-being."
             }
         ]
@@ -442,6 +449,7 @@ export const teamTree = [
                 "name": "Aysha",
                 "role": "Communications Coach & Public Speaking Trainer",
                 "image": getImageUrl("about/team/aysha.jpg"),
+                "slug": "aysha-iqbal-communication-coach",
                 "description": "Aysha is a former BBC and ITV News Anchor and founder of Wize Communications. She specialises in helping professionals communicate with confidence and impact through business pitching, public speaking, presentation skills, and leadership communication training delivered through Flowergrid."
             }
         ]
@@ -454,12 +462,14 @@ export const teamTree = [
                 "name": "Nudrat",
                 "role": "Registered Nutritional Therapist & Health Coach",
                 "image": getImageUrl("about/team/nusratchangthai.jpg"),
+                "slug": "nudrat-chagtai-nutritional-therapist",
                 "description": "Nudrat is a registered nutritional therapist specialising in blood sugar balance, metabolic health, women's health, and gut health. She delivers personalised nutrition plans and group education programmes through Flowergrid, with expertise in culturally-sensitive nutrition and sustainable lifestyle change."
             },
             {
                 "name": "Tarun",
                 "role": "Reiki Grand Master & Holistic Energy Consultant",
                 "image": getImageUrl("about/team/Tarun Sharma.png"),
+                "slug": "tarun-sharma-reiki-grand-master",
                 "description": "Tarun is a Reiki Grand Master and healer who brings deep expertise in Gayatri Reiki, Sujok therapy, and Mudras to Flowergrid. He blends ancient energy work with practical lifestyle habits, offering guidance on natural home remedies and daily nutrition to support your vitality. Through Nadi astrology and Vastu energy, Tarun helps you create lasting harmony within yourself and your environment."
             }
         ]
@@ -472,6 +482,7 @@ export const teamTree = [
                 "name": "Dr. Ayla", 
                 "role": "Aesthetic and Plastic Surgeon",
                 "image": getImageUrl("about/team/angleroc.jpg"),
+                "slug": "dr-ayla-gokce-aesthetic-surgeon",
                 "description": "Dr. Ayla is an expert aesthetic and plastic surgeon in London specializing in facial rejuvenation, breast surgery, and body contouring. Bringing surgical precision and an artistic eye to Flowergrid, she focuses on natural-looking results that enhance your unique features. Whether guiding you through a transformative procedure or a non-surgical treatment plan, Dr. Ayla prioritises safety, clarity, and long-term care."
             }
         ]
@@ -484,12 +495,14 @@ export const teamTree = [
                 "name": "Uzma",
                 "role": "Life Coach & Neurodiversity Specialist",
                 "image": getImageUrl("about/team/uzma.png"),
+                "slug": "uzma-neurodiversity-specialist-london",
                 "description": "Uzma brings over 20 years of experience in teaching and community welfare to Flowergrid. Specialising in life coaching and neurodiversity support, Uzma helps individuals and families navigate life’s challenges with practical tools and deep compassion. With a background rooted in education and family advocacy, Uzma is dedicated to helping people build resilience and find meaningful direction in their lives."
             },
             {
                 "name": "Angelina Ray",
                 "role": "Psychic Therapist, Integrative Counsellor & Reiki Practitioner",
                 "image": getImageUrl("about/team/Angelina Ray.jpg"),
+                "slug": "angelina-ray-psychic-therapist-croydon",
                 "description": "Angelina is an independent integrative counsellor and Psychic Therapist in Croydon, offering grounded emotional support alongside optional psychic mediumship for deeper insight. She works with clients through inner child work, shadow work, unconscious pattern exploration, and Reiki healing to support clarity, healing, and forward movement. Angelina’s approach is professional, confidential, and always led by consent and client comfort."
             }
         ]
@@ -502,12 +515,14 @@ export const teamTree = [
                 "name": "Entwine",
                 "role": "Professional At-Home Salon Skincare Partner",
                 "image": getImageUrl("about/team/entwine.png"),
+                "slug": "entwine-at-home-salon-skincare",
                 "description": "Entwine is our dedicated skincare partner providing professional at-home salon skincare results through supercharged, laboratory-formulated active ampoules. Specialising in glass skin treatments and radiant complexion maintenance, Entwine offers cruelty-free and sustainable beauty solutions that fit your lifestyle. Their range ensures that your physical self-care is high-performance, ethical, and fully integrated into your wider wellbeing journey."
             }
         ]
     }
 
 ]
+
 
 export const foundersData = [
     {

@@ -154,7 +154,7 @@ const Qualifications: React.FC<QualificationsProps> = ({ qualifications = [], ed
                 </div>
             </div>
 
-            <div className='px-6 md:px-12 lg:px-10 py-10 md:py-12'>
+            <div className='px-6 md:px-12 lg:px-10 pt-10 pb-4 md:pb-6'>
                 <p className='text-center md:text-2xl lg:text-2xl xl:text-3xl font-light leading-relaxed'>
                     Twenty-five years of building things that matter – businesses, <br className='hidden md:block' />
                     teams, communities, and now spaces where people can finally <br className='hidden md:block' />
