@@ -20,7 +20,7 @@ export default function ServiceApproach({ data }: Props) {
   const approach = data.approach;
 
   return (
-    <section className="w-full bg-background py-14 md:py-20">
+    <section className="w-full py-14 md:py-6">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
 
         {/* Heading */}
@@ -35,11 +35,11 @@ export default function ServiceApproach({ data }: Props) {
         </div>
 
         {/* Cards */}
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mt-14 md:gap-8">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2  lg:grid-cols-3 md:mt-14 md:gap-8">
           {approach.cards?.map((item, index) => (
             <div
               key={index}
-              className="rounded-[2rem] bg-primary px-6 py-10 text-center md:px-10 md:py-16 shadow-lg transition-transform hover:scale-[1.02]"
+              className="rounded-[2rem] bg-[#E5D2AE] px-6 py-10 text-center md:px-10 md:py-16 shadow-lg transition-transform hover:scale-[1.02]"
             >
               {/* Leaf */}
               <div className="mb-6 flex justify-center">
@@ -48,7 +48,7 @@ export default function ServiceApproach({ data }: Props) {
                   alt="Leaf decoration"
                   width={60}
                   height={60}
-                  className="object-contain brightness-0 invert"
+                  className="object-contain"
                 />
               </div>
 

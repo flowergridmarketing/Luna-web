@@ -9,6 +9,7 @@ import Link from 'next/link';
 interface SupportItem {
   image: string;
   title: string;
+  link?: string;
 }
 
 interface SupportProps {
@@ -192,30 +193,30 @@ const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
 
                       <Link
                         className="
-    /* Layout & Centering */
-    flex items-center justify-center
-    whitespace-nowrap overflow-hidden
-    
-    /* Initial Size (constrained) */
-    w-full max-w-[150px] py-3 px-8
-    
-    /* Visual Styles */
-    border border-white/60 rounded-full 
-    text-white text-sm uppercase tracking-widest 
-    backdrop-blur-[2px] 
-    
-    /* Transitions */
-    transition-all duration-500 ease-in-out
-    
-    /* Hover Effects */
-    hover:max-w-full 
-    hover:bg-[#A68653] 
-    hover:text-black 
-    hover:border-black! 
-    hover:py-4 
-    hover:scale-105
-  "
-                        href="/holistic-wellness-services"
+                        /* Layout & Centering */
+                        flex items-center justify-center
+                        whitespace-nowrap overflow-hidden
+                        
+                        /* Initial Size (constrained) */
+                        w-full max-w-[150px] py-3 px-8
+                        
+                        /* Visual Styles */
+                        border border-white/60 rounded-full 
+                        text-white text-sm uppercase tracking-widest 
+                        backdrop-blur-[2px] 
+                        
+                        /* Transitions */
+                        transition-all duration-500 ease-in-out
+                        
+                        /* Hover Effects */
+                        hover:max-w-full 
+                        hover:bg-[#A68653] 
+                        hover:text-black 
+                        hover:border-black! 
+                        hover:py-4 
+                        hover:scale-105
+                      "
+                        href={item.link || "/holistic-wellness-services"}
                       >
                         Learn more
                       </Link>

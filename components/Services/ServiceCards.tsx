@@ -2,99 +2,106 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { getImageUrl } from '@/lib/utils';
+import services from '@/app/data/individualServices/individualServices';
 
 const serviceCardData = [
     {
-        title: "Personal & Professional Growth Coaching",
+        title: "Personal Development Coaching",
         image: getImageUrl("about/person1/s5.jpg"),
-        desc: "Build confidence, clarity, and purpose in every aspect of life."
-
+        desc: "Build confidence, clarity, and purpose in every aspect of life.",
+        slug: "personal-development-coaching"
     },
     {
-        title: "Leadership & Soft Skills Coaching",
+        title: "Professional Development Coaching",
         image: getImageUrl("about/person1/s4.jpg"),
-        desc: "Enhance emotional intelligence, leadership, and communication for success."
+        desc: "Enhance leadership, influence, and sustainable performance for success.",
+        slug: "professional-development-coaching"
     },
     {
-        title: "Neuro-Linguistic Programming",
+        title: "Neuro-Linguistic Programming (NLP)",
         image: getImageUrl("about/person1/s3.jpg"),
-        desc: "Tailored plans to optimise nutrition, metabolism, and energy."
-    },
-    {
-        title: "Soul Reflection & Transformation Work",
-        image: getImageUrl("about/person1/s2.jpg"),
-        desc: "Dive deep into self-awareness, ego work, and soul growth."
+        desc: "Rewire patterns of thought and behaviour to achieve positive change.",
+        slug: "neuro-linguistic-programming-nlp"
     },
     {
         title: "Reiki Healing",
         image: getImageUrl("about/person1/s1.jpg"),
-        desc: "Channel universal energy to clear blockages and renew your emotional state."
+        desc: "Channel universal energy to clear blockages and renew your emotional state.",
+        slug: "reiki-healing"
     },
     {
         title: "Hypnotherapy",
         image: getImageUrl("about/person2/ps3.jpg"),
-        desc: "Access your subconscious to overcome blocks and instill confidence."
+        desc: "Access your subconscious to overcome blocks and instill confidence.",
+        slug: "hypnotherapy"
     },
     {
-        title: "Nuero-Linguistic Programming (NLP)",
-        image: getImageUrl("about/person1/s3.jpg"),
-        desc: "Rewire patterns of thought and behaviour to achieve positive change."
-    },
-    {
-        title: "Anxiety & Stress Management Techniques",
+        title: "Stress and Anxiety Support",
         image: getImageUrl("about/person2/ps1.jpg"),
-        desc: "Learn evidence-based tools to calm the mind and regulate emotions."
-    },
-    {
-        title: "Soul Reflection & Transformation Work",
-        image: getImageUrl("about/person1/s2.jpg"),
-        desc: "Dive deep into self-awareness, ego work, and soul growth."
+        desc: "Learn evidence-based tools to calm the mind and regulate emotions.",
+        slug: "stress-and-anxiety-support"
     },
     {
         title: "Relationship Coaching",
         image: getImageUrl("services/sc1.jpg"),
-        desc: "Strengthen communication, compassion, and connection in your relationships."
+        desc: "Strengthen communication, compassion, and connection in your relationships.",
+        slug: "relationship-coaching"
     },
     {
         title: "Conscious Living Coaching",
         image: getImageUrl("services/sc2.jpg"),
-        desc: "Align your thoughts and habits with your soul’s purpose."
+        desc: "Align your thoughts and habits with your soul’s purpose.",
+        slug: "conscious-living-coaching"
     },
     {
         title: "Psychological Therapy",
         image: getImageUrl("services/sc3.jpg"),
-        desc: "Receive compassionate support to process emotions and heal from within."
+        desc: "Receive compassionate support to process emotions and heal from within.",
+        slug: "psychological-therapy"
     },
     {
-        title: "Doctor Consultations",
-        image: getImageUrl("services/sc4.jpg"),
-        desc: "Access our network of integrative practitioners for personalised health insights."
-    },
-    {
-        title: "Medical Checks, Treatments & Aesthetics",
+        title: "Aesthetic and Plastic Surgery",
         image: getImageUrl("services/sc5.jpg"),
-        desc: "Comprehensive assessments and aesthetic services guided by healthcare professionals."
+        desc: "Comprehensive assessments and aesthetic services guided by healthcare professionals.",
+        slug: "aesthetic-and-plastic-surgery"
     },
     {
         title: "Nutritional Consulting",
         image: getImageUrl("services/sc6.jpg"),
-        desc: "Tailored plans to optimise nutrition, metabolism, and energy."
+        desc: "Tailored plans to optimise nutrition, metabolism, and energy.",
+        slug: "nutritional-consulting"
+    },
+    {
+        title: "Auricular Acupuncture",
+        image: getImageUrl("services/sc9.jpg"),
+        desc: "Experience subtle energy realignment for mind–body rejuvenation.",
+        slug: "auricular-acupuncture-croydon"
+    },
+    {
+        title: "Craniosacral Therapy",
+        image: getImageUrl("services/sc4.jpg"),
+        desc: "Gentle, non-invasive support to help your body settle stress and restore energy.",
+        slug: "craniosacral-therapy-croydon"
+    },
+    {
+        title: "Sound Therapy",
+        image: getImageUrl("services/sc8.jpg"),
+        desc: "A gentle reset for stress and emotional overload through guided sound and relaxation.",
+        slug: "sound-therapy-croydon"
+    },
+    {
+        title: "Aromatherapy",
+        image: getImageUrl("services/sc5.jpg"),
+        desc: "Custom essential oil blends to support calm, sleep, and emotional balance.",
+        slug: "aromatherapy-croydon"
     },
     {
         title: "Integrative Health & Fitness Plans",
         image: getImageUrl("services/sc7.jpg"),
-        desc: "Custom wellness programme combining fitness, nutrition, and mindfulness."
-    },
-    {
-        title: "Meditation, Mindfulness & Breathing",
-        image: getImageUrl("services/sc8.jpg"),
-        desc: "Restore presence and balance through guided stillness."
-    },
-    {
-        title: "Colour Therapy / Auricular Acupuncture",
-        image: getImageUrl("services/sc9.jpg"),
-        desc: "Experience subtle energy realignment for mind–body rejuvenation."
+        desc: "A joined-up roadmap combining movement, nutrition, and recovery for sustainable vitality.",
+        slug: "integrative-health-and-fitness-plans-croydon"
     }
 ]
 
@@ -135,12 +142,12 @@ const ServiceCards: React.FC = () => {
                         const isThisOpen = activeIndex === index;
 
                         return (
-                            <div
+                            <Link
                                 key={index}
-                                onClick={() => handleTouch(index)}
+                                href={`/services/${item.slug}`}
                                 onPointerEnter={(e) => handlePointerEnter(index, e)}
                                 onPointerLeave={handlePointerLeave}
-                                className="group relative h-[420px] md:h-[550px] lg:h-[500px] w-full overflow-hidden rounded-4xl cursor-pointer touch-manipulation"
+                                className="group relative h-[420px] md:h-[550px] lg:h-[500px] w-full overflow-hidden rounded-4xl cursor-pointer touch-manipulation block"
                             >
                                 <div className="absolute inset-0 w-full h-full">
                                     <Image
@@ -165,22 +172,25 @@ const ServiceCards: React.FC = () => {
                                         {item.title}
                                     </h3>
 
-                                    {item.desc && (
-                                        <p className={`text-sm md:text-base lg:text-lg text-white/90! font-light leading-relaxed w-[90%] transition-all duration-500 ease-out overflow-hidden
-                                            ${isThisOpen
-                                                ? 'max-h-40 opacity-100 mb-6'
-                                                : 'max-h-0 opacity-0 mb-0'
-                                            }`}
-                                        >
-                                            {item.desc}
-                                        </p>
-                                    )}
-
-                                    <div className={`md:hidden text-white/50 text-xs uppercase tracking-widest transition-opacity duration-300 ${isThisOpen ? 'opacity-0' : 'opacity-100'}`}>
-                                        Tap to learn more
+                                    <div className="
+                                        flex items-center justify-center
+                                        whitespace-nowrap overflow-hidden
+                                        w-full max-w-[150px] py-3 px-8
+                                        border border-white/60 rounded-full 
+                                        text-white text-sm uppercase tracking-widest 
+                                        backdrop-blur-[2px] 
+                                        transition-all duration-500 ease-in-out
+                                        group-hover:max-w-full 
+                                        group-hover:bg-[#A68653] 
+                                        group-hover:text-black 
+                                        group-hover:border-black! 
+                                        group-hover:py-4 
+                                        group-hover:scale-105
+                                    ">
+                                        View more
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>
