@@ -9,13 +9,14 @@ interface BenefitsSectionProps {
     title: string;
     description: string;
     items: string[];
+    note: string;
     image: string;
   };
 }
 
 const BenefitsSection = ({ data }: BenefitsSectionProps) => {
   return (
-    <section className="py-24 bg-white px-6">
+    <section className="py-24 bg-background px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
@@ -32,7 +33,7 @@ const BenefitsSection = ({ data }: BenefitsSectionProps) => {
             <ul className="space-y-6">
               {data.items.map((item, index) => (
                 <li key={index} className="flex items-start gap-4 group">
-                  <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#A67C52]/10 flex items-center justify-center group-hover:bg-[#A67C52] transition-colors duration-300">
+                  <div className="mt-1 shrink-0 w-6 h-6 rounded-full bg-[#A67C52]/10 flex items-center justify-center group-hover:bg-[#A67C52] transition-colors duration-300">
                     <Check className="w-4 h-4 text-[#A67C52] group-hover:text-white transition-colors duration-300" />
                   </div>
                   <span className="text-base md:text-lg text-[#2C1810]/70 font-sans leading-relaxed">
@@ -41,6 +42,12 @@ const BenefitsSection = ({ data }: BenefitsSectionProps) => {
                 </li>
               ))}
             </ul>
+
+            <div className="mt-10">
+              <p className="text-base md:text-lg text-[#2C1810]/80 font-sans leading-relaxed">
+                Note : {data.note}
+              </p>
+            </div>
           </div>
 
           {/* RIGHT CONTENT: IMAGE */}

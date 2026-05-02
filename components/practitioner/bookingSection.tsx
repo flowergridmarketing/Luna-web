@@ -43,7 +43,7 @@ export default function BookingSection({ data }: Props) {
   if (!booking) return null;
 
   return (
-    <section id="booking" className="w-full bg-[#E6DFD4] py-20 md:py-28">
+    <section id="booking" className="w-full bg-[#F3EAD8] py-20 md:py-28 border-b border-[#644D36]/20">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center xl:gap-20">
           
@@ -62,7 +62,7 @@ export default function BookingSection({ data }: Props) {
               <div className="flex items-start gap-3">
                 <LotusIcon />
                 <div>
-                  <h4 className="font-semibold text-lg text-[#171717] mb-2">Availability & Session Details</h4>
+                  <h4 className="font-medium text-lg text-[#171717] mb-2">Availability & Session Details</h4>
                   <p className="text-[15px] leading-relaxed text-[#171717]">
                     Flexible sessions to fit your schedule, available online or in person.
                   </p>
@@ -73,7 +73,7 @@ export default function BookingSection({ data }: Props) {
               <div className="flex items-start gap-3">
                 <LotusIcon />
                 <div>
-                  <h4 className="font-semibold text-lg text-[#171717] mb-2">Booking:</h4>
+                  <h4 className="font-medium text-lg text-[#171717] mb-2">Booking:</h4>
                   <p className="text-[15px] leading-relaxed text-[#171717]">
                     You can secure your preferred slot directly via Calendly
                   </p>
@@ -84,7 +84,7 @@ export default function BookingSection({ data }: Props) {
               <div className="flex items-start gap-3">
                 <LotusIcon />
                 <div>
-                  <h4 className="font-semibold text-lg text-[#171717] mb-3">Time Zones Supported:</h4>
+                  <h4 className="font-medium text-lg text-[#171717] mb-3">Time Zones Supported:</h4>
                   <ul className="text-[15px] leading-relaxed text-[#171717] space-y-1">
                     <li>· UK (GMT)</li>
                     <li>· Gulf (GST)</li>
@@ -97,7 +97,7 @@ export default function BookingSection({ data }: Props) {
               <div className="flex items-start gap-3">
                 <LotusIcon />
                 <div>
-                  <h4 className="font-semibold text-lg text-[#171717] mb-3">Session Formats:</h4>
+                  <h4 className="font-medium text-lg text-[#171717] mb-3">Session Formats:</h4>
                   <ul className="text-[15px] leading-relaxed text-[#171717] space-y-1">
                     <li>· Online via Zoom - available globally</li>
                     <li>· In-person - {availability?.location || "Coulsdon, UK"}</li>

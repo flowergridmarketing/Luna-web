@@ -17,7 +17,7 @@ export default function Hero({ data }: Props) {
     <section 
       className="relative w-full overflow-hidden flex flex-col justify-center" 
       style={{ 
-        backgroundColor: "#35271C", 
+        background: "linear-gradient(to right, #140F0B, #35271C, #140F0B)", 
         color: "#FFFFFF",
         minHeight: "100vh"
       }}
