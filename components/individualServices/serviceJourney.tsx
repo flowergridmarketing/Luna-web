@@ -15,8 +15,7 @@ interface Step {
 }
 
 interface Props {
-  steps?: string[]; // The current data structure in individualServices.ts uses string[] for steps
-  // But let's support both string[] and Step[] for future flexibility
+  steps?: string[];
 }
 
 export default function ServiceJourney({ steps: rawSteps }: Props) {
@@ -38,12 +37,58 @@ export default function ServiceJourney({ steps: rawSteps }: Props) {
     { title: "Sustainable Support", description: "Habits and skills that last." }
   ];
 
-  const steps = rawSteps?.map((title, index) => ({
-    id: index + 1,
-    title,
-    description: defaultSteps[index]?.description || "Expert guidance for your journey.",
-    position: index % 2 === 0 ? 'left' : 'right'
-  })) || defaultSteps.map((s, i) => ({ ...s, id: i + 1, position: i % 2 === 0 ? 'left' : 'right' }));
+  const steps = rawSteps?.map((rawStep, index) => {
+    const splitIndex = rawStep.indexOf(':');
+    const title = splitIndex !== -1 ? rawStep.substring(0, splitIndex).trim() : rawStep;
+    const description = splitIndex !== -1 ? rawStep.substring(splitIndex + 1).trim() : "";
+
+    return {
+      id: index + 1,
+      title,
+      description,
+      position: index % 2 === 0 ? 'left' : 'right'
+    };
+  }) || defaultSteps.map((s, i) => ({ ...s, id: i + 1, position: i % 2 === 0 ? 'left' : 'right' }));
+
+  // Desktop configuration for up to 5 steps
+  const desktopConfigs = [
+    { 
+      cx: "300", cy: "40", 
+      left: '5%', top: '0px', 
+      mt: 'md:mt-20 sm:mt-12 lg:py-10',
+      path: "M 300 40"
+    },
+    { 
+      cx: "800", cy: "430", 
+      right: '5%', top: '360px', 
+      align: 'items-end text-right', 
+      mt: 'md:mt-20 lg:ml-4',
+      path: "L 650 40 Q 800 40 800 140 Q 800 270 800 400 L 800 430"
+    },
+    { 
+      cx: "200", cy: "650", 
+      left: '2%', top: '700px', 
+      mt: 'md:mt-12',
+      path: "Q 800 550 650 550 L 300 550 Q 200 550 200 650"
+    },
+    { 
+      cx: "750", cy: "1100", 
+      right: '5%', top: '1030px', 
+      align: 'text-right', 
+      mt: 'md:mt-6 lg:ml-6',
+      path: "Q 200 750 300 750 L 650 750 Q 750 750 750 850 Q 750 950 750 1050 L 750 1100"
+    },
+    { 
+      cx: "300", cy: "1400", 
+      left: '5%', top: '1370px', 
+      mt: 'md:mt-[-8rem] lg:mt-4',
+      path: "Q 750 1200 650 1200 L 300 1200 Q 200 1200 200 1300 Q 200 1400 300 1400"
+    }
+  ];
+
+  const activeSteps = steps.slice(0, 5);
+  const dynamicPath = desktopConfigs.slice(0, activeSteps.length).map(c => c.path).join(" ");
+  const dynamicMinHeight = activeSteps.length > 0 ? (parseInt(desktopConfigs[activeSteps.length - 1].top) + 450) : 1800;
 
   useEffect(() => {
     setIsMounted(true);
@@ -227,46 +272,30 @@ export default function ServiceJourney({ steps: rawSteps }: Props) {
         >
           <path
             ref={pathRef}
-            d="M 300 40 L 650 40 Q 800 40 800 140 Q 800 270 800 400 L 800 430 Q 800 550 650 550 L 300 550 Q 200 550 200 650 Q 200 750 300 750 L 650 750 Q 750 750 750 850 Q 750 950 750 1050 L 750 1100 Q 750 1200 650 1200 L 300 1200 Q 200 1200 200 1300 Q 200 1400 300 1400"
+            d={dynamicPath}
             stroke="#9C7D4D"
             strokeWidth="3"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          {steps.slice(0, 5).map((_, i) => {
-            const coords = [
-              { cx: "300", cy: "40" },
-              { cx: "800", cy: "430" },
-              { cx: "200", cy: "650" },
-              { cx: "750", cy: "1100" },
-              { cx: "300", cy: "1400" }
-            ];
-            return (
+          {activeSteps.map((_, i) => (
               <circle 
                 key={i}
                 ref={(el) => { dotsRef.current[i] = el; }} 
-                cx={coords[i].cx} 
-                cy={coords[i].cy} 
+                cx={desktopConfigs[i].cx} 
+                cy={desktopConfigs[i].cy} 
                 r="12" 
                 fill="#9C7D4D" 
                 stroke="#F3E5CB" 
                 strokeWidth="4" 
               />
-            );
-          })}
+          ))}
         </svg>
 
-        <div className="relative mx-auto" style={{ maxWidth: '1400px', minHeight: '1800px' }}>
-          {steps.slice(0, 5).map((step, index) => {
-            const positions = [
-              { left: '5%', top: '0px', mt: 'md:mt-20 sm:mt-12 lg:py-10' },
-              { right: '5%', top: '360px', align: 'items-end text-right', mt: 'md:mt-20 lg:ml-4' },
-              { left: '2%', top: '700px', mt: 'md:mt-12' },
-              { right: '5%', top: '1030px', align: 'text-right', mt: 'md:mt-6 lg:ml-6' },
-              { left: '5%', top: '1370px', mt: 'md:mt-[-8rem] lg:mt-4' }
-            ];
-            const pos = positions[index];
+        <div className="relative mx-auto" style={{ maxWidth: '1400px', minHeight: `${dynamicMinHeight}px` }}>
+          {activeSteps.map((step, index) => {
+            const pos = desktopConfigs[index];
             return (
               <div
                 key={step.id}

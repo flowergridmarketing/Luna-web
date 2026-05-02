@@ -7,15 +7,16 @@ import MeetPractitioners from "@/components/individualServices/meetourpractioner
 import HeroTestimonials from "@/components/Home/HeroTestimonials";
 import FaqSection from "@/components/Contact/FAQSection";
 import ServiceIntroBar from "@/components/individualServices/serviceintro";
-import ServiceApproach from "@/components/individualServices/serviceApproadh";
+import ServiceApproach from "@/components/individualServices/serviceApproach";
 import ServiceBenefits from "@/components/individualServices/serviceBenefits";
-import RelatedServices from "@/components/individualServices/relatedServices";
+import Support from "@/components/About/person/Support";
 import ServiceJourney from "@/components/individualServices/serviceJourney";
 import LatestWriting from "@/components/individualServices/latestWriting";
 import SecondaryCTA from "@/components/individualServices/secondaryCTA";
 import Link from "next/link";
 import Connect from "@/components/About/person/Connect";
 import { getImageUrl } from "@/lib/utils";
+import BlogSection from "@/components/Home/BlogSection";
 
 type Props = {
     params: Promise<{
@@ -106,11 +107,22 @@ export default async function ServicePage({ params }: Props) {
             <ServiceBenefits data={service} />
 
             {/* 6. RELATED SERVICES */}
-            <RelatedServices data={
-                (service.relatedServices?.map((slug: string) =>
-                    services.find((s: any) => s.slug === slug)
-                ).filter(Boolean) as any) || []
-            } />
+            <Support 
+                title="Related Services"
+                data={
+                    (service.relatedServices?.map((slug: string) => {
+                        console.log(slug, 'related services')
+                        const s = services.find((s: any) => s.slug === slug);
+                        console.log(s?.hero.image, `service img for :${s?.hero.name}`)
+                        if (!s) return null;
+                        return {
+                            title: s.hero.name,
+                            image: s.hero.image,
+                            link: `/services/${s.slug}`
+                        };
+                    }).filter(Boolean) as any) || []
+                } 
+            />
 
             {/* 7. JOURNEY (CURVED LINE) */}
             {service.journey?.steps?.length > 0 && (
@@ -124,7 +136,7 @@ export default async function ServicePage({ params }: Props) {
                         </p>
                         <Link
                             href="#booking"
-                            className="inline-flex bg-primary text-white px-8 py-4 rounded-full text-lg font-medium transition-transform hover:scale-105"
+                            className="inline-flex bg-[#A68A64] hover:opacity-90 text-white px-8 py-4 rounded-full text-lg font-medium transition-transform hover:scale-105"
                         >
                             {service.journey.buttonText || "Book Your Session"}
                         </Link>
@@ -142,10 +154,7 @@ export default async function ServicePage({ params }: Props) {
                 />
             )}
 
-            {/* 9. LATEST WRITING */}
-            {service.blogs?.length > 0 && (
-                <LatestWriting blogs={service.blogs} />
-            )}
+            <BlogSection headerTitle="Latest Writings" />
 
             {/* 10. FAQ */}
             {service.faq?.length > 0 && (
@@ -159,9 +168,7 @@ export default async function ServicePage({ params }: Props) {
                 />
             )}
 
-            <Connect image={getImageUrl("individualService/individualservice.jpg")} title="Take the first step toward balance with a free consultation.
-" btnText='Book Free Consultation' description='' />
-
+            <Connect image={getImageUrl("individualService/individualservice.jpg")} title="Take the first step toward balance with a free consultation." btnText='Book Free Consultation' description='' />
 
         </main>
     );
