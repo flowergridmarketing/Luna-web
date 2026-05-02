@@ -45,7 +45,7 @@ export default function JourneySection({ title, description, items }: JourneySec
     }, { scope: containerRef });
 
     return (
-        <section className="py-24 bg-[#F5F1E9]">
+        <section className="py-24 bg-[#F3EAD8]">
             <div className="max-w-7xl mx-auto px-6">
 
                 <div className="text-center mb-20">
@@ -66,8 +66,8 @@ export default function JourneySection({ title, description, items }: JourneySec
                         <div key={index} className="journey-item flex justify-center items-center w-full h-full">
 
                             {item.type === 'card' ? (
-                                <div className="w-full max-w-[280px] aspect-[3/4] flex flex-col">
-                                    <div className="w-full h-full bg-[#E6DFD4] rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-sm">
+                                <div className="w-full max-w-[280px] aspect-3/4 flex flex-col">
+                                    <div className="w-full h-full bg-[#E5CCA1] rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-sm">
 
                                         <h3 className="text-xl font-bold text-[#171717] mb-4">
                                             {item.title}
@@ -80,7 +80,7 @@ export default function JourneySection({ title, description, items }: JourneySec
                                 </div>
                             ) : (
 
-                                <div className="w-full max-w-[250px] aspect-[3/4] flex items-center justify-center relative">
+                                <div className="w-full max-w-[250px] aspect-3/4 flex items-center justify-center relative">
                                     <div className="relative opacity-80 hover:opacity-100 transition-opacity duration-500">
                                         <Image
                                             src={item.image || "/assets/flower-placeholder.svg"}

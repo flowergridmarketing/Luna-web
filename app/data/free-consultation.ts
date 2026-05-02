@@ -2,7 +2,7 @@ import { getImageUrl } from "@/lib/utils";
 
 export const freeConsultationData = {
   hero: {
-    headline: "Free Consultation with Samina Khan at Flowergrid",
+    headline: "Free Consultation with\nSamina Khan at Flowergrid",
     subtext: "Helping you find clarity, balance, and a path forward through integrative mind, body, and spirit wellness programmes.",
     duration: "30 minutes discovery call on Zoom or over the Phone",
     cta: "Book Your Free Consultation",
@@ -14,14 +14,15 @@ export const freeConsultationData = {
     url: "https://calendly.com/flowergridmarketing/30min"
   },
   benefits: {
-    title: "What you will gain from the free consultation",
-    description: "A holistic assessment of your current wellbeing and goals. We take the time to listen and understand your unique needs.",
+    title: "What you will get from this free consultation",
+    description: "This is a calm, private conversation where you can explain what’s been going on without having to edit yourself.",
     items: [
-      "A safe and confidential space to talk about what is holding you back.",
-      "Clarity on which wellness programme or practitioner best suits your current needs.",
-      "A clear roadmap of how integrative support can help you achieve sustainable change.",
-      "Insights into how our mind, body, and spirit approach can help you feel more grounded and aligned."
+      "Clarity on what the real issue is, not just the loudest symptom",
+      "A recommendation on the best next step, coaching, therapy, wellbeing support, or a mix",
+      "A practical starting point you can act on straight away",
+      "Options for online sessions or in person support in Croydon."
     ],
+    note : "This call is for guidance and suitability. It is not a medical appointment and it is not crisis support.",
     image: getImageUrl("free-consultation/benefits.jpg")
   },
   practitioner: {

@@ -28,9 +28,9 @@ export default function PoliciesSection({ policies }: Props) {
           {policies.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col rounded-3xl border border-black/5 bg-[#E6DFD4] p-8"
+              className="flex flex-col rounded-3xl border border-black/5 bg-[#E5CCA1] p-8"
             >
-              <h3 className="font-heading text-xl leading-tight text-text-heading md:text-2xl font-semibold text-center">
+              <h3 className="font-medium text-xl leading-tight text-text-heading md:text-2xl text-center">
                 {item.title}
               </h3>
 

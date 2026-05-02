@@ -16,7 +16,7 @@ export default function SidebarProfile({ data }: Props) {
   ].filter(Boolean);
 
   return (
-    <div className="lg:sticky lg:top-36 flex flex-col items-center bg-[#E6DFD4]/60 backdrop-blur-sm rounded-[32px] pt-12 px-8 pb-12 text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/20">
+    <div className="lg:sticky lg:top-36 flex flex-col items-center bg-[#E6DFD4]/60 border border-primary/20 backdrop-blur-sm rounded-md pt-12 px-8 pb-12 text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] ">
       {/* Profile Image */}
       <div className="mb-8 relative">
         <div className="absolute inset-0 bg-[#644D36]/10 rounded-full blur-2xl -z-10 scale-150"></div>
@@ -44,7 +44,7 @@ export default function SidebarProfile({ data }: Props) {
         href={data.booking?.calendly || "#"}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center rounded-full bg-[#d8c7a2] text-black px-10 py-4 text-lg font-semibold transition-transform hover:scale-[1.03] w-fit"
+        className="inline-flex items-center justify-center rounded-full bg-primary px-15 py-2 mb-5 text-md text-white transition-transform hover:scale-[1.03] w-fit"
       >
         Book a Discovery Call
       </Link>
@@ -52,11 +52,11 @@ export default function SidebarProfile({ data }: Props) {
       {/* Highlights / Badges */}
       <div className="flex w-full flex-col items-center gap-4">
         <div className="flex items-center gap-2 mb-2">
-          <div className="h-[1px] w-4 bg-[#644D36]/20"></div>
+          <div className="h-px w-4 bg-[#644D36]/20"></div>
           <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#644D36]/60">
             Practitioner Highlights
           </p>
-          <div className="h-[1px] w-4 bg-[#644D36]/20"></div>
+          <div className="h-px w-4 bg-[#644D36]/20"></div>
         </div>
         <div className="flex flex-wrap justify-center gap-2.5">
           {badges.map((badge: string, index: number) => (

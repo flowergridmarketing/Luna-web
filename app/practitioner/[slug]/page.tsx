@@ -86,7 +86,7 @@ export default async function PractitionerPage({ params }: Props) {
             <Hero data={practitioner} />
 
             {/* MIDDLE SECTION - Left Content + Right Sidebar */}
-            <section className="w-full bg-[#F5F1E9] py-16 md:py-24">
+            <section className="w-full bg-[#F3EAD8] py-16 md:py-24">
                 <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 xl:gap-24 relative items-start">
                         {/* Left Column Content - Independently scrollable on desktop */}
@@ -106,7 +106,7 @@ export default async function PractitionerPage({ params }: Props) {
                         </div>
 
                         {/* Right Sidebar */}
-                        <div className="w-full lg:w-[380px] xl:w-[420px] flex-shrink-0 lg:sticky lg:top-28">
+                        <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0 lg:sticky lg:top-28">
                             <SidebarProfile data={practitioner} />
                         </div>
                     </div>

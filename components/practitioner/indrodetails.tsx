@@ -22,7 +22,7 @@ export default function IntroDetails({ data }: Props) {
   return (
     <div className="w-full flex flex-col items-start text-left">
       {/* Heading */}
-      <h2 className="text-3xl md:text-5xl font-playfair font-bold text-[#171717] leading-tight max-w-3xl">
+      <h2 className="text-3xl md:text-5xl font-playfair text-[#171717] leading-tight max-w-3xl">
         {data.hero?.subtitle || data.hero?.headline}
       </h2>
 
@@ -37,7 +37,7 @@ export default function IntroDetails({ data }: Props) {
         {/* Formats Badge */}
         {formats && (
           <div className="flex items-stretch w-fit bg-[#E9D8B4] rounded-md overflow-hidden">
-            <div className="w-[6px] bg-[#A7683A] flex-shrink-0" />
+            <div className="w-[6px] bg-[#A7683A] shrink-0" />
             <div className="px-5 py-2.5 text-[#171717] font-medium text-sm md:text-base leading-tight">
               <span className="font-semibold">Formats:</span> {formats}
             </div>
@@ -47,7 +47,7 @@ export default function IntroDetails({ data }: Props) {
         {/* Languages Badge */}
         {languages && (
           <div className="flex items-stretch w-fit bg-[#E9D8B4] rounded-md overflow-hidden">
-            <div className="w-[6px] bg-[#A7683A] flex-shrink-0" />
+            <div className="w-[6px] bg-[#A7683A] shrink-0" />
             <div className="px-5 py-2.5 text-[#171717] font-medium text-sm md:text-base leading-tight">
               <span className="font-semibold">Languages:</span> {languages}
             </div>
@@ -57,7 +57,7 @@ export default function IntroDetails({ data }: Props) {
         {/* Availability Badge */}
         {isAccepting && (
           <div className="flex items-stretch w-fit bg-[#E9D8B4] rounded-md overflow-hidden">
-            <div className="w-[6px] bg-[#A7683A] flex-shrink-0" />
+            <div className="w-[6px] bg-[#A7683A] shrink-0" />
             <div className="px-5 py-2.5 text-[#171717] font-medium text-sm md:text-base leading-tight">
               Accepting new clients
             </div>

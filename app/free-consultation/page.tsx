@@ -10,6 +10,7 @@ import BrandValueSection from '@/components/FreeConsultation/BrandValueSection';
 import TestimonialsSection from '@/components/FreeConsultation/TestimonialsSection';
 import FaqSection from '@/components/Contact/FAQSection';
 import { freeConsultationData } from '@/app/data/free-consultation';
+import HeroTestimonials from '@/components/Home/HeroTestimonials';
 
 const FreeConsultationPage = () => {
   const { hero, calendly, benefits, practitioner, howItWorks, services, brandSection, testimonials, faq } = freeConsultationData;
@@ -29,6 +30,12 @@ const FreeConsultationPage = () => {
     { type: 'flower' as const, image: steps[1].icon || '', alt: 'Coneflower' },
   ];
 
+  const badges = [
+    "12+ years in mental health",
+    "Holistic life coach, NLP trained",
+    "Founder of Flowergrid"
+  ];
+
   return (
     <main className="bg-background">
       <PersonHero
@@ -38,26 +45,22 @@ const FreeConsultationPage = () => {
         duration={hero.duration}
         ctaText={hero.cta}
         ctaLink="#calendly"
+        badges={badges}
       />
-      
+
       <CalendlySection data={calendly} />
 
       <BenefitsSection data={benefits} />
 
       <PractitionerSection data={practitioner} />
 
-      <JourneySection 
+      <JourneySection
         title={howItWorks.title}
         description=""
         items={journeyItems}
       />
 
-      <BrandValueSection data={brandSection} />
-
-      <TestimonialsSection data={testimonials} />
-
-      {/* Services Grid Section */}
-      <section className="pb-24 px-6 md:px-12 lg:px-20">
+      <section className="py-24 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading text-[#171717] mb-16">
             {services.title}
@@ -65,7 +68,7 @@ const FreeConsultationPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
             {services.items.map((service, index) => (
-              <div 
+              <div
                 key={index}
                 className="group relative h-[450px] md:h-[550px] lg:h-[600px] overflow-hidden rounded-[2rem] cursor-pointer shadow-lg"
               >
@@ -81,11 +84,11 @@ const FreeConsultationPage = () => {
                 </div>
 
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
                 {/* Content */}
                 <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-end items-start z-10">
-                  <h3 className="text-2xl md:text-3xl font-heading text-white mb-8 leading-tight">
+                  <h3 className="text-2xl md:text-3xl font-heading text-white! mb-8 leading-tight">
                     {service.title}
                   </h3>
 
@@ -101,8 +104,10 @@ const FreeConsultationPage = () => {
           </div>
         </div>
       </section>
-      {/* FAQ Section */}
-      <FaqSection 
+      <BrandValueSection />
+
+      <HeroTestimonials title={"What people say after their free consultation with Samina"} textSize={"text-4xl md:6xl"} />
+      <FaqSection
         title={faq.title}
         faqs={faq.items.map((item, index) => ({
           id: index + 1,
