@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { getImageUrl } from "@/lib/utils";
 
 type Practitioner = {
   name: string;
@@ -23,13 +24,16 @@ export default function MeetPractitioners({
   return (
     <section className="w-full bg-background py-16 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
-        
-        {/* Heading */}
-        <div className="mb-12 text-center md:mb-16">
-          <p className="mb-3 text-sm uppercase tracking-[0.25em] text-primary">
-            Flowergrid Experts
-          </p>
 
+        {/* Heading */}
+        <div className="mb-12 flex items-center justify-center gap-3 px-4 md:mb-16 md:gap-5">
+          <Image 
+            src={getImageUrl("home/leaf.png")}
+            alt="leaf" 
+            width={80} 
+            height={80} 
+            className="h-10 w-10 object-contain md:h-16 md:w-16"
+          />
           <h2 className="font-heading text-3xl text-text-heading md:text-5xl">
             {title}
           </h2>
@@ -71,7 +75,7 @@ export default function MeetPractitioners({
               <div className="mt-auto pt-8">
                 <Link
                   href={`/practitioner/${item.slug}`}
-                  className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-primary px-8 py-4 text-base font-medium text-white transition hover:scale-[1.02] md:text-lg"
+                  className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A68A64] hover:opacity-90 px-8 py-4 text-base font-medium text-white transition hover:scale-[1.02] md:text-lg"
                 >
                   View Profile
                 </Link>

@@ -9,7 +9,7 @@ const services = [
     hero: {
       name: 'Reiki Healing',
       subtitle: 'Reiki healing in Croydon offers a gentle, non invasive way to help you release stress, reconnect with your internal calm and support your long term physical and emotional balance.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc5.jpg?updatedAt=1771327517706',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/about/person1/s1.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -154,7 +154,7 @@ const services = [
     hero: {
       name: 'Personal Development Coaching',
       subtitle: 'Personal development coaching at Flowergrid helps you build a clearer sense of direction, genuine confidence, and the practical tools needed to create meaningful change in your life.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/s2.png?updatedAt=1771327517993',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/about/person1/s5.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -298,7 +298,7 @@ const services = [
     hero: {
       name: 'Professional Development Coaching',
       subtitle: 'Professional development coaching at Flowergrid helps you build career clarity, workplace confidence, and the leadership skills needed to advance without burnout.',
-      image: 'https://ik.imagekit.io/your-folder/services/professional-development-hero.webp',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/about/person1/s4.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -442,14 +442,13 @@ const services = [
     hero: {
       name: 'Relationship Coaching',
       subtitle: 'Relationship coaching at Flowergrid helps you improve communication, rebuild trust, and create healthier, more authentic connections through a professional, joined up approach.',
-      image: 'https://ik.imagekit.io/your-folder/services/relationship-coaching-hero.webp',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc1.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
       title: 'Relationship coaching supports you when your communication and connection feel out of sync',
       points: [
-        'Feeling disconnected or misunderstood by your partner',
-        'Struggling with repeating arguments and unresolved conflict',
+        'Feeling disconnected or misunderstood by your partner Struggling with repeating arguments and unresolved conflict',
         'Wanting to rebuild trust and intimacy after a difficult period',
         'Navigating major life changes such as marriage, parenthood or loss',
         'Seeking to improve boundaries and communication in your life'
@@ -586,7 +585,7 @@ const services = [
     hero: {
       name: 'Conscious Living Coaching',
       subtitle: 'Conscious living coaching at Flowergrid helps you align your life with your true values, build authentic direction, and create a deeper sense of internal calm and purpose.',
-      image: 'https://ik.imagekit.io/your-folder/services/conscious-living-hero.webp',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc2.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -698,7 +697,7 @@ const services = [
       },
       {
         question: 'Can it help with anxiety and stress?',
-        answer: 'Yes. Conscious living is a powerful tool for nervous system regulation. By reducing internal conflict and building presence, you naturally reduce your stress load.'
+        answer: 'Yes. Conscious living is a powerful tool for Experiencing your nervous system regulation. By reducing internal conflict and building presence, you naturally reduce your stress load.'
       },
       {
         question: 'How many sessions will I need?',
@@ -730,7 +729,7 @@ const services = [
     hero: {
       name: 'Stress and Anxiety Support',
       subtitle: 'Professional stress and anxiety support at Flowergrid helps you calm a racing mind, regulate your nervous system, and build the resilience needed to navigate life with ease.',
-      image: 'https://ik.imagekit.io/your-folder/services/stress-anxiety-hero.webp',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/about/person2/ps1.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -875,7 +874,7 @@ const services = [
     hero: {
       name: 'Neuro-Linguistic Programming (NLP)',
       subtitle: 'NLP coaching at Flowergrid helps you rewrite the mental patterns holding you back, building the confidence, clarity, and emotional resilience needed to move forward.',
-      image: 'https://ik.imagekit.io/your-folder/services/nlp-hero.webp',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/about/person1/s3.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -1019,7 +1018,7 @@ const services = [
     hero: {
       name: 'Psychological Therapy',
       subtitle: 'Psychological therapy at Flowergrid provides a professional, compassionate space to process emotions, understand deeper patterns, and build long-term emotional resilience.',
-      image: 'https://ik.imagekit.io/your-folder/services/psychological-therapy-hero.webp',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc3.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -1163,7 +1162,7 @@ const services = [
     hero: {
       name: 'Hypnotherapy',
       subtitle: 'Hypnotherapy at Flowergrid helps you rewrite the subconscious patterns driving anxiety, habits, and low confidence through gentle, professional guidance.',
-      image: 'https://ik.imagekit.io/your-folder/services/hypnotherapy-hero.webp',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/about/person2/ps3.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -1307,7 +1306,7 @@ const services = [
     hero: {
       name: 'Aesthetic and Plastic Surgery',
       subtitle: 'Aesthetic and Plastic Surgery at Flowergrid offers a surgeon-led, integrated approach to transformation, prioritising clinical safety, natural results, and long term recovery.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/s1.jpg',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc5.jpg',
       buttonText: 'Book a Consultation'
     },
     intro: {
@@ -1447,7 +1446,7 @@ const services = [
     hero: {
       name: 'Nutritional Consulting',
       subtitle: 'Nutritional Consulting at Flowergrid helps you build a personalised nutrition plan that supports energy, digestion, hormones and long term health, without extreme rules.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/s2.jpg',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc6.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -1593,7 +1592,7 @@ const services = [
     hero: {
       name: 'Craniosacral Therapy',
       subtitle: 'Craniosacral therapy in Croydon offers gentle, non invasive support to help your body settle stress, release tension, and restore calmer sleep and energy.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/s3.jpg',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc4.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -1735,7 +1734,7 @@ const services = [
     hero: {
       name: 'Auricular Acupuncture',
       subtitle: 'Experience precise, professional Auricular Acupuncture at Flowergrid Holistic Wellness Centre. We help you quieten the noise of stress and manage physical tension through an integrated approach.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/s4.jpg',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc9.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -1878,7 +1877,7 @@ const services = [
     hero: {
       name: 'Sound Therapy',
       subtitle: 'Sound therapy at Flowergrid Holistic Wellness Centre Croydon offers a gentle reset for stress, sleep, and emotional overload through guided sound and deep relaxation.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/s5.jpg',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc8.jpg',
       buttonText: 'Book a Free Consultation'
     },
     intro: {
@@ -2020,7 +2019,7 @@ const services = [
     hero: {
       name: 'Aromatherapy',
       subtitle: 'Aromatherapy at Flowergrid Holistic Wellness Centre Croydon uses personalised essential oil blends to support calm, sleep, and emotional balance through gentle, sensory care.',
-      image: 'https://ik.imagekit.io/z6xh4w9tp/services/s6.jpg',
+      image: 'https://ik.imagekit.io/z6xh4w9tp/services/sc5.jpg',
       buttonText: 'Book Your Free Discovery Call'
     },
     intro: {
@@ -2151,7 +2150,583 @@ const services = [
       'sound-therapy',
       'stress-and-anxiety-support'
     ]
+  },
+  {
+  "slug": "craniosacral-therapy-croydon",
+  "seo": {
+    "title": "Craniosacral Therapy Croydon | Stress Relief & Balance | Flowergrid",
+    "description": "Book Craniosacral Therapy in Croydon at Flowergrid. Gentle sessions for nervous system regulation, relief from jaw tension, headaches, and better sleep."
+  },
+  "hero": {
+    "name": "Craniosacral Therapy",
+    "subtitle": "Craniosacral therapy in Croydon offers gentle, non invasive support to help your body settle stress, release tension, and restore calmer sleep and energy.",
+    "image": "https://ik.imagekit.io/z6xh4w9tp/services/sc4.jpg",
+    "buttonText": "Book a Free Consultation"
+  },
+  "intro": {
+    "title": "Craniosacral Therapy supports you when your body has forgotten how to properly rest",
+    "points": [
+      "Managing chronic headaches or migraines linked to stress and tension",
+      "Relieving jaw clenching, grinding, and discomfort caused by TMJ issues",
+      "Settling the nervous system after periods of burnout or trauma",
+      "Improving sleep quality by helping the body exit survival mode",
+      "Releasing deep-seated tension held within the body’s fascia and tissues",
+      "Supporting recovery from physical injuries such as whiplash or falls"
+    ],
+    "summary": "We provide a calm, professional environment to help your body find its way back to stillness and balance."
+  },
+  "approach": {
+    "title": "Our approach to Craniosacral Therapy at Flowergrid",
+    "description": "At Flowergrid, we view your body as an intelligent system that knows how to heal when given the right conditions. Our approach focuses on 'listening' to your body's subtle rhythms rather than forcing change through pressure.",
+    "cards": [
+      {
+        "title": "Nervous System Regulation",
+        "text": "We focus on helping your body move from 'fight or flight' into a state of rest and repair. By calming the central nervous system, we allow deep physical and emotional shifts to happen naturally."
+      },
+      {
+        "title": "Non-Invasive Tissue Release",
+        "text": "Our work is remarkably gentle. We use light touch to encourage the release of restrictions in the fascia and the membranes surrounding the brain and spinal cord."
+      },
+      {
+        "title": "Whole-Grid Integration",
+        "text": "Craniosacral Therapy works best when joined up with your wider wellbeing, considering how physical tension relates to your stress levels and nutrition."
+      }
+    ]
+  },
+  "practitioners": [
+    "fattia-craniosacral-therapist-holistic-practitioner"
+  ],
+  "benefits": [
+    {
+      "title": "Deep Physical Relaxation",
+      "text": "By working with the subtle rhythms of the body, we help the muscles and fascia let go of long-standing tightness for a level of ease difficult to achieve through traditional massage."
+    },
+    {
+      "title": "Relief from Chronic Tension",
+      "text": "Whether it is a tight jaw or a stiff neck, we address the root of the tension within the nervous system to provide lasting relief from recurring headaches."
+    },
+    {
+      "title": "Improved Sleep and Rest",
+      "text": "When your nervous system is regulated, your body can finally enter a state of deep, restorative sleep, leaving you feeling more refreshed and energized."
+    },
+    {
+      "title": "Emotional and Mental Settling",
+      "text": "Physical release often leads to emotional relief. By quietening the central nervous system, you gain greater mental clarity and internal calm."
+    },
+    {
+      "title": "Enhanced Internal Vitality",
+      "text": "Supporting the flow of cerebrospinal fluid and releasing restrictions boosts your overall vitality, helping you feel more connected to your body."
+    }
+  ],
+  "journey": {
+    "title": "How to book Craniosacral Therapy at Flowergrid",
+    "subtitle": "Finding a moment of calm at our Croydon centre is simple. Our booking process is designed to ensure you feel supported and clear about your care.",
+    "buttonText": "Book Your Session",
+    "steps": [
+      "Choose Your Practitioner: Browse our team profiles to find a practitioner who specialises in nervous system regulation and holistic bodywork.",
+      "Get in Touch: Reach out through our website, email, or call. Share what you are experiencing so we can guide your next steps.",
+      "Confirm Your Session: We coordinate your first appointment at our calm sanctuary in Croydon, ensuring every session is private and professional.",
+      "Visit Us in Croydon: Visit our holistic wellness centre at Coulsdon Rd. Our space is a quiet sanctuary designed to help you focus on your nervous system health."
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Sarah Thompson",
+      "location": "London",
+      "text": "I came to Flowergrid feeling completely burnt out and 'tired but wired'. The craniosacral therapy session was incredibly gentle, yet I felt my nervous system settle for the first time in months."
+    },
+    {
+      "name": "James Miller",
+      "location": "Surrey",
+      "text": "The physical tension in my jaw was causing constant headaches. After trying several other treatments, craniosacral therapy at Flowergrid was the only thing that provided lasting relief."
+    },
+    {
+      "name": "Anita Patel",
+      "location": "Croydon",
+      "text": "I was not sure what to expect, but Samina explained the process so clearly. The therapy helped me move out of constant 'fight or flight' mode and find a sense of stillness."
+    },
+    {
+      "name": "David Williams",
+      "location": "UK",
+      "text": "Finding a holistic wellness centre in Croydon that offers this level of care was a relief. I always leave feeling more grounded and physically comfortable."
+    }
+  ],
+  "blogs": [
+    "understanding-craniosacral-rhythms",
+    "vagus-nerve-and-stress-relief",
+    "healing-tmj-naturally"
+  ],
+  "faq": [
+    {
+      "question": "How does Craniosacral Therapy work with the central nervous system?",
+      "answer": "Craniosacral Therapy is a gentle manual therapy that focuses on the subtle rhythmic flow of cerebrospinal fluid. By using a very light touch, a practitioner helps release restrictions in the fascia and the membranes surrounding the brain and spinal cord, supporting the system to self-correct."
+    },
+    {
+      "question": "What is the difference between Craniosacral Therapy and traditional massage?",
+      "answer": "Traditional massage involves the manipulation of surface muscles through pressure. Craniosacral Therapy is a non-invasive practice that works with deeper tissues and the nervous system without force or deep pressure, making it ideal for those who find massage too intense."
+    },
+    {
+      "question": "Can Craniosacral Therapy help with anxiety and the vagus nerve?",
+      "answer": "Yes. This therapy is highly effective for nervous system regulation. By encouraging the body to move out of a 'fight or flight' response, it supports the function of the vagus nerve, reducing physical symptoms of anxiety like a racing heart."
+    },
+    {
+      "question": "Can this therapy provide relief for TMJ and jaw tension?",
+      "answer": "Absolutely. By gently addressing the tension in the bones and fascia of the skull and face, the therapy helps the jaw muscles relax, which can also lead to a reduction in stress-related headaches and migraines."
+    },
+    {
+      "question": "Are there any conditions where Craniosacral Therapy is not recommended?",
+      "answer": "It is not suitable for individuals where a slight change in intracranial pressure could be dangerous, such as a recent skull fracture, brain haemorrhage, or acute stroke. We recommend discussing your medical history during your discovery call."
+    },
+    {
+      "question": "Do I remain fully clothed during the treatment?",
+      "answer": "Yes. You remain fully clothed throughout your entire Craniosacral Therapy session. We suggest wearing comfortable, loose-fitting clothing to help you feel completely at ease."
+    },
+    {
+      "question": "How do I book a session at the Croydon holistic wellness centre?",
+      "answer": "Booking is straightforward. You can reach out via email at sk@flowergrid.co.uk or call +44 7432 211096. We usually recommend starting with a free discovery call to ensure it is the most effective path forward for you."
+    }
+  ],
+  "relatedServices": [
+    "anxiety-and-stress-management",
+    "psychological-therapy",
+    "hypnotherapy",
+    "reiki-healing",
+    "nutritional-consulting"
+  ]
+},
+  {
+  "slug": "sound-therapy-croydon",
+  "seo": {
+    "title": "Sound Therapy Croydon | Stress Relief & Sleep | Flowergrid",
+    "description": "Sound Therapy at Flowergrid Holistic Wellness Centre Croydon supports stress relief, sleep and emotional balance through guided sound sessions. Book a free consultation."
+  },
+  "hero": {
+    "name": "Sound Therapy",
+    "subtitle": "Sound therapy at Flowergrid Holistic Wellness Centre Croydon offers a gentle reset for stress, sleep, and emotional overload through guided sound and deep relaxation.",
+    "image": "https://ik.imagekit.io/z6xh4w9tp/services/sc8.jpg",
+    "buttonText": "Book a Free Consultation"
+  },
+  "intro": {
+    "title": "Sound Therapy supports you when you need a passive way to move from mental noise to inner stillness",
+    "points": [
+      "Quietening a racing mind or 'monkey mind' that makes it hard to focus",
+      "Managing high levels of anxiety and persistent emotional overwhelm",
+      "Improving sleep quality by helping the brain enter deep relaxation states",
+      "Releasing physical tension held at a cellular level through vibration",
+      "Recovering from mental exhaustion and professional burnout",
+      "Providing a pathway to meditation for those who find traditional stillness difficult"
+    ],
+    "summary": "Sound therapy settles your nervous system, easing stress and tension so you can breathe deeper, sleep better, and feel more grounded."
+  },
+  "approach": {
+    "title": "Our approach to Sound Therapy at Flowergrid",
+    "description": "At Flowergrid, sound therapy is delivered in a calm, consent led way. We focus on creating the right conditions for the body and mind to settle, so you leave feeling clearer and lighter.",
+    "cards": [
+      {
+        "title": "Calm, Consent-Led Sessions",
+        "text": "We begin with a short check in to ensure you feel comfortable. You remain fully in control, and the session is paced around what helps you feel safe and relaxed."
+      },
+      {
+        "title": "Nervous System Settling",
+        "text": "The aim is to encourage calm, reduce stress reactivity, and help you step out of constant mental noise by supporting a slower pace in the body."
+      },
+      {
+        "title": "Joined-Up Wellbeing Support",
+        "text": "If stress or anxiety are part of a wider picture, we integrate your care with coaching, therapy, breathwork, Reiki, or craniosacral therapy."
+      }
+    ]
+  },
+  "practitioners": [
+    "claire-sound-therapist-vibrational-specialist"
+  ],
+  "benefits": [
+    {
+      "title": "Reduced Stress Hormones",
+      "text": "The frequencies used help lower cortisol levels and stimulate the parasympathetic nervous system, providing measurable physical and mental relief."
+    },
+    {
+      "title": "Improved Quality of Rest",
+      "text": "By encouraging slower brain wave states, Sound Therapy helps resolve patterns of insomnia, leading to deeper, more uninterrupted sleep."
+    },
+    {
+      "title": "Sharper Mental Clarity",
+      "text": "Removing the 'noise' of daily stress through frequency work gives your mind the space to process information and gain a renewed sense of perspective."
+    },
+    {
+      "title": "Safe Emotional Release",
+      "text": "Sound bypasses the logical mind to provide a non-verbal way to process stored emotions, leaving you feeling more balanced and resilient."
+    },
+    {
+      "title": "Cellular Level Relaxation",
+      "text": "As the body is mostly water, acoustic vibrations travel deep into tissues to release tension in muscles and organs that traditional massage might not reach."
+    }
+  ],
+  "journey": {
+    "title": "How to book Sound Therapy at Flowergrid",
+    "subtitle": "Finding your moment of stillness at our Croydon centre is straightforward. We ensure the process is calm and supportive from the start.",
+    "buttonText": "Book Your Session",
+    "steps": [
+      "Choose Your Practitioner: Browse our team profiles to find a specialist in Sound Therapy whose approach to vibrational healing resonates with your goals.",
+      "Get in Touch: Reach out through our website, email, or call. Share whether you are looking for a 1:1 clinical session or a group sound bath.",
+      "Confirm Your Session: We coordinate your appointment at our sanctuary in Croydon, ensuring a private and professional environment tailored to your safety.",
+      "Visit Us in Croydon: Our centre at Coulsdon Rd is a calm sanctuary away from city noise, perfect for experiencing the restorative power of sound."
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Sarah Thompson",
+      "location": "London",
+      "text": "I was not sure what to expect from Sound Therapy, but the experience at Flowergrid was incredible. I felt my mind go quiet for the first time in weeks."
+    },
+    {
+      "name": "David Miller",
+      "location": "Surrey",
+      "text": "Claire’s session was exactly what I needed for my burnout. The vibrations from the singing bowls felt like a massage for my brain. Truly professional."
+    },
+    {
+      "name": "Anita Patel",
+      "location": "Croydon",
+      "text": "I struggle with traditional meditation, but Sound Therapy at Flowergrid made it easy to find stillness. The integrated approach makes me feel supported."
+    },
+    {
+      "name": "James Morgan",
+      "location": "UK",
+      "text": "Finding a professional Sound Therapy session in South London was a relief. The team are experts and the environment is exceptionally calm."
+    }
+  ],
+  "blogs": [
+    "science-of-sound-healing",
+    "overcoming-burnout-with-frequency",
+    "how-sound-improves-sleep-quality"
+  ],
+  "faq": [
+    {
+      "question": "What is the difference between a clinical Sound Therapy session and a Sound Bath?",
+      "answer": "A Sound Bath is usually a group experience. Sound Therapy at Flowergrid is typically a 1:1 clinical session where frequencies and instruments are tailored specifically to your individual needs for a deeper approach."
+    },
+    {
+      "question": "Do I need any previous experience with meditation for Sound Therapy to work?",
+      "answer": "No. Sound Therapy is a passive treatment, making it ideal for those who find traditional meditation difficult. Your only job is to lie comfortably and allow the vibrations to wash over you."
+    },
+    {
+      "question": "Which specific instruments are used to create healing frequencies?",
+      "answer": "We use high-quality instruments including Himalayan and crystal singing bowls, gongs, tuning forks, and percussion tools, each chosen for its ability to encourage brainwave entrainment."
+    },
+    {
+      "question": "How does acoustic vibration help with physical tension and pain?",
+      "answer": "Sound acts as a physical vibration that travels through the water in your body. This stimulates blood flow and releases tension in deep muscles and organs that traditional massage might not reach."
+    },
+    {
+      "question": "How many Sound Therapy sessions are typically needed to achieve lasting shifts?",
+      "answer": "While one session reduces stress significantly, we typically recommend a course of three to five sessions to help your nervous system 'learn' the way back to a state of balance effectively."
+    },
+    {
+      "question": "Are there specific medical conditions where Sound Therapy is not recommended?",
+      "answer": "It may not be suitable for those with sound-induced epilepsy, certain heart conditions (like pacemakers), or during the first trimester of pregnancy. We discuss your history during the discovery call."
+    },
+    {
+      "question": "How do I schedule my first session at the Croydon holistic wellness centre?",
+      "answer": "Booking is simple. Email sk@flowergrid.co.uk or call +44 7432 211096. We often suggest starting with a free consultation to see how sound can best support your journey."
+    }
+  ],
+  "relatedServices": [
+    "reiki-healing",
+    "craniosacral-therapy",
+    "stress-and-anxiety-support",
+    "psychological-therapy",
+    "hypnotherapy"
+  ]
+ },
+ {
+  "slug": "aromatherapy-croydon",
+  "seo": {
+    "title": "Aromatherapy Croydon | Stress Relief & Hormonal Support | Flowergrid",
+    "description": "Book professional Aromatherapy in Croydon at Flowergrid. Custom essential oil blends for stress relief, menopause support, better sleep, and emotional balance."
+  },
+  "hero": {
+    "name": "Aromatherapy",
+    "subtitle": "Aromatherapy at Flowergrid Holistic Wellness Centre Croydon uses personalised essential oil blends to support calm, sleep, and emotional balance through gentle, sensory care.",
+    "image": "https://ik.imagekit.io/z6xh4w9tp/services/sc5.jpg",
+    "buttonText": "Book a Free Consultation"
+  },
+  "intro": {
+    "title": "Choose aromatherapy if you want a professional, plant-based way to settle your nervous system",
+    "points": [
+      "People dealing with high stress who need a rapid emotional reset",
+      "Individuals struggling with poor sleep who want a natural wind-down",
+      "Women navigating hormonal changes like menopause who need gentle support",
+      "Professionals experiencing burnout who need to quieten a racing mind",
+      "Those carrying physical tension and wanting to reduce internal inflammation"
+    ],
+    "summary": "Aromatherapy helps your body relax, eases stress responses, and supports steadier sleep by working through scent, breath, and nervous system calming."
+  },
+  "approach": {
+    "title": "Our approach to Aromatherapy at Flowergrid",
+    "description": "Our clinical approach uses therapeutic-grade botanical oils to target your nervous system. We create bespoke blends that work in harmony with your wider life and wellbeing.",
+    "cards": [
+      {
+        "title": "Clinical Botanical Blending",
+        "text": "We use therapeutic-grade oils to create bespoke blends specifically tailored to your physiological and emotional needs for lasting results."
+      },
+      {
+        "title": "Limbic System Support",
+        "text": "By engaging your olfactory system, we speak directly to the emotional centre of your brain, providing rapid stress relief and calm."
+      },
+      {
+        "title": "Integrated Sensory Care",
+        "text": "We ensure your aromatherapy sits alongside your wider health goals, supporting your physical and mental transformation through joined-up care."
+      }
+    ]
+  },
+  "practitioners": [
+    "fattia-aromatherapist-holistic-practitioner"
+  ],
+  "benefits": [
+    {
+      "title": "Immediate Emotional Settling",
+      "text": "Because scent reaches the brain faster than any other sense, Aromatherapy provides rapid relief from anxiety, offering a shift in just a few deep breaths."
+    },
+    {
+      "title": "Better Sleep Hygiene",
+      "text": "Specific oils like lavender and cedarwood support melatonin production, helping you break the cycle of insomnia and establish restorative sleep patterns."
+    },
+    {
+      "title": "Targeted Hormonal Support",
+      "text": "Many clients find relief from hot flushes, irritability, and physical tension during hormonal transitions like menopause through our bespoke botanical blends."
+    },
+    {
+      "title": "Reduced Physical Tension",
+      "text": "When inhaled or applied topically, essential oils help lower the body's inflammatory response, reducing muscle aches and symptoms of chronic stress."
+    },
+    {
+      "title": "Enhanced Immune Resilience",
+      "text": "By reducing your overall stress load and utilizing oils with antimicrobial properties, Aromatherapy helps your immune system function more effectively."
+    }
+  ],
+  "journey": {
+    "title": "How to book Aromatherapy in Croydon",
+    "subtitle": "Join us at our Croydon sanctuary for a professional aromatherapy session designed to restore your natural internal balance.",
+    "buttonText": "Book Your Session",
+    "steps": [
+      "Choose Your Practitioner: Select an expert in clinical aromatherapy from our professional team who best aligns with your health and wellness goals.",
+      "Get in Touch: Email sk@flowergrid.co.uk or call +44 7432 211096. Share your goals so we can guide you to the right next step.",
+      "Confirm Your Session: We will schedule your session at our Croydon sanctuary and provide all the details needed for your restorative botanical experience.",
+      "Visit Us in Croydon: Visit us at Coulsdon Rd, Croydon (CR5 2JA) for a session tailored to restore your physical and emotional vitality."
+    ]
+  },
+  "testimonials": [
+    {
+      "name": "Sarah Thompson",
+      "location": "London",
+      "text": "I came to Flowergrid for stress support and the aromatherapy session was a revelation. The custom blend helped me feel grounded immediately."
+    },
+    {
+      "name": "David Miller",
+      "location": "Surrey",
+      "text": "Finding clinical aromatherapy in South London was exactly what I needed for my menopause symptoms. The oils have made such a difference to my sleep."
+    },
+    {
+      "name": "Anita Patel",
+      "location": "Croydon",
+      "text": "The integrated approach at Flowergrid is brilliant. My aromatherapy sessions support my nutritional plan perfectly. I feel more in control of my health."
+    },
+    {
+      "name": "James Morgan",
+      "location": "UK",
+      "text": "The expertise of the practitioners at Flowergrid is evident. The environment is exceptionally calm and the results for my anxiety have been very real."
+    }
+  ],
+  "blogs": [
+    "essential-oils-for-menopause",
+    "clinical-vs-commercial-aromatherapy",
+    "aromatherapy-for-nervous-system-regulation"
+  ],
+  "faq": [
+    {
+      "question": "What makes clinical aromatherapy different from using oils at home?",
+      "answer": "Clinical aromatherapy at Flowergrid involves a professional consultation and bespoke blending of therapeutic-grade oils targeted to your specific health needs and biological profiles."
+    },
+    {
+      "question": "How does aromatherapy help with stress and anxiety?",
+      "answer": "Essential oil molecules speak directly to the limbic system, the brain's emotional centre, signalling your nervous system to move from a stress response into a state of calm."
+    },
+    {
+      "question": "Can aromatherapy support me during menopause or hormonal changes?",
+      "answer": "Yes. Specific botanical oils like clary sage and geranium are highly effective for balancing mood and managing symptoms such as hot flushes and irritability."
+    },
+    {
+      "question": "Are there any safety concerns with using essential oils?",
+      "answer": "When guided by a professional, it is very safe. We review your medical history to ensure every blend is appropriate for your specific conditions or medications."
+    },
+    {
+      "question": "Can I have aromatherapy sessions while I am pregnant?",
+      "answer": "Yes, but with care. Our clinical aromatherapists are trained to use only pregnancy-safe oils to provide supportive care for both you and your baby."
+    },
+    {
+      "question": "Do I need to visit the Croydon centre for aromatherapy?",
+      "answer": "We recommend in-person sessions for the full sensory experience, but we can provide online consultations to guide your botanical home routine."
+    },
+    {
+      "question": "How do I book my first session at Flowergrid?",
+      "answer": "Booking is simple. Email sk@flowergrid.co.uk or call +44 7432 211096. We often suggest a free discovery call to ensure this is the best path for your goals."
+    }
+  ],
+  "relatedServices": [
+    "craniosacral-therapy",
+    "nutritional-consulting",
+    "reiki-healing",
+    "sound-therapy",
+    "stress-and-anxiety-support"
+  ]
+},
+  {
+    "slug": "integrative-health-and-fitness-plans-croydon",
+    "seo": {
+      "title": "Integrative Health & Fitness Plans Croydon | Flowergrid",
+      "description": "Experience Integrative Health & Fitness Plans at Flowergrid in Croydon. We combine movement, nutrition and recovery for sustainable vitality. Book a free call."
+    },
+    "hero": {
+      "name": "Integrative Health & Fitness Plans",
+      "subtitle": "Experience Integrative Health & Fitness Plans at Flowergrid Holistic Wellness Centre Croydon. We combine movement, nutrition, and recovery for your sustainable physical vitality.",
+      "image": "https://ik.imagekit.io/z6xh4w9tp/services/sc7.jpg",
+      "buttonText": "Book a Free Consultation"
+    },
+    "intro": {
+      "title": "Integrative Health and Fitness Plans support you when you want a joined up plan",
+      "points": [
+        "You are exercising regularly but still feel tired, stuck, or uninspired",
+        "Hormonal changes or menopause are affecting your strength, weight, and energy",
+        "You are recovering from injury or burnout and need a safe, guided reset",
+        "You want a plan that considers your gut health and metabolic balance",
+        "Stress and a busy London lifestyle make high-intensity training feel like a burden"
+      ],
+      "summary": "Integrative Health & Fitness Plans at Flowergrid connects training, nutrition, sleep, and stress so your results come from routine, not willpower."
+    },
+    "approach": {
+      "title": "Our approach to Integrative Health & Fitness Plans at Flowergrid",
+      "description": "At Flowergrid, we believe that fitness is not a standalone project. Our plans are built on the understanding that your physical performance is inseparable from your sleep, stress levels, and internal health.",
+      "cards": [
+        {
+          "title": "Multidisciplinary Collaboration",
+          "text": "Your plan is informed by our team of over 20 practitioners, including doctors and nutritional therapists, ensuring movement is supported by medical insight."
+        },
+        {
+          "title": "Precision Movement and Recovery",
+          "text": "We balance strength training and cardio with Pilates and nervous system regulation to build a body that is resilient, mobile, and able to recover effectively."
+        },
+        {
+          "title": "Bio-Individual Planning",
+          "text": "We look at your unique biology, including vitamin levels and hormonal health, to ensure your plan fits your specific needs and your real life in Croydon."
+        }
+      ]
+    },
+    "practitioners": [
+      "husna-hoque-personal-trainer-wellness-coach",
+      "rebecca-nutrition-fitness-coach",
+      "nudrat-chagtai-registered-nutritional-therapist"
+    ],
+    "benefits": [
+      {
+        "title": "Sustainable Energy Levels",
+        "text": "By aligning movement with your metabolic needs, we help end the cycle of burnout, building fitness that adds to your energy rather than draining it."
+      },
+      {
+        "title": "Stronger Functional Mobility",
+        "text": "Our focus on strength training and Pilates ensures you move with ease, reducing injury risk and building resilience for an active, long-term lifestyle."
+      },
+      {
+        "title": "Improved Metabolic Health",
+        "text": "Our plans support blood sugar balance and gut health, leading to clearer skin, better digestion, and a metabolism that works with your natural rhythms."
+      },
+      {
+        "title": "Hormonal and Menopause Support",
+        "text": "We provide specific resistance training and nutritional support needed to protect bone density and manage changing energy levels with confidence."
+      },
+      {
+        "title": "Greater Mental Resilience",
+        "text": "By regulating your nervous system through movement and recovery, you build the inner strength to handle stress and transitions with ease."
+      },
+      {
+        "title": "Joined-Up Professional Care",
+        "text": "Benefit from a multidisciplinary team of expert practitioners who collaborate to ensure every part of your wellbeing 'grid' is supported."
+      }
+    ],
+    "journey": {
+      "title": "How to book your Integrative Health & Fitness Plan in Croydon",
+      "subtitle": "Every plan starts with a thorough audit of your health and movement at our Croydon sanctuary or online.",
+      "buttonText": "Book Your Session",
+      "steps": [
+        "Choose Your Practitioner: Browse our team of personal trainers and health coaches to find a specialist whose approach best aligns with your goals.",
+        "Get in Touch: Reach out via email or phone. We often recommend starting with a free consultation to map out your roadmap.",
+        "Confirm Your Assessment: We will coordinate your initial movement and nutrition audit at our Croydon sanctuary or via a secure online link.",
+        "Visit Us in Croydon or Online: Join us at Coulsdon Rd for in-person training, or access our expert team from anywhere online."
+      ]
+    },
+    "testimonials": [
+      {
+        "name": "Sarah Thompson",
+        "location": "London",
+        "text": "I was tired of generic gym plans. The Integrative Health & Fitness Plans at Flowergrid gave me a joined up roadmap for my nutrition and strength."
+      },
+      {
+        "name": "Anita Patel",
+        "location": "Croydon",
+        "text": "Having a trainer who understands my hormonal health and a nutritionist in the same building made all the difference to my results."
+      },
+      {
+        "name": "David Miller",
+        "location": "Surrey",
+        "text": "The focus on both recovery and strength means I am seeing progress without feeling burnt out. Highly professional and supportive care."
+      },
+      {
+        "name": "James Morgan",
+        "location": "UK",
+        "text": "They don't just focus on how you look, but how you function as a whole person. It is the best investment I've made in my health."
+      }
+    ],
+    "blogs": [
+      "nutrition-for-sustainable-fitness",
+      "training-through-menopause",
+      "balancing-strength-and-recovery"
+    ],
+    "faq": [
+      {
+        "question": "What exactly are Integrative Health & Fitness Plans?",
+        "answer": "These are comprehensive wellness programmes that move beyond isolated gym workouts. A plan combines tailored movement, precise nutrition, and nervous system recovery to support your whole 'grid'."
+      },
+      {
+        "question": "How is this different from hiring a regular personal trainer in Croydon?",
+        "answer": "Your coach is part of an integrated team of over 20 expert practitioners. Your training is informed by doctors and nutritional therapists, providing joined-up care that a solo trainer cannot provide."
+      },
+      {
+        "question": "Can these plans help with menopause and hormonal changes?",
+        "answer": "Yes. We include specific resistance training to protect bone density and nutritional guidance to manage changing energy levels, helping you work with your hormones rather than against them."
+      },
+      {
+        "question": "Do I need to visit the Croydon centre for my sessions?",
+        "answer": "We offer flexibility. You can visit our holistic wellness centre at Coulsdon Rd, Croydon (CR5 2JA) for in-person training, or access secure online coaching from anywhere in the UK."
+      },
+      {
+        "question": "Is this suitable for beginners or those returning to exercise?",
+        "answer": "Absolutely. Every plan starts with a thorough audit of your current health and movement, allowing us to build your strength and confidence gradually and safely."
+      },
+      {
+        "question": "How long does it take to see measurable results?",
+        "answer": "Most clients notice improvements in energy, sleep, and mood within four weeks. For lasting shifts in body composition and metabolic health, we typically recommend a 12-week commitment."
+      },
+      {
+        "question": "How do I book my first session at the Croydon centre?",
+        "answer": "Booking is straightforward. Email sk@flowergrid.co.uk or call +44 7432 211096. We recommend a free consultation with Samina to match you with the right practitioners."
+      }
+    ],
+    "relatedServices": [
+      "nutritional-consulting",
+      "craniosacral-therapy",
+      "stress-and-anxiety-support",
+      "hypnotherapy"
+    ]
   }
+ 
 ];
 
 export default services;

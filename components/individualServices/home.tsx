@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
+import { getImageUrl } from "@/lib/utils";
 type Props = {
   data: {
     hero: {
@@ -20,7 +20,7 @@ export default function ServiceHero({ data }: Props) {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Full screen fit exactly like old hero */}
-      <div className="relative h-screen min-h-[700px] w-full">
+      <div className="relative h-dvh min-h-[600px] w-full">
         
         {/* Same image fetching style as old section */}
         <div className="absolute inset-0">
@@ -39,13 +39,22 @@ export default function ServiceHero({ data }: Props) {
         <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/20 to-black/35" />
 
         {/* centered content */}
-        <div className="relative z-10 flex h-full items-center justify-center px-4">
+        <div className="relative z-10 flex h-full items-center justify-center px-6">
           <div className="mx-auto max-w-5xl text-center">
-            <h1 className="font-heading text-5xl uppercase tracking-wide text-white! md:text-5xl lg:text-5xl">
-              {hero.name}
-            </h1>
+            <div className="flex items-center justify-center gap-3 md:gap-5">
+              <Image 
+                src="/leaf.png"
+                alt="leaf"
+                width={80} 
+                height={80} 
+                className="h-8 w-8 object-contain md:h-20 md:w-20"
+              />
+              <h1 className="font-heading text-3xl uppercase tracking-wide text-white! sm:text-4xl md:text-6xl lg:text-7xl">
+                {hero.name}
+              </h1>
+            </div>
 
-            <p className="mx-auto mt-6 max-w-4xl text-lg leading-relaxed text-white! md:text-2xl lg:text-2xl">
+            <p className="mx-auto mt-6 max-w-4xl text-base leading-relaxed text-white! md:text-2xl lg:text-2xl">
               {hero.subtitle}
             </p>    
           </div>
