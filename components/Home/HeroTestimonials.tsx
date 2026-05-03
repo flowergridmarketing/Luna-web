@@ -72,22 +72,22 @@ export default function HeroTestimonials({
     testimonials = defaultTestimonials,
     title = "Client Experiences with Flowergrid",
     subtitle = "Flowergrid's Testimonials",
-    textSize = "text-4xl md:text-6xl"
+    textSize = "text-2xl md:text-6xl"
 
 }: HeroTestimonialsProps) {
 
     if (title === "What clients say about Flowergrid in Croydon") {
-        textSize = "text-2xl md:text-4xl"
+        textSize = "text-xl md:text-4xl"
     }
 
 
     return (
         <section className="w-full h-auto py-10 bg-[#F3EAD8] overflow-hidden">
-            <div className="max-w-3xl mx-auto px-4 mb-30 md:mb-10 mt-5 text-center">
-                <h2 className={`${textSize} font-heading font-normal uppercase tracking-wide mt-30 md:mt-0 mb-4 text-center`}>
+            <div className="max-w-3xl mx-auto px-4 mb-12 md:mb-10 mt-5 text-center">
+                <h2 className={`${textSize} font-heading font-normal uppercase tracking-wide mt-5 md:mt-0 mb-4 text-center`}>
                     {title}
                 </h2>
-                <p className="text-black! text-lg md:text-xl font-sans uppercase tracking-widest text-center">
+                <p className="text-black! text-base md:text-xl font-sans uppercase tracking-widest text-center">
                     {subtitle}
                 </p>
             </div>

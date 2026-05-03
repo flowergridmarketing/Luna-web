@@ -16,7 +16,7 @@ interface BenefitsSectionProps {
 
 const BenefitsSection = ({ data }: BenefitsSectionProps) => {
   return (
-    <section className="py-24 bg-background px-6">
+    <section className="py-4 md:py-24 bg-background px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           

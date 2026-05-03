@@ -34,7 +34,7 @@ export default function MovingTestimonials({ testimonials }: MovingTestimonialsP
                 {duplicatedTestimonials.map((item, index) => (
                     <div
                         key={`${item.id}-${index}`}
-                        className="w-[350px] md:w-[350px] h-[420px] md:h-[420px] shrink-0 mx-6 p-8 bg-[#E6D7C3] rounded-3xl flex flex-col"
+                        className="w-[300px] md:w-[350px] h-[420px] md:h-[420px] shrink-0 mx-4 md:mx-6 p-6 md:p-8 bg-[#E6D7C3] rounded-3xl flex flex-col"
                     >
                         <p className="text-[#4E351A] text-base md:text-lg leading-relaxed font-sans grow overflow-hidden">
                             "{item.quote}"

@@ -40,8 +40,9 @@ const locationTestimonials: Testimonial[] = [
 ];
 
 const locationFadeLines1 = [
-    "Corporate Wellbeing Programmes",
-    "in Croydon for leadership,",
+    "Corporate Wellbeing",
+    "Programmes in Croydon",
+    "for leadership,",
     "communication and resilience,"
 ];
 

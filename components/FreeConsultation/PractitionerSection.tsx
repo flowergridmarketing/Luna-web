@@ -15,13 +15,13 @@ interface PractitionerSectionProps {
 
 const PractitionerSection = ({ data }: PractitionerSectionProps) => {
   return (
-    <section className="py-24 bg-transparent px-6">
+    <section className="py-4 md:py-24 bg-transparent px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           
           {/* LEFT CONTENT: IMAGE */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-[500px] aspect-[4/5] rounded-[2rem] overflow-hidden">
+            <div className="relative w-full max-w-[500px] aspect-4/5 rounded-4xl overflow-hidden">
               <Image
                 src={data.image}
                 alt={data.name}
