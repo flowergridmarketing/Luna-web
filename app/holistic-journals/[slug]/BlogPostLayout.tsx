@@ -55,30 +55,32 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
 
                 {/* Back Button & Focus Toggle */}
                 <div
-                    className={`flex justify-between items-center mb-6 ${isFocusMode ? 'pt-24' : ''}`}                  
+                    className={`sticky top-0 z-40 bg-[#F3EAD8]/80 backdrop-blur-md transition-all duration-300 ${isFocusMode ? 'pt-24 pb-4' : 'py-4'} mb-6 -mx-6 px-6 md:-mx-12 md:px-12`}
                 >
-                    <Link
-                        href="/holistic-journals"
-                        className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest"
-                    >
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Articles
-                    </Link>
+                    <div className={`flex justify-between items-center ${isFocusMode ? 'max-w-4xl mx-auto' : ''}`}>
+                        <Link
+                            href="/holistic-journals"
+                            className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest"
+                        >
+                            <ArrowLeft className="w-4 h-4" />
+                            Back to Articles
+                        </Link>
 
-                    <button
-                        onClick={() => setIsFocusMode(!isFocusMode)}
-                        className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest bg-[#ECDDC4]/50 px-4 py-2 rounded-full"
-                    >
-                        {isFocusMode ? (
-                            <>
-                                <Minimize2 className="w-4 h-4" /> Standard View
-                            </>
-                        ) : (
-                            <>
-                                <Maximize2 className="w-4 h-4" /> Focus Mode
-                            </>
-                        )}
-                    </button>
+                        <button
+                            onClick={() => setIsFocusMode(!isFocusMode)}
+                            className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest bg-[#ECDDC4]/50 px-4 py-2 rounded-full"
+                        >
+                            {isFocusMode ? (
+                                <>
+                                    <Minimize2 className="w-4 h-4" /> Standard View
+                                </>
+                            ) : (
+                                <>
+                                    <Maximize2 className="w-4 h-4" /> Focus Mode
+                                </>
+                            )}
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Table of Contents (Visible only on small screens) */}

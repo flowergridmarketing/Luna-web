@@ -91,30 +91,30 @@ export default function PersonHero({
   return (
     <section
       ref={sectionRef}
-      className={`relative w-full overflow-hidden bg-linear-to-r from-[#ECDDC6] to-[#a27f45] ${ctaText ? 'min-h-[950px]' : 'min-h-[850px]'}`}
+      className={`relative w-full overflow-hidden bg-linear-to-r from-[#ECDDC6] to-[#a27f45] ${ctaText ? 'min-h-[850px] md:min-h-[950px]' : 'min-h-[750px] md:min-h-[850px]'}`}
     >
 
-      <div className={`mx-auto flex flex-col max-w-7xl items-center justify-center md:justify-start px-4 sm:px-6 md:px-8 lg:px-12
-          md:flex-col ${ctaText ? 'min-h-[950px] md:h-[950px]' : 'min-h-screen md:h-[850px] lg:max-h-[850px]'}
+      <div className={`mx-auto flex flex-col max-w-7xl items-center justify-start md:justify-start px-4 sm:px-6 md:px-8 lg:px-12
+          md:flex-col ${ctaText ? 'min-h-[850px] md:h-[950px]' : 'min-h-[750px] md:h-[850px] lg:max-h-[850px]'}
       `}>
 
         <div
           ref={textRef}
           className={`
-          relative z-30 mx-auto
+          relative z-40 mx-auto
           max-w-6xl
-          ${ctaText ? 'pt-6 md:pt-10 lg:pt-12 items-center' : 'pt-8 md:pt-26 lg:pt-22'}
+          ${ctaText ? 'pt-28 md:pt-10 lg:pt-12 items-center' : 'pt-32 md:pt-26 lg:pt-22'}
           px-4 sm:px-6 md:pl-14 lg:px-24 lg:pr-24
           text-center
           flex flex-col justify-start
         `}
         >
           <h1 className={`
-          ${ctaText ? 'text-3xl sm:text-4xl md:text-5xl whitespace-pre-line' : 'text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl'}
+          ${ctaText ? 'text-2xl sm:text-4xl md:text-5xl whitespace-pre-line' : 'text-xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl'}
           font-normal text-black
           leading-tight sm:leading-tight md:leading-snug lg:leading-snug
           max-w-4xl
-          ${ctaText ? 'mb-4' : 'mb-8 sm:mb-12 md:mb-16 md:px-20 lg:mt-8 md:ml-4'}
+          ${ctaText ? 'mb-4' : 'mb-6 sm:mb-12 md:mb-16 md:px-20 lg:mt-8 md:ml-4'}
           `}
           >
             {text}
@@ -154,7 +154,7 @@ export default function PersonHero({
           className="
             absolute top-0 left-0 sm:left-2 md:left-0 lg:left-10 xl:left-12
             z-10
-            w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[320px]
+            w-[100px] sm:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[320px]
           "
         >
           <Image src={getImageUrl("about/lamp.png")} alt="Lamp" width={360} height={200} className="object-contain w-full h-auto" />
@@ -168,7 +168,7 @@ export default function PersonHero({
             alt="trainer img"
             width={450}
             height={450}
-            className={`absolute bottom-0 left-1/2 -translate-x-1/2 object-contain object-bottom ${imageClassName || "w-[250px] sm:w-[300px] md:w-[300px] lg:w-[300px] xl:w-[350px]"}`}
+            className={`absolute bottom-0 left-1/2 -translate-x-1/2 object-contain object-bottom ${imageClassName || "w-[220px] sm:w-[300px] md:w-[300px] lg:w-[300px] xl:w-[350px]"}`}
             priority
           />
         </div>
@@ -179,7 +179,8 @@ export default function PersonHero({
           className="
             absolute bottom-0 right-0 sm:right-0 md:right-6 lg:right-16 xl:right-24
             z-20
-            w-[160px] sm:w-[220px] md:w-[260px] lg:w-[340px] xl:w-[400px]
+            w-[120px] sm:w-[220px] md:w-[260px] lg:w-[340px] xl:w-[400px]
+            hidden sm:block
           "
           style={{
             marginLeft: "34px"
@@ -193,8 +194,9 @@ export default function PersonHero({
           className="
             absolute bottom-0 left-0
             z-10
-            w-[180px] sm:w-[320px] md:w-[360px] lg:w-[400px] xl:w-[420px]
+            w-[140px] sm:w-[320px] md:w-[360px] lg:w-[400px] xl:w-[420px]
             -mb-6 sm:-mb-8 md:-mb-10 lg:-mb-12
+            hidden sm:block
           "
         >
           <Image

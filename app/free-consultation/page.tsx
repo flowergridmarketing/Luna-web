@@ -70,7 +70,7 @@ const FreeConsultationPage = () => {
             {services.items.map((service, index) => (
               <div
                 key={index}
-                className="group relative h-[450px] md:h-[550px] lg:h-[600px] overflow-hidden rounded-[2rem] cursor-pointer shadow-lg"
+                className="group relative h-[450px] md:h-[550px] lg:h-[600px] overflow-hidden rounded-4xl cursor-pointer shadow-lg"
               >
                 {/* Background Image */}
                 <div className="absolute inset-0">
@@ -106,7 +106,7 @@ const FreeConsultationPage = () => {
       </section>
       <BrandValueSection />
 
-      <HeroTestimonials title={"What people say after their free consultation with Samina"} textSize={"text-4xl md:6xl"} />
+      <HeroTestimonials title={"What people say after their free consultation with Samina"} textSize={"text-2xl md:text-4xl"} />
       <FaqSection
         title={faq.title}
         faqs={faq.items.map((item, index) => ({

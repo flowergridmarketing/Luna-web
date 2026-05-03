@@ -10,7 +10,7 @@ export default function WhoIWorkWith({ data }: Props) {
 
   return (
     <div className="w-full">
-      <h2 className="font-playfair font-serif text-4xl leading-tight text-[#111111] md:text-5xl lg:text-7xl mb-10 tracking-tight">
+      <h2 className="font-playfair text-4xl leading-tight text-[#111111] md:text-5xl lg:text-7xl mb-10 tracking-tight">
         Who I Work With
       </h2>
       <p className="max-w-4xl text-lg leading-relaxed text-[#3D3D3D] md:text-xl mb-10 font-light">
