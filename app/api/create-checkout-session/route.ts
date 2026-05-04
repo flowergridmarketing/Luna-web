@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     }
 
     // Determine price based on session length (Placeholder logic - you should use Stripe Price IDs in production)
-    // For now, we'll create a line item with a custom price
+    // For now, we'll create a line item with a custom price  
     const unitAmount = sessionLength === '90' ? 15000 : 10000; // $150 vs $100 in cents
 
     const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;

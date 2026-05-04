@@ -3,9 +3,8 @@
 import { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { motion } from 'framer-motion';
+import { Calendar, User, Clock, MapPin, ShieldCheck, ChevronRight } from 'lucide-react';
 
-// Hardcoded for now as fetching them dynamically would require a server action or a separate API
-// but since these are static data files, we can just list them here for better UX
 const services = [
   "Reiki Healing",
   "Personal Development Coaching",
@@ -86,222 +85,207 @@ export default function BookingPage() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 bg-[#0B0F19] text-white">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen pt-44 pb-20 px-6 md:px-12 bg-[#f3e5cb] font-sans selection:bg-primary/20">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-24"
         >
-          <span className="text-blue-500 font-medium tracking-widest uppercase text-sm mb-4 block">Secure Booking</span>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-white/50 bg-clip-text text-transparent">
-            Your Journey Starts Here
+          <span className="text-primary font-medium tracking-[0.4em] uppercase text-[10px] mb-4 block">Reservation Portal</span>
+          <h1 className="text-6xl md:text-8xl font-heading font-medium text-text-heading mb-6 tracking-tight leading-none">
+            Book Your Session
           </h1>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto leading-relaxed">
-            Choose your service and practitioner. We'll handle the rest with a secure and seamless payment process.
+          <p className="text-text-body text-lg max-w-2xl mx-auto leading-relaxed font-light">
+            Experience a tailored journey toward balance and harmony. Choose your preferred service and practitioner below.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+          {/* Form Column - 60% width on LG */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-2"
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full lg:w-3/5"
           >
-            <div className="bg-[#151C2C]/50 backdrop-blur-xl p-8 md:p-10 rounded-3xl border border-white/5 shadow-2xl">
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">First Name</label>
-                    <input
-                      required
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full bg-[#0B0F19] border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white placeholder:text-gray-600"
-                      placeholder="Enter your name"
-                    />
+            <div className="bg-white/40 backdrop-blur-md p-10 md:p-14 rounded-[2.5rem] border border-primary/10 shadow-sm">
+              <form onSubmit={handleSubmit} className="space-y-12">
+                <div className="space-y-10">
+                  {/* Row 1: Identification */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Full Name</label>
+                      <input
+                        required
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/20 font-light text-base"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Email Address</label>
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/20 font-light text-base"
+                        placeholder="john@example.com"
+                      />
+                    </div>
                   </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Email Address</label>
-                    <input
-                      required
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full bg-[#0B0F19] border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white placeholder:text-gray-600"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Service</label>
-                    <div className="relative">
+                  {/* Row 2: Selection */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div className="space-y-3 relative group">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Service Category</label>
                       <select
                         required
                         name="serviceName"
                         value={formData.serviceName}
                         onChange={handleChange}
-                        className="w-full bg-[#0B0F19] border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white appearance-none cursor-pointer"
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading appearance-none cursor-pointer font-light text-base"
                       >
-                        <option value="" disabled className="text-gray-600">Select Service</option>
+                        <option value="" disabled>Select Service</option>
                         {services.map(service => (
                           <option key={service} value={service}>{service}</option>
                         ))}
                       </select>
-                      <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="Step 19 9l-7 7-7-7"></path></svg>
-                      </div>
+                      <ChevronRight className="absolute right-0 bottom-4 w-4 h-4 text-primary/30 rotate-90 pointer-events-none" />
                     </div>
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Practitioner</label>
-                    <div className="relative">
+                    <div className="space-y-3 relative group">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Preferred Practitioner</label>
                       <select
                         name="practitionerName"
                         value={formData.practitionerName}
                         onChange={handleChange}
-                        className="w-full bg-[#0B0F19] border border-white/10 rounded-2xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all text-white appearance-none cursor-pointer"
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading appearance-none cursor-pointer font-light text-base"
                       >
-                        <option value="" className="text-gray-600">Any Practitioner (Optional)</option>
+                        <option value="">Any Available Expert</option>
                         {practitioners.map(p => (
                           <option key={p} value={p}>{p}</option>
                         ))}
                       </select>
-                      <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                      <ChevronRight className="absolute right-0 bottom-4 w-4 h-4 text-primary/30 rotate-90 pointer-events-none" />
+                    </div>
+                  </div>
+
+                  {/* Row 3: Preferences */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Interaction Format</label>
+                      <div className="flex gap-2 p-1.5 bg-white/20 rounded-full border border-primary/5">
+                        {['Online', 'In-person'].map((opt) => (
+                          <button
+                            key={opt}
+                            type="button"
+                            onClick={() => setFormData({ ...formData, format: opt })}
+                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${
+                              formData.format === opt
+                                ? 'bg-primary text-white shadow-md'
+                                : 'text-text-body hover:bg-white/30'
+                            }`}
+                          >
+                            {opt.toUpperCase()}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Session Length</label>
+                      <div className="flex gap-2 p-1.5 bg-white/20 rounded-full border border-primary/5">
+                        {['60', '90'].map((opt) => (
+                          <button
+                            key={opt}
+                            type="button"
+                            onClick={() => setFormData({ ...formData, sessionLength: opt })}
+                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${
+                              formData.sessionLength === opt
+                                ? 'bg-primary text-white shadow-md'
+                                : 'text-text-body hover:bg-white/30'
+                            }`}
+                          >
+                            {opt} MINS
+                          </button>
+                        ))}
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Format</label>
-                    <div className="grid grid-cols-2 gap-3 p-1 bg-[#0B0F19] rounded-2xl border border-white/5">
-                      {['Online', 'In-person'].map((opt) => (
-                        <button
-                          key={opt}
-                          type="button"
-                          onClick={() => setFormData({ ...formData, format: opt })}
-                          className={`py-3 rounded-xl transition-all text-sm font-medium ${
-                            formData.format === opt
-                              ? 'bg-blue-600 text-white shadow-lg'
-                              : 'text-gray-500 hover:text-gray-300'
-                          }`}
-                        >
-                          {opt}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    <label className="text-xs font-bold text-gray-500 uppercase tracking-wider ml-1">Duration</label>
-                    <div className="grid grid-cols-2 gap-3 p-1 bg-[#0B0F19] rounded-2xl border border-white/5">
-                      {['60', '90'].map((opt) => (
-                        <button
-                          key={opt}
-                          type="button"
-                          onClick={() => setFormData({ ...formData, sessionLength: opt })}
-                          className={`py-3 rounded-xl transition-all text-sm font-medium ${
-                            formData.sessionLength === opt
-                              ? 'bg-purple-600 text-white shadow-lg'
-                              : 'text-gray-500 hover:text-gray-300'
-                          }`}
-                        >
-                          {opt} Min
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4">
+                <div className="pt-10 border-t border-primary/5">
                   <button
                     disabled={loading}
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-bold py-5 rounded-2xl shadow-2xl transition-all transform hover:scale-[1.01] active:scale-[0.99] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 group"
+                    className="w-full bg-primary hover:bg-[#8b5630] text-white font-medium py-5 rounded-full shadow-lg shadow-primary/20 transition-all transform hover:translate-y-[-2px] active:translate-y-[0px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 group overflow-hidden relative"
                   >
-                    {loading ? (
-                      <div className="w-6 h-6 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    ) : (
-                      <>
-                        <span>Proceed to Secure Payment</span>
-                        <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                      </>
-                    )}
+                    <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                    <span className="relative z-10 tracking-[0.2em] uppercase text-xs">Finalize Booking</span>
+                    <ChevronRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
-                  <p className="text-center text-gray-500 text-xs mt-4 flex items-center justify-center gap-2">
-                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"></path></svg>
-                    Payments are securely processed by Stripe
-                  </p>
+                  <div className="flex items-center justify-center gap-4 mt-8 opacity-40">
+                    <div className="h-[1px] flex-grow bg-primary/20" />
+                    <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-[8px] uppercase tracking-[0.3em] font-bold text-primary">Secure Checkout</span>
+                    <div className="h-[1px] flex-grow bg-primary/20" />
+                  </div>
                 </div>
               </form>
             </div>
           </motion.div>
 
+          {/* Summary Column - 40% width on LG */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-8"
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full lg:w-2/5"
           >
-            <div className="bg-white/5 p-8 rounded-3xl border border-white/5">
-              <h3 className="text-xl font-bold mb-6">Booking Summary</h3>
-              <div className="space-y-4">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Service</span>
-                  <span className="text-gray-200">{formData.serviceName || '—'}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Practitioner</span>
-                  <span className="text-gray-200">{formData.practitionerName || 'Any'}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Duration</span>
-                  <span className="text-gray-200">{formData.sessionLength} Minutes</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-500">Format</span>
-                  <span className="text-gray-200">{formData.format}</span>
-                </div>
-                <div className="border-t border-white/5 pt-4 mt-4 flex justify-between items-end">
-                  <span className="text-gray-400 font-medium">Total Price</span>
-                  <span className="text-2xl font-bold text-white">
-                    £{formData.sessionLength === '90' ? '150' : '100'}
-                  </span>
+            <div className="bg-white/60 backdrop-blur-md p-10 md:p-12 rounded-[3rem] border border-primary/10 shadow-sm">
+              <div className="flex justify-between items-center mb-10">
+                <h3 className="text-2xl font-heading font-medium text-text-heading">Summary</h3>
+                <div className="p-2 bg-primary/5 rounded-lg">
+                  <Calendar className="w-4 h-4 text-primary" />
                 </div>
               </div>
-            </div>
+              
+              <div className="space-y-8">
+                {[
+                  { label: "Selected Service", value: formData.serviceName || '---' },
+                  { label: "Expert Practitioner", value: formData.practitionerName || 'Any Available' },
+                  { label: "Timeframe", value: `${formData.sessionLength} Minute Session` },
+                  { label: "Environment", value: formData.format },
+                ].map((item, i) => (
+                  <div key={i} className="border-b border-primary/5 pb-4">
+                    <p className="text-[8px] uppercase tracking-[0.25em] text-primary/50 font-bold mb-2">{item.label}</p>
+                    <p className="text-base text-text-heading font-light">{item.value}</p>
+                  </div>
+                ))}
 
-            <div className="bg-blue-600/10 p-8 rounded-3xl border border-blue-500/20">
-              <h4 className="text-blue-400 font-bold mb-3 flex items-center gap-2 text-sm uppercase tracking-wider">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                Why book with us?
-              </h4>
-              <ul className="space-y-3 text-sm text-gray-400">
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">●</span>
-                  <span>Handpicked expert practitioners</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">●</span>
-                  <span>Seamless secure payments</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-blue-500 mt-1">●</span>
-                  <span>Full integrated wellness grid</span>
-                </li>
-              </ul>
+                <div className="pt-6 flex justify-between items-center">
+                  <div>
+                    <p className="text-[8px] uppercase tracking-[0.2em] text-primary/40 font-bold mb-1">Total Fee</p>
+                    <p className="text-5xl font-heading font-medium text-text-heading leading-none">
+                      £{formData.sessionLength === '90' ? '150' : '100'}
+                    </p>
+                  </div>
+                  <div className="text-[9px] text-primary/40 uppercase tracking-widest font-bold border border-primary/10 px-3 py-1 rounded-full">
+                    GBP
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-12 p-6 rounded-2xl bg-primary/[0.03] border border-primary/5">
+                <p className="text-[10px] text-text-body/60 leading-relaxed font-light italic">
+                  * All sessions are conducted under strict confidentiality. Confirmation details will be dispatched to your inbox upon completion.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
