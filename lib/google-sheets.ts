@@ -24,34 +24,33 @@ export async function appendToSheet(data: any) {
     // Look for a sheet named "Bookings"
     let sheet = doc.sheetsByTitle['Bookings'];
 
-    // If it doesn't exist, create it with the correct headers
+    const requiredHeaders = [
+      'Full Name',
+      'Email',
+      'Phone Number',
+      'Service Name',
+      'Practitioner Name',
+      'Payment Status',
+      'Timestamp'
+    ];
+
+    // If it doesn't exist, create it
     if (!sheet) {
       console.log('Sheet "Bookings" not found. Creating new sheet...');
-      sheet = await doc.addSheet({ 
-        title: 'Bookings', 
-        headerValues: [
-          'First Name', 
-          'Email', 
-          'Service Name', 
-          'Practitioner Name', 
-          'Format', 
-          'Session Length', 
-          'Payment Status', 
-          'Timestamp'
-        ] 
-      });
+      sheet = await doc.addSheet({ title: 'Bookings', headerValues: requiredHeaders });
       console.log('New "Bookings" sheet created with headers.');
     } else {
-      console.log(`Working on existing sheet: "${sheet.title}"`);
+      console.log(`Checking headers for existing sheet: "${sheet.title}"`);
+      // Ensure headers are up to date
+      await sheet.setHeaderRow(requiredHeaders);
     }
 
     const rowData = {
-      'First Name': data.name || 'N/A',
+      'Full Name': data.name || 'N/A',
       'Email': data.email || 'N/A',
+      'Phone Number': data.phone || 'N/A',
       'Service Name': data.serviceName || 'N/A',
       'Practitioner Name': data.practitionerName || 'N/A',
-      'Format': data.format || 'N/A',
-      'Session Length': data.sessionLength || 'N/A',
       'Payment Status': 'Paid',
       'Timestamp': new Date().toLocaleString(),
     };

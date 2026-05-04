@@ -3,20 +3,17 @@ import { stripe } from '@/lib/stripe';
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { name, email, serviceName, practitionerName, format, sessionLength } = body;
+    const { name, email, phone, serviceName, practitionerName } = await req.json();
 
     // Validate required fields
-    if (!name || !email || !serviceName || !format || !sessionLength) {
+    if (!name || !email || !phone || !serviceName) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       );
     }
 
-    // Determine price based on session length (Placeholder logic - you should use Stripe Price IDs in production)
-    // For now, we'll create a line item with a custom price  
-    const unitAmount = sessionLength === '90' ? 15000 : 10000; // $150 vs $100 in cents
+    const unitAmount = 3000; // Flat £30 for all services
 
     const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
 
@@ -27,8 +24,8 @@ export async function POST(req: Request) {
           price_data: {
             currency: 'gbp',
             product_data: {
-              name: `${serviceName} (${sessionLength} min)`,
-              description: `Practitioner: ${practitionerName || 'Any'}. Format: ${format}`,
+              name: serviceName,
+              description: `Practitioner: ${practitionerName || 'Any'}. Contact: ${phone}`,
             },
             unit_amount: unitAmount,
           },
@@ -42,10 +39,9 @@ export async function POST(req: Request) {
       metadata: {
         name,
         email,
+        phone,
         serviceName,
         practitionerName: practitionerName || '',
-        format,
-        sessionLength,
       },
     });
 

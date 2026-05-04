@@ -3,7 +3,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { CheckCircle2, User, Clock, ChevronRight, Share2, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, User, Phone, ChevronRight, Share2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 function SuccessContent() {
@@ -59,6 +59,7 @@ function SuccessContent() {
               <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Billed To</p>
               <p className="text-sm font-medium">{details?.name}</p>
               <p className="text-xs text-gray-500">{details?.email}</p>
+              <p className="text-xs text-gray-500">{details?.phone}</p>
             </div>
             <div>
               <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Date</p>
@@ -85,21 +86,21 @@ function SuccessContent() {
           <div className="flex justify-between items-start mb-4">
             <div>
               <p className="text-sm font-medium mb-1">{details?.serviceName}</p>
-              <p className="text-[10px] text-gray-500 italic">Practitioner: {details?.practitionerName} • {details?.sessionLength} Mins • {details?.format}</p>
+              <p className="text-[10px] text-gray-500 italic">Practitioner: {details?.practitionerName || 'Any Available'}</p>
             </div>
-            <span className="text-sm font-bold">£{details?.sessionLength === '90' ? '150' : '100'}.00</span>
+            <span className="text-sm font-bold">£30.00</span>
           </div>
         </div>
 
         <div className="flex justify-between items-center text-xl font-heading font-medium">
           <span className="uppercase tracking-widest text-xs font-bold text-gray-400">Total Charged</span>
-          <span>£{details?.sessionLength === '90' ? '150' : '100'}.00</span>
+          <span>£30.00</span>
         </div>
 
         <div className="mt-32 text-center border-t border-gray-50 pt-10">
           <p className="text-[10px] uppercase tracking-[0.5em] font-bold text-gray-300 mb-2">Thank You</p>
           <p className="text-[8px] text-gray-400 max-w-xs mx-auto leading-relaxed italic">
-            This is an automated receipt for your holistic wellness booking. A confirmation with session links has been sent to your email.
+            This is an automated receipt for your holistic wellness booking. A confirmation with session details has been sent to your email.
           </p>
         </div>
       </div>
@@ -149,13 +150,13 @@ function SuccessContent() {
             </div>
             
             <p className="text-sm text-text-body/80 leading-relaxed font-light">
-              A detailed confirmation email has been dispatched. Please check your inbox for preparation guidelines and your session link.
+              A detailed confirmation email has been dispatched. Please check your inbox for preparation guidelines and your session details.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: User, label: "Practitioner", value: details?.practitionerName || "Expert Assigned" },
-                { icon: Clock, label: "Duration", value: `${details?.sessionLength || '60'} Mins` }
+                { icon: Phone, label: "Contact", value: details?.phone || "---" }
               ].map((item, i) => (
                 <div key={i} className="bg-primary/3 p-4 rounded-xl border border-primary/5">
                   <p className="text-[7px] uppercase tracking-[0.2em] text-primary/50 font-bold mb-1 flex items-center gap-1">

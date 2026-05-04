@@ -54,9 +54,7 @@ export async function POST(req: Request) {
             <p>Your booking for <strong>${metadata.serviceName}</strong> has been confirmed.</p>
             <div style="background: #f4f4f4; padding: 15px; border-radius: 8px; margin: 20px 0;">
               <p><strong>Service:</strong> ${metadata.serviceName}</p>
-              <p><strong>Practitioner:</strong> ${metadata.practitionerName || 'N/A'}</p>
-              <p><strong>Format:</strong> ${metadata.format}</p>
-              <p><strong>Length:</strong> ${metadata.sessionLength} minutes</p>
+              <p><strong>Practitioner:</strong> ${metadata.practitionerName || 'Expert Assigned'}</p>
             </div>
             <p>We will contact you shortly with the next steps.</p>
             <p>Best regards,<br/>The Luna Team</p>

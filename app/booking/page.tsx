@@ -5,6 +5,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import { motion } from 'framer-motion';
 import { Calendar, ShieldCheck, ChevronRight, Check, Search } from 'lucide-react';
 import { AnimatePresence } from 'framer-motion';
+import { toast } from 'sonner';
 
 const services = [
   "Reiki Healing",
@@ -143,10 +144,9 @@ export default function BookingPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     serviceName: '',
     practitionerName: '',
-    format: 'Online',
-    sessionLength: '60',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -159,12 +159,25 @@ export default function BookingPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validation
+    if (!formData.phone || formData.phone.trim().length < 8) {
+      toast.error('Valid contact number is required');
+      return;
+    }
+
+    if (!formData.serviceName) {
+      toast.error('Please select a service category');
+      return;
+    }
+
     if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
-      alert("Stripe Publishable Key is not configured. Please check your .env.local file.");
+      toast.error("Checkout system is currently unavailable");
       return;
     }
 
     setLoading(true);
+    const toastId = toast.loading('Preparing your session...');
 
     try {
       const response = await fetch('/api/create-checkout-session', {
@@ -180,10 +193,11 @@ export default function BookingPage() {
       }
 
       if (data.url) {
+        toast.success('Redirecting to secure payment...', { id: toastId });
         window.location.href = data.url;
       }
     } catch (err: any) {
-      alert(err.message || 'Something went wrong');
+      toast.error(err.message || 'Something went wrong', { id: toastId });
       setLoading(false);
     }
   };
@@ -245,8 +259,20 @@ export default function BookingPage() {
                     </div>
                   </div>
 
-                  {/* Row 2: Selection */}
+                  {/* Row 2: Contact & Service */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Phone Number</label>
+                      <input
+                        required
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/60 font-light text-base"
+                        placeholder="+44 7000 000000"
+                      />
+                    </div>
                     <CustomSelect
                       label="Service Category"
                       placeholder="Select Service"
@@ -254,6 +280,10 @@ export default function BookingPage() {
                       value={formData.serviceName}
                       onChange={(val) => handleSelectChange('serviceName', val)}
                     />
+                  </div>
+
+                  {/* Row 3: Practitioner */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                     <CustomSelect
                       label="Preferred Practitioner"
                       placeholder="Any Available Expert"
@@ -261,46 +291,6 @@ export default function BookingPage() {
                       value={formData.practitionerName}
                       onChange={(val) => handleSelectChange('practitionerName', val)}
                     />
-                  </div>
-
-                  {/* Row 3: Preferences */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Interaction Format</label>
-                      <div className="flex gap-2 p-1.5 bg-white/20 rounded-full border border-primary/5">
-                        {['Online', 'In-person'].map((opt) => (
-                          <button
-                            key={opt}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, format: opt })}
-                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${formData.format === opt
-                                ? 'bg-primary text-white shadow-md'
-                                : 'text-text-body hover:bg-white/30'
-                              }`}
-                          >
-                            {opt.toUpperCase()}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="space-y-3">
-                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Session Length</label>
-                      <div className="flex gap-2 p-1.5 bg-white/20 rounded-full border border-primary/5">
-                        {['60', '90'].map((opt) => (
-                          <button
-                            key={opt}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, sessionLength: opt })}
-                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${formData.sessionLength === opt
-                                ? 'bg-primary text-white shadow-md'
-                                : 'text-text-body hover:bg-white/30'
-                              }`}
-                          >
-                            {opt} MINS
-                          </button>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                 </div>
 
@@ -344,8 +334,7 @@ export default function BookingPage() {
                 {[
                   { label: "Selected Service", value: formData.serviceName || '---' },
                   { label: "Expert Practitioner", value: formData.practitionerName || 'Any Available' },
-                  { label: "Timeframe", value: `${formData.sessionLength} Minute Session` },
-                  { label: "Environment", value: formData.format },
+                  { label: "Contact Phone", value: formData.phone || '---' },
                 ].map((item, i) => (
                   <div key={i} className="border-b border-primary/5 pb-4">
                     <p className="text-[8px] uppercase tracking-[0.25em] text-primary/50 font-bold mb-2">{item.label}</p>
@@ -357,7 +346,7 @@ export default function BookingPage() {
                   <div>
                     <p className="text-[8px] uppercase tracking-[0.2em] text-primary/40 font-bold mb-1">Total Fee</p>
                     <p className="text-5xl font-heading font-medium text-text-heading leading-none">
-                      £{formData.sessionLength === '90' ? '150' : '100'}
+                      £30
                     </p>
                   </div>
                   <div className="text-[9px] text-primary/40 uppercase tracking-widest font-bold border border-primary/10 px-3 py-1 rounded-full">

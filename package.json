@@ -33,6 +33,7 @@
     "react-dom": "19.2.3",
     "react-toastify": "^11.0.5",
     "resend": "^6.12.2",
+    "sonner": "^2.0.7",
     "stripe": "^22.1.0"
   },
   "devDependencies": {

@@ -16,10 +16,9 @@ export async function GET(req: Request) {
     return NextResponse.json({
       name: session.metadata?.name,
       email: session.metadata?.email,
+      phone: session.metadata?.phone,
       serviceName: session.metadata?.serviceName,
       practitionerName: session.metadata?.practitionerName,
-      format: session.metadata?.format,
-      sessionLength: session.metadata?.sessionLength,
       amount: session.amount_total ? session.amount_total / 100 : 0,
     });
   } catch (error: any) {
