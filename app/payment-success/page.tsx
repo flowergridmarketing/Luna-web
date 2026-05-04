@@ -3,7 +3,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { CheckCircle2, Calendar, User, Clock, MapPin, Mail, ArrowRight, Share2 } from 'lucide-react';
+import { CheckCircle2, User, Clock, ChevronRight, Share2, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
 
 function SuccessContent() {
@@ -35,108 +35,157 @@ function SuccessContent() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#0B0F19]">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-          <p className="text-gray-400 font-medium animate-pulse">Verifying your booking...</p>
+      <div className="min-h-screen flex items-center justify-center bg-[#f3e5cb]">
+        <div className="flex flex-col items-center gap-6">
+          <div className="w-16 h-16 border-t-2 border-primary rounded-full animate-spin" />
+          <p className="text-primary/60 font-light tracking-[0.2em] uppercase text-xs animate-pulse">Verifying Transaction</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen pt-32 pb-20 px-6 bg-[#0B0F19] text-white">
-      <div className="max-w-3xl mx-auto">
+    <div className="min-h-screen flex items-center justify-center bg-[#f3e5cb] font-sans selection:bg-primary/20 p-6 overflow-hidden">
+      {/* Printable Receipt (Only visible during printing) */}
+      <div className="hidden print:block w-full max-w-2xl mx-auto p-12 bg-white text-black font-sans">
+        <div className="text-center mb-12 border-b border-gray-100 pb-10">
+          <h1 className="text-3xl font-heading font-medium tracking-tight mb-2">Flowergrid</h1>
+          <p className="text-[10px] uppercase tracking-[0.4em] text-gray-400 font-bold">Official Booking Receipt</p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-10 mb-12">
+          <div className="space-y-4">
+            <div>
+              <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Billed To</p>
+              <p className="text-sm font-medium">{details?.name}</p>
+              <p className="text-xs text-gray-500">{details?.email}</p>
+            </div>
+            <div>
+              <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Date</p>
+              <p className="text-sm font-medium">{new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+            </div>
+          </div>
+          <div className="text-right space-y-4">
+            <div>
+              <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Transaction Ref</p>
+              <p className="text-xs font-mono">{sessionId?.toUpperCase()}</p>
+            </div>
+            <div>
+              <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Status</p>
+              <p className="text-[10px] uppercase tracking-widest font-bold text-green-600">Paid in Full</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-b border-gray-100 py-8 mb-12">
+          <div className="flex justify-between items-center mb-6">
+            <span className="text-[8px] uppercase tracking-widest text-gray-400 font-bold">Description</span>
+            <span className="text-[8px] uppercase tracking-widest text-gray-400 font-bold">Amount</span>
+          </div>
+          <div className="flex justify-between items-start mb-4">
+            <div>
+              <p className="text-sm font-medium mb-1">{details?.serviceName}</p>
+              <p className="text-[10px] text-gray-500 italic">Practitioner: {details?.practitionerName} • {details?.sessionLength} Mins • {details?.format}</p>
+            </div>
+            <span className="text-sm font-bold">£{details?.sessionLength === '90' ? '150' : '100'}.00</span>
+          </div>
+        </div>
+
+        <div className="flex justify-between items-center text-xl font-heading font-medium">
+          <span className="uppercase tracking-widest text-xs font-bold text-gray-400">Total Charged</span>
+          <span>£{details?.sessionLength === '90' ? '150' : '100'}.00</span>
+        </div>
+
+        <div className="mt-32 text-center border-t border-gray-50 pt-10">
+          <p className="text-[10px] uppercase tracking-[0.5em] font-bold text-gray-300 mb-2">Thank You</p>
+          <p className="text-[8px] text-gray-400 max-w-xs mx-auto leading-relaxed italic">
+            This is an automated receipt for your holistic wellness booking. A confirmation with session links has been sent to your email.
+          </p>
+        </div>
+      </div>
+
+      {/* Main UI (Hidden during printing) */}
+      <div className="max-w-xl w-full print:hidden">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="bg-[#151C2C]/80 backdrop-blur-2xl p-8 md:p-14 rounded-[2.5rem] border border-white/5 shadow-2xl text-center relative overflow-hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-10"
         >
-          {/* Background Glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent opacity-50" />
-          
           <div className="flex justify-center mb-8">
             <motion.div 
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ scale: 0, rotate: -20 }}
+              animate={{ scale: 1, rotate: 0 }}
               transition={{ type: "spring", damping: 12, stiffness: 200, delay: 0.2 }}
-              className="bg-green-500/10 p-6 rounded-full border border-green-500/20"
+              className="bg-primary/5 p-6 rounded-full border border-primary/10 relative"
             >
-              <CheckCircle2 className="w-16 h-16 text-green-500" />
+              <CheckCircle2 className="w-12 h-12 text-primary" />
+              <motion.div 
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute inset-0 rounded-full border border-primary/20"
+              />
             </motion.div>
           </div>
+          <span className="text-primary font-medium tracking-[0.4em] uppercase text-[10px] mb-3 block">Booking Confirmed</span>
+          <h1 className="text-4xl md:text-5xl font-heading font-medium text-text-heading mb-4 tracking-tight">
+            Thank you, {details?.name?.split(' ')[0] || 'there'}
+          </h1>
+          <p className="text-text-body text-base leading-relaxed font-light">
+            Your journey toward harmony has begun. We&apos;ve reserved your session for <span className="text-text-heading font-normal">{details?.serviceName || 'your selected service'}</span>.
+          </p>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-white/60 bg-clip-text text-transparent">
-              Payment Successful
-            </h1>
-            <p className="text-gray-400 mb-10 text-lg max-w-md mx-auto">
-              Thank you {details?.name || 'there'}! Your booking for <span className="text-white font-medium">{details?.serviceName || 'your session'}</span> has been confirmed.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-left">
-            {[
-              { icon: User, label: "Practitioner", value: details?.practitionerName || "Team Member" },
-              { icon: Clock, label: "Duration", value: `${details?.sessionLength || '--'} Minutes` },
-              { icon: MapPin, label: "Format", value: details?.format || "Online" },
-              { icon: Mail, label: "Confirmation", value: "Sent to your email" }
-            ].map((item, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + (i * 0.1) }}
-                className="bg-[#0B0F19]/50 p-4 rounded-2xl border border-white/5 flex items-center gap-4"
-              >
-                <div className="p-2 bg-blue-500/10 rounded-lg">
-                  <item.icon className="w-5 h-5 text-blue-400" />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-widest text-gray-500 font-bold">{item.label}</p>
-                  <p className="text-sm text-gray-200 font-medium">{item.value}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="space-y-6"
-          >
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/"
-                className="flex-1 bg-white text-black font-bold py-4 rounded-2xl transition-all hover:bg-gray-200 flex items-center justify-center gap-2 group"
-              >
-                <span>Return to Home</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <button 
-                onClick={() => window.print()}
-                className="flex-1 bg-white/5 hover:bg-white/10 text-white font-bold py-4 rounded-2xl transition-all border border-white/10 flex items-center justify-center gap-2"
-              >
-                <Share2 className="w-4 h-4" />
-                <span>Save Receipt</span>
-              </button>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="bg-white/40 backdrop-blur-md p-8 md:p-10 rounded-2xl border border-primary/10 shadow-sm space-y-8"
+        >
+          <div className="space-y-6">
+            <div className="flex items-center justify-between border-b border-primary/5 pb-4">
+              <h3 className="text-lg font-heading font-medium text-text-heading">Next Steps</h3>
+              <ShieldCheck className="w-4 h-4 text-primary/40" />
             </div>
             
-            <div className="pt-6 border-t border-white/5 flex flex-col items-center gap-2">
-              <p className="text-xs text-gray-500 font-medium">
-                TRANSACTION ID: <span className="text-gray-400">{sessionId?.slice(-12).toUpperCase()}</span>
-              </p>
-              <p className="text-[10px] text-gray-600 max-w-xs leading-relaxed uppercase tracking-tighter">
-                A confirmation email with the session link and next steps has been sent to {details?.email || 'your registered email'}.
-              </p>
+            <p className="text-sm text-text-body/80 leading-relaxed font-light">
+              A detailed confirmation email has been dispatched. Please check your inbox for preparation guidelines and your session link.
+            </p>
+
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { icon: User, label: "Practitioner", value: details?.practitionerName || "Expert Assigned" },
+                { icon: Clock, label: "Duration", value: `${details?.sessionLength || '60'} Mins` }
+              ].map((item, i) => (
+                <div key={i} className="bg-primary/3 p-4 rounded-xl border border-primary/5">
+                  <p className="text-[7px] uppercase tracking-[0.2em] text-primary/50 font-bold mb-1 flex items-center gap-1">
+                    <item.icon className="w-2.5 h-2.5" />
+                    {item.label}
+                  </p>
+                  <p className="text-xs text-text-heading font-medium truncate">{item.value}</p>
+                </div>
+              ))}
             </div>
-          </motion.div>
+          </div>
+
+          <div className="space-y-4">
+            <Link 
+              href="/"
+              className="w-full bg-primary hover:bg-[#8b5630] text-white font-medium py-4 rounded-full shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-3 group relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              <span className="relative z-10 tracking-[0.2em] uppercase text-[10px]">Return Home</span>
+              <ChevronRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <button 
+              onClick={() => window.print()}
+              className="w-full bg-white/20 hover:bg-white/40 text-primary border border-primary/10 font-medium py-4 rounded-full transition-all flex items-center justify-center gap-3 group"
+            >
+              <span className="tracking-[0.2em] uppercase text-[10px]">Save Receipt</span>
+              <Share2 className="w-4 h-4 text-primary/40 group-hover:text-primary transition-colors" />
+            </button>
+          </div>
+
         </motion.div>
       </div>
     </div>
@@ -146,8 +195,8 @@ function SuccessContent() {
 export default function PaymentSuccessPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-[#0B0F19]">
-        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+      <div className="min-h-screen flex items-center justify-center bg-[#f3e5cb]">
+        <div className="w-16 h-16 border-t-2 border-primary rounded-full animate-spin" />
       </div>
     }>
       <SuccessContent />

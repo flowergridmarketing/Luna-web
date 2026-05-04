@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     const unitAmount = sessionLength === '90' ? 15000 : 10000; // $150 vs $100 in cents
 
     const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
-    
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [

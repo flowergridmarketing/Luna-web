@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { motion } from 'framer-motion';
-import { Calendar, User, Clock, MapPin, ShieldCheck, ChevronRight } from 'lucide-react';
+import { Calendar, ShieldCheck, ChevronRight, Check, Search } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
 
 const services = [
   "Reiki Healing",
@@ -38,6 +39,105 @@ const practitioners = [
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
+const CustomSelect = ({
+  options,
+  value,
+  onChange,
+  label,
+  placeholder
+}: {
+  options: string[],
+  value: string,
+  onChange: (val: string) => void,
+  label: string,
+  placeholder: string
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredOptions = options.filter(opt =>
+    opt.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div className="space-y-3 relative">
+      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">{label}</label>
+      <div
+        onClick={() => {
+          setIsOpen(!isOpen);
+          if (!isOpen) setSearchTerm("");
+        }}
+        className="w-full border-b border-primary/20 py-3 cursor-pointer flex justify-between items-center transition-all hover:border-primary group"
+      >
+        <span className={`text-base font-light tracking-wide ${value ? 'text-text-heading' : 'text-text-body/60'}`}>
+          {value || placeholder}
+        </span>
+        <ChevronRight className={`w-3.5 h-3.5 text-primary/40 transition-transform duration-500 ease-out ${isOpen ? '-rotate-90' : 'rotate-90'}`} />
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 bg-transparent"
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.98 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="absolute left-0 right-0 top-full mt-4 bg-white/95 backdrop-blur-xl border border-primary/10 rounded-2xl shadow-2xl z-50 overflow-hidden p-2"
+            >
+              <div className="p-2 border-b border-primary/5 mb-1">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-primary/40" />
+                  <input
+                    autoFocus
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder={`Search ${label.toLowerCase()}...`}
+                    className="w-full bg-primary/5 border-none rounded-2xl py-3 pl-10 pr-4 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary/20 placeholder:text-text-body/30 text-text-heading"
+                  />
+                </div>
+              </div>
+              <div className="max-h-64 overflow-y-auto custom-scrollbar p-2">
+                {filteredOptions.length > 0 ? (
+                  filteredOptions.map((opt) => (
+                    <motion.div
+                      key={opt}
+                      whileHover={{ x: 4 }}
+                      onClick={() => {
+                        onChange(opt);
+                        setIsOpen(false);
+                      }}
+                      className={`px-5 py-3.5 rounded-2xl text-sm font-light cursor-pointer transition-all flex items-center justify-between mb-1 last:mb-0 ${value === opt
+                          ? 'bg-primary text-white shadow-md'
+                          : 'text-text-heading hover:bg-primary/5'
+                        }`}
+                    >
+                      <span>{opt}</span>
+                      {value === opt && <Check className="w-3.5 h-3.5" />}
+                    </motion.div>
+                  ))
+                ) : (
+                  <div className="px-5 py-10 text-center text-[10px] uppercase tracking-widest text-primary/40 font-bold">
+                    No Results Found
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 export default function BookingPage() {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -53,13 +153,17 @@ export default function BookingPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData({ ...formData, [name]: value });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
       alert("Stripe Publishable Key is not configured. Please check your .env.local file.");
       return;
     }
-    
+
     setLoading(true);
 
     try {
@@ -85,7 +189,7 @@ export default function BookingPage() {
   };
 
   return (
-    <div className="min-h-screen pt-44 pb-20 px-6 md:px-12 bg-[#f3e5cb] font-sans selection:bg-primary/20">
+    <div className="min-h-screen pt-20 pb-20 px-6 md:px-12 bg-[#f3e5cb] font-sans selection:bg-primary/20">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -110,7 +214,7 @@ export default function BookingPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-full lg:w-3/5"
           >
-            <div className="bg-white/40 backdrop-blur-md p-10 md:p-14 rounded-[2.5rem] border border-primary/10 shadow-sm">
+            <div className="bg-white/40 backdrop-blur-md p-10 md:p-14 rounded-2xl border border-primary/10 shadow-sm">
               <form onSubmit={handleSubmit} className="space-y-12">
                 <div className="space-y-10">
                   {/* Row 1: Identification */}
@@ -123,7 +227,7 @@ export default function BookingPage() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/20 font-light text-base"
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/60 font-light text-base"
                         placeholder="John Doe"
                       />
                     </div>
@@ -135,7 +239,7 @@ export default function BookingPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/20 font-light text-base"
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/60 font-light text-base"
                         placeholder="john@example.com"
                       />
                     </div>
@@ -143,37 +247,20 @@ export default function BookingPage() {
 
                   {/* Row 2: Selection */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-                    <div className="space-y-3 relative group">
-                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Service Category</label>
-                      <select
-                        required
-                        name="serviceName"
-                        value={formData.serviceName}
-                        onChange={handleChange}
-                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading appearance-none cursor-pointer font-light text-base"
-                      >
-                        <option value="" disabled>Select Service</option>
-                        {services.map(service => (
-                          <option key={service} value={service}>{service}</option>
-                        ))}
-                      </select>
-                      <ChevronRight className="absolute right-0 bottom-4 w-4 h-4 text-primary/30 rotate-90 pointer-events-none" />
-                    </div>
-                    <div className="space-y-3 relative group">
-                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Preferred Practitioner</label>
-                      <select
-                        name="practitionerName"
-                        value={formData.practitionerName}
-                        onChange={handleChange}
-                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading appearance-none cursor-pointer font-light text-base"
-                      >
-                        <option value="">Any Available Expert</option>
-                        {practitioners.map(p => (
-                          <option key={p} value={p}>{p}</option>
-                        ))}
-                      </select>
-                      <ChevronRight className="absolute right-0 bottom-4 w-4 h-4 text-primary/30 rotate-90 pointer-events-none" />
-                    </div>
+                    <CustomSelect
+                      label="Service Category"
+                      placeholder="Select Service"
+                      options={services}
+                      value={formData.serviceName}
+                      onChange={(val) => handleSelectChange('serviceName', val)}
+                    />
+                    <CustomSelect
+                      label="Preferred Practitioner"
+                      placeholder="Any Available Expert"
+                      options={practitioners}
+                      value={formData.practitionerName}
+                      onChange={(val) => handleSelectChange('practitionerName', val)}
+                    />
                   </div>
 
                   {/* Row 3: Preferences */}
@@ -186,11 +273,10 @@ export default function BookingPage() {
                             key={opt}
                             type="button"
                             onClick={() => setFormData({ ...formData, format: opt })}
-                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${
-                              formData.format === opt
+                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${formData.format === opt
                                 ? 'bg-primary text-white shadow-md'
                                 : 'text-text-body hover:bg-white/30'
-                            }`}
+                              }`}
                           >
                             {opt.toUpperCase()}
                           </button>
@@ -205,11 +291,10 @@ export default function BookingPage() {
                             key={opt}
                             type="button"
                             onClick={() => setFormData({ ...formData, sessionLength: opt })}
-                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${
-                              formData.sessionLength === opt
+                            className={`flex-1 py-3 px-4 rounded-full text-[10px] tracking-[0.1em] font-medium transition-all duration-500 ${formData.sessionLength === opt
                                 ? 'bg-primary text-white shadow-md'
                                 : 'text-text-body hover:bg-white/30'
-                            }`}
+                              }`}
                           >
                             {opt} MINS
                           </button>
@@ -247,14 +332,14 @@ export default function BookingPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="w-full lg:w-2/5"
           >
-            <div className="bg-white/60 backdrop-blur-md p-10 md:p-12 rounded-[3rem] border border-primary/10 shadow-sm">
+            <div className="bg-white/60 backdrop-blur-md p-10 md:p-12 rounded-2xl border border-primary/10 shadow-sm">
               <div className="flex justify-between items-center mb-10">
                 <h3 className="text-2xl font-heading font-medium text-text-heading">Summary</h3>
                 <div className="p-2 bg-primary/5 rounded-lg">
                   <Calendar className="w-4 h-4 text-primary" />
                 </div>
               </div>
-              
+
               <div className="space-y-8">
                 {[
                   { label: "Selected Service", value: formData.serviceName || '---' },
@@ -268,7 +353,7 @@ export default function BookingPage() {
                   </div>
                 ))}
 
-                <div className="pt-6 flex justify-between items-center">
+                <div className="pt-4 flex justify-between items-center">
                   <div>
                     <p className="text-[8px] uppercase tracking-[0.2em] text-primary/40 font-bold mb-1">Total Fee</p>
                     <p className="text-5xl font-heading font-medium text-text-heading leading-none">
@@ -279,12 +364,6 @@ export default function BookingPage() {
                     GBP
                   </div>
                 </div>
-              </div>
-              
-              <div className="mt-12 p-6 rounded-2xl bg-primary/[0.03] border border-primary/5">
-                <p className="text-[10px] text-text-body/60 leading-relaxed font-light italic">
-                  * All sessions are conducted under strict confidentiality. Confirmation details will be dispatched to your inbox upon completion.
-                </p>
               </div>
             </div>
           </motion.div>

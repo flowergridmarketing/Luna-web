@@ -17,6 +17,7 @@
     "@editorjs/quote": "^2.7.6",
     "@gsap/react": "^2.1.2",
     "@next/third-parties": "^16.1.6",
+    "@stripe/react-stripe-js": "^6.3.0",
     "@stripe/stripe-js": "^9.4.0",
     "@vercel/blob": "^2.1.0",
     "framer-motion": "^12.26.2",
