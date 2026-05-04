@@ -21,6 +21,8 @@ const services = [
 ];
 
 const practitioners = [
+  "Samina Khan",
+  "Monira Ahmed",
   "Nudrat Chagtai",
   "Dr. Hana Patel",
   "Aysha Iqbal",
@@ -117,8 +119,8 @@ const CustomSelect = ({
                         setIsOpen(false);
                       }}
                       className={`px-5 py-3.5 rounded-2xl text-sm font-light cursor-pointer transition-all flex items-center justify-between mb-1 last:mb-0 ${value === opt
-                          ? 'bg-primary text-white shadow-md'
-                          : 'text-text-heading hover:bg-primary/5'
+                        ? 'bg-primary text-white shadow-md'
+                        : 'text-text-heading hover:bg-primary/5'
                         }`}
                     >
                       <span>{opt}</span>

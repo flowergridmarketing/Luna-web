@@ -27,7 +27,7 @@ export async function appendToSheet(data: any) {
     const requiredHeaders = [
       'Full Name',
       'Email',
-      'Phone Number',
+      'Phone',
       'Service Name',
       'Practitioner Name',
       'Payment Status',
@@ -40,15 +40,14 @@ export async function appendToSheet(data: any) {
       sheet = await doc.addSheet({ title: 'Bookings', headerValues: requiredHeaders });
       console.log('New "Bookings" sheet created with headers.');
     } else {
-      console.log(`Checking headers for existing sheet: "${sheet.title}"`);
-      // Ensure headers are up to date
+      console.log(`Ensuring headers for sheet: "${sheet.title}"`);
       await sheet.setHeaderRow(requiredHeaders);
     }
 
     const rowData = {
       'Full Name': data.name || 'N/A',
       'Email': data.email || 'N/A',
-      'Phone Number': data.phone || 'N/A',
+      'Phone': data.phone ? `'${data.phone}` : 'N/A', // Force text format
       'Service Name': data.serviceName || 'N/A',
       'Practitioner Name': data.practitionerName || 'N/A',
       'Payment Status': 'Paid',
