@@ -1,0 +1,363 @@
+'use client';
+
+import { useState } from 'react';
+import { loadStripe } from '@stripe/stripe-js';
+import { motion } from 'framer-motion';
+import { Calendar, ShieldCheck, ChevronRight, Check, Search } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
+import { toast } from 'sonner';
+
+const services = [
+  "Reiki Healing",
+  "Personal Development Coaching",
+  "Professional Development Coaching",
+  "Relationship Coaching",
+  "Conscious Living Coaching",
+  "Stress and Anxiety Support",
+  "Craniosacral Therapy",
+  "Hypnotherapy",
+  "Emotional Wellbeing Support",
+  "Mindfulness Session"
+];
+
+const practitioners = [
+  "Nudrat Chagtai",
+  "Dr. Hana Patel",
+  "Aysha Iqbal",
+  "Dr. Ayla Gokce",
+  "Tarun Sharma",
+  "Angelina Ray",
+  "Tamkin Riaz",
+  "Yvonne Hewitt",
+  "Dr. Ravinder",
+  "Runa Boolaky",
+  "Rico Wagner Caleap",
+  "Rebecca",
+  "Husna Hoque",
+  "Uzma",
+  "Dr. Renuka Marley"
+];
+
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
+
+const CustomSelect = ({
+  options,
+  value,
+  onChange,
+  label,
+  placeholder
+}: {
+  options: string[],
+  value: string,
+  onChange: (val: string) => void,
+  label: string,
+  placeholder: string
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredOptions = options.filter(opt =>
+    opt.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  return (
+    <div className="space-y-3 relative">
+      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">{label}</label>
+      <div
+        onClick={() => {
+          setIsOpen(!isOpen);
+          if (!isOpen) setSearchTerm("");
+        }}
+        className="w-full border-b border-primary/20 py-3 cursor-pointer flex justify-between items-center transition-all hover:border-primary group"
+      >
+        <span className={`text-base font-light tracking-wide ${value ? 'text-text-heading' : 'text-text-body/60'}`}>
+          {value || placeholder}
+        </span>
+        <ChevronRight className={`w-3.5 h-3.5 text-primary/40 transition-transform duration-500 ease-out ${isOpen ? '-rotate-90' : 'rotate-90'}`} />
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 bg-transparent"
+              onClick={() => setIsOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 10, scale: 0.98 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="absolute left-0 right-0 top-full mt-4 bg-white/95 backdrop-blur-xl border border-primary/10 rounded-2xl shadow-2xl z-50 overflow-hidden p-2"
+            >
+              <div className="p-2 border-b border-primary/5 mb-1">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-primary/40" />
+                  <input
+                    autoFocus
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder={`Search ${label.toLowerCase()}...`}
+                    className="w-full bg-primary/5 border-none rounded-2xl py-3 pl-10 pr-4 text-sm font-light focus:outline-none focus:ring-1 focus:ring-primary/20 placeholder:text-text-body/30 text-text-heading"
+                  />
+                </div>
+              </div>
+              <div className="max-h-64 overflow-y-auto custom-scrollbar p-2">
+                {filteredOptions.length > 0 ? (
+                  filteredOptions.map((opt) => (
+                    <motion.div
+                      key={opt}
+                      whileHover={{ x: 4 }}
+                      onClick={() => {
+                        onChange(opt);
+                        setIsOpen(false);
+                      }}
+                      className={`px-5 py-3.5 rounded-2xl text-sm font-light cursor-pointer transition-all flex items-center justify-between mb-1 last:mb-0 ${value === opt
+                          ? 'bg-primary text-white shadow-md'
+                          : 'text-text-heading hover:bg-primary/5'
+                        }`}
+                    >
+                      <span>{opt}</span>
+                      {value === opt && <Check className="w-3.5 h-3.5" />}
+                    </motion.div>
+                  ))
+                ) : (
+                  <div className="px-5 py-10 text-center text-[10px] uppercase tracking-widest text-primary/40 font-bold">
+                    No Results Found
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+export default function BookingPage() {
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    serviceName: '',
+    practitionerName: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Validation
+    if (!formData.phone || formData.phone.trim().length < 8) {
+      toast.error('Valid contact number is required');
+      return;
+    }
+
+    if (!formData.serviceName) {
+      toast.error('Please select a service category');
+      return;
+    }
+
+    if (!process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY) {
+      toast.error("Checkout system is currently unavailable");
+      return;
+    }
+
+    setLoading(true);
+    const toastId = toast.loading('Preparing your session...');
+
+    try {
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.error) {
+        throw new Error(data.error);
+      }
+
+      if (data.url) {
+        toast.success('Redirecting to secure payment...', { id: toastId });
+        window.location.href = data.url;
+      }
+    } catch (err: any) {
+      toast.error(err.message || 'Something went wrong', { id: toastId });
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen pt-20 pb-20 px-6 md:px-12 bg-[#f3e5cb] font-sans selection:bg-primary/20">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-24"
+        >
+          <span className="text-primary font-medium tracking-[0.4em] uppercase text-[10px] mb-4 block">Reservation Portal</span>
+          <h1 className="text-6xl md:text-8xl font-heading font-medium text-text-heading mb-6 tracking-tight leading-none">
+            Book Your Session
+          </h1>
+          <p className="text-text-body text-lg max-w-2xl mx-auto leading-relaxed font-light">
+            Experience a tailored journey toward balance and harmony. Choose your preferred service and practitioner below.
+          </p>
+        </motion.div>
+
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
+          {/* Form Column - 60% width on LG */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full lg:w-3/5"
+          >
+            <div className="bg-white/40 backdrop-blur-md p-10 md:p-14 rounded-2xl border border-primary/10 shadow-sm">
+              <form onSubmit={handleSubmit} className="space-y-12">
+                <div className="space-y-10">
+                  {/* Row 1: Identification */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Full Name</label>
+                      <input
+                        required
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/60 font-light text-base"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Email Address</label>
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/60 font-light text-base"
+                        placeholder="john@example.com"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 2: Contact & Service */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Phone Number</label>
+                      <input
+                        required
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/60 font-light text-base"
+                        placeholder="+44 7000 000000"
+                      />
+                    </div>
+                    <CustomSelect
+                      label="Service Category"
+                      placeholder="Select Service"
+                      options={services}
+                      value={formData.serviceName}
+                      onChange={(val) => handleSelectChange('serviceName', val)}
+                    />
+                  </div>
+
+                  {/* Row 3: Practitioner */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <CustomSelect
+                      label="Preferred Practitioner"
+                      placeholder="Any Available Expert"
+                      options={practitioners}
+                      value={formData.practitionerName}
+                      onChange={(val) => handleSelectChange('practitionerName', val)}
+                    />
+                  </div>
+                </div>
+
+                <div className="pt-10 border-t border-primary/5">
+                  <button
+                    disabled={loading}
+                    type="submit"
+                    className="w-full bg-primary hover:bg-[#8b5630] text-white font-medium py-5 rounded-full shadow-lg shadow-primary/20 transition-all transform hover:translate-y-[-2px] active:translate-y-[0px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 group overflow-hidden relative"
+                  >
+                    <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                    <span className="relative z-10 tracking-[0.2em] uppercase text-xs">Finalize Booking</span>
+                    <ChevronRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                  <div className="flex items-center justify-center gap-4 mt-8 opacity-40">
+                    <div className="h-[1px] flex-grow bg-primary/20" />
+                    <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+                    <span className="text-[8px] uppercase tracking-[0.3em] font-bold text-primary">Secure Checkout</span>
+                    <div className="h-[1px] flex-grow bg-primary/20" />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </motion.div>
+
+          {/* Summary Column - 40% width on LG */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="w-full lg:w-2/5"
+          >
+            <div className="bg-white/60 backdrop-blur-md p-10 md:p-12 rounded-2xl border border-primary/10 shadow-sm">
+              <div className="flex justify-between items-center mb-10">
+                <h3 className="text-2xl font-heading font-medium text-text-heading">Summary</h3>
+                <div className="p-2 bg-primary/5 rounded-lg">
+                  <Calendar className="w-4 h-4 text-primary" />
+                </div>
+              </div>
+
+              <div className="space-y-8">
+                {[
+                  { label: "Selected Service", value: formData.serviceName || '---' },
+                  { label: "Expert Practitioner", value: formData.practitionerName || 'Any Available' },
+                  { label: "Contact Phone", value: formData.phone || '---' },
+                ].map((item, i) => (
+                  <div key={i} className="border-b border-primary/5 pb-4">
+                    <p className="text-[8px] uppercase tracking-[0.25em] text-primary/50 font-bold mb-2">{item.label}</p>
+                    <p className="text-base text-text-heading font-light">{item.value}</p>
+                  </div>
+                ))}
+
+                <div className="pt-4 flex justify-between items-center">
+                  <div>
+                    <p className="text-[8px] uppercase tracking-[0.2em] text-primary/40 font-bold mb-1">Total Fee</p>
+                    <p className="text-5xl font-heading font-medium text-text-heading leading-none">
+                      £30
+                    </p>
+                  </div>
+                  <div className="text-[9px] text-primary/40 uppercase tracking-widest font-bold border border-primary/10 px-3 py-1 rounded-full">
+                    GBP
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}

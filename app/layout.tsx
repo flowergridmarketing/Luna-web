@@ -8,6 +8,7 @@ import Preloader from "@/components/Preloader";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import Footer from "@/components/Home/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import { Toaster } from "sonner";
 import { headers } from "next/headers";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -76,7 +77,7 @@ export default async function RootLayout({
 }>) {
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "";
-  const isAdminRoute = pathname.startsWith("/admin") || pathname.startsWith("/holistic-journals/editor");
+  const isAdminRoute = pathname.startsWith("/admin") || pathname.startsWith("/holistic-journals/editor") || pathname === "/payment-success";
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -152,6 +153,7 @@ export default async function RootLayout({
           `}
         </Script>
         <LoadingProvider>
+          <Toaster position="top-center" richColors closeButton />
           {!isAdminRoute && <Preloader />}
           {!isAdminRoute && <SmoothScroll />}
           {!isAdminRoute && <Navbar />}
