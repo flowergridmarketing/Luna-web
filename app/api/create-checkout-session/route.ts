@@ -13,7 +13,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const unitAmount = 3000; // Flat £30 for all services
+    const unitAmount = 3000;
 
     const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
 
