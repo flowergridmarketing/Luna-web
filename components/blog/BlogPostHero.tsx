@@ -44,6 +44,7 @@ interface BlogPostHeroProps {
 
 export default function BlogPostHero({
     title,
+    coverImage,
     date,
     readTime,
     category,
@@ -64,7 +65,7 @@ export default function BlogPostHero({
             <div className="relative h-screen w-full overflow-hidden">
                 {/* Background Image */}
                 <Image
-                    src={getImageUrl('blog/individualblogpost.png')}
+                    src={coverImage || getImageUrl('blog/individualblogpost.png')}
                     alt={title}
                     fill
                     priority
