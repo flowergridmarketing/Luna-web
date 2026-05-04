@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { headers } from 'next/headers';
 import { appendToSheet } from '@/lib/google-sheets';
-import { resend } from '@/lib/resend';
+import { transporter } from '@/lib/nodemailer';
 
 const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
@@ -24,10 +24,14 @@ export async function POST(req: Request) {
   // Handle the event
   if (event.type === 'checkout.session.completed') {
     const session = event.data.object as any;
-
     const metadata = session.metadata;
 
     console.log('Webhook metadata received:', metadata);
+
+    if (!metadata || !metadata.email) {
+      console.error('Missing metadata or email in session');
+      return NextResponse.json({ error: 'Missing metadata' }, { status: 400 });
+    }
 
     try {
       // 1. Store in Google Sheets
@@ -36,11 +40,13 @@ export async function POST(req: Request) {
       console.log('Successfully appended to Google Sheets');
 
       // 2. Send confirmation email
-      console.log('Attempting to send confirmation email...');
-      await resend.emails.send({
-        from: 'Luna <onboarding@resend.dev>', // Use resend's default for testing
-        to: [metadata.email],
-        subject: 'Booking Confirmation - Luna',
+      console.log('Attempting to send confirmation email to:', metadata.email);
+
+      // Send email using Nodemailer
+      const info = await transporter.sendMail({
+        from: '"FlowerGrid" <flowergridmarketing@gmail.com>', // sender address
+        to: metadata.email, // list of receivers
+        subject: 'Booking Confirmation - FlowerGrid',
         html: `
           <div style="font-family: sans-serif; padding: 20px; color: #333;">
             <h1 style="color: #000;">Booking Confirmed!</h1>
@@ -57,7 +63,8 @@ export async function POST(req: Request) {
           </div>
         `,
       });
-      console.log('Successfully sent confirmation email');
+      
+      console.log('Email sent successfully. Message ID:', info.messageId);
 
     } catch (error) {
       console.error('CRITICAL WEBHOOK ERROR:', error);

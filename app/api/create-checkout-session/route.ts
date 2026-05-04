@@ -18,6 +18,8 @@ export async function POST(req: Request) {
     // For now, we'll create a line item with a custom price
     const unitAmount = sessionLength === '90' ? 15000 : 10000; // $150 vs $100 in cents
 
+    const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
+    
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
@@ -34,8 +36,8 @@ export async function POST(req: Request) {
         },
       ],
       mode: 'payment',
-      success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/booking`,
+      success_url: `${origin}/payment-success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}/booking`,
       customer_email: email,
       metadata: {
         name,
