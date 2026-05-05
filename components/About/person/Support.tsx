@@ -210,9 +210,9 @@ const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
                         
                         /* Hover Effects */
                         hover:max-w-full 
-                        hover:bg-[#A68653] 
-                        hover:text-black 
-                        hover:border-black! 
+                        hover:bg-primary 
+                        hover:text-white! 
+                        hover:border-primary 
                         hover:py-4 
                         hover:scale-105
                       "

@@ -43,7 +43,7 @@ const TeamConnections = () => {
     }, { scope: container });
 
     return (
-        <section ref={container} className="w-full bg-background py-20 px-6 md:px-12 lg:px-20">
+        <section ref={container} className="w-full bg-background pt-20 px-6 md:px-12 lg:px-20">
             <div className="max-w-7xl mx-auto">
 
                 <div className="connection-header flex items-center gap-4 mb-12">

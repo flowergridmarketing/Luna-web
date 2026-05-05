@@ -124,7 +124,7 @@ const TeamTreeSection = () => {
                           {/* View Profile Button */}
                           <Link 
                             href={member.slug ? `/practitioner/${member.slug}` : "/contact"} 
-                            className="bg-[#A67C52] hover:bg-[#8B6A45] text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6"
+                            className="bg-primary hover:opacity-90 text-white text-[11px] md:text-sm font-medium px-5 md:px-7 py-2.5 md:py-3 rounded-full transition-colors duration-200 whitespace-nowrap mt-6"
                           >
                             View Profile
                           </Link>

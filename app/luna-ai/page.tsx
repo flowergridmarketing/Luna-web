@@ -23,7 +23,7 @@ export default function LunaPage() {
       {/* Hero Section */}
       <section className="relative min-h-screen md:h-screen flex items-center overflow-hidden bg-[#1a0f05] pt-32 pb-16 md:py-20">
         {/* Background Glow */}
-        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-[#d4a373] opacity-20 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[600px] h-[600px] bg-primary opacity-20 blur-[120px] rounded-full pointer-events-none" />
         
         <div className="container mx-auto px-6 md:px-10 grid md:grid-cols-2 items-center relative z-10">
           <div className="max-w-2xl mx-auto md:mx-0 text-center md:text-left">

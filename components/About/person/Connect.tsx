@@ -38,7 +38,7 @@ const Connect = ({
                     </p>
                 )}
                 <Link href={redirectionLink} target='_blank' rel='noopener noreferrer' >
-                    <button className="bg-[#A68653] transition-colors duration-300 text-white font-medium px-8 mt-4 lg:px-20 py-4 rounded-full text-sm md:text-base shadow-md">
+                    <button className="bg-primary transition-colors duration-300 text-white font-medium px-8 mt-4 lg:px-20 py-4 rounded-full text-sm md:text-base shadow-md">
                         {btnText}
                     </button>
 

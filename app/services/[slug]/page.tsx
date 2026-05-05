@@ -136,7 +136,7 @@ export default async function ServicePage({ params }: Props) {
                         </p>
                         <Link
                             href="#booking"
-                            className="inline-flex bg-[#A68A64] hover:opacity-90 text-white px-8 py-4 rounded-full text-lg font-medium transition-transform hover:scale-105"
+                            className="inline-flex bg-primary hover:opacity-90 text-white px-8 py-4 rounded-full text-lg font-medium transition-transform hover:scale-105"
                         >
                             {service.journey.buttonText || "Book Your Session"}
                         </Link>

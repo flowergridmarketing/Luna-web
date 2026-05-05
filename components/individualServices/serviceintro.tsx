@@ -55,7 +55,7 @@ export default function ServiceIntroBar({ data }: Props) {
           <div className="mt-8 flex justify-center md:mt-12">
             <Link
               href="#booking"
-              className="inline-flex min-w-[240px] items-center justify-center rounded-full bg-[#A68A64] px-8 py-3 text-sm font-medium text-white transition duration-300 hover:opacity-90 sm:min-w-[300px] md:min-w-[380px] md:px-10 md:py-5 md:text-xl"
+              className="inline-flex min-w-[240px] items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-medium text-white transition duration-300 hover:opacity-90 sm:min-w-[300px] md:min-w-[380px] md:px-10 md:py-5 md:text-xl"
             >
               Schedule Your {data.hero.name} Session
             </Link>
