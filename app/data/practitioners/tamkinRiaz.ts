@@ -2,22 +2,32 @@ import { getImageUrl } from "@/lib/utils";
 export const tamkinRiaz = {
   slug: "tamkin-riaz-career-development-coach-in-croydon",
 
+  seo: {
+    title: "Tamkin Riaz | Career Development Coach in Croydon",
+    description: "Meet Tamkin Riaz, a Career Development Coach in Croydon with 45+ years in education, business and community leadership. Book a free discovery call."
+  },
+
   profile: {
     name: "Tamkin Riaz",
     title: "Career Development Coach in Croydon | Community Leader, Educator and Strategic Partnerships Mentor",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/tamkin.png?updatedAt=1771742262330",
     experience: "45+ years",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through your goals and choose the right next step.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Clarity and a plan for your career",
-    subtext: "If you feel stuck in your career, unsure how to take the next step, or tired of trying to figure it out alone, I offer structured support that turns ideas into a plan you can act on.",
+    subtext: "If you feel stuck in your career, unsure how to take the next step, or tired of trying to figure it out alone, I am here to help.",
     tags: [
       "Career Development Coaching",
       "Leadership Coaching",

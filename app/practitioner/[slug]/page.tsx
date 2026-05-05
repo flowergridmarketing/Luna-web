@@ -165,9 +165,10 @@ export default async function PractitionerPage({ params }: Props) {
             {/* 12. DISCOVERY CTA */}
             <Connect
                 image={getImageUrl("indivdualPractioner/individualpractioner.jpg")}
-                title="TO DATE THOUSANDS OF HOURS OF THERAPY DONE !"
-                btnText="Book a session Call"
-                description=""
+                title={practitioner.booking?.ctaBox?.title || "TO DATE THOUSANDS OF HOURS OF THERAPY DONE !"}
+                btnText={practitioner.booking?.ctaBox?.btnText || "Book a session Call"}
+                description={practitioner.booking?.ctaBox?.description || ""}
+                redirectionLink={practitioner.booking?.calendly}
             />
 
         </main>

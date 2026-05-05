@@ -2,22 +2,37 @@ import { getImageUrl } from "@/lib/utils";
 export const drHanaPatel = {
   slug: "dr-hana-patel-gp-mental-health-coach",
 
+  seo: {
+    title: "Dr Hana Patel | GP and Mental Health Coach | Flowergrid",
+    description: "Meet Dr Hana Patel, a London GP and mental health coach at Flowergrid. Specialising in stress, burnout and menopause. Evidence-based care online or in Croydon, South London."
+  },
+
   profile: {
     name: "Dr Hana Patel",
     title: "GP and mental health coach in South London",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/hana.png?updatedAt=1771328747211",
+    credentials: "MBBS BSc MSc(Med Ed) FRCGP ILM7 RCPathME",
+    gmc: "6129771",
+    rating: "5.0 from 52 reviews",
     experience: "20 years' experience",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
+      video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", // Placeholder video link
     },
+    microcopy: "Secure booking. No referral needed. Insurance accepted.",
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through what you need and choose the right appointment.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Clarity and a plan for stress, menopause and burnout",
-    subtext: "Evidence based medical care with practical coaching. Appointments online or in South London.",
+    subtext: "Evidence based medical care with practical coaching. Appointments online or in Croydon, South London.",
     tags: [
       "Mental health assessment",
       "Menopause",

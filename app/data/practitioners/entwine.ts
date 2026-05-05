@@ -2,17 +2,27 @@ import { getImageUrl } from "@/lib/utils";
 export const entwine = {
   slug: "entwine-at-home-salon-skincare",
 
+  seo: {
+    title: "Entwine | Professional At-Home Salon Skincare | Flowergrid",
+    description: "Entwine at Flowergrid offers professional at-home salon skincare with luxury ampoules for glass skin. Cruelty free, sustainable beauty with UK delivery. Book a free discovery call."
+  },
+
   profile: {
     name: "Entwine",
     title: "Luxury at home facials and skincare advice, created for radiant, healthy looking skin.",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/entwine.png?updatedAt=1777472825136",
     experience: "Professional Skincare",
     languages: ["English"],
-    location: "UK delivery",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Available now",
     cta: {
-      primary: "Explore Entwine Products",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure what your skin needs?",
+      description: "Get a clear starting point with a free Flowergrid discovery call and a simple routine recommendation.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {

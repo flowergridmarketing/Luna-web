@@ -1,23 +1,33 @@
 import { getImageUrl } from "@/lib/utils";
 export const husnaHoque = {
-  slug: "husna-hoque-personal-trainer-wellness-coach-london",
+  slug: "husna-hoque-personal-trainer-wellness-coach-croydon",
+
+  seo: {
+    title: "Husna Hoque | Personal Trainer and Wellness Coach Croydon| Flowergrid",
+    description: "Meet Husna Hoque, a personal trainer and wellness coach in Croydon. Custom workouts, macro coaching and habits for strength and confidence. Book a free call."
+  },
 
   profile: {
     name: "Husna Hoque",
-    title: "Personal Trainer & Wellness Coach London | Fitness and Nutrition Specialist",
+    title: "Personal Trainer & Wellness Coach Croydon | Fitness and Nutrition Specialist",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/husna.png?updatedAt=1771328747170",
     experience: "Personal Trainer & Wellness Coach",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through your goals and find the right path forward.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Fitness and wellbeing support built around real life",
-    subtext: "As a personal trainer and wellness coach in London, I help you follow a fitness plan you can actually stick to. We focus on customised workouts, macro guidance, and simple lifestyle habits that support long term results, not quick fixes.",
+    subtext: "As a personal trainer and wellness coach in Croydon, I help you follow a fitness plan you can actually stick to. We focus on customised workouts, macro guidance, and simple lifestyle habits that support long term results, not quick fixes.",
     tags: [
       "Personal Trainer & Wellness Coach",
       "Fitness Coach",

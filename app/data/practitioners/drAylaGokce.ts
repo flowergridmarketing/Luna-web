@@ -2,22 +2,32 @@ import { getImageUrl } from "@/lib/utils";
 export const drAylaGokce = {
   slug: "dr-ayla-gokce-aesthetic-surgeon",
 
+  seo: {
+    title: "Dr. Ayla Gökçe | Aesthetic Surgeon Croydon| Flowergrid",
+    description: "Meet Dr. Ayla Gökçe, an Aesthetic and Plastic Surgeon in Croydon. Specialist in facial rejuvenation, breast surgery, and body contouring at Flowergrid."
+  },
+
   profile: {
     name: "Dr. E. Ayla Gökçe",
-    title: "Aesthetic and Plastic Surgeon London | Plastic, Reconstructive and Aesthetic Surgeon",
+    title: "Aesthetic and Plastic Surgeon Croydon | Plastic, Reconstructive and Aesthetic Surgeon",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/angleroc.jpg?updatedAt=1777046535595",
     experience: "Aesthetic and plastic surgeon",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through what you need and choose the right appointment.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Aesthetic Surgery Tailored to Your Unique Beauty",
-    subtext: "Aesthetic and plastic surgeon delivering natural, transformative facial, breast, and body surgery with surgical precision and artistic vision.",
+    subtext: "Aesthetic and plastic surgeon in Croydon delivering natural, transformative facial, breast, and body surgery with surgical precision and artistic vision.",
     tags: [
       "Aesthetic Surgery",
       "Plastic Surgery",
@@ -151,6 +161,11 @@ export const drAylaGokce = {
       name: "Patient",
       location: "London",
       text: "Amazing results from Dr Ayla! 👏👏 Everyone comments on how well I look and I know it’s because of my hooded eye removal! You’re the best, thank you"
+    },
+    {
+      name: "Patient",
+      location: "London",
+      text: "I have had many different medical aesthetic procedures done by Ms. Ayla, and once even had a cosmetic surgery. I was able to get up and drive my car right after the surgery. Now I have contacted her again for my other combined surgeries. She explained all my questions meticulously and in detail, and was very helpful in making my decision. If I were to have another cosmetic procedure in the future, I would choose her again. I am now counting down the days until my current surgery. Thank you again."
     },
     {
       name: "Sophie M.",

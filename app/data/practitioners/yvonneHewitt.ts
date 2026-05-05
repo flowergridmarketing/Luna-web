@@ -2,17 +2,27 @@ import { getImageUrl } from "@/lib/utils";
 export const yvonneHewitt = {
   slug: "yvonne-hewitt-rtt-hypnotherapist-in-croydon",
 
+  seo: {
+    title: "Yvonne Hewitt | RTT Hypnotherapist in Croydon | Flowergrid",
+    description: "Meet Yvonne Hewitt, an RTT hypnotherapist in Croydon offering Rapid Transformational Therapy and hypnotherapy for anxiety, confidence, habits and phobias."
+  },
+
   profile: {
     name: "Yvonne Hewitt",
     title: "RTT hypnotherapist in Croydon | Clinical Hypnotherapist and Subconscious Breakthrough Specialist",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/yvonne.png?updatedAt=1771328747206",
     experience: "RTT Hypnotherapist",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through what you need and see how RTT Hypnotherapy can help you move forward.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {

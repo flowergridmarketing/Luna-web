@@ -72,6 +72,22 @@ export default function Hero({ data }: Props) {
               {hero.subtitle || hero.title}
             </p>
 
+            {/* Rating — 5.0 from 52 reviews */}
+            {data.rating && (
+              <div className="mt-2 flex items-center gap-2">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-sm font-light text-white/90">
+                  {typeof data.rating === 'string' ? data.rating : `${data.rating}.0 from ${data.reviewCount || 0} reviews`}
+                </span>
+              </div>
+            )}
+
             {/* Credentials pill — combined credentials; GMC: xxxx */}
             {credentialPill && (
               <div 
@@ -91,8 +107,20 @@ export default function Hero({ data }: Props) {
                 className="rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5"
                 style={{ backgroundColor: "#F3EFE7", color: "#35271C" }}
               >
-                Book a Free Discovery Session
+                Book consultation
               </Link>
+
+              {data.booking?.video && (
+                <Link
+                  href={data.booking.video}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5 border border-[#F3EFE7]"
+                  style={{ color: "#F3EFE7" }}
+                >
+                  Watch presentation video
+                </Link>
+              )}
 
               <a
                 href="https://wa.me/447432211096"
@@ -118,10 +146,7 @@ export default function Hero({ data }: Props) {
               className="mt-6 max-w-2xl text-xs italic leading-relaxed sm:text-sm font-light"
               style={{ color: "rgba(255, 255, 255, 0.8)" }}
             >
-              Secure booking. No referral needed. We accept all major insurance
-              providers, including Bupa, Aviva, Cigna, WPA, Simplyhealth,
-              Allianz and CS Healthcare, and you also have the option of paying
-              for treatment yourself.
+              {data.booking?.microcopy || "Secure booking. No referral needed. We accept all major insurance providers, including Bupa, Aviva, Cigna, WPA, Simplyhealth, Allianz and CS Healthcare, and you also have the option of paying for treatment yourself."}
             </p>
 
           </div>
