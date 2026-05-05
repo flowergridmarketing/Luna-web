@@ -2,22 +2,32 @@ import { getImageUrl } from "@/lib/utils";
 export const drRenukaMarley = {
   slug: "dr-renuka-marley-healthcare-consultant-croydon",
 
+  seo: {
+    title: "Dr. Renuka Marley | Healthcare Consultant in Croydon | Flowergrid",
+    description: "Meet Dr. Renuka Marley, a healthcare consultant in Croydon and Life Coach. Specialist in preventative health, body scans and health audits for energy and vitality."
+  },
+
   profile: {
     name: "Dr. Renuka Marley",
     title: "Healthcare Consultant in Croydon and Life Coach",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/renuka.png?updatedAt=1771328747232",
     experience: "Specialist Healthcare Consultant and Life Coach (Doctorate level)",
     languages: ["English"],
-    location: "Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure what your body needs?",
+      description: "Book a free discovery call with Samina to see how a health audit and body scan can provide the clarity you need.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Healthcare Consultant in Croydon and Life Coach",
-    subtext: "Not sure what your body needs? Book a free discovery call with Samina to see how a health audit and body scan can provide the clarity you need.",
+    subtext: "As a healthcare consultant in Croydon, I support clients who want clearer answers about their energy, habits, and health direction. Book a free discovery call with Samina to see how a health audit and body scan can provide the clarity you need.",
     tags: [
       "Healthcare Consultant Croydon",
       "Life Coach Croydon",

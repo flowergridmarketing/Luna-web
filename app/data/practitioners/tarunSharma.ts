@@ -2,22 +2,32 @@ import { getImageUrl } from "@/lib/utils";
 export const tarunSharma = {
   slug: "tarun-sharma-reiki-grand-master",
 
+  seo: {
+    title: "Tarun Sharma | Reiki Grand Master & Energy Healing | Flowergrid",
+    description: "Meet Tarun Sharma, a Reiki Grand Master in Croydon. Specialising in energy healing, Sujok therapy and Nadi Astrology at Flowergrid. Restore your inner balance today."
+  },
+
   profile: {
     name: "Tarun Sharma",
     title: "Reiki Grand Master and holistic consultant specialising in energy healing, Sujok therapy, and Vedic lifestyle.",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/Tarun%20Sharma.png?updatedAt=1777046535615",
     experience: "Reiki Grand Master",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through what you need and choose the right appointment.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Energy Healing Aligned with Your Natural Vibration",
-    subtext: "Reiki Grand Master delivering deep energetic restoration and Vedic lifestyle guidance through ancient wisdom and precise holistic mastery.",
+    subtext: "Reiki Grand Master in Croydon delivering deep energetic restoration and Vedic lifestyle guidance through ancient wisdom and precise holistic mastery.",
     tags: [
       "Reiki Grand Master",
       "Reiki Healing",

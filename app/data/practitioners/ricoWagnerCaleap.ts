@@ -1,6 +1,11 @@
 import { getImageUrl } from "@/lib/utils";
 export const ricoWagnerCaleap = {
-  slug: "rico-wagner-caleap-executive-coach-london",
+  slug: "rico-wagner-caleap-executive-coach-croydon",
+
+  seo: {
+    title: "Rico Wagner Caleap | Executive Coach Croydon | Flowergrid",
+    description: "Meet Rico Wagner Caleap, Executive Coach London. Support for resilience and EQ through the Wagner Method. Book a consultation online or in person today."
+  },
 
   profile: {
     name: "Rico Wagner Caleap",
@@ -8,11 +13,16 @@ export const ricoWagnerCaleap = {
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/rico.png?updatedAt=1771328747183",
     experience: "Executive Coach",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through your goals and find the right path forward.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {

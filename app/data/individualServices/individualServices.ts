@@ -808,7 +808,11 @@ const services = [
         }
       ]
     },
-    "practitioners": [],
+    "practitioners": [
+      "husna-hoque-personal-trainer-wellness-coach-croydon",
+      "rebecca-nutrition-and-fitness-coach-croydon",
+      "nudrat-chagtai-nutritional-therapist"
+    ],
     "benefits": [
       {
         "title": "Sustainable Energy Levels",

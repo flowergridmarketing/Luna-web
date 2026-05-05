@@ -55,7 +55,7 @@ const navLinks = [
     ],
   },
   { title: "Journals", href: "/holistic-journals", image: getImageUrl("n6.png") },
-  { title: "Location", href: "/location", image: getImageUrl("location/support.jpg.jpeg") },
+  { title: "Location", href: "/holistic-wellness-center-in-croydon", image: getImageUrl("location/support.jpg.jpeg") },
   { title: "Contact Us", href: "/contact-us", image: getImageUrl("n7.png") },
 ];
 

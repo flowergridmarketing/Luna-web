@@ -2,17 +2,27 @@ import { getImageUrl } from "@/lib/utils";
 export const runaBoolaky = {
   slug: "runa-boolaky-nlp-practitioner-in-croydon",
 
+  seo: {
+    title: "Runa Boolaky | NLP Practitioner in Croydon | Flowergrid",
+    description: "Meet Runa Boolaky, an NLP Practitioner in Croydon. Coaching for confidence, leadership and habits. Book a free discovery call at Flowergrid today."
+  },
+
   profile: {
     name: "Runa Boolaky",
     title: "NLP Practitioner, Life Coach & Mental Health First Aider",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/runa.png?updatedAt=1771328747202",
     experience: "NLP Practitioner",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through what you need and see how NLP can help you find clarity.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {

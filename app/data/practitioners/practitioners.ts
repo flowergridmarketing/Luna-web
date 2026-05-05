@@ -39,8 +39,8 @@ const practitioners = allPractitionersData.map((p: any) => {
   return {
     slug: p.slug,
     seo: {
-      title: `${p.profile?.name} | ${p.profile?.title} | Flowergrid`,
-      description: p.hero?.subtext || ""
+      title: p.seo?.title || `${p.profile?.name} | ${p.profile?.title} | Flowergrid`,
+      description: p.seo?.description || p.hero?.subtext || ""
     },
     hero: {
       name: p.profile?.name,
@@ -50,10 +50,10 @@ const practitioners = allPractitionersData.map((p: any) => {
       image: p.profile?.image
     },
     introSummary: p.sections?.introduction,
-    credentials: p.profile?.experience,
-    registration: "", 
-    rating: 5,
-    reviewCount: 52,
+    credentials: p.profile?.credentials || p.profile?.experience,
+    registration: p.profile?.gmc ? `GMC: ${p.profile.gmc}` : "", 
+    rating: p.profile?.rating || 5,
+    reviewCount: p.profile?.reviewCount || 52,
     badges: [
       p.profile?.experience,
       p.profile?.location,
@@ -68,7 +68,7 @@ const practitioners = allPractitionersData.map((p: any) => {
     },
     languages: p.profile?.languages || ["English"],
     insurance: [
-      "Bupa", "Aviva", "Cigna", "WPA", "Simply Health", "Allianz"
+      "Bupa", "Aviva", "Cigna", "WPA", "Simply Health", "Allianz", "CS Healthcare", "Paying for myself"
     ],
     whoIWorkWith: {
       intro: p.sections?.whoIWorkWithIntro,
@@ -100,6 +100,9 @@ const practitioners = allPractitionersData.map((p: any) => {
       heading: p.booking?.title,
       description: p.booking?.description,
       calendly: p.booking?.cta?.calendly || "https://calendly.com/",
+      video: p.profile?.cta?.video,
+      microcopy: p.profile?.microcopy,
+      ctaBox: p.profile?.ctaBox
     },
     testimonials: p.testimonials || [],
     faq: p.faq || [],

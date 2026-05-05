@@ -58,7 +58,7 @@ const DifferentSection = () => {
                 <div className="different-text grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mb-12">
                    <div>
                      <p className="text-text-body text-base md:text-lg leading-relaxed mb-6">
-                        The main thing that sets us apart is our collaborative model of care here at the Flowergrid Holistic Wellness Center in Croydon. At Flowergrid, our team of over 20 doctors, coaches, and therapists work together around the same goal.
+                        The main thing that sets us apart is our collaborative model of care here at the Flowergrid Holistic Wellness Center in Croydon. In most wellness settings, practitioners work in isolation. At Flowergrid, our team of over 20 doctors, coaches, and therapists work together around the same goal: joined up support that fits your life.
                     </p>
                     <p className="text-text-body text-base md:text-lg leading-relaxed">
                         This means your nutrition guidance can sit alongside your psychological therapy, and your coaching goals can be supported by holistic practices such as energy healing. You get one coherent plan, not fragmented advice from separate places.

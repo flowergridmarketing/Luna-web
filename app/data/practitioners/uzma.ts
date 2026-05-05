@@ -1,6 +1,11 @@
 import { getImageUrl } from "@/lib/utils";
 export const uzma = {
-  slug: "uzma-neurodiversity-specialist-london",
+  slug: "uzma-neurodiversity-specialist-croydon",
+
+  seo: {
+    title: "Uzma | Neurodiversity Specialist in Croydon| Flowergrid",
+    description: "Meet Uzma, a Neurodiversity Specialist in Croydon and Life Coach with 20+ years' experience in teaching and family advocacy. Book a free discovery call today."
+  },
 
   profile: {
     name: "Uzma",
@@ -8,16 +13,21 @@ export const uzma = {
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/uzma.png?updatedAt=1777472825370",
     experience: "Neurodiversity Specialist",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call with Uzma to talk through your needs and find the right support for your family or career.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Practical neurodiversity support for real life",
-    subtext: "As a neurodiversity specialist in London, I support you with the day to day challenges that can feel exhausting, focus, routines, overwhelm, confidence, and communication. My approach is calm, strengths based, and tailored to how you think and live.",
+    subtext: "As a neurodiversity specialist in Croydon, I support you with the day to day challenges that can feel exhausting, focus, routines, overwhelm, confidence, and communication. My approach is calm, strengths based, and tailored to how you think and live.",
     tags: [
       "Neurodiversity Specialist in London",
       "Neurodiversity Support",

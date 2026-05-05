@@ -5,6 +5,11 @@ import { join } from "path";
 export const nudratChagtai = {
     slug: "nudrat-chagtai-nutritional-therapist",
 
+    seo: {
+        title: "Nudrat Chagtai | Nutritional Therapist & Health Coach in Croydon",
+        description: "Personalised nutritional therapy for blood sugar, hormones, gut health, and weight management. Registered therapist offering culturally-sensitive nutrition in Croydon."
+    },
+
     profile: {
         name: "Nudrat Chagtai",
         title:
@@ -12,17 +17,22 @@ export const nudratChagtai = {
         image: "https://ik.imagekit.io/z6xh4w9tp/about/team/nusratchangthai.jpg?updatedAt=1777012418164",
         experience: "DipION Nutritional Therapist",
         languages: ["English"],
-        location: "South London (In-person on request)",
+        location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
         availability: "Accepting new clients",
         cta: {
-            primary: "Book a Free Discovery Call",
+            primary: "Book Consultation",
         },
+        ctaBox: {
+            title: "Not sure where to start?",
+            description: "Book a free discovery call to talk through what you need and choose the right appointment.",
+            btnText: "Book a Free Discovery Call"
+        }
     },
 
     hero: {
         headline: "Nutrition support that fits your real life",
         subtext:
-            "Registered nutritional therapist helping people manage blood sugar, hormones, gut health, and metabolic wellbeing through sustainable, culturally-sensitive nutrition.",
+            "Registered nutritional therapist in Croydon helping people manage blood sugar, hormones, gut health, and metabolic wellbeing through sustainable, culturally-sensitive nutrition.",
         tags: [
             "Metabolic Health",
             "Blood Sugar Balance",
@@ -110,13 +120,13 @@ export const nudratChagtai = {
         ],
     },
     booking: {
-        title: "Book your nutrition consultation",
+        title: "Schedule your nutritional therapy session",
         description:
-            "Book your consultation with me to discuss your health and nutrition goals. Together, we will create a clear and sustainable path forward.",
+            "Book your consultation with Nudrat to start your journey toward better metabolic health and balanced energy. Together, we will create a realistic, sustainable nutrition plan that fits your culture and lifestyle.",
 
         cta: {
-            primary: "Explore Product Range",
-            secondary: "Book a Consultation",
+            primary: "Book a Consultation",
+            secondary: "Book a Free Discovery Call",
             calendly: "https://calendly.com/",
         },
 
