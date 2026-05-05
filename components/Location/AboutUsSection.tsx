@@ -82,7 +82,7 @@ const AboutUsSection = () => {
                 </div>
 
                 <div className="flex justify-start">
-                    <Link href="/samina-khan-holistic-life-coach" className="connection-button px-10 py-4 bg-[#A68653] text-white rounded-full font-medium text-sm md:text-base hover:bg-[#967B4E] transition-colors inline-block shadow-md">
+                    <Link href="/samina-khan-holistic-life-coach" className="connection-button px-10 py-4 bg-primary hover:opacity-90 text-white rounded-full font-medium text-sm md:text-base hover:bg-[#967B4E] transition-colors inline-block shadow-md">
                         About Us
                     </Link>
                 </div>

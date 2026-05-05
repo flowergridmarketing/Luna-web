@@ -44,7 +44,7 @@ export default function MeetPractitioners({
           {practitioners.map((item, index) => (
             <div
               key={index}
-              className="flex min-h-[560px] flex-col rounded-[2rem] bg-[#d8c7a2] p-6 text-center transition duration-300 hover:-translate-y-1 hover:shadow-xl md:p-8"
+              className="flex min-h-[560px] flex-col rounded-4xl bg-[#d8c7a2] p-6 text-center transition duration-300 hover:-translate-y-1 hover:shadow-xl md:p-8"
             >
               {/* Profile Image */}
               <div className="relative mx-auto h-28 w-28 overflow-hidden rounded-full md:h-36 md:w-36">
@@ -75,7 +75,7 @@ export default function MeetPractitioners({
               <div className="mt-auto pt-8">
                 <Link
                   href={`/practitioner/${item.slug}`}
-                  className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#A68A64] hover:opacity-90 px-8 py-4 text-base font-medium text-white transition hover:scale-[1.02] md:text-lg"
+                  className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-primary hover:opacity-90 px-8 py-4 text-base font-medium text-white transition hover:scale-[1.02] md:text-lg"
                 >
                   View Profile
                 </Link>

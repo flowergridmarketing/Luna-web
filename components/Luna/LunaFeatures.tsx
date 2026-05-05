@@ -21,10 +21,10 @@ const NAV = [
 ];
 
 const RIGHT_COPY = [
-  { h: 'An AI that listens, gently.', p: 'A calm space to think out loud. No judgment, no rush—just a quiet companion that meets you where you are.' },
-  { h: 'Discover the shape of you.', p: 'Thoughtful, science-backed self-discovery—for the mind, the body, the heart. Small insights that add up to something bigger.' },
-  { h: 'Experts, when you want one.', p: 'When the moment calls for it, our verified therapists are a tap away. Warm, qualified, and ready to listen.' },
-  { h: 'Your inner world, protected.', p: 'End-to-end encrypted, anonymous by default, and independently audited. What you share stays yours—always.' },
+  { h: 'An AI that listens, gently.', p: 'Access 24/7 empathetic emotional support designed by therapists to help you navigate stress and find clarity whenever needed.' },
+  { h: 'Discover the shape of you.', p: 'Explore research-based quizzes to understand your stress triggers, chakra alignment, and mind-body balance for deeper personal insight.' },
+  { h: 'Experts, when you want one.', p: 'Connect with our multidisciplinary team of doctors, coaches, and therapists for personalised one-to-one sessions through Luna’s expert recommendations.' },
+  { h: 'Your inner world, protected.', p: 'Your data is protected by end-to-end encryption and strict GDPR compliance. We never share your personal reflections with anyone.' },
 ];
 
 const MESSAGES = [
@@ -58,10 +58,10 @@ function Phone({ children }: { children: React.ReactNode }) {
         }}
       >
         {/* Inner screen */}
-        <div 
-          className="rounded-[38px] overflow-hidden relative" 
-          style={{ 
-            background: '#f5ebe0', 
+        <div
+          className="rounded-[38px] overflow-hidden relative"
+          style={{
+            background: '#f5ebe0',
             minHeight: 540,
             transform: 'translateZ(0)',
           }}
@@ -501,7 +501,7 @@ export default function LunaFeatures() {
                 </motion.div>
               </AnimatePresence>
             </Phone>
-            
+
             <Link href="https://flowergrid.vercel.app/" target="_blank" rel="noopener noreferrer">
               <motion.button
                 whileHover={{ scale: 1.03 }}
@@ -535,12 +535,12 @@ export default function LunaFeatures() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
               >
-                <h2
+                {/* <h2
                   className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"
                   style={{ color: '#2c1a0e', fontFamily: 'var(--font-heading)' }}
                 >
                   {RIGHT_COPY[active].h}
-                </h2>
+                </h2> */}
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-xs lg:max-w-sm mx-auto lg:mx-0" style={{ color: '#6b4c35' }}>
                   {RIGHT_COPY[active].p}
                 </p>

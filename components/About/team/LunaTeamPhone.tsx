@@ -91,7 +91,7 @@ function ChatScreen({ active }: { active: boolean }) {
                   <div
                     className="px-3.5 py-2 text-[11px] font-medium leading-snug max-w-[78%]"
                     style={{
-                      background: msg.from === 'luna' ? '#e8d5be' : '#2c1a0e',
+                      background: msg.from === 'luna' ? '#e8d5be' : '#a7683a',
                       color: msg.from === 'luna' ? '#2c1a0e' : '#f5ebe0',
                       borderRadius: msg.from === 'luna' ? '4px 16px 16px 16px' : '16px 4px 16px 16px',
                     }}
@@ -146,7 +146,7 @@ function ChatScreen({ active }: { active: boolean }) {
         style={{ background: '#e8d5be' }}
       >
         <span className="flex-1 text-[10px] text-[#9e7b5a]">Start typing here...</span>
-        <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0" style={{ background: '#2c1a0e' }}>
+        <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0" style={{ background: '#a7683a' }}>
           <Send size={10} color="#f5ebe0" />
         </div>
       </motion.div>
