@@ -21,7 +21,7 @@ const EXPERTS = [
 
 export default function LunaExperts() {
   return (
-    <section className="bg-background py-8 px-6 overflow-hidden">
+    <section className="bg-background py-16 px-6 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export default function LunaExperts() {
               </p>
             <a href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target='_blank' >
 
-              <button className="mt-auto bg-[#a78b5a] text-white px-10 py-3.5 rounded-full font-heading font-medium text-base transition-all duration-300 hover:bg-[#8e754a] hover:scale-105 active:scale-95 shadow-md">
+              <button className="mt-auto bg-primary text-white px-10 py-3.5 rounded-full font-heading font-medium text-base transition-all duration-300 hover:opacity-90 hover:scale-105 active:scale-95 shadow-md">
                 Book a Session
               </button>
             </a>

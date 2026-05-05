@@ -76,7 +76,7 @@ const page = () => {
     <>
       <TeamHero />
       <Teamconn />
-      <div className="pt-20 pb-10 text-center top-0 z-10 backdrop-blur-sm">
+      <div className="pt-6 pb-10 text-center top-0 z-10 backdrop-blur-sm">
           <h2 className="text-4xl md:text-5xl font-heading text-[#3a3a3a] mb-4">
               Meet the Founders
           </h2>

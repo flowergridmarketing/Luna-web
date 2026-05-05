@@ -39,7 +39,7 @@ export default function LunaUnderstanding() {
     <section className="bg-background pt-8 px-6 overflow-hidden">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16 space-y-6">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -54,7 +54,7 @@ export default function LunaUnderstanding() {
             transition={{ delay: 0.2 }}
             className="text-lg md:text-xl text-[#171717]! max-w-2xl mx-auto leading-relaxed"
           >
-            Explore quick, research-based self-tests created by our therapists and psychologists. 
+            Explore quick, research-based self-tests created by our therapists and psychologists.
             Each one helps you understand how your mind, body and emotions connect
           </motion.p>
         </div>

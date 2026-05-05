@@ -40,7 +40,7 @@ const LunaTeamSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-8 bg-[#A67C52] text-[#f3e5cb] px-8 py-4 rounded-full font-heading font-medium text-lg shadow-lg hover:bg-[#8B6A45] transition-all duration-300"
+              className="mt-8 bg-primary text-[#f3e5cb] px-8 py-4 rounded-full font-heading font-medium text-lg shadow-lg hover:opacity-90 transition-all duration-300"
             >
               Discover Luna and Start Your Journey
             </motion.button>

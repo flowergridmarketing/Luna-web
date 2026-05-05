@@ -83,13 +83,13 @@ const serviceCardData = [
         title: "Craniosacral Therapy",
         image: getImageUrl("services/sc4.jpg"),
         desc: "Gentle, non-invasive support to help your body settle stress and restore energy.",
-        slug: "craniosacral-therapy-croydon"
+        slug: "craniosacral-therapy"
     },
     {
         title: "Sound Therapy",
         image: getImageUrl("services/sc8.jpg"),
         desc: "A gentle reset for stress and emotional overload through guided sound and relaxation.",
-        slug: "sound-therapy-croydon"
+        slug: "sound-therapy"
     },
     {
         title: "Aromatherapy",
@@ -181,7 +181,7 @@ const ServiceCards: React.FC = () => {
                                         backdrop-blur-[2px] 
                                         transition-all duration-500 ease-in-out
                                         group-hover:max-w-full 
-                                        group-hover:bg-[#A68653] 
+                                        group-hover:bg-primary 
                                         group-hover:text-black 
                                         group-hover:border-black! 
                                         group-hover:py-4 

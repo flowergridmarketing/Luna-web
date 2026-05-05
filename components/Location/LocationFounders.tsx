@@ -87,7 +87,7 @@ export default function LocationFounders() {
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
                             Meet Samina Khan, our founder and holistic life coach in Croydon. Bringing over twenty years of experience, she provides personalised guidance to help you find clarity and achieve genuine mind, body spirit wellness.
                         </p>
-                        <Link href="/samina-khan-holistic-life-coach" className="bg-[#A68653] hover:bg-[#8F7A52] text-white font-medium text-sm md:text-base px-8 py-4 rounded-full transition-colors duration-300 shadow-md inline-block">
+                        <Link href="/samina-khan-holistic-life-coach" className="bg-primary hover:opacity-90 text-white font-medium text-sm md:text-base px-8 py-4 rounded-full transition-colors duration-300 shadow-md inline-block">
                             Book Your Discovery Session
                         </Link>
                     </div>
@@ -103,7 +103,7 @@ export default function LocationFounders() {
                         <p className="text-[#4A4A4A] text-base md:text-lg font-sans leading-relaxed mb-8">
                             Continue your journey beyond the Longevity Programmes with FlowerGrid Membership. Receive ongoing guidance, personalised coaching, and access to holistic wellbeing practices that integrate mind, body, and spirit. Build resilience, clarity, and lasting habits while connecting with a supportive community.
                         </p>
-                        <Link href="/membership" className="bg-[#A68653] hover:bg-[#8F7A52] text-white font-medium text-sm md:text-base px-8 py-4 rounded-full transition-colors duration-300 shadow-md inline-block">
+                        <Link href="/membership" className="bg-primary hover:opacity-90 text-white font-medium text-sm md:text-base px-8 py-4 rounded-full transition-colors duration-300 shadow-md inline-block">
                             Join the Membership
                         </Link>
                     </div>

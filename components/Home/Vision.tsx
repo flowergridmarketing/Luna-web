@@ -88,7 +88,7 @@ const Vision = ({ title, text, buttonText, buttonLink = "/vision" }: VisionProps
             <Link href={buttonLink}>
               <button
                 ref={btnRef}
-                className="bg-[#A68653] text-white text-xs md:text-sm tracking-wider font-medium rounded-full px-8 py-3 md:px-16 md:py-4 hover:bg-[#8F7A52] transition-colors duration-300 shadow-md"
+                className="bg-primary text-white text-xs md:text-sm tracking-wider font-medium rounded-full px-8 py-3 md:px-16 md:py-4 hover:opacity-90 transition-colors duration-300 shadow-md"
               >
                 {buttonText}
               </button>
