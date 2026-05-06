@@ -43,7 +43,9 @@ const services = [
     "practitioners": [
       "dr-ayla-gokce-plastic-surgeon"
     ],
+    "benefitsDescription": "Aesthetic and plastic surgery provides a permanent shift in how you look and feel. By choosing surgeon-led care within a holistic environment, you ensure your results are both medically safe and physically harmonious",
     "benefits": [
+
       {
         "title": "Long-term Body Confidence",
         "text": "Surgery offers lasting solutions to concerns that topical treatments or exercise cannot reach. You gain a silhouette or facial profile that reflects your inner energy and vitality."
@@ -183,6 +185,7 @@ const services = [
     "practitioners": [
       "fattia-aromatherapist-croydon"
     ],
+    "benefitsDescription": "Choosing professional Clinical Aromatherapy at Flowergrid provides a powerful, botanical path to emotional and physical restoration. We use therapeutic-grade oils to support your nervous system and help your body find its way back to a state of calm and balance.",
     "benefits": [
       {
         "title": "Immediate Emotional Settling",
@@ -318,7 +321,10 @@ const services = [
         }
       ]
     },
-    "practitioners": [],
+    "practitioners": [
+      "dr-ravinder-auricular-acupuncturist-croydon"
+    ],
+    "benefitsDescription": "Choosing professional Auricular Acupuncture at Flowergrid provides an effective, evidence-based way to manage the pressures of daily life and support your body’s functional health.",
     "benefits": [
       {
         "title": "Rapid Stress Reduction",
@@ -438,14 +444,49 @@ const services = [
     "approach": {
       "title": "Our Approach to Conscious Living Coaching",
       "description": "At Flowergrid, we believe conscious living coaching works best when it integrates values clarity with holistic wellbeing. We combine self-discovery work with practical tools and nervous system support to help you live authentically and purposefully.",
-      "cards": []
+      "cards": [
+        {
+          "title": "Values-Centred, Not Symptom-Focused",
+          "text": "Conscious living coaching at Flowergrid starts with understanding your core values and what authenticity means for you. Rather than fixing problems, we help you build a life aligned with who you actually are and what genuinely matters."
+        },
+        {
+          "title": "Integrated Mind, Body, and Spirit Work",
+          "text": "We blend values clarification with emotional support, nervous system regulation, and practical grounding. This integration ensures your conscious living choices are embodied and sustainable, not just intellectual or aspirational ideas disconnected from real life."
+        },
+        {
+          "title": "Practical Authenticity, Not Just Reflection",
+          "text": "Conscious living coaching includes both deep self-discovery and concrete action steps. You gain clarity on your values and leave with a practical roadmap for living more authentically, making decisions consciously, and building sustainable change."
+        }
+      ]
     },
     "practitioners": [
       "samina-khan-founder-holistic-wellness",
       "monira-ahmed-clinical-hypnotherapist",
       "tarun-sharma-reiki-grand-master"
     ],
-    "benefits": [],
+    "benefitsDescription": "Conscious living coaching creates measurable shifts in how authentically you live, how clearly you make decisions, and how aligned your life feels. From discovering your values to building purposeful change, coaching supports lasting fulfilment and genuine transformation.",
+    "benefits": [
+      {
+        "title": "Clarity on Core Values",
+        "text": "Gain deep understanding of what actually matters to you, not what you think should matter. Build clarity that guides every decision and choice with authentic confidence and purpose."
+      },
+      {
+        "title": "Authentic Living and Self-Expression",
+        "text": "Move from performing for others to showing up as your true self. Experience freedom and relief from living aligned with your values, not external expectations or inherited patterns."
+      },
+      {
+        "title": "Purposeful Direction and Meaning",
+        "text": "Build a clear sense of purpose and direction rooted in your values. Experience the fulfillment that comes from living consciously, not just successfully, with genuine meaning and passion."
+      },
+      {
+        "title": "Confident Decision-Making",
+        "text": "Make major life decisions from clarity rather than fear or obligation. Develop a values-based framework that helps you navigate choices with confidence and minimal regret in any situation."
+      },
+      {
+        "title": "Inner Peace and Integration",
+        "text": "Experience reduced internal conflict and wholeness when your beliefs, choices, and actions align. Feel grounded, present, and at peace knowing your life reflects who you truly are."
+      }
+    ],
     "journey": {
       "title": "How to Book Your Conscious Living Coaching",
       "subtitle": "Booking conscious living coaching at Flowergrid is straightforward and tailored to you. You can choose a coach whose approach fits your needs, decide on a single session or a structured programme, and our team will support you through the entire process.",
@@ -566,6 +607,7 @@ const services = [
     "practitioners": [
       "fattia-aromatherapist-croydon"
     ],
+    "benefitsDescription": "Choosing Craniosacral Therapy at Flowergrid offers a profound way to address stress that has become \"stuck\" in the body. It provides the physical and emotional space needed for genuine restoration.",
     "benefits": [
       {
         "title": "Deep Physical Relaxation",
@@ -699,7 +741,12 @@ const services = [
         }
       ]
     },
-    "practitioners": [],
+    "practitioners": [
+      "monira-ahmed-clinical-hypnotherapist",
+      "yvonne-hewitt-clinical-hypnotherapist",
+      "samina-khan-founder-holistic-wellness"
+    ],
+    "benefitsDescription": "Hypnotherapy provides a direct path to the subconscious mind, making it an effective way to achieve rapid change. It supports your mental health by quietening the noise of the inner critic and building new, resilient habits.",
     "benefits": [
       {
         "title": "Rapid Habit Transformation",
@@ -733,7 +780,33 @@ const services = [
         "Visit Us or Connect Online: You can visit our Coulsdon centre in London (CR5 2JA) for your sessions or connect with us online. Both options provide a safe, quiet, and professional environment for your subconscious work to take place."
       ]
     },
-    "testimonials": [],
+    "testimonials": [
+      {
+        "name": "Hannah Brooks",
+        "location": "London",
+        "text": "I was sceptical, but I felt safe throughout. After a few sessions my sleep improved and my body felt less tense. It was calm, practical support."
+      },
+      {
+        "name": "Omar Khan",
+        "location": "Birmingham",
+        "text": "I booked hypnotherapy to help with anxiety before presentations. It helped me feel steadier and less reactive. The change felt gentle, but real."
+      },
+      {
+        "name": "Sophie Taylor",
+        "location": "Croydon",
+        "text": "Working with Monira helped me understand what was driving my stress habits. I now have tools I can actually use when I feel triggered."
+      },
+      {
+        "name": "Priya Desai",
+        "location": "Manchester",
+        "text": "Working with Samina and the hypnotherapy team gave me a different way to work with my confidence. I stopped getting stuck in the same inner dialogue and started trusting my choices more."
+      },
+      {
+        "name": "James Whitfield",
+        "location": "Leeds",
+        "text": "I expected something intense, but it was surprisingly grounding. I left feeling clear headed and calmer, and that feeling lasted into the week."
+      }
+    ],
     "blogs": [],
     "faq": [
       {
@@ -808,7 +881,12 @@ const services = [
         }
       ]
     },
-    "practitioners": [],
+    "practitioners": [
+      'husna-hoque-personal-trainer-wellness-coach-london',
+      'rebecca-nutrition-and-fitness-coach-london',
+      'nudrat-chagtai-nutritional-therapist'
+    ],
+    "benefitsDescription": "Choosing an integrated path to fitness provides more than just physical changes. It offers the clinical insight and professional support needed to build a body that feels as good as it looks.",
     "benefits": [
       {
         "title": "Sustainable Energy Levels",
@@ -952,6 +1030,7 @@ const services = [
       "monira-ahmed-clinical-hypnotherapist",
       "runa-boolaky-nlp-practitioner-in-croydon"
     ],
+    "benefitsDescription": "NLP coaching creates measurable shifts in how you think, feel, and act. By identifying and changing the patterns that hold you back, you gain the clarity and resilience needed for lasting growth.",
     "benefits": [
       {
         "title": "Genuine Self Belief",
@@ -1053,7 +1132,7 @@ const services = [
   {
     "slug": "nutritional-consulting",
     "seo": {
-      "title": "Nutritional Consulting Croydon | Personalised Plann",
+      "title": "Nutritional Consulting Croydon | Personalised Plans | Flowergrid",
       "description": "Nutritional Consulting at Flowergrid supports energy, digestion, blood sugar and hormones with food first plans. Book a free consultation online or in Croydon."
     },
     "hero": {
@@ -1091,7 +1170,11 @@ const services = [
         }
       ]
     },
-    "practitioners": [],
+    "practitioners": [
+      "rebecca-nutrition-and-fitness-coach-london",
+      "nudrat-chagtai-nutritional-therapist"
+    ],
+    "benefitsDescription": "Choosing professional Nutritional Consulting at Flowergrid offers more than just a meal plan. It provides the clinical insight and habit-changing support needed to sustain your health for the long term.",
     "benefits": [
       {
         "title": "Sustained Natural Energy",
@@ -1214,14 +1297,48 @@ const services = [
     "approach": {
       "title": "Our Approach to Personal Development Coaching",
       "description": "At Flowergrid, we believe personal development coaching works best when it integrates mind, body, and spirit. We combine practical coaching techniques with holistic wellbeing support to help you build lasting confidence and clarity.",
-      "cards": []
+      "cards": [
+        {
+          "title": "Self-Discovery and Clarity",
+          "text": "We start by understanding who you are, what drives you, and what is holding you back. Through honest conversations and guided reflection, you gain clarity on your values, strengths, and the direction you actually want to move in."
+        },
+        {
+          "title": "Practical Strategies and Action",
+          "text": "Clarity alone is not enough. We work together to build realistic, achievable strategies that fit your life. You leave each session with clear actions, accountability, and the confidence to move forward with purpose."
+        },
+        {
+          "title": "Integration and Lasting Change",
+          "text": "Real change sticks when it touches your whole self. Our holistic approach ensures your coaching integrates with your wellbeing, habits, and daily life. You build sustainable progress, not just quick fixes."
+        }
+      ]
     },
     "practitioners": [
       "samina-khan-founder-holistic-wellness",
       "monira-ahmed-clinical-hypnotherapist",
       "runa-boolaky-nlp-practitioner-in-croydon"
     ],
-    "benefits": [],
+    "benefits": [
+      {
+        "title": "Clarity and Direction",
+        "text": "Gain clear understanding of what you actually want from life and career. Move from confusion to confident direction with a practical roadmap forward."
+      },
+      {
+        "title": "Genuine Confidence",
+        "text": "Build self-belief that comes from understanding yourself better. Develop resilience and confidence that holds even when challenges arise."
+      },
+      {
+        "title": "Meaningful Change",
+        "text": "Create lasting shifts in habits, behaviours, and patterns. Move from knowing what to change to actually making it happen consistently."
+      },
+      {
+        "title": "Better Relationships and Communication",
+        "text": "Develop stronger communication skills and healthier boundaries. Build deeper, more authentic connections with the people who matter most to you."
+      },
+      {
+        "title": "Personal Growth and Resilience",
+        "text": "Unlock your potential and build the inner strength to navigate life's transitions. Develop resilience and self-awareness that support long-term wellbeing."
+      }
+    ],
     "journey": {
       "title": "How to Book Your Personal Development Coaching",
       "subtitle": "Booking a coaching session at Flowergrid is straightforward and tailored to you. You can choose a coach whose approach fits your needs, decide on a single session or a structured programme, and our team will support you through the entire process.",
@@ -1324,14 +1441,49 @@ const services = [
     "approach": {
       "title": "Our Approach to Professional Development Coaching",
       "description": "At Flowergrid, we believe professional development coaching works best when it integrates career strategy with personal wellbeing. We combine practical workplace skills with holistic support to help you advance confidently whilst maintaining balance and authenticity.",
-      "cards": []
+      "cards": [
+        {
+          "title": "Whole-Person Professional Growth",
+          "text": "We address not just your career strategy, but your confidence, mindset, and wellbeing. Professional development coaching that ignores stress, burnout, or self-doubt misses the real barrier to advancement. We work with the whole you."
+        },
+        {
+          "title": "Practical Workplace Skills With Mindset Work",
+          "text": "You get both. Practical strategies for presentations, communication, leadership, and career planning combined with mindset work that builds genuine confidence. This integration means change actually sticks in real workplace situations."
+        },
+        {
+          "title": "Sustainable Performance, Not Burnout",
+          "text": "Professional development coaching at Flowergrid includes work-life balance and wellbeing integration. We help you advance your career without sacrificing your health, relationships, or peace of mind. Sustainable success looks different."
+        }
+      ]
     },
     "practitioners": [
-      "rico-wagner-caleap-performance-specialist",
+      "rico-wagner-caleap-executive-coach-london",
       "aysha-iqbal-communication-coach",
-      "tamkin-riaz-career-coach-in-croydon"
+      "tamkin-riaz-career-development-coach-in-croydon"
     ],
-    "benefits": [],
+    "benefitsDescription": "Professional development coaching creates measurable shifts in your career confidence, performance, and advancement. From building genuine leadership presence to achieving career clarity, coaching supports sustainable professional growth that benefits your whole life.",
+    "benefits": [
+      {
+        "title": "Career Clarity and Direction",
+        "text": "Gain clear understanding of your career goals and the steps to achieve them. Move from uncertainty to confident direction with a strategic professional roadmap tailored to your ambitions."
+      },
+      {
+        "title": "Workplace Confidence and Presence",
+        "text": "Build genuine confidence in your abilities and professional value. Develop authentic presence that influences others, strengthens leadership, and positions you for advancement opportunities."
+      },
+      {
+        "title": "Improved Performance and Results",
+        "text": "Enhance productivity, decision-making, and workplace effectiveness. Develop practical skills in communication, time management, and leadership that directly improve your professional performance and impact."
+      },
+      {
+        "title": "Better Professional Relationships",
+        "text": "Strengthen communication with colleagues, managers, and stakeholders. Build healthier workplace relationships through improved listening, assertiveness, and emotional intelligence in professional settings."
+      },
+      {
+        "title": "Sustainable Career Advancement",
+        "text": "Progress your career whilst maintaining wellbeing and work-life balance. Advance confidently without burnout, building sustainable success that supports your whole life, not just your career."
+      }
+    ],
     "journey": {
       "title": "How to Book Your Professional Development Coaching",
       "subtitle": "Booking professional development coaching at Flowergrid is straightforward and tailored to you. You can choose a coach whose approach fits your needs, decide on a single session or a structured programme, and our team will support you through the entire process.",
@@ -1433,13 +1585,27 @@ const services = [
     "approach": {
       "title": "Our approach to Psychological Therapy at Flowergrid",
       "description": "At Flowergrid, we offer psychological therapy that is compassionate, grounded, and evidence informed. We work with your mind and emotions, while also respecting how stress shows up in the body and daily life.",
-      "cards": []
+      "cards": [
+        {
+          "title": "Safe, Supportive Space First",
+          "text": "Therapy works when you feel heard and not judged. We prioritise trust, confidentiality, and emotional safety so you can speak honestly and feel properly supported."
+        },
+        {
+          "title": "Understanding Patterns and Triggers",
+          "text": "Together, we explore what is behind your reactions, behaviours, and emotional responses. This helps you recognise patterns, understand triggers, and make sense of what you have been dealing with."
+        },
+        {
+          "title": "Practical Tools for Everyday Life",
+          "text": "Alongside insight, we focus on what helps day to day. You can expect gentle structure, coping strategies, and reflections you can use between sessions to support steady progress."
+        }
+      ]
     },
     "practitioners": [
       "angelina-ray-psychic-therapist-croydon",
       "dr-hana-patel-gp-mental-health-coach",
       "uzma-neurodiversity-specialist-croydon"
     ],
+    "benefitsDescription": "Professional therapy supports lasting shifts in your mental and emotional state. By processing the past and understanding the present, you build a healthier relationship with yourself and the world around you.",
     "benefits": [
       {
         "title": "Deeper Self-Understanding",
@@ -1473,7 +1639,33 @@ const services = [
         "Visit Us or Connect Online: Visit our Coulsdon centre in London (CR5 2JA) for in-person therapy, or choose online sessions via secure video call. We provide professional psychological support accessible from anywhere in the UK."
       ]
     },
-    "testimonials": [],
+    "testimonials": [
+      {
+        "name": "Nadia Ali",
+        "location": "London",
+        "text": "I did not realise how much I was holding in until I finally spoke it out loud. Therapy helped me feel calmer, and I am coping with stress in a completely different way now."
+      },
+      {
+        "name": "James Porter",
+        "location": "Surrey",
+        "text": "I came in feeling burnt out and numb. The sessions helped me understand my patterns and take small steps that actually stuck. I feel more like myself again."
+      },
+      {
+        "name": "Sophie Grant",
+        "location": "Croydon",
+        "text": "I was struggling with anxiety and sleep for months. Therapy gave me a safe space and practical tools. It was not instant, but it was real progress."
+      },
+      {
+        "name": "Emma Williams",
+        "location": "UK",
+        "text": "Samina helped me untangle what was really going on beneath my stress. I felt listened to properly, and I left with practical ways to cope that actually fit my day to day life."
+      },
+      {
+        "name": "Daniel Okoye",
+        "location": "Manchester",
+        "text": "It helped me through a difficult transition. I felt listened to properly and supported without judgement. That alone made a difference."
+      }
+    ],
     "blogs": [],
     "faq": [
       {
@@ -1543,13 +1735,27 @@ const services = [
     "approach": {
       "title": "Modern, Evidence-Aware Approach to Energy Work",
       "description": "Reiki at Flowergrid is delivered through a calm, structured, and integrative method that supports emotional balance and nervous system regulation. Our approach blends energy work with practical wellbeing techniques, offering grounded guidance that fits modern life and genuine healing needs.",
-      "cards": []
+      "cards": [
+        {
+          "title": "Trauma-Sensitive and Emotionally Aware Practice",
+          "text": "Our Reiki sessions are designed with emotional safety in mind, supporting those navigating stress, anxiety, or overwhelm. We focus on grounding, gentle regulation, and creating a calm environment where you can release tension and restore balance at a steady, comfortable pace."
+        },
+        {
+          "title": "Integrative Mind–Body–Spirit Method",
+          "text": "We combine Reiki with conscious breathing, reflective grounding, and practical wellbeing tools. This integrated approach helps you reconnect with your mind, body, and emotional state, encouraging clarity, ease, and a stronger sense of inner alignment during and beyond each session."
+        },
+        {
+          "title": "Modern, Evidence-Aware Approach to Energy Work",
+          "text": "Our practitioners use Reiki in a contemporary, accessible way that supports relaxation responses and emotional release. Instead of mystical language, we emphasise calm, clarity, and wellbeing, integrating techniques such as mindful awareness and meditation to enhance the overall healing experience."
+        }
+      ]
     },
     "practitioners": [
       "tarun-sharma-reiki-grand-master",
       "dr-ravinder-auricular-acupuncturist-croydon",
       "angelina-ray-psychic-therapist-croydon"
     ],
+    "benefitsDescription": "Reiki healing nurtures your overall wellbeing by easing stress, enhancing emotional resilience, and supporting mental clarity. Benefits are gradual and personal, complementing mindfulness, meditation, and lifestyle practices, helping you feel more balanced, grounded, and connected in daily life.",
     "benefits": [
       {
         "title": "Calm and Stress Relief",
@@ -1580,7 +1786,12 @@ const services = [
       "title": "How to Book Your Reiki Session",
       "subtitle": "Booking a Reiki session at Flowergrid is simple and personalised. You can select a practitioner whose approach resonates with you, choose a single session or a longer programme, and our team will guide you every step of the way.",
       "buttonText": "Book Your Session",
-      "steps": []
+      "steps": [
+        "Choose Your Practitioner: Each Reiki practitioner has a dedicated profile detailing their experience, specialities, and approach. Take a moment to explore the profiles and select the practitioner you feel most comfortable with.",
+        "Get in Touch: Reach out directly through the practitioner’s profile form, or contact us via email at sk@flowergrid.co.uk or by phone on \\+44 7432 211096\\. Let us know what you’re seeking from your session, and we’ll help you find the right fit.",
+        "Confirm Your Session: Once we receive your request, a member of our team will respond promptly to schedule your session. Whether it’s a single appointment or part of a longer programme, we ensure a smooth and supportive booking process.",
+        "Visit Us: Flowergrid is located at Coulsdon CR5 2JA. Our centre is easily accessible, offering a calm, welcoming environment for your Reiki sessions."
+      ]
     },
     "testimonials": [
       {
@@ -1646,7 +1857,7 @@ const services = [
     "slug": "relationship-coaching",
     "seo": {
       "title": "Relationship Coaching | Strengthen Your Connection | Flowergrid",
-      "description": ""
+      "description": "Relationship coaching at Flowergrid helps couples improve communication, rebuild trust and deepen connection. Book a free consultation online or in Croydon, UK."
     },
     "hero": {
       "name": "Relationship Coaching at Flowergrid",
@@ -1668,14 +1879,49 @@ const services = [
     "approach": {
       "title": "Our Approach to Relationship Coaching",
       "description": "At Flowergrid, we believe relationship coaching works best when it honours both people and addresses the root causes of disconnection. We combine practical communication skills with emotional understanding to help couples rebuild trust, clarity, and genuine connection.",
-      "cards": []
+      "cards": [
+        {
+          "title": "Safe, Compassionate Space for Both Partners",
+          "text": "We create an environment where both partners feel heard and respected. Relationship coaching that favours one person misses the point. We work to understand both perspectives and help you reconnect with empathy and mutual respect."
+        },
+        {
+          "title": "Communication Skills With Emotional Intelligence",
+          "text": "You get practical tools for expressing needs and listening deeply, combined with understanding why certain topics trigger hurt. This blend of communication technique and emotional awareness transforms how you interact and resolve conflict together."
+        },
+        {
+          "title": "Addressing Root Causes, Not Just Symptoms",
+          "text": "We look beyond surface arguments to understand patterns, unmet needs, and emotional barriers. Relationship coaching that only teaches communication skills without addressing deeper issues misses lasting change. We work with the whole relationship."
+        }
+      ]
     },
     "practitioners": [
       "samina-khan-founder-holistic-wellness",
       "angelina-ray-psychic-therapist-croydon",
       "uzma-neurodiversity-specialist-croydon"
     ],
-    "benefits": [],
+    "benefitsDescription": "Relationship coaching creates measurable shifts in how couples connect, communicate, and resolve conflict. From rebuilding trust to deepening intimacy, coaching supports lasting relationships that feel fulfilling and secure for both partners.",
+    "benefits": [
+      {
+        "title": "Improved Communication",
+        "text": "Learn to express needs clearly and listen with genuine understanding. Develop communication skills that transform how you connect and resolve conflict with respect and compassion."
+      },
+      {
+        "title": "Deeper Emotional Connection",
+        "text": "Rebuild intimacy and trust through honest understanding. Move beyond surface-level interaction to feel genuinely seen and valued by your partner in meaningful ways."
+      },
+      {
+        "title": "Conflict Resolution Skills",
+        "text": "Stop repeating the same arguments. Learn practical strategies to resolve conflict constructively, honour both perspectives, and move forward together with mutual respect."
+      },
+      {
+        "title": "Increased Trust and Security",
+        "text": "Rebuild safety in your relationship through understanding and consistent actions. Feel confident that your partnership can weather challenges and grow stronger through difficulty."
+      },
+      {
+        "title": "Renewed Sense of Partnership",
+        "text": "Move from feeling like opponents to allies. Relationship coaching helps you remember why you chose each other and build a shared vision for your future together."
+      }
+    ],
     "journey": {
       "title": "How to Book Your Relationship Coaching",
       "subtitle": "Booking relationship coaching at Flowergrid is straightforward and tailored to you both. You can choose a coach whose approach fits your needs, decide on a single session or a structured programme, and our team will support you through the entire process.",
@@ -1779,9 +2025,23 @@ const services = [
     "approach": {
       "title": "Our approach to Sound Therapy at Flowergrid",
       "description": "At Flowergrid, sound therapy is delivered in a calm, consent led way. We focus on creating the right conditions for the body and mind to settle, so you leave feeling clearer and lighter.",
-      "cards": []
+      "cards": [
+        {
+          "title": "Calm, Consent-Led Sessions",
+          "text": "We begin with a short check-in and make sure you feel comfortable. You remain fully in control, and the session is paced around what helps you feel safe and relaxed."
+        },
+        {
+          "title": "Sound-Based Nervous System Settling",
+          "text": "Sound therapy supports a slower pace in the body. The aim is to encourage calm, reduce stress reactivity, and help you step out of constant mental noise."
+        },
+        {
+          "title": "Joined-Up Wellbeing Support",
+          "text": "If stress, sleep, anxiety, or emotional overload are part of a wider picture, Flowergrid can support you with related services such as coaching, therapy, breathwork, Reiki, or craniosacral therapy."
+        }
+      ]
     },
     "practitioners": [],
+    "benefitsDescription": "Choosing professional Sound Therapy at Flowergrid offers a profound way to reset your system. Because it is a passive therapy, it is particularly effective for those who feel too exhausted for more active forms of self care.",
     "benefits": [
       {
         "title": "Reduced Stress Hormones",
@@ -1921,6 +2181,7 @@ const services = [
       "monira-ahmed-clinical-hypnotherapist",
       "dr-ravinder-auricular-acupuncturist-croydon"
     ],
+    "benefitsDescription": "Stress and anxiety support creates measurable shifts in how you feel, function, and thrive. From immediate relief to lasting resilience, our integrated approach supports better sleep, clearer thinking, stronger relationships, and genuine peace in your daily life.",
     "benefits": [
       {
         "title": "Immediate Symptom Relief",

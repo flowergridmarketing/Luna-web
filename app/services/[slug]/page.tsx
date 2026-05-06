@@ -135,7 +135,8 @@ export default async function ServicePage({ params }: Props) {
                             {service.journey.subtitle}
                         </p>
                         <Link
-                            href="#booking"
+                            href="https://calendly.com/flowergridmarketing/30min?month=2026-05"
+                            target="_blank"
                             className="inline-flex bg-primary hover:opacity-90 text-white px-8 py-4 rounded-full text-lg font-medium transition-transform hover:scale-105"
                         >
                             {service.journey.buttonText || "Book Your Session"}
