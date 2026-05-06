@@ -34,14 +34,14 @@ export default function WhoIWorkWith({ data }: Props) {
         If you recognise yourself in any of these groups, you are welcome here
       </p>
 
-       <Link
-              href={data.booking?.calendly || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-[#d8c7a2] text-black px-10 py-4 text-lg font-semibold transition-transform hover:scale-[1.03] w-fit"
-            >
-              Book a Discovery Call
-            </Link>
+      <Link
+        href={data.booking?.calendly || "#"}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center justify-center rounded-full bg-primary text-white px-10 py-4 text-lg font-semibold transition-transform hover:scale-[1.03] w-fit"
+      >
+        Book a Discovery Call
+      </Link>
     </div>
   );
 }
