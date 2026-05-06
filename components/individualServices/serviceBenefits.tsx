@@ -13,6 +13,7 @@ type Props = {
       name: string;
     };
     benefits: Benefit[];
+    benefitsDescription?: string;
   };
 };
 
@@ -38,10 +39,7 @@ export default function ServiceBenefits({ data }: Props) {
             </h2>
  
             <p className="mt-8 max-w-md text-base leading-relaxed text-[#231F20]/80 md:text-lg">
-              {data.hero.name} healing nurtures your overall wellbeing by easing stress, 
-              enhancing emotional resilience, and supporting mental clarity. 
-              Benefits are gradual and personal, complementing mindfulness,
-              meditation, and lifestyle practices.
+              {data.benefitsDescription || `${data.hero.name} healing nurtures your overall wellbeing by easing stress, enhancing emotional resilience, and supporting mental clarity. Benefits are gradual and personal, complementing mindfulness, meditation, and lifestyle practices.`}
             </p>
           </div>
  
