@@ -2,22 +2,32 @@ import { getImageUrl } from "@/lib/utils";
 export const ayshaIqbal = {
   slug: "aysha-iqbal-communication-coach",
 
+  seo: {
+    title: "Aysha Iqbal | Communication Coach & Public Speaking Trainer | Flowergrid",
+    description: "Meet Aysha Iqbal, a Communication Coach in Croydon and former BBC News Anchor. She specialises in public speaking, business pitching, and leadership communication training through Flowergrid."
+  },
+
   profile: {
     name: "Aysha Iqbal",
     title: "Communications Coach & Public Speaking Trainer",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/aysha.jpg?updatedAt=1777011424219",
     experience: "Former BBC and ITV News Anchor",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through what you need and choose the right appointment.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
     headline: "Helping you speak with clarity and confidence",
-    subtext: "Practical coaching and training to improve speaking, pitching and leadership communication with calm, persuasive delivery.",
+    subtext: "Practical coaching and training in Croydon to improve speaking, pitching and leadership communication with calm, persuasive delivery.",
     tags: [
       "Public Speaking",
       "Business Pitching",

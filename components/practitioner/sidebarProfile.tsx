@@ -33,10 +33,10 @@ export default function SidebarProfile({ data }: Props) {
 
       {/* Title & Subtext */}
       <h3 className="font-heading text-xl font-bold text-[#171717] mb-4 leading-tight">
-        Not sure where to start?
+        {data.booking?.ctaBox?.title || "Not sure where to start?"}
       </h3>
       <p className="text-[14px] leading-relaxed text-[#4A4A4A] mb-10 max-w-[260px]">
-        Book a free discovery session with me so we can find out what clinical support is right for you.
+        {data.booking?.ctaBox?.description || "Book a free discovery session with me so we can find out what clinical support is right for you."}
       </p>
 
       {/* Button */}
@@ -46,7 +46,7 @@ export default function SidebarProfile({ data }: Props) {
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center rounded-full bg-primary px-15 py-2 mb-5 text-md text-white transition-transform hover:scale-[1.03] w-fit"
       >
-        Book a Discovery Call
+        {data.booking?.ctaBox?.btnText || "Book a Discovery Call"}
       </Link>
 
       {/* Highlights / Badges */}

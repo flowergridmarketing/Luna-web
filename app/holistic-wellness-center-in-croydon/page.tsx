@@ -55,43 +55,38 @@ const locationFadeLines2 = [
 const locationFaqs = [
     {
         id: 1,
-        question: "I am new to holistic wellness. Where is the best place to start?",
-        answer: "The best starting point is our complimentary discovery call. This is a relaxed, confidential conversation where we can understand your personal goals and challenges. We can then recommend the most suitable path for you, whether that is one-to-one coaching, a specific wellness programme, or joining a workshop."
+        question: "Where is the Flowergrid holistic wellness centre located?",
+        answer: "Our physical centre is located at Coulsdon Rd, Coulsdon CR5 2JA, United Kingdom. We are easily accessible for residents across Croydon, Sutton, and the wider South London area. We offer a calm, professional space designed to support your mind, body and spirit wellness journey in person."
     },
     {
         id: 2,
-        question: "How do I book a holistic wellness consultation at Flowergrid?",
-        answer: "Booking is simple. You can schedule online, ring us on +44 7432 211096, or drop us an email at sk@flowergrid.co.uk. We offer a free 30-minute discovery session where we'll chat about what you're looking for and suggest the right holistic wellbeing programme to help you get there."
+        question: "Do you offer a free consultation for new clients in Croydon?",
+        answer: "Yes. We believe that finding the right fit is essential for genuine healing. We offer a free consultation to help you discuss your needs, ask questions, and understand how our integrated approach can help. This initial conversation ensures you are matched with the right practitioner for your specific goals."
     },
     {
         id: 3,
-        question: "What qualifications do your holistic wellness practitioners have?",
-        answer: "Our team includes qualified doctors, certified life coaches, licensed therapists and accredited holistic practitioners. Each professional holds proper certifications in their speciality, whether that's NLP, hypnotherapy, Reiki or clinical qualifications. We take professional standards seriously to ensure you receive safe, effective integrative wellness support."
+        question: "What services does your holistic wellness centre in Croydon provide?",
+        answer: "We provide a comprehensive range of holistic health and wellness services, including life coaching, psychological therapy, NLP, hypnotherapy, nutritional guidance, and energy healing. Because we have over 20 practitioners, we can offer joined up support that addresses your mental, physical, and emotional health all in one place."
     },
     {
         id: 4,
-        question: "Can I combine different holistic wellbeing services in my programme?",
-        answer: "Absolutely. Our holistic wellness approach works best when combining complementary services. Many clients benefit from pairing life and transformation coaching with stress management, or medical consultations with energy healing for complete mind body spirit wellness."
+        question: "Can I access your services if I don't live in Croydon?",
+        answer: "Absolutely. While many of our clients value our in-person sessions at our Coulsdon centre, we also provide all our coaching and therapeutic services online via secure video calls. This allows you to access our expert team from anywhere in the UK or globally, while still receiving the same high standard of care."
     },
     {
         id: 5,
-        question: "Do you offer holistic wellness services in Croydon and South London?",
-        answer: "Yes, our holistic wellness centre in Coulsdon, CR5 2JA, serves Croydon, Surrey and South London. We also provide online integrative wellness consultations across the UK and internationally, making mind body spirit wellness accessible wherever you are."
+        question: "How is Flowergrid different from other wellness centres in Croydon?",
+        answer: "Unlike many clinics that focus on just one area of health, Flowergrid is truly integrative. We bring together a multidisciplinary team of doctors, coaches, and therapists who collaborate on your care. Our approach is also uniquely guided by sacred geometry, providing an intelligent blueprint for your mind body spirit wellness."
     },
     {
         id: 6,
-        question: "What are your fees for a discovery call or initial session?",
-        answer: "Our initial discovery call is offered free of charge, with no obligation. This ensures you can explore how Flowergrid can help you before making a commitment. Fees for subsequent coaching or therapy sessions vary depending on the practitioner and programme length. Please contact us for our current rate card."
+        question: "Do you offer corporate wellbeing programmes for Croydon businesses?",
+        answer: "Yes. We design bespoke corporate wellbeing programmes in Croydon for organisations and educational settings. These workshops focus on leadership, communication training, and mental health awareness. We help teams build resilience and emotional intelligence through practical, holistic workshops tailored to your workplace needs."
     },
     {
         id: 7,
-        question: "What happens during a corporate wellness workshop?",
-        answer: "Our corporate workshops are interactive and practical. We focus on key areas such as resilience, leadership, communication, and stress management. The aim is to provide your team with tangible tools and strategies they can apply immediately to improve their performance, wellbeing, and workplace environment."
-    },
-    {
-        id: 8,
-        question: "What is your policy for cancelling or rescheduling an appointment?",
-        answer: "We operate a 48-hour cancellation policy. If you need to reschedule or cancel an appointment, please let us know at least 48 hours in advance to avoid a cancellation fee. This policy helps us manage our practitioners' schedules and offer appointments to clients on our waiting list."
+        question: "How do I book my first session at the Croydon centre?",
+        answer: "Booking is simple. You can reach out directly via our website, email us at sk@flowergrid.co.uk, or call us on +44 7432 211096. We will guide you through the process, starting with your free consultation, to ensure you feel supported and clear about your path forward from the very first step."
     }
 ];
 
@@ -127,8 +122,9 @@ const LocationPage = () => {
       <FaqSection faqs={locationFaqs} />
       <Connect
         image={getImageUrl("location/location-connect.jpg.jpeg")}
-        title="Transform your mind, body, and spirit today"
-        description="If you're ready to find balance, clarity, and personal growth through life and transformation coaching, I'd love to work with you."
+        title="Find the right support with a free consultation"
+        btnText='Book a Free Consultation'
+        description=''
       />
     </div>
   )

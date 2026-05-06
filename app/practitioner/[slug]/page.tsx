@@ -80,7 +80,7 @@ export default async function PractitionerPage({ params }: Props) {
     const hasTestimonials = practitionerTestimonials.length > 0;
 
     return (
-        <main className="min-h-screen bg-background overflow-x-hidden">
+        <main className="min-h-screen bg-background overflow-x-clip">
 
             {/* 1. HERO — name, title, credentials, rating, CTA */}
             <Hero data={practitioner} />
@@ -106,7 +106,7 @@ export default async function PractitionerPage({ params }: Props) {
                         </div>
 
                         {/* Right Sidebar */}
-                        <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0 lg:sticky lg:top-28">
+                        <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0 lg:self-start lg:sticky lg:top-28">
                             <SidebarProfile data={practitioner} />
                         </div>
                     </div>
@@ -165,9 +165,10 @@ export default async function PractitionerPage({ params }: Props) {
             {/* 12. DISCOVERY CTA */}
             <Connect
                 image={getImageUrl("indivdualPractioner/individualpractioner.jpg")}
-                title="TO DATE THOUSANDS OF HOURS OF THERAPY DONE !"
-                btnText="Book a session Call"
-                description=""
+                title={practitioner.booking?.ctaBox?.title || "TO DATE THOUSANDS OF HOURS OF THERAPY DONE !"}
+                btnText={practitioner.booking?.ctaBox?.btnText || "Book a session Call"}
+                description={practitioner.booking?.ctaBox?.description || ""}
+                redirectionLink={practitioner.booking?.calendly}
             />
 
         </main>

@@ -2,17 +2,27 @@ import { getImageUrl } from "@/lib/utils";
 export const angelinaRay = {
   slug: "angelina-ray-psychic-therapist-croydon",
 
+  seo: {
+    title: "Angelina Ray | Psychic Therapist Croydon | Flowergrid",
+    description: "Meet Angelina Ray, a Psychic Therapist in Croydon offering integrative counselling, psychic mediumship, shadow work, inner child work and Reiki. Book online or in person."
+  },
+
   profile: {
     name: "Angelina Ray",
     title: "Psychic Therapist Croydon | Integrative Counsellor, Psychic Medium and Reiki Practitioner",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/Angelina%20Ray.jpg?updatedAt=1777046535596",
     experience: "Integrative Counsellor",
     languages: ["English"],
-    location: "South Croydon (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through what you need and choose the right appointment.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
@@ -140,6 +150,11 @@ export const angelinaRay = {
       name: "LeeAnn",
       location: "London",
       text: "It’s all in the name. Angelina, she is an angel. Angelina helped me through an incredibly difficult time in my life. She guided me both emotionally and spiritually. A truly gifted professional."
+    },
+    {
+      name: "Gillian",
+      location: "Surrey",
+      text: "Angelina is extremely professional and focuses on me. My experience of Reiki with her has always been amazing. A truly special experience and I love the evidence she shares after Reiki."
     },
     {
       name: "Gillian Moore",

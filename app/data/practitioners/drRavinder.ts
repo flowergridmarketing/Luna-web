@@ -2,17 +2,27 @@ import { getImageUrl } from "@/lib/utils";
 export const drRavinder = {
   slug: "dr-ravinder-auricular-acupuncturist-croydon",
 
+  seo: {
+    title: "Dr Ravinder | Auricular Acupuncturist Croydon | Flowergrid",
+    description: "Meet Dr Ravinder, an Auricular Acupuncturist Croydon. Specialist in Reiki, Colour Therapy and Angelic Healing for pain relief and vitality. Book your call today."
+  },
+
   profile: {
     name: "Dr Ravinder",
     title: "Auricular Acupuncturist Croydon | Reiki Grand Master, Colour Therapist and Angel Healer",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/ravinder.png?updatedAt=1771328747199",
     experience: "Auricular Acupuncturist",
     languages: ["English"],
-    location: "South London (In-person on request)",
+    location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     cta: {
-      primary: "Book a free discovery call",
+      primary: "Book Consultation",
     },
+    ctaBox: {
+      title: "Not sure where to start?",
+      description: "Book a free discovery call to talk through your physical or emotional needs and see how auricular acupuncture can support your recovery.",
+      btnText: "Book a Free Discovery Call"
+    }
   },
 
   hero: {
