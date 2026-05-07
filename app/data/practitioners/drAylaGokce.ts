@@ -26,7 +26,7 @@ export const drAylaGokce = {
   },
 
   hero: {
-    headline: "Aesthetic Surgery Tailored to Your Unique Beauty",
+    headline: "Aesthetic and Plastic Surgeon Croydon | Plastic, Reconstructive and Aesthetic Surgeon",
     subtext: "Aesthetic and plastic surgeon in Croydon delivering natural, transformative facial, breast, and body surgery with surgical precision and artistic vision.",
     tags: [
       "Aesthetic Surgery",

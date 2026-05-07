@@ -14,7 +14,7 @@ export const drRenukaMarley = {
     experience: "Specialist Healthcare Consultant and Life Coach (Doctorate level)",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
     cta: {
       primary: "Book Consultation",
     },

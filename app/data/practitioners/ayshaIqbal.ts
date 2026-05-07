@@ -11,10 +11,10 @@ export const ayshaIqbal = {
     name: "Aysha Iqbal",
     title: "Communications Coach & Public Speaking Trainer",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/aysha.jpg?updatedAt=1777011424219",
-    experience: "Former BBC and ITV News Anchor",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
+    ctaButtons: [],
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +26,7 @@ export const ayshaIqbal = {
   },
 
   hero: {
-    headline: "Helping you speak with clarity and confidence",
+    headline: "Communications Coach & Public Speaking Trainer",
     subtext: "Practical coaching and training in Croydon to improve speaking, pitching and leadership communication with calm, persuasive delivery.",
     tags: [
       "Public Speaking",

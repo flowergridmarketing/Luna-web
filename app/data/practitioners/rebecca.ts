@@ -14,7 +14,7 @@ export const rebecca = {
     experience: "Nutrition and Fitness Coach",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +26,7 @@ export const rebecca = {
   },
 
   hero: {
-    headline: "Nutrition and fitness support that actually fits your week",
+    headline: "Nutrition and Fitness Coach London | Women’s Fitness Specialist and Pilates Instructor",
     subtext: "As a nutrition and fitness coach in London, I help you combine food, strength training and Pilates in a way that gets results without burning out. My focus is balance: building strength, improving energy, and creating habits you can maintain.",
     tags: [
       "Nutrition and Fitness Coach London",

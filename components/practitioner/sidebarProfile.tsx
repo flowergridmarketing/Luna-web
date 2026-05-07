@@ -8,11 +8,7 @@ type Props = {
 
 export default function SidebarProfile({ data }: Props) {
   const badges = [
-    data.credentials,
-    ...(data.languages || []),
-    data.availability?.online ? "Online" : null,
-    data.availability?.inPerson ? "In-person" : null,
-    data.availability?.acceptingClients ? "Accepting new clients" : null,
+    ...(data.profile?.tags || []),
   ].filter(Boolean);
 
   return (
@@ -59,7 +55,7 @@ export default function SidebarProfile({ data }: Props) {
           <div className="h-px w-4 bg-[#644D36]/20"></div>
         </div>
         <div className="flex flex-wrap justify-center gap-2.5">
-          {badges.map((badge: string, index: number) => (
+          {data.tags.map((badge: string, index: number) => (
             <span
               key={index}
               className="rounded-full border border-[#644D36]/10 bg-white/50 px-4 py-2 text-[12px] font-medium text-[#2D2D2D] shadow-sm backdrop-blur-[2px] transition-colors hover:bg-white/80"

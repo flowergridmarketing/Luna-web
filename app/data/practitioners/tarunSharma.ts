@@ -26,7 +26,7 @@ export const tarunSharma = {
   },
 
   hero: {
-    headline: "Energy Healing Aligned with Your Natural Vibration",
+    headline: "Reiki Grand Master and holistic consultant specialising in energy healing, Sujok therapy, and Vedic lifestyle.",
     subtext: "Reiki Grand Master in Croydon delivering deep energetic restoration and Vedic lifestyle guidance through ancient wisdom and precise holistic mastery.",
     tags: [
       "Reiki Grand Master",

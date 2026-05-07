@@ -14,7 +14,7 @@ export const runaBoolaky = {
     experience: "NLP Practitioner",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +26,7 @@ export const runaBoolaky = {
   },
 
   hero: {
-    headline: "Mindset mastery through NLP",
+    headline: "NLP Practitioner, Life Coach & Mental Health First Aider",
     subtext: "NLP helps you identify and rewrite the subconscious patterns holding you back, allowing you to achieve your goals with new confidence.",
     tags: [
       "NLP Practitioner",

@@ -15,7 +15,6 @@ export const nudratChagtai = {
         title:
             "Registered Nutritional Therapist and Health Coach | Metabolic Health, Gut Health and Women’s Health Specialist",
         image: "https://ik.imagekit.io/z6xh4w9tp/about/team/nusratchangthai.jpg?updatedAt=1777012418164",
-        experience: "DipION Nutritional Therapist",
         languages: ["English"],
         location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
         availability: "Accepting new clients",
@@ -30,14 +29,14 @@ export const nudratChagtai = {
     },
 
     hero: {
-        headline: "Nutrition support that fits your real life",
+        headline: "Registered Nutritional Therapist & Health Coach | Metabolic Health, Gut Health and Women’s Health Specialist",
         subtext:
             "Registered nutritional therapist in Croydon helping people manage blood sugar, hormones, gut health, and metabolic wellbeing through sustainable, culturally-sensitive nutrition.",
         tags: [
             "Metabolic Health",
             "Blood Sugar Balance",
             "Gut Health",
-            "Women’s Health",
+            "Women's Health",
             "Menopause Support",
             "Weight Management",
             "Type 2 Diabetes Support",
