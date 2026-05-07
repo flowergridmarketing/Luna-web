@@ -11,10 +11,12 @@ export const angelinaRay = {
     name: "Angelina Ray",
     title: "Psychic Therapist Croydon | Integrative Counsellor, Psychic Medium and Reiki Practitioner",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/Angelina%20Ray.jpg?updatedAt=1777046535596",
-    experience: "Integrative Counsellor",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
+    ctaButtons: [
+      { label: "Book a Session", href: "https://calendly.com/", isExternal: true, variant: "primary" }
+    ],
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +28,7 @@ export const angelinaRay = {
   },
 
   hero: {
-    headline: "Helping you move forward with clarity, healing and insight",
+    headline: "Psychic Therapist in Croydon | Integrative Counsellor, Psychic Medium and Reiki Practitioner",
     subtext: "I offer integrative counselling with optional psychic mediumship for clients who want emotional support and a deeper understanding of repeating patterns. Sessions are calm, confidential, and led by what you need.",
     tags: [
       "Psychic Therapist Croydon",

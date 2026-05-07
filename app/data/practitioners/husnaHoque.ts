@@ -14,7 +14,7 @@ export const husnaHoque = {
     experience: "Personal Trainer & Wellness Coach",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +26,7 @@ export const husnaHoque = {
   },
 
   hero: {
-    headline: "Fitness and wellbeing support built around real life",
+    headline: "Personal Trainer & Wellness Coach Croydon | Fitness and Nutrition Specialist",
     subtext: "As a personal trainer and wellness coach in Croydon, I help you follow a fitness plan you can actually stick to. We focus on customised workouts, macro guidance, and simple lifestyle habits that support long term results, not quick fixes.",
     tags: [
       "Personal Trainer & Wellness Coach",

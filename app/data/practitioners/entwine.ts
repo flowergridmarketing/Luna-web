@@ -15,6 +15,9 @@ export const entwine = {
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Available now",
+    ctaButtons: [
+      { label: "Explore Entwine Products", href: "https://calendly.com/", isExternal: true, variant: "primary" }
+    ],
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +29,7 @@ export const entwine = {
   },
 
   hero: {
-    headline: "At home facials with a spa level feel",
+    headline: "Luxury at home facials and skincare advice, created for radiant, healthy looking skin.",
     subtext: "Entwine is designed for people who want a simple, high performance skincare routine at home. The range is built around concentrated ampoules that support glow, hydration and a smoother looking complexion, without adding ten new steps to your day.",
     tags: [
       "At-Home Salon Skincare",

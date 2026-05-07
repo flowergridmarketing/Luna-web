@@ -11,10 +11,13 @@ export const tamkinRiaz = {
     name: "Tamkin Riaz",
     title: "Career Development Coach in Croydon | Community Leader, Educator and Strategic Partnerships Mentor",
     image: "https://ik.imagekit.io/z6xh4w9tp/about/team/tamkin.png?updatedAt=1771742262330",
-    experience: "45+ years",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
+    ctaButtons: [
+      { label: "Book Consultation", href: "https://calendly.com/", isExternal: true, variant: "primary" },
+      { label: "WhatsApp Me", href: "https://wa.me/447432211096", isExternal: true, variant: "outline" }
+    ],
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +29,7 @@ export const tamkinRiaz = {
   },
 
   hero: {
-    headline: "Clarity and a plan for your career",
+    headline: "Career Development Coach in Croydon | Community Leader, Educator and Strategic Partnerships Mentor",
     subtext: "If you feel stuck in your career, unsure how to take the next step, or tired of trying to figure it out alone, I am here to help.",
     tags: [
       "Career Development Coaching",

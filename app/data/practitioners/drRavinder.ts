@@ -14,7 +14,7 @@ export const drRavinder = {
     experience: "Auricular Acupuncturist",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +26,7 @@ export const drRavinder = {
   },
 
   hero: {
-    headline: "Restoring physical comfort and energetic flow",
+    headline: "Auricular Acupuncturist Croydon | Reiki Grand Master, Colour Therapist and Angel Healer",
     subtext: "As an Auricular Acupuncturist in Croydon, I provide a bridge between clinical precision and spiritual healing. My work is focused on helping you release physical pain while restoring the emotional and energetic vitality needed for a balanced life.",
     tags: [
       "Auricular Acupuncturist",

@@ -14,7 +14,7 @@ export const yvonneHewitt = {
     experience: "RTT Hypnotherapist",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +26,7 @@ export const yvonneHewitt = {
   },
 
   hero: {
-    headline: "Calm, focused support for real breakthroughs",
+    headline: "RTT Hypnotherapist in Croydon | Clinical Hypnotherapist and Subconscious Breakthrough Specialist",
     subtext: "As an RTT hypnotherapist in Croydon, I help clients work with the subconscious patterns that sit underneath anxiety, low confidence, unwanted habits, and emotional overwhelm. My approach is calm and practical, with clear structure so you know what to expect and feel safe throughout.",
     tags: [
       "RTT Hypnotherapy",

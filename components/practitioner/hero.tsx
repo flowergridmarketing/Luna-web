@@ -100,45 +100,45 @@ export default function Hero({ data }: Props) {
 
             {/* ── CTA BUTTONS ── */}
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href={data.booking?.calendly || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5"
-                style={{ backgroundColor: "#F3EFE7", color: "#35271C" }}
-              >
-                Book consultation
-              </Link>
+              {data.booking?.buttons?.map((btn: any, idx: number) => {
+                const isPrimary = btn.variant === "primary";
+                
+                if (btn.isExternal) {
+                  return (
+                    <a
+                      key={idx}
+                      href={btn.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5 ${
+                        isPrimary ? "" : "border border-[#F3EFE7]"
+                      }`}
+                      style={{ 
+                        backgroundColor: isPrimary ? "#F3EFE7" : "transparent", 
+                        color: isPrimary ? "#35271C" : "#F3EFE7" 
+                      }}
+                    >
+                      {btn.label}
+                    </a>
+                  );
+                }
 
-              {data.booking?.video && (
-                <Link
-                  href={data.booking.video}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5 border border-[#F3EFE7]"
-                  style={{ color: "#F3EFE7" }}
-                >
-                  Watch presentation video
-                </Link>
-              )}
-
-              <a
-                href="https://wa.me/447432211096"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5"
-                style={{ backgroundColor: "#F3EFE7", color: "#35271C" }}
-              >
-                WhatsApp
-              </a>
-
-              <a
-                href="tel:+447432211096"
-                className="rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5"
-                style={{ backgroundColor: "#F3EFE7", color: "#35271C" }}
-              >
-                Call
-              </a>
+                return (
+                  <Link
+                    key={idx}
+                    href={btn.href}
+                    className={`rounded-full px-6 py-3 text-sm font-medium transition sm:px-8 sm:py-3.5 ${
+                      isPrimary ? "" : "border border-[#F3EFE7]"
+                    }`}
+                    style={{ 
+                      backgroundColor: isPrimary ? "#F3EFE7" : "transparent", 
+                      color: isPrimary ? "#35271C" : "#F3EFE7" 
+                    }}
+                  >
+                    {btn.label}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Microcopy */}

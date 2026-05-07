@@ -14,7 +14,7 @@ export const ricoWagnerCaleap = {
     experience: "Executive Coach",
     languages: ["English"],
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
-    availability: "Accepting new clients",
+    availability: "Available",
     cta: {
       primary: "Book Consultation",
     },
@@ -26,7 +26,7 @@ export const ricoWagnerCaleap = {
   },
 
   hero: {
-    headline: "Leadership support when the pressure is high",
+    headline: "Executive Coach London and Organisational Performance Specialist",
     subtext: "Leadership can be a lonely place, especially when the stakes are high and you’re expected to stay composed. As an executive coach in London, I help leaders think clearly under pressure, manage stress without burning out, and lead with confidence and stability.",
     tags: [
       "Executive Coaching",

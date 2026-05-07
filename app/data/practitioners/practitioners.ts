@@ -55,9 +55,8 @@ const practitioners = allPractitionersData.map((p: any) => {
     rating: p.profile?.rating || 5,
     reviewCount: p.profile?.reviewCount || 52,
     badges: [
-      p.profile?.experience,
-      p.profile?.location,
-      p.profile?.availability
+      
+      ...p.profile?.languages
     ].filter(Boolean),
     tags: p.hero?.tags || [],
     availability: {
@@ -102,7 +101,13 @@ const practitioners = allPractitionersData.map((p: any) => {
       calendly: p.booking?.cta?.calendly || "https://calendly.com/",
       video: p.profile?.cta?.video,
       microcopy: p.profile?.microcopy,
-      ctaBox: p.profile?.ctaBox
+      ctaBox: p.profile?.ctaBox,
+      buttons: p.profile?.ctaButtons || [
+        { label: "Book consultation", href: p.booking?.cta?.calendly || "https://calendly.com/", isExternal: true, variant: "primary" },
+        ...(p.profile?.cta?.video ? [{ label: "Watch presentation video", href: p.profile.cta.video, isExternal: true, variant: "outline" }] : []),
+        { label: "WhatsApp", href: "https://wa.me/447432211096", isExternal: true, variant: "primary" },
+        { label: "Call", href: "tel:+447432211096", isExternal: true, variant: "primary" }
+      ]
     },
     testimonials: p.testimonials || [],
     faq: p.faq || [],
