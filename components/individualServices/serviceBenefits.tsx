@@ -29,13 +29,12 @@ export default function ServiceBenefits({ data }: Props) {
     <section className="w-full bg-background py-10 md:py-14">
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-12">
         
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-start">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-start">
           
           {/* LEFT SIDE: Heading & Description */}
-          <div className=" lg:top-24">
-            <h2 className="text-4xl font-normal leading-[1.1] text-[#231F20] md:text-5xl lg:text-6xl inline">
-              Experience the Benefits of <br />
-              {data.hero.name}
+          <div className="lg:col-span-7 lg:top-24">
+            <h2 className="text-4xl font-normal leading-[1.1] text-[#231F20] md:text-5xl lg:text-6xl">
+              Experience the Benefits of {data.hero.name}
             </h2>
  
             <p className="mt-8 max-w-md text-base leading-relaxed text-[#231F20]/80 md:text-lg">
@@ -44,7 +43,7 @@ export default function ServiceBenefits({ data }: Props) {
           </div>
  
           {/* RIGHT SIDE: Accordion List */}
-          <div className="w-full">
+          <div className="lg:col-span-5 w-full">
             <div className="w-full border-t border-[#231F20]/20">
               {data.benefits?.map((item, index) => {
                 const isOpen = openIndex === index;

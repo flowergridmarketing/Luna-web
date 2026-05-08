@@ -11,12 +11,12 @@ const EXPERTS = [
     description: 'Samina brings over a decade of experience in life coaching and energy healing. Her approach blends mindfulness, self-awareness and practical strategies to help clients move through change with clarity and confidence.',
     image: getImageUrl('about/person1/saminahalf.png'),
   },
-  {
-    name: 'Munira',
-    role: 'Co-Founder | Clinical Hypnotherapist | NLP Practitioner',
-    description: 'A visionary strategist and wellbeing advocate who blends leadership, psychology, and holistic growth to inspire conscious living, personal transformation, and purpose-driven leadership across global communities.',
-    image: getImageUrl('about/person2/monira.png'),
-  },
+  // {
+  //   name: 'Munira',
+  //   role: 'Co-Founder | Clinical Hypnotherapist | NLP Practitioner',
+  //   description: 'A visionary strategist and wellbeing advocate who blends leadership, psychology, and holistic growth to inspire conscious living, personal transformation, and purpose-driven leadership across global communities.',
+  //   image: getImageUrl('about/person2/monira.png'),
+  // },
 ];
 
 export default function LunaExperts() {
@@ -32,7 +32,7 @@ export default function LunaExperts() {
           Meet the Experts Behind Luna
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 lg:gap-12">
           {EXPERTS.map((expert, i) => (
             <motion.div
               key={expert.name}

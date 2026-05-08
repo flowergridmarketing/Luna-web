@@ -94,7 +94,7 @@ const FreeConsultationPage = () => {
 
                   <Link
                     href="/holistic-wellness-services"
-                    className="flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-w-[150px] py-3 px-8 border border-white/60 rounded-full text-white text-xs uppercase tracking-widest backdrop-blur-sm transition-all duration-500 ease-in-out hover:max-w-full hover:bg-[#A68653] hover:text-black hover:border-black hover:scale-105"
+                    className="flex items-center justify-center whitespace-nowrap overflow-hidden w-full max-w-[150px] py-3 px-8 border border-white/60 rounded-full text-white text-xs uppercase tracking-widest backdrop-blur-sm transition-all duration-500 ease-in-out hover:max-w-full hover:bg-primary hover:text-white hover:border-black hover:scale-105"
                   >
                     Learn more
                   </Link>
