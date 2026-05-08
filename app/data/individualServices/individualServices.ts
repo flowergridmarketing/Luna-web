@@ -107,32 +107,32 @@ const services = [
     "blogs": [],
     "faq": [
       {
-        "question": "1\\) What is included in an Aesthetic and Plastic Surgery consultation at Flowergrid?",
+        "question": "1) What is included in an Aesthetic and Plastic Surgery consultation at Flowergrid?",
         "answer": "Your consultation includes a discussion of your goals, a professional assessment, and clear recommendations on suitable options. You will also receive guidance on safety, risks, recovery time, and realistic outcomes."
       },
       {
-        "question": "2\\) What procedures do you cover under Aesthetic and Plastic Surgery?",
+        "question": "2) What procedures do you cover under Aesthetic and Plastic Surgery?",
         "answer": "We cover facial procedures such as facelift, rhinoplasty and blepharoplasty, breast procedures such as augmentation, lift and reduction, and body contouring such as liposuction and tummy tuck. Non surgical options may also be discussed."
       },
       {
-        "question": "3\\) How do you ensure natural looking results?",
+        "question": "3) How do you ensure natural looking results?",
         "answer": "We focus on proportion, harmony, and what will age well over time. The goal is to enhance your features while keeping you looking like yourself, not chasing trends or dramatic change."
       },
       {
-        "question": "4\\) Can I choose non surgical treatments instead of surgery?",
+        "question": "4) Can I choose non surgical treatments instead of surgery?",
         "answer": "Yes. During your consultation, we can discuss non surgical options such as Botox, fillers, thread lifts, and skin rejuvenation where appropriate. You will be guided towards what is most suitable and realistic."
       },
       {
-        "question": "5\\) What is recovery like after aesthetic or plastic surgery?",
+        "question": "5) What is recovery like after aesthetic or plastic surgery?",
         "answer": "Recovery depends on the procedure. Your surgeon will explain expected downtime, aftercare steps, and follow up. Planning includes recovery timelines so you can prepare properly and feel supported."
       },
       {
-        "question": "6\\) Do you offer online consultations?",
+        "question": "6) Do you offer online consultations?",
         "answer": "Yes. Online consultations are available for initial discussions and suitability. In person appointments can be arranged on request, depending on your goals and treatment plan."
       },
       {
-        "question": "7\\) How do I book Aesthetic and Plastic Surgery at Flowergrid?",
-        "answer": "You can book by emailing sk@flowergrid.co.uk or calling \\+44 7432 211096\\. If you are unsure where to start, we can guide you to the right consultation and practitioner."
+        "question": "7) How do I book Aesthetic and Plastic Surgery at Flowergrid?",
+        "answer": "You can book by emailing sk@flowergrid.co.uk or calling +44 7432 211096. If you are unsure where to start, we can guide you to the right consultation and practitioner."
       }
     ],
     "relatedServices": [
@@ -528,31 +528,31 @@ const services = [
     "blogs": [],
     "faq": [
       {
-        "question": "1\\. What is conscious living coaching?",
+        "question": "1. What is conscious living coaching?",
         "answer": "Conscious living coaching helps you clarify your core values, understand your authentic self, and build a life that genuinely reflects what matters to you. It combines self-discovery with practical tools to help you live purposefully, authentically, and aligned with your true beliefs."
       },
       {
-        "question": "2\\. How is conscious living coaching different from life coaching?",
+        "question": "2. How is conscious living coaching different from life coaching?",
         "answer": "Life coaching often focuses on goals, productivity, and achievement. Conscious living coaching goes deeper, asking what you truly value and whether your current life reflects those values. It is about authentic alignment, not just external success or life hacks."
       },
       {
-        "question": "3\\. Who benefits from conscious living coaching?",
+        "question": "3. Who benefits from conscious living coaching?",
         "answer": "Anyone seeking authenticity, clarity, or meaningful change can benefit. Whether you are navigating a major life transition, feeling empty despite external success, questioning inherited beliefs, or wanting to live more consciously and purposefully, this coaching offers genuine support."
       },
       {
-        "question": "4\\. What should I expect in a conscious living coaching session?",
+        "question": "4. What should I expect in a conscious living coaching session?",
         "answer": "Sessions begin with exploration and self-discovery work. You will gain clarity on your values, examine where your life aligns or misaligns with those values, and develop practical strategies for living more consciously and authentically in daily life."
       },
       {
-        "question": "5\\. How long does conscious living coaching take to show results?",
+        "question": "5. How long does conscious living coaching take to show results?",
         "answer": "Many clients notice shifts in clarity and self-awareness within 2 to 3 sessions. Deeper values alignment and sustainable life changes typically take 6 to 12 weeks of consistent work. Your coach will help you understand realistic timelines based on your specific journey."
       },
       {
-        "question": "6\\. Can I do conscious living coaching online or does it need to be in person?",
+        "question": "6. Can I do conscious living coaching online or does it need to be in person?",
         "answer": "Both options are available. Flowergrid offers conscious living coaching online via secure video call and in-person sessions at our Coulsdon centre. Many clients find online sessions equally effective and more convenient for their schedule and lifestyle."
       },
       {
-        "question": "7\\. How do I book conscious living coaching at Flowergrid?",
+        "question": "7. How do I book conscious living coaching at Flowergrid?",
         "answer": "Booking is simple. Browse our coaches' profiles, select someone whose approach resonates with you, and reach out via their profile form or contact us at sk@flowergrid.co.uk or \\+44 7432 211096\\. We will confirm your session and guide you through the process."
       }
     ],
@@ -1380,31 +1380,31 @@ const services = [
     "blogs": [],
     "faq": [
       {
-        "question": "1\\. What is personal development coaching and how does it work?",
+        "question": "1. What is personal development coaching and how does it work?",
         "answer": "Personal development coaching is a structured, one-to-one process that helps you clarify your goals, understand your patterns, and build the confidence to create meaningful change. Your coach uses guided questions and practical strategies to help you move forward at your own pace."
       },
       {
-        "question": "2\\. How is personal development coaching different from therapy?",
+        "question": "2. How is personal development coaching different from therapy?",
         "answer": "Coaching is future-focused and goal-oriented, helping you build clarity and take action. Therapy typically addresses past experiences and emotional processing. At Flowergrid, we often combine both approaches for complete support tailored to your needs."
       },
       {
-        "question": "3\\. Who can benefit from personal development coaching?",
+        "question": "3. Who can benefit from personal development coaching?",
         "answer": "Anyone seeking clarity, confidence, or meaningful change can benefit. Whether you are navigating a career transition, building self-belief, improving relationships, or simply wanting to understand yourself better, personal development coaching offers practical support."
       },
       {
-        "question": "4\\. How long does personal development coaching take to work?",
+        "question": "4. How long does personal development coaching take to work?",
         "answer": "Most people notice shifts within 4 to 6 weeks of consistent coaching. However, everyone's journey is different. Some changes happen quickly, while deeper transformation takes longer. Your coach will help you understand realistic timelines for your goals."
       },
       {
-        "question": "5\\. Can I book a single session or do I need a full programme?",
+        "question": "5. Can I book a single session or do I need a full programme?",
         "answer": "Both options are available. You can book a single consultation to explore coaching, or commit to a structured programme (6 weeks, 12 weeks, or custom length). Many clients start with one session and then decide on a longer programme."
       },
       {
-        "question": "6\\. How do I book a personal development coaching session?",
-        "answer": "Booking is simple. Browse our coaches' profiles, select someone whose approach resonates with you, and reach out via their profile form or contact us at sk@flowergrid.co.uk or \\+44 7432 211096\\. We will confirm your session and guide you through the process."
+        "question": "6. How do I book a personal development coaching session?",
+        "answer": "Booking is simple. Browse our coaches' profiles, select someone whose approach resonates with you, and reach out via their profile form or contact us at sk@flowergrid.co.uk or +44 7432 211096. We will confirm your session and guide you through the process."
       },
       {
-        "question": "7\\. Is personal development coaching available online or in person?",
+        "question": "7. Is personal development coaching available online or in person?",
         "answer": "Both. We offer in-person sessions at our Coulsdon centre and online coaching via secure video call. This flexibility makes it easy to work with us whether you are local or anywhere in the UK."
       }
     ],
@@ -1525,31 +1525,31 @@ const services = [
     "blogs": [],
     "faq": [
       {
-        "question": "1\\) What is professional development coaching?",
+        "question": "1) What is professional development coaching?",
         "answer": "Professional development coaching is structured support that helps you grow in your role, strengthen communication, and build confidence at work. It focuses on practical skills, decision-making, boundaries, and career direction so you can progress without burning out."
       },
       {
-        "question": "2\\) Who is professional development coaching for?",
+        "question": "2) Who is professional development coaching for?",
         "answer": "It is for professionals who feel stuck, overlooked, or overwhelmed at work, as well as new managers and leaders who want to improve confidence, presence, and communication. It is also useful during promotions, career changes, or high-pressure periods."
       },
       {
-        "question": "3\\) What do you work on in professional development coaching?",
+        "question": "3) What do you work on in professional development coaching?",
         "answer": "Common areas include career clarity, confidence in meetings, presentations, leadership skills, boundary setting, managing stress at work, handling difficult conversations, and building sustainable habits around workload, focus, and performance."
       },
       {
-        "question": "4\\) How is professional development coaching different from career coaching?",
+        "question": "4) How is professional development coaching different from career coaching?",
         "answer": "Career coaching often focuses on job search strategy, CVs, interviews, and career moves. Professional development coaching focuses more on how you show up at work, your confidence, communication, leadership, and long-term growth. Many people benefit from a blend."
       },
       {
-        "question": "5\\) Is professional development coaching available online in the UK?",
+        "question": "5) Is professional development coaching available online in the UK?",
         "answer": "Yes. Flowergrid offers professional development coaching online via Zoom for clients across the UK. We also offer in-person sessions in Coulsdon, Croydon when available, depending on your coach and schedule."
       },
       {
-        "question": "6\\) How long does professional development coaching take?",
+        "question": "6) How long does professional development coaching take?",
         "answer": "Some people notice shifts after one or two sessions, especially around clarity and confidence. Sustainable change often takes several weeks of consistent coaching. Your coach will recommend a pace based on your goals and the challenges you are facing."
       },
       {
-        "question": "7\\) How do I book professional development coaching at Flowergrid?",
+        "question": "7) How do I book professional development coaching at Flowergrid?",
         "answer": "You can start by booking a free consultation, or choose a coach and schedule your first session. If you are unsure where to begin, contact us at sk@flowergrid.co.uk or \\+44 7432 211096 and we will guide you."
       }
     ],
@@ -1963,31 +1963,31 @@ const services = [
     "blogs": [],
     "faq": [
       {
-        "question": "1\\) What is relationship coaching?",
+        "question": "1) What is relationship coaching?",
         "answer": "Relationship coaching is structured support that helps you improve communication, reduce conflict, and rebuild connection. It focuses on patterns, practical tools, and next steps you can apply in real life, not just talking about the same issues repeatedly."
       },
       {
-        "question": "2\\) Is relationship coaching for couples only?",
+        "question": "2) Is relationship coaching for couples only?",
         "answer": "No. Relationship coaching can support couples or individuals. Many people book solo sessions to work on boundaries, communication, attachment patterns, or preparing for a difficult conversation in their relationship."
       },
       {
-        "question": "3\\) How is relationship coaching different from couples therapy?",
+        "question": "3) How is relationship coaching different from couples therapy?",
         "answer": "Couples therapy often focuses more on emotional healing and deeper past experiences. Relationship coaching is usually more practical and goal-focused, helping you change habits, communication, and behaviours. If you are unsure, start with a free consultation."
       },
       {
-        "question": "4\\) What can relationship coaching help with?",
+        "question": "4) What can relationship coaching help with?",
         "answer": "Relationship coaching can help with repeated arguments, poor communication, resentment, trust issues, boundary problems, intimacy challenges, stress affecting the relationship, and feeling disconnected or like you are living separate lives."
       },
       {
-        "question": "5\\) Do you offer relationship coaching online in the UK?",
+        "question": "5) Do you offer relationship coaching online in the UK?",
         "answer": "Yes. We offer online relationship coaching via secure video sessions across the UK. In-person sessions are available in Coulsdon, Croydon when suitable."
       },
       {
-        "question": "6\\) How many sessions do we need?",
+        "question": "6) How many sessions do we need?",
         "answer": "It depends on your goals and the situation. Some people find a few sessions enough to learn tools and reduce conflict. Others prefer a structured programme to rebuild trust, improve communication, and create lasting change."
       },
       {
-        "question": "7\\) How do I book relationship coaching at Flowergrid?",
+        "question": "7) How do I book relationship coaching at Flowergrid?",
         "answer": "You can book a free consultation first, choose a practitioner, or contact us directly. Email sk@flowergrid.co.uk or call or WhatsApp \\+44 7432 211096\\. We will confirm your session and guide you on the best next step."
       }
     ],
@@ -2245,31 +2245,31 @@ const services = [
     "blogs": [],
     "faq": [
       {
-        "question": "1\\. What is stress and anxiety support?",
+        "question": "1. What is stress and anxiety support?",
         "answer": "Stress and anxiety support at Flowergrid is integrated care combining psychological techniques, medical insight, coaching, and holistic practices. We help you understand what's driving your stress and anxiety, provide immediate relief tools, and build lasting resilience through personalised support."
       },
       {
-        "question": "2\\. How is stress and anxiety support different from therapy or counselling?",
+        "question": "2. How is stress and anxiety support different from therapy or counselling?",
         "answer": "While therapy explores emotions and past experiences, stress and anxiety support at Flowergrid is more practical and forward-focused. We combine immediate relief techniques with deeper coaching work and medical insight to address root causes and build lasting change."
       },
       {
-        "question": "3\\. What techniques do you use in stress and anxiety support?",
+        "question": "3. What techniques do you use in stress and anxiety support?",
         "answer": "Our stress and anxiety support integrates evidence-based methods including NLP, mindfulness, breathing exercises, grounding techniques, hypnotherapy, nutritional guidance, and energy healing. We personalise your approach based on what works for your mind, body, and spirit."
       },
       {
-        "question": "4\\. How quickly will stress and anxiety support help?",
+        "question": "4. How quickly will stress and anxiety support help?",
         "answer": "Many clients notice relief within 1 to 2 sessions through practical techniques. Deeper transformation typically develops over 6 to 12 weeks of consistent stress and anxiety support. Your practitioner will outline realistic timelines based on your unique situation."
       },
       {
-        "question": "5\\. Can I access stress and anxiety support online in the UK?",
+        "question": "5. Can I access stress and anxiety support online in the UK?",
         "answer": "Yes. Flowergrid offers online stress and anxiety support via secure video call, making it accessible across the UK. Many clients prefer online sessions for convenience and privacy, and they're equally effective as in-person sessions."
       },
       {
-        "question": "6\\. Who can benefit from stress and anxiety support at Flowergrid?",
+        "question": "6. Who can benefit from stress and anxiety support at Flowergrid?",
         "answer": "Anyone experiencing stress, anxiety, overwhelm, or burnout can benefit. Our stress and anxiety support is particularly effective for high-functioning professionals, those managing multiple responsibilities, and anyone ready for lasting change beyond symptom management."
       },
       {
-        "question": "7\\. How do I book stress and anxiety support at Flowergrid?",
+        "question": "7. How do I book stress and anxiety support at Flowergrid?",
         "answer": "Booking is simple. Browse our practitioners' profiles, select someone whose approach resonates with you, and reach out via their profile form or contact us at sk@flowergrid.co.uk or \\+44 7432 211096\\. We'll confirm your first stress and anxiety support session."
       }
     ],
