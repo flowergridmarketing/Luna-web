@@ -46,7 +46,7 @@ const BrandValueSection = () => {
     <section ref={container} className="w-full bg-background py-20 px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
 
-        <div className="connection-header flex items-center gap-4 mb-12">
+        <div className="connection-header flex items-center mb-12">
           <div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading text-text-heading max-w-3xl">
               One integrated home for your complete wellbeing
@@ -58,7 +58,7 @@ const BrandValueSection = () => {
               alt="Flowergrid Logo"
               width={100}
               height={100}
-              className="object-contain"
+              className="object-contain mb-12"
             />
           </div>
         </div>

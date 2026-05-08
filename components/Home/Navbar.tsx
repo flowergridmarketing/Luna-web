@@ -24,11 +24,11 @@ const navLinks = [
         href: "/samina-khan-holistic-life-coach",
         image: getImageUrl("about/person1/saminahalf.png"),
       },
-      {
-        title: "Monira Ahmed",
-        href: "/monira-ahmed-hypnotherapist",
-        image: getImageUrl("about/person2/1.png"),
-      },
+      // {
+      //   title: "Monira Ahmed",
+      //   href: "/monira-ahmed-hypnotherapist",
+      //   image: getImageUrl("about/person2/1.png"),
+      // },
       {
         title: "Team",
         href: "/our-team",

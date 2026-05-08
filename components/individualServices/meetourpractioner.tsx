@@ -21,6 +21,7 @@ export default function MeetPractitioners({
   title = "Meet Your Practitioner",
   practitioners,
 }: Props) {
+  console.log(practitioners.length, 'practitioner')
   return (
     <section className="w-full bg-background py-16 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
@@ -40,7 +41,13 @@ export default function MeetPractitioners({
         </div>
 
         {/* Responsive Grid */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
+        <div className={`grid gap-6 md:gap-8 ${
+          practitioners.length === 1 
+            ? 'grid-cols-1 max-w-md mx-auto' 
+            : practitioners.length === 2 
+              ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto' 
+              : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+        }`}>
           {practitioners.map((item, index) => (
             <div
               key={index}

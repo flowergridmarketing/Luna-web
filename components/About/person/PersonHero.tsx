@@ -142,7 +142,7 @@ export default function PersonHero({
           {ctaText && ctaLink && (
             <Link
               href={ctaLink}
-              className="bg-[#433327] text-white px-8 py-3 rounded-full text-base md:text-lg font-medium transition-transform hover:scale-105 shadow-md mb-4"
+              className="bg-primary hover:opacity-90 text-white px-8 py-3 rounded-full text-base md:text-lg font-medium transition-transform hover:scale-105 shadow-md mb-4"
             >
               {ctaText}
             </Link>
