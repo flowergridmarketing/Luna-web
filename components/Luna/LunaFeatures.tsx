@@ -535,12 +535,12 @@ export default function LunaFeatures() {
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.4, ease: 'easeOut' }}
               >
-                {/* <h2
+                <h2
                   className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"
                   style={{ color: '#2c1a0e', fontFamily: 'var(--font-heading)' }}
                 >
                   {RIGHT_COPY[active].h}
-                </h2> */}
+                </h2>
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed max-w-xs lg:max-w-sm mx-auto lg:mx-0" style={{ color: '#6b4c35' }}>
                   {RIGHT_COPY[active].p}
                 </p>

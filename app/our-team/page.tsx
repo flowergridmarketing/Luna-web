@@ -60,15 +60,15 @@ const foundersData: Founder[] = [
     firstName: "Samina",
     secondaryColor: "text-[#4E351A]!"
   },
-  {
-    name: "Monira Ahmed",
-    role: "Co-Founder & Leadership Life Coach",
-    description: "Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.",
-    image: "about/person2/monira.png",
-    link: "/monira-ahmed-hypnotherapist",
-    firstName: "Monira",
-    secondaryColor: "text-[#4E351A]!"
-  }
+  // {
+  //   name: "Monira Ahmed",
+  //   role: "Co-Founder & Leadership Life Coach",
+  //   description: "Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.",
+  //   image: "about/person2/monira.png",
+  //   link: "/monira-ahmed-hypnotherapist",
+  //   firstName: "Monira",
+  //   secondaryColor: "text-[#4E351A]!"
+  // }
 ];
 
 const page = () => {

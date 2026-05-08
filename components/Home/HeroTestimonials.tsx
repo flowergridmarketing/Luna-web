@@ -83,7 +83,7 @@ export default function HeroTestimonials({
 
     return (
         <section className="w-full h-auto py-10 bg-[#F3EAD8] overflow-hidden">
-            <div className="max-w-3xl mx-auto px-4 mb-12 md:mb-10 mt-5 text-center">
+            <div className="max-w-6xl mx-auto px-4 mb-12 md:mb-10 mt-5 text-center">
                 <h2 className={`${textSize} font-heading font-normal uppercase tracking-wide mt-5 md:mt-0 mb-4 text-center`}>
                     {title}
                 </h2>
