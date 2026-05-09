@@ -32,7 +32,7 @@ export default function BlogHero() {
 
             <div className="absolute inset-0">
                 <Image
-                    src={getImageUrl("blog/bloghero.png")}
+                    src={getImageUrl("blog/hero.png")}
                     alt="blog page Hero Image"
                     fill
                     className="object-cover"

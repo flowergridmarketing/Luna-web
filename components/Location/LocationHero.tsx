@@ -6,7 +6,7 @@ const LocationHero = () => {
     return (
         <section
             style={{
-                backgroundImage: `url(${getImageUrl("location/location-hero.jpg.jpeg")})`,
+                backgroundImage: `url(${getImageUrl("location/hero.jpeg")})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 backgroundPosition: "center top", // important for mobile
