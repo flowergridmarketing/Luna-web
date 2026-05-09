@@ -16,49 +16,6 @@ const TikTokIcon = ({ className }: { className?: string }) => (
     </svg>
 );
 
-const navLinks = [
-    { title: "Home", href: "/" },
-    {
-        title: "About",
-        href: "/our-team",
-        subLinks: [
-            {
-                title: "Samina Khan",
-                href: "/samina-khan-holistic-life-coach",
-                image: getImageUrl("about/person1/saminahalf.png"),
-            },
-            {
-                title: "Monira Ahmed",
-                href: "/monira-ahmed-hypnotherapist",
-                image: getImageUrl("about/person2/1.png"),
-            },
-            {
-                title: "Team",
-                href: "/our-team",
-                image: getImageUrl("b2b/4.jpg"),
-            },
-        ],
-    },
-    { title: "Services", href: "/holistic-wellness-services" },
-    { title: "Membership", href: "/holistic-wellness-membership" },
-    {
-        title: "Workshops",
-        href: "/holistic-wellness-programme",
-        subLinks: [
-            {
-                title: "Programmes",
-                href: "/holistic-wellness-programme",
-            },
-            {
-                title: "Corporate Programmes",
-                href: "/corporate-wellbeing-programmes",
-                image: getImageUrl("b2b/1.jpg"),
-            },
-        ],
-    },
-    { title: "Journals", href: "/holistic-journals" },
-    { title: "Contact Us", href: "/contact-us" },
-];
 
 export default function Footer() {
 
@@ -109,11 +66,11 @@ export default function Footer() {
                     >
                         <ul className="flex flex-col gap-4 md:gap-6 text-left sm:text-left lg:text-left">
                             <li><Link href="/" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Home</Link></li>
+                            <li><Link href="/luna-ai" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Luna AI</Link></li>
                             <li className="flex flex-col gap-2">
                                 About
                                 <ul className="flex flex-col gap-2 pl-4 lg:pl-6 border-l border-[#F3EAD8]/20">
                                     <li><Link href="/samina-khan-holistic-life-coach" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Samina Khan</Link></li>
-                                    <li><Link href="/monira-ahmed-hypnotherapist" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Monira Ahmed</Link></li>
                                     <li><Link href="/our-team" className="text-base md:text-lg font-sans text-[#D6CFC2]/70 hover:text-[#A58E62] transition-colors">Team</Link></li>
                                 </ul>
                             </li>
@@ -128,6 +85,7 @@ export default function Footer() {
 
                             </li>
                             <li><Link href="/holistic-journals" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Journals</Link></li>
+                            <li><Link href="/holistic-wellness-center-in-croydon" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Location</Link></li>
                             <li><Link href="/contact-us" className="text-xl md:text-2xl font-heading font-light tracking-wide hover:text-[#A58E62] transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
