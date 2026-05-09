@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import { getImageUrl } from "@/lib/utils";
 
 export default function NotFound() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -88,7 +89,7 @@ export default function NotFound() {
                 className="absolute -left-20 -top-20 md:left-10 md:top-10 w-64 md:w-96 opacity-20 pointer-events-none"
             >
                 <Image
-                    src={`/home/hero-flower.png`}
+                    src={getImageUrl("home/hero-flower.png")}
                     alt="Decorative Flower"
                     width={400}
                     height={400}
@@ -101,7 +102,7 @@ export default function NotFound() {
                 className="absolute -right-20 -bottom-20 md:right-10 md:bottom-10 w-64 md:w-96 opacity-20 pointer-events-none transform rotate-180"
             >
                 <Image
-                    src={`/home/hero-flower.png`}
+                    src={getImageUrl("home/hero-flower.png")}
                     alt="Decorative Flower"
                     width={400}
                     height={400}
@@ -138,7 +139,7 @@ export default function NotFound() {
             {/* Subtle Floating Petal (Optional/Extra) */}
             <div className="absolute top-1/2 left-1/4 w-8 h-8 opacity-10 animate-pulse pointer-events-none">
                 <Image
-                    src={`/home/leaf.png`}
+                    src={getImageUrl("home/leaf.png")}
                     alt=""
                     width={32}
                     height={32}

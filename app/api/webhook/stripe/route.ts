@@ -55,6 +55,7 @@ export async function POST(req: Request) {
             <div style="background: #f4f4f4; padding: 15px; border-radius: 8px; margin: 20px 0;">
               <p><strong>Service:</strong> ${metadata.serviceName}</p>
               <p><strong>Practitioner:</strong> ${metadata.practitionerName || 'Expert Assigned'}</p>
+              <p><strong>Date:</strong> ${metadata.bookingDate}</p>
             </div>
             <p>We will contact you shortly with the next steps.</p>
             <p>Best regards,<br/>The Luna Team</p>

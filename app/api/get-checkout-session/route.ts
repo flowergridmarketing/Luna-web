@@ -19,6 +19,7 @@ export async function GET(req: Request) {
       phone: session.metadata?.phone,
       serviceName: session.metadata?.serviceName,
       practitionerName: session.metadata?.practitionerName,
+      bookingDate: session.metadata?.bookingDate,
       amount: session.amount_total ? session.amount_total / 100 : 0,
     });
   } catch (error: any) {
