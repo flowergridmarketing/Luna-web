@@ -3,7 +3,7 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { CheckCircle2, User, Phone, ChevronRight, Share2, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, User, Phone, ChevronRight, Share2, ShieldCheck, Calendar } from 'lucide-react';
 import Link from 'next/link';
 
 function SuccessContent() {
@@ -62,7 +62,11 @@ function SuccessContent() {
               <p className="text-xs text-gray-500">{details?.phone}</p>
             </div>
             <div>
-              <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Date</p>
+              <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Booking Date</p>
+              <p className="text-sm font-medium">{details?.bookingDate || '---'}</p>
+            </div>
+            <div>
+              <p className="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Receipt Date</p>
               <p className="text-sm font-medium">{new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
             </div>
           </div>
@@ -88,13 +92,13 @@ function SuccessContent() {
               <p className="text-sm font-medium mb-1">{details?.serviceName}</p>
               <p className="text-[10px] text-gray-500 italic">Practitioner: {details?.practitionerName || 'Any Available'}</p>
             </div>
-            <span className="text-sm font-bold">£30.00</span>
+            <span className="text-sm font-bold">£110.00</span>
           </div>
         </div>
 
         <div className="flex justify-between items-center text-xl font-heading font-medium">
           <span className="uppercase tracking-widest text-xs font-bold text-gray-400">Total Charged</span>
-          <span>£30.00</span>
+          <span>£110.00</span>
         </div>
 
         <div className="mt-32 text-center border-t border-gray-50 pt-10">
@@ -153,10 +157,11 @@ function SuccessContent() {
               A detailed confirmation email has been dispatched. Please check your inbox for preparation guidelines and your session details.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {[
                 { icon: User, label: "Practitioner", value: details?.practitionerName || "Expert Assigned" },
-                { icon: Phone, label: "Contact", value: details?.phone || "---" }
+                { icon: Phone, label: "Contact", value: details?.phone || "---" },
+                { icon: Calendar, label: "Date", value: details?.bookingDate || "---" }
               ].map((item, i) => (
                 <div key={i} className="bg-primary/3 p-4 rounded-xl border border-primary/5">
                   <p className="text-[7px] uppercase tracking-[0.2em] text-primary/50 font-bold mb-1 flex items-center gap-1">

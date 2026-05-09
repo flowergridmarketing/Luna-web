@@ -416,7 +416,7 @@ export const teamTree = [
                 "name": "Rico Wagner Caleep",
                 "role": "Leadership • Growth • Mental Performance Coaching executives & organisations",
                 "image": getImageUrl("about/team/rico.png"),
-                "slug": "rico-wagner-caleap-executive-coach-london",
+                "slug": "rico-wagner-caleap-executive-coach-croydon",
                 "description": "Rico supports executives and leaders in navigating high-pressure roles with clarity and resilience. Using the Wagner Method, he blends cognitive behavioural strategies, emotional intelligence, and holistic coaching to enhance performance, balance, and wellbeing. Trust Rico to guide you towards sustainable growth and empowered leadership."
             }
         ]
@@ -429,14 +429,14 @@ export const teamTree = [
                 "name": "Rebecca",
                 "role": "The Nutrition And Fitness Coach",
                 "image": getImageUrl("about/team/rebecca.png"),
-                "slug": "rebecca-nutrition-and-fitness-coach-london",
+                "slug": "rebecca-nutrition-and-fitness-coach-croydon",
                 "description": "Rebecca the nutrition and fitness coach trained in nutrition and training. Taylored nutrition plans, strength training and Pilates, balancing cardio and Tonning to get results. We are running boot camps for women, menopause programmes, and specializing in fitness and body strength still being individual."
             },
             {
                 "name": "Husna Hoque",
                 "role": "Personal Trainer & Wellness Coach",
                 "image": getImageUrl("about/team/husna.png"),
-                "slug": "husna-hoque-personal-trainer-wellness-coach-london",
+                "slug": "husna-hoque-personal-trainer-wellness-coach-croydon",
                 "description": "Trainer Husna specializes in creating customized workout routines and managing your macros to help you adopt healthier habits. With a focus on personalized fitness plans, she guides clients towards achieving their goals effectively. Trust in Trainer Husna to design workouts tailored to your needs and support you in making positive lifestyle changes. Elevate your fitness journey with Husna's expertise and commitment to your well-being."
             }
         ]
@@ -495,7 +495,7 @@ export const teamTree = [
                 "name": "Uzma",
                 "role": "Life Coach & Neurodiversity Specialist",
                 "image": getImageUrl("about/team/uzma.png"),
-                "slug": "uzma-neurodiversity-specialist-london",
+                "slug": "uzma-neurodiversity-specialist-croydon",
                 "description": "Uzma brings over 20 years of experience in teaching and community welfare to Flowergrid. Specialising in life coaching and neurodiversity support, Uzma helps individuals and families navigate life’s challenges with practical tools and deep compassion. With a background rooted in education and family advocacy, Uzma is dedicated to helping people build resilience and find meaningful direction in their lives."
             },
             {

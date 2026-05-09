@@ -3,17 +3,17 @@ import { stripe } from '@/lib/stripe';
 
 export async function POST(req: Request) {
   try {
-    const { name, email, phone, serviceName, practitionerName } = await req.json();
+    const { name, email, phone, serviceName, practitionerName, bookingDate } = await req.json();
 
     // Validate required fields
-    if (!name || !email || !phone || !serviceName) {
+    if (!name || !email || !phone || !serviceName || !bookingDate) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
       );
     }
 
-    const unitAmount = 3000;
+    const unitAmount = 11000;
 
     const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
 
@@ -42,6 +42,7 @@ export async function POST(req: Request) {
         phone,
         serviceName,
         practitionerName: practitionerName || '',
+        bookingDate,
       },
     });
 

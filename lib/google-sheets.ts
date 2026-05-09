@@ -28,6 +28,7 @@ export async function appendToSheet(data: any) {
       'Full Name',
       'Email',
       'Phone',
+      'Booking Date',
       'Service Name',
       'Practitioner Name',
       'Payment Status',
@@ -47,7 +48,8 @@ export async function appendToSheet(data: any) {
     const rowData = {
       'Full Name': data.name || 'N/A',
       'Email': data.email || 'N/A',
-      'Phone': data.phone ? `'${data.phone}` : 'N/A', // Force text format
+      'Phone': data.phone ? `'${data.phone}` : 'N/A',
+      'Booking Date': data.bookingDate || 'N/A',
       'Service Name': data.serviceName || 'N/A',
       'Practitioner Name': data.practitionerName || 'N/A',
       'Payment Status': 'Paid',

@@ -149,6 +149,7 @@ export default function BookingPage() {
     phone: '',
     serviceName: '',
     practitionerName: '',
+    bookingDate: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -170,6 +171,19 @@ export default function BookingPage() {
 
     if (!formData.serviceName) {
       toast.error('Please select a service category');
+      return;
+    }
+
+    if (!formData.bookingDate) {
+      toast.error('Please select a booking date');
+      return;
+    }
+
+    const selectedDate = new Date(formData.bookingDate);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (selectedDate < today) {
+      toast.error('Please select a date in the future');
       return;
     }
 
@@ -275,6 +289,22 @@ export default function BookingPage() {
                         placeholder="+44 7000 000000"
                       />
                     </div>
+                    <div className="space-y-3">
+                      <label className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] block">Booking Date</label>
+                      <input
+                        required
+                        type="date"
+                        name="bookingDate"
+                        value={formData.bookingDate}
+                        onChange={handleChange}
+                        className="w-full bg-transparent border-b border-primary/20 py-3 focus:outline-none focus:border-primary transition-all text-text-heading placeholder:text-text-body/60 font-light text-base appearance-none"
+                        style={{ colorScheme: 'light' }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Row 3: Service & Practitioner */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                     <CustomSelect
                       label="Service Category"
                       placeholder="Select Service"
@@ -282,10 +312,6 @@ export default function BookingPage() {
                       value={formData.serviceName}
                       onChange={(val) => handleSelectChange('serviceName', val)}
                     />
-                  </div>
-
-                  {/* Row 3: Practitioner */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
                     <CustomSelect
                       label="Preferred Practitioner"
                       placeholder="Any Available Expert"
@@ -337,6 +363,7 @@ export default function BookingPage() {
                   { label: "Selected Service", value: formData.serviceName || '---' },
                   { label: "Expert Practitioner", value: formData.practitionerName || 'Any Available' },
                   { label: "Contact Phone", value: formData.phone || '---' },
+                  { label: "Booking Date", value: formData.bookingDate ? new Date(formData.bookingDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) : '---' },
                 ].map((item, i) => (
                   <div key={i} className="border-b border-primary/5 pb-4">
                     <p className="text-[8px] uppercase tracking-[0.25em] text-primary/50 font-bold mb-2">{item.label}</p>
@@ -348,7 +375,7 @@ export default function BookingPage() {
                   <div>
                     <p className="text-[8px] uppercase tracking-[0.2em] text-primary/40 font-bold mb-1">Total Fee</p>
                     <p className="text-5xl font-heading font-medium text-text-heading leading-none">
-                      £30
+                      £110
                     </p>
                   </div>
                   <div className="text-[9px] text-primary/40 uppercase tracking-widest font-bold border border-primary/10 px-3 py-1 rounded-full">
