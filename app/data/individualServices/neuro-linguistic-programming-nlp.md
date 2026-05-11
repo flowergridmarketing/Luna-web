@@ -45,10 +45,6 @@ Samina Khan
 Founder and Holistic Life Coach  
 Samina uses NLP techniques to help you identify and reframe the mental patterns that keep you feeling stuck. Her approach focuses on building the clarity and self-awareness needed to take practical, grounded steps toward your goals.
 
-Monira Ahmed  
-Clinical Hypnotherapist and Master NLP Coach  
-Monira specialises in shifting subconscious patterns and language to help you develop conscious leadership. She uses NLP to help you bridge the gap between where you are now and the transformation you want to achieve.
-
 Runa Boolaky  
 NLP Practitioner and Life Coach  
 Runa focuses on the practical application of NLP for habit change and professional confidence. She helps you understand the connection between your thoughts and behaviours, providing tools to break limiting loops and build sustainable success.

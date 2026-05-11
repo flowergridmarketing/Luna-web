@@ -60,15 +60,6 @@ const foundersData: Founder[] = [
     firstName: "Samina",
     secondaryColor: "text-[#4E351A]!"
   },
-  // {
-  //   name: "Monira Ahmed",
-  //   role: "Co-Founder & Leadership Life Coach",
-  //   description: "Monira brings a unique blend of global strategy, human behaviour insight, and coaching expertise. She combines NLP, mindset training, and wellbeing practices to support clients in aligning their personal and professional lives. In the FlowerGrid programmes, Monira focuses on conscious living, habit transformation, and mind-body-soul integration. She empowers members to gain confidence, make lasting changes, and step fully into their potential.",
-  //   image: "about/person2/monira.png",
-  //   link: "/monira-ahmed-hypnotherapist",
-  //   firstName: "Monira",
-  //   secondaryColor: "text-[#4E351A]!"
-  // }
 ];
 
 const page = () => {
@@ -77,12 +68,13 @@ const page = () => {
       <TeamHero />
       <Teamconn />
       <div className="pt-6 pb-10 text-center top-0 z-10 backdrop-blur-sm">
-          <h2 className="text-4xl md:text-5xl font-heading text-[#3a3a3a] mb-4">
-              Meet the Founders
-          </h2>
-          <p className="text-[#5a5a5a] text-sm md:text-base max-w-2xl mx-auto px-6">
-            Guiding Flowergrid with vision, expertise, and heart, Samina Khan and Munira Ahmed bring decades of experience in holistic wellbeing, coaching, and personal transformation.          </p>
-          <Founders founders={foundersData}/>
+        <h2 className="text-4xl md:text-5xl font-heading text-[#3a3a3a] mb-4">
+          Meet the Founder
+        </h2>
+        <p className="text-[#5a5a5a] text-sm md:text-base max-w-2xl mx-auto px-6">
+          Guiding Flowergrid with vision, expertise, and heart, Samina Khan brings decades of experience in holistic wellbeing, coaching, and personal transformation.
+        </p>
+        <Founders founders={foundersData} />
       </div>
       <Team />
       <div className='w-full mt-16'>
@@ -90,7 +82,7 @@ const page = () => {
         <LunaTeamSection />
       </div>
       <LeafScrollText lines={lines} />
-      <Connect image='about/team/team-conn.png' title='Find Your Supportive Practitioner and Begin Your Journey' description='Book Your Discovery Session' btnText='Book Your Discovery Session'  />
+      <Connect image='about/team/team-conn.png' title='Find Your Supportive Practitioner and Begin Your Journey' description='Book Your Discovery Session' btnText='Book Your Discovery Session' />
 
     </>
   )

@@ -67,7 +67,7 @@ Quietening the inner critic allows your natural confidence to emerge. Hypnothera
 Experience subconscious healing at Flowergrid Holistic Wellness Centre. Our practitioners are highly trained in clinical hypnotherapy and RTT (Rapid Transformational Therapy) to ensure you receive the most effective support possible.
 
 H3: Choose Your Coach  
-Explore the profiles of our hypnotherapists, such as Monira Ahmed or Yvonne Hewitt, to understand their specialities and approach. Finding a practitioner you feel comfortable with is the first step toward successful transformation.
+Explore the profiles of our hypnotherapists, such as Yvonne Hewitt, to understand their specialities and approach. Finding a practitioner you feel comfortable with is the first step toward successful transformation.
 
 H3: Get in Touch  
 Reach out via our website, email us at sk@flowergrid.co.uk, or call us on \+44 7432 211096\. Tell us a little bit about what you are hoping to change, and we will guide you from there.
@@ -86,9 +86,6 @@ Hannah Brooks, London
 “I booked hypnotherapy to help with anxiety before presentations. It helped me feel steadier and less reactive. The change felt gentle, but real.”  
 Omar Khan, Birmingham
 
-“Working with Monira helped me understand what was driving my stress habits. I now have tools I can actually use when I feel triggered.”  
-Sophie Taylor, Croydon
-
 “Working with Samina and the hypnotherapy team gave me a different way to work with my confidence. I stopped getting stuck in the same inner dialogue and started trusting my choices more.”  
 Priya Desai, Manchester
 
@@ -104,13 +101,13 @@ Will I lose control or be made to do something against my will?
 This is the most common myth about hypnotherapy. You are always in complete control and fully aware of what is happening. You cannot be "made" to do anything that goes against your values or your will. It is a collaborative process where you and your practitioner work together to achieve the goals you have set.
 
 What kind of issues can hypnotherapy help me with?  
-At Flowergrid, we use hypnotherapy to help with a wide range of challenges. It is particularly effective for breaking unwanted habits, overcoming phobias like fear of flying or public speaking, and managing chronic anxiety. Monira and our team also use specific techniques like Rapid Transformational Therapy (RTT) to help clients get to the root of self sabotage and performance blocks.
+At Flowergrid, we use hypnotherapy to help with a wide range of challenges. It is particularly effective for breaking unwanted habits, overcoming phobias like fear of flying or public speaking, and managing chronic anxiety. Our team also use specific techniques like Rapid Transformational Therapy (RTT) to help clients get to the root of self sabotage and performance blocks.
 
 What does being under hypnosis actually feel like?  
 Most people describe it as a feeling of deep, pleasant relaxation. It is very similar to the "daydreaming" state you might experience when you are lost in a book or just about to fall asleep. You stay awake and conscious of your surroundings, but your mind feels quieter and more focused than usual.
 
 Can I book a free consultation before I decide to start?  
-Yes. We offer a free 30 minute discovery call to all new clients. This is a chance for you to speak with one of our practitioners, such as Samina or Monira, to talk through what you are looking for and ask any questions you have. There is no pressure to book a full session afterwards: it is simply about making sure our approach is the right fit for you.
+Yes. We offer a free 30 minute discovery call to all new clients. This is a chance for you to speak with one of our practitioners, such as Samina, to talk through what you are looking for and ask any questions you have. There is no pressure to book a full session afterwards: it is simply about making sure our approach is the right fit for you.
 
 Is hypnotherapy available online or do I need to visit the Croydon centre?  
 We offer both. You can visit our holistic wellness centre in Coulsdon, Croydon (CR5 2JA) for in person sessions, or you can connect with us online via secure video call. Both formats are equally effective for hypnotherapy work, and many of our clients across the UK prefer the comfort and privacy of their own home for these sessions.

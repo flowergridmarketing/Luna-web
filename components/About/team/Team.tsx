@@ -7,6 +7,8 @@ import { getImageUrl } from '@/lib/utils'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
+import { User } from 'lucide-react'
+
 const TeamTreeSection = () => {
   const [expandedCard, setExpandedCard] = useState<string | null>(null)
   const router = useRouter()
@@ -28,7 +30,7 @@ const TeamTreeSection = () => {
 
   return (
     <div
-      style={{ background: `url(${getImageUrl('/about/team/bg.png')}) no-repeat center center/cover` }}
+      style={{ background: `url(${getImageUrl('/about/team/bg.png')}) no-repeat top center/cover` }}
       className='flex flex-col items-center py-10 px-4 mb-10 lg:px-12 md:px-20 min-h-screen relative overflow-hidden'
     >
       {/* Title responsive text size */}
@@ -103,12 +105,18 @@ const TeamTreeSection = () => {
                       >
                         {/* Image - stays at top */}
                         <div className="relative w-full h-[200px] md:h-[280px]">
-                          <Image
-                            src={member.image}
-                            alt={member.name}
-                            fill
-                            className="object-cover object-[center_20%]"
-                          />
+                          {member.image ? (
+                            <Image
+                              src={member.image}
+                              alt={member.name}
+                              fill
+                              className="object-cover object-[center_20%]"
+                            />
+                          ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-[#E5D5C0]">
+                              <User className="w-20 h-20 text-[#714C24] opacity-50" />
+                            </div>
+                          )}
                         </div>
 
                         {/* Description Section - Appears below image on hover */}

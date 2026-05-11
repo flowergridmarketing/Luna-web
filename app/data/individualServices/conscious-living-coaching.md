@@ -46,10 +46,6 @@ Samina Khan
 Founder and Holistic Life Coach  
 Samina helps you align your daily habits with your inner values. She specialises in helping you uncover what you truly want and provides the practical, grounded support needed to live with genuine authenticity and purpose.
 
-Monira Ahmed  
-Clinical Hypnotherapist and NLP Coach  
-Monira focus on the "Intelligent Soul" approach, helping you develop conscious leadership and a deeper self-understanding. She guides you to align your inner world with your external actions for a more fulfilled life.
-
 Tarun Sharma  
 Reiki Grand Master and Holistic Energy Consultant  
 Tarun helps you live consciously by harmonising your internal energy and your physical environment. Through Reiki and Vastu energy guidance, he ensures your life "grid" supports your long term peace and growth.

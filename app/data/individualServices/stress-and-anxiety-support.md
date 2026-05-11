@@ -45,10 +45,6 @@ Dr. Hana Patel
 GP and Mental Health Coach  
 Hana combines professional medical expertise with practical coaching to help you understand and manage the physical and emotional roots of your stress and anxiety.
 
-Monira Ahmed  
-Clinical Hypnotherapist and NLP Coach  
-Monira specialises in shifting the subconscious patterns behind chronic anxiety, helping you rewire your internal response to pressure and develop lasting mental resilience.
-
 Dr. Ravinder  
 Auricular Acupuncturist and Reiki Grand Master  
 Dr. Ravinder provides rapid nervous system regulation through ear acupuncture and energy healing, designed to lower stress hormones and restore a sense of physical and energetic calm.
