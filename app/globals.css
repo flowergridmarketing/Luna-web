@@ -131,3 +131,6 @@ svg {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.font-parisienne {
+  font-family: var(--font-parisienne), cursive;
+}

@@ -1,7 +1,7 @@
 import re
 import json
 
-def parse_practitioners(filepath):
+def parse_practitioners(filepath
     with open(filepath, 'r') as f:
         text = f.read()
 
