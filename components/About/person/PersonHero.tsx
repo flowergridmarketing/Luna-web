@@ -121,7 +121,7 @@ export default function PersonHero({
           </h1>
 
           {subtext && (
-            <p className="max-w-3xl text-base md:text-lg text-black/80 mb-6 font-light leading-relaxed">
+            <p className="max-w-3xl text-base md:text-lg text-black! mb-6 font-light leading-relaxed">
               {subtext}
             </p>
           )}

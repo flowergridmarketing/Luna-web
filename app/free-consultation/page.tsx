@@ -11,9 +11,15 @@ import TestimonialsSection from '@/components/FreeConsultation/TestimonialsSecti
 import FaqSection from '@/components/Contact/FAQSection';
 import { freeConsultationData } from '@/app/data/free-consultation';
 import HeroTestimonials from '@/components/Home/HeroTestimonials';
+import FounderStatement from '@/components/FreeConsultation/FounderStatement';
+import PhilosophySection from '@/components/FreeConsultation/PhilosophySection';
+import SaminaHistory from '@/components/FreeConsultation/SaminaHistory';
+import FlowergridStory from '@/components/FreeConsultation/FlowergridStory';
+import SupportChallenge from '@/components/FreeConsultation/SupportChallenge';
+import SupportReasons from '@/components/FreeConsultation/SupportReasons';
 
 const FreeConsultationPage = () => {
-  const { hero, calendly, benefits, practitioner, howItWorks, services, brandSection, testimonials, faq } = freeConsultationData;
+  const { hero, calendly, benefits, practitioner, howItWorks, services, brandSection, testimonials, faq, history, flowergridStory, supportChallenge, supportReasons } = freeConsultationData;
 
   // Map howItWorks steps to JourneySection items format with exact order from reference image
   const steps = howItWorks.steps;
@@ -48,17 +54,29 @@ const FreeConsultationPage = () => {
         badges={badges}
       />
 
+      <FounderStatement />
+
+      <PhilosophySection /> 
+
+      <SaminaHistory data={history} />
+
+      <FlowergridStory data={flowergridStory} />
+
+      <SupportChallenge data={supportChallenge} />
+
+      <SupportReasons data={supportReasons} />
+
+      <JourneySection 
+        title={howItWorks.title}
+        description=""
+        items={journeyItems}
+      />
+
       <CalendlySection data={calendly} />
 
       <BenefitsSection data={benefits} />
 
       <PractitionerSection data={practitioner} />
-
-      <JourneySection
-        title={howItWorks.title}
-        description=""
-        items={journeyItems}
-      />
 
       <section className="py-24 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">

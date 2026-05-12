@@ -133,5 +133,83 @@ export const freeConsultationData = {
         answer: "We understand that plans change. You can easily reschedule or cancel your consultation via the link provided in your confirmation email, preferably with 24 hours' notice." 
       }
     ]
+  },
+  history: [
+    {
+      title: "My story",
+      text: "I spent over twenty years in the world of business and startups, focused on high performance and building things that last. However, when I transitioned into motherhood, my entire world shifted. On the outside, I was evolving into a new role, but on the inside, I was quietly asking myself who I was actually becoming. This period was deeply confronting. I was dealing with persistent physical pain and emotional overwhelm, yet finding the right help felt like a second full-time job. Every referral and Google search led to a different, disconnected service. No one was talking to each other, and I realised then that a completely new approach was needed.",
+      image: "/images/free-consultation/story.jpg",
+      imagePosition: "left",
+      decorativeFlower: "/images/free-consultation/flower1.png"
+    },
+    {
+      title: "My philosophy",
+      text: "My philosophy is simple. I imagine you are like a seed in an environment. The health of the root determines the outcome, not just the environment. When you combine modern psychological tools, ancient healing practices and holistic mind-body techniques, you can begin to transform the root cause of your emotional, physical and mental distress.\n\nBy addressing all parts of your system, healing is accelerated. My focus is on the foundation, providing the right tools, and holding a compassionate space for your growth.",
+      image: "/images/free-consultation/philosophy.jpg",
+      imagePosition: "right",
+      decorativeFlower: "/images/free-consultation/flower2.png"
+    },
+    {
+      title: "Why I do this work",
+      text: "It is the work that gave me my life back. I believe that sustainable and deep personal growth is the solution to most the world's problems. I know firsthand the pain of feeling lost and disconnected from my purpose. I've walked the long and hard path of returning to a state of inner harmony and well-being.\n\nMy aim is to help others walk their path with much more support and ease. I truly believe that when we heal ourselves, we also heal our world. This work is about helping people find their way back home.",
+      image: "/images/free-consultation/work.jpg",
+      imagePosition: "left",
+      decorativeFlower: "/images/free-consultation/flower3.png"
+    }
+  ] as const,
+  flowergridStory: {
+    headline: "The Story Behind Flowergrid",
+    items: [
+      {
+        text: "There was a point in my life where I moved from high performance into motherhood and fully stepping into being a wife. From the outside it looked like a beautiful evolution, but inside I felt unsettled. I kept asking myself, where am I now, who am I becoming, and what is my role in this new chapter?",
+        image: "/images/free-consultation/story1.png",
+        imagePosition: "right"
+      },
+      {
+        text: "Around the same time, I was dealing with health challenges that would not shift. Sciatica affected me physically, and emotionally I could feel old patterns from childhood showing up in how I responded to my children. That was confronting. It made me realise I could not keep pushing through and pretending I was fine.",
+        image: "/images/free-consultation/story2.png",
+        imagePosition: "left"
+      },
+      {
+        text: "So I started searching for support. I tried alternative remedies for the pain. I worked with a life coach to make sense of my identity. I explored trauma healing, mindset work, and practical tools for coping. What surprised me most was how exhausting it was to find the right help. Referrals, Google searches, trial and error. Every service lived in a different place.",
+        image: "/images/free-consultation/story3.png",
+        imagePosition: "right"
+      },
+      {
+        text: "I kept thinking, why is wellbeing so fragmented? Why isn't there one place that supports mind, body and soul together? That question became the seed of Flowergrid.",
+        image: "/images/free-consultation/story4.png",
+        imagePosition: "left"
+      }
+    ]
+  } as const,
+  supportChallenge: {
+    headline: "Why finding the right support often feels like a second job",
+    subtext: "Most people come to us after they have already tried everything else. They have spent hours on Google, followed endless referrals, and gone through the exhausting process of trial and error with different treatments.",
+    bodyText: [
+      "The most frustrating part of that journey is often the fragmentation. You might see a doctor for your physical health, a coach for your career, and a therapist for your emotions, but none of them are talking to each other. You are left to act as your own project manager, repeating your story over and over while you are already feeling depleted.",
+      "I built Flowergrid to change that. We believe you should not have to manage your wellbeing in separate, disconnected boxes.",
+      "Flowergrid is one integrated home where mind, body, and spirit support finally sit together. Because our team of over 20 practitioners actually collaborates, you receive one joined up plan that respects how your stress, your health, and your purpose are all linked. You stop chasing symptoms and start building a foundation that actually lasts."
+    ],
+    images: {
+      stressed: "/images/free-consultation/stressed.jpg",
+      relaxed: "/images/free-consultation/relaxed.jpg"
+    }
+  },
+  supportReasons: {
+    headline: "Support that fits the reality of your life",
+    text: "People come to us for lots of different reasons, but it often starts with the same feeling: life is heavy, you're carrying too much, and you're not sure where to begin. In your free consultation, we help you get clear on what support fits you best and what the next step should be.",
+    quote: "Self-care is not selfish. You cannot serve from an empty vessel.",
+    reasons: [
+      "Stress, anxiety, and a mind that won't switch off",
+      "Burnout, exhaustion, and feeling emotionally stretched",
+      "Sleep problems and that tired but wired feeling",
+      "Low confidence, self doubt, and overthinking decisions",
+      "Life transitions, identity shifts, and feeling stuck",
+      "Relationship strain, boundaries, and communication challenges",
+      "Body tension, headaches, jaw clenching, and stress held physically",
+      "Hormonal changes and midlife wellbeing support",
+      "Gut health, cravings, and building a steadier relationship with food",
+      "Leadership pressure and workplace stress that's affecting your health"
+    ]
   }
 };

@@ -10,6 +10,14 @@ import Footer from "@/components/Home/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Toaster } from "sonner";
 import { headers } from "next/headers";
+import { Parisienne } from "next/font/google";
+
+const parisienne = Parisienne({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-parisienne",
+  display: "swap",
+});
 
 export async function generateMetadata(): Promise<Metadata> {
   const headersList = await headers();
@@ -82,7 +90,7 @@ export default async function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <GoogleTagManager gtmId="GTM-T5QR8FGW" />
-      <body className="antialiased overflow-x-hidden">
+      <body className={`${parisienne.variable} antialiased overflow-x-hidden`}>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-T5QR8FGW"

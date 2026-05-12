@@ -46,10 +46,6 @@ Samina Khan
 Founder and Holistic Life Coach  
 Samina specialises in guiding you to uncover your true desires and take practical, grounded steps toward the life you want through an integrative approach to your wellbeing.
 
-Monira Ahmed  
-Clinical Hypnotherapist and NLP Coach  
-Monira focus on subconscious transformation and mindset shifts, helping you develop the conscious leadership and inner strength needed for deep personal growth.
-
 Runa Boolaky  
 NLP Practitioner and Life Coach  
 Runa is your guide for building healthy habits and achieving professional goals, using practical tools to help you evolve and create a more balanced, prosperous life.

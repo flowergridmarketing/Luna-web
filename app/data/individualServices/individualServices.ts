@@ -882,8 +882,8 @@ const services = [
       ]
     },
     "practitioners": [
-      'husna-hoque-personal-trainer-wellness-coach-london',
-      'rebecca-nutrition-and-fitness-coach-london',
+      'husna-hoque-personal-trainer-wellness-coach-croydon',
+      'rebecca-nutrition-and-fitness-coach-croydon',
       'nudrat-chagtai-nutritional-therapist'
     ],
     "benefitsDescription": "Choosing an integrated path to fitness provides more than just physical changes. It offers the clinical insight and professional support needed to build a body that feels as good as it looks.",
@@ -1171,7 +1171,7 @@ const services = [
       ]
     },
     "practitioners": [
-      "rebecca-nutrition-and-fitness-coach-london",
+      "rebecca-nutrition-and-fitness-coach-croydon",
       "nudrat-chagtai-nutritional-therapist"
     ],
     "benefitsDescription": "Choosing professional Nutritional Consulting at Flowergrid offers more than just a meal plan. It provides the clinical insight and habit-changing support needed to sustain your health for the long term.",
@@ -1457,7 +1457,7 @@ const services = [
       ]
     },
     "practitioners": [
-      "rico-wagner-caleap-executive-coach-london",
+      "rico-wagner-caleap-executive-coach-croydon",
       "aysha-iqbal-communication-coach",
       "tamkin-riaz-career-development-coach-in-croydon"
     ],
