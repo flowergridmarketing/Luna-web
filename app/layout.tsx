@@ -7,7 +7,7 @@ import Navbar from "@/components/Home/Navbar";
 import Preloader from "@/components/Preloader";
 import { LoadingProvider } from "@/contexts/LoadingContext";
 import Footer from "@/components/Home/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
+import BookConsultationButton from "@/components/BookConsultationButton";
 import { Toaster } from "sonner";
 import { headers } from "next/headers";
 import { Parisienne } from "next/font/google";
@@ -167,7 +167,7 @@ export default async function RootLayout({
           {!isAdminRoute && <Navbar />}
           {children}
           {!isAdminRoute && <Footer />}
-          {!isAdminRoute && <ScrollToTop />}
+          {!isAdminRoute && <BookConsultationButton />}
         </LoadingProvider>
       </body>
     </html>
