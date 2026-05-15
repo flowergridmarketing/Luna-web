@@ -16,6 +16,9 @@ export default function SmoothScroll() {
             touchMultiplier: 2,
         });
 
+        // Expose lenis globally so other components can trigger smooth scrolls
+        (window as any).lenis = lenis;
+
         let rafId: number;
         function raf(time: number) {
             lenis.raf(time);
@@ -31,6 +34,7 @@ export default function SmoothScroll() {
                 cancelAnimationFrame(rafId);
             }
             lenis.destroy();
+            delete (window as any).lenis;
         };
     }, []);
 
