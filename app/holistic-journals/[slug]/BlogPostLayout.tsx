@@ -51,13 +51,13 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
             )}
 
             {/* Main Content Container */}
-            <div className="max-w-7xl mx-auto px-6 md:px-12">
+            <div className="max-w-[1600px] mx-auto px-6 md:px-12">
 
                 {/* Back Button & Focus Toggle */}
                 <div
                     className={`sticky top-0 z-40 bg-[#F3EAD8]/80 backdrop-blur-md transition-all duration-300 ${isFocusMode ? 'pt-24 pb-4' : 'py-4'} mb-6 -mx-6 px-6 md:-mx-12 md:px-12`}
                 >
-                    <div className={`flex justify-between items-center ${isFocusMode ? 'max-w-4xl mx-auto' : ''}`}>
+                    <div className={`flex justify-between items-center ${isFocusMode ? 'max-w-5xl mx-auto' : ''}`}>
                         <Link
                             href="/holistic-journals"
                             className="inline-flex items-center gap-2 text-sm text-[#8C7A65] hover:text-[#1C1C1C] transition-colors uppercase tracking-widest"
@@ -92,7 +92,7 @@ export default function BlogPostLayout({ blog, latestPost, featuredPosts }: { bl
 
 
                 {/* Main Grid Layout */}
-                <div className={`grid gap-12 transition-all duration-500 ease-in-out ${isFocusMode ? 'grid-cols-1 max-w-4xl mx-auto' : 'grid-cols-1 lg:grid-cols-12'
+                <div className={`grid gap-12 transition-all duration-500 ease-in-out ${isFocusMode ? 'grid-cols-1 max-w-5xl mx-auto' : 'grid-cols-1 lg:grid-cols-12'
                     }`}>
 
                     {/* LEFT COLUMN: ToC & Tools (Hidden in Focus Mode) */}

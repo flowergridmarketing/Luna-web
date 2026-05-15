@@ -260,14 +260,15 @@ export default function Navbar() {
           </div>
         </Link >
         {/* Book Consultation Button */}
-        <Link
-          href="https://calendly.com/flowergridmarketing/30min?month=2026-02"
-          target="_blank"
-          className="flex items-center gap-2 px-3 py-2.5 md:px-6 md:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white"
-        >
-          <Calendar className="w-6 h-6 md:hidden" />
-          <span className="hidden md:inline text-sm font-sans tracking-wide">Book Consultation</span>
-        </Link>
+          <Link
+            href="https://calendly.com/flowergridmarketing/30min?month=2026-02"
+            target="_blank"
+            className="flex items-center gap-2 px-3 py-2.5 md:px-6 md:py-2.5 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 text-white"
+          >
+            <Calendar className="w-6 h-6 md:hidden" />
+            <span className="hidden md:inline text-sm font-sans tracking-wide">Book Consultation</span>
+          </Link>
+
 
 
         <button

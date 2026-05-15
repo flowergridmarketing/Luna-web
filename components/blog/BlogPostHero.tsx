@@ -62,7 +62,7 @@ export default function BlogPostHero({
 
     return (
         <div className="w-full mb-16">
-            <div className="relative h-screen w-full overflow-hidden">
+            <div className="relative h-[70vh] lg:h-auto lg:aspect-16/10 w-full overflow-hidden">
                 {/* Background Image */}
                 <Image
                     src={coverImage || getImageUrl('blog/individualblogpost.png')}
@@ -72,9 +72,9 @@ export default function BlogPostHero({
                     className="object-cover object-[center_20%]"
                 />
 
-                <div className="absolute inset-0 flex flex-col justify-end pb-50 md:pb-40">
-                    <div className="max-w-350 mx-auto px-6 md:px-12 w-full !text-white">
-                        <div className="max-w-4xl">
+                <div className="absolute inset-0 flex flex-col justify-end pb-32 md:pb-40">
+                    <div className="max-w-[1600px] mx-auto px-6 md:px-12 w-full text-white!">
+                        <div className="max-w-5xl">
                             <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs md:text-sm font-medium tracking-[0.15em] mb-6 uppercase opacity-90">
                                 <span className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 hover:bg-white/30 transition-colors cursor-default">
                                     {category}
@@ -91,7 +91,7 @@ export default function BlogPostHero({
                             </div>
 
                             {/* Title */}
-                            <h1 className="text-4xl md:text-5xl lg:text-5xl font-serif leading-[1.1] mb-8 drop-shadow-lg !text-white">
+                            <h1 className="text-4xl md:text-5xl lg:text-5xl font-serif leading-[1.1] mb-8 drop-shadow-lg text-white!">
                                 {title}
                             </h1>
                         </div>
@@ -101,7 +101,7 @@ export default function BlogPostHero({
 
             {/* TLDR Section - Styled Box Below Hero */}
             {tldr && (
-                <div className="max-w-4xl mx-auto -mt-24 md:-mt-32 relative z-10 px-6">
+                <div className="max-w-5xl mx-auto -mt-24 md:-mt-32 relative z-10 px-6">
                     <div className="bg-[#FAF6F0]/95 backdrop-blur-xl border border-[#8C7A65]/10 rounded-4xl p-8 md:p-12 shadow-xl shadow-[#8C7A65]/5 relative overflow-hidden">
 
                         <div className="flex flex-col items-center text-center">

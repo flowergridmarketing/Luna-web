@@ -18,23 +18,23 @@ import { getImageUrl } from "@/lib/utils";
 const locationTestimonials: Testimonial[] = [
   {
     id: 1,
-    quote: "FlowerGrid helped me find balance when I didn't even realize how much I needed it. The care I received was more than service. It was healing. I've tried so many wellness programs before, but nothing felt as personal and transforming as this. It's like they see the real you. Thank you so much!!!",
-    author: "Aisha M.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&h=200&auto=format&fit=crop",
-    rating: 5,
+    quote: "Flowergrid’s integrative wellness approach reminded me that healing is a personal journey. Their support allowed me to progress at my own pace and feel fully restored",
+    author: "Michael Foster, Brighton.",
+    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    rating: 5
   },
   {
     id: 2,
-    quote: "FlowerGrid helped me find balance when I didn't even realize how much I needed it. The care I received was more than service. It was healing. I've tried so many wellness programs before, but nothing felt as personal and transforming as this. It's like they see the real you. Thank you so much!!!",
-    author: "Jonathan L.",
+    quote: "I had tried several holistic wellness programmes before, but Flowergrid was different. The personalised approach helped me make real, lasting changes in my life.",
+    author: "Olivia Bennett, Kent",
     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5,
   },
   {
     id: 3,
-    quote: "FlowerGrid helped me find balance when I didn't even realize how much I needed it. The care I received was more than service. It was healing. I've tried so many wellness programs before, but nothing felt as personal and transforming as this. It's like they see the real you. Thank you so much!!!",
-    author: "Winona.",
-    image: "https://images.unsplash.com/photo-1521146764736-56c929d59c83?q=80&w=200&h=200&auto=format&fit=crop",
+    quote: "I felt genuinely understood from day one. The guidance I received helped me reconnect with myself and achieve a deeper level of mind body spirit wellness.",
+    author: "David Wilson, UK.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&h=200&auto=format&fit=crop",
     rating: 5,
   }
 ];
