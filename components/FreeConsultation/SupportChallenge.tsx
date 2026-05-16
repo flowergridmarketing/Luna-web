@@ -54,7 +54,7 @@ const SupportChallenge = ({ data }: SupportChallengeProps) => {
             
             {/* Top Row: Stressed Image & Headline */}
             <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-start">
-              {/* Stressed Image with Blue Border */}
+              {/* Stressed Image */}
               <div className="challenge-image-stressed relative w-full md:w-[350px] aspect-square shrink-0">
                 <div className="absolute -inset-1 rounded-4xl z-0"></div>
                 <div className="relative w-full h-full rounded-[1.8rem] overflow-hidden z-10">
@@ -79,7 +79,7 @@ const SupportChallenge = ({ data }: SupportChallengeProps) => {
             </div>
 
             {/* Bottom Row: Body Text Blocks */}
-            <div className="challenge-body-text space-y-8 max-w-3xl">
+            <div className="challenge-body-text space-y-8 max-w-full">
               {data.bodyText.map((paragraph, index) => (
                 <p key={index} className="text-lg md:text-xl text-black! leading-[1.8] font-sans">
                   {paragraph}
