@@ -137,7 +137,7 @@ export const freeConsultationData = {
   history: [
     {
       title: "My story",
-      text: "I spent over twenty years in the world of business and startups, focused on high performance and building things that last. However, when I transitioned into motherhood, my entire world shifted. On the outside, I was evolving into a new role, but on the inside, I was quietly asking myself who I was actually becoming. This period was deeply confronting. I was dealing with persistent physical pain and emotional overwhelm, yet finding the right help felt like a second full-time job. Every referral and Google search led to a different, disconnected service. No one was talking to each other, and I realised then that a completely new approach was needed.",
+      text: "I spent over twenty years in the world of business and startups, focused on high performance and building things that last. However, when I transitioned into motherhood, my entire world shifted. On the outside, I was evolving into a new role, but on the inside, I was quietly asking myself who I was actually becoming.\n\nThis period was deeply confronting. I was dealing with persistent physical pain and emotional overwhelm, yet finding the right help felt like a second full-time job. Every referral and Google search led to a different, disconnected service. No one was talking to each other, and I realised then that a completely new approach was needed.",
       image: "/images/free-consultation/story.jpg",
       imagePosition: "left",
       decorativeFlower: "/images/free-consultation/flower1.png"

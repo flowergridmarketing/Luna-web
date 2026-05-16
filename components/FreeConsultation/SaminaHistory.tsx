@@ -27,7 +27,7 @@ const SaminaHistory = ({ data }: SaminaHistoryProps) => {
 
   useGSAP(() => {
     const rows = gsap.utils.toArray('.history-row');
-    
+
     rows.forEach((row: any) => {
       gsap.fromTo(row,
         { y: 60, opacity: 0 },
@@ -49,11 +49,10 @@ const SaminaHistory = ({ data }: SaminaHistoryProps) => {
     <section ref={containerRef} className="bg-[#f3e5cb] overflow-hidden py-10 md:py-20">
       <div className="max-w-7xl mx-auto flex flex-col gap-4 md:gap-8 px-4 md:px-6">
         {data.map((item, index) => (
-          <div 
-            key={index} 
-            className={`history-row flex flex-col items-center justify-center md:flex-row bg-[#f3e5cb] ${
-              item.imagePosition === 'right' ? 'md:flex-row-reverse' : ''
-            }`}
+          <div
+            key={index}
+            className={`history-row flex flex-col items-center justify-center md:flex-row bg-[#f3e5cb] ${item.imagePosition === 'right' ? 'md:flex-row-reverse' : ''
+              }`}
           >
             {/* Image Column */}
             <div className="history-image w-full md:w-1/2 relative h-[400px] md:h-auto min-h-[500px] lg:min-h-[600px]">
@@ -69,13 +68,22 @@ const SaminaHistory = ({ data }: SaminaHistoryProps) => {
             {/* Text Column */}
             <div className="history-text w-100 md:w-1/2 flex items-center mx-10 md:mx-0 justify-center p-6 md:p-12 lg:p-16 relative bg-[#f3e5cb]">
               <div className="relative w-full max-w-lg border border-[#C7AD94] rounded-xl p-8 md:p-12 z-10 flex flex-col justify-center">
-                <div className={`relative z-10 ${item.imagePosition === 'right' ? 'text-right' : 'text-left'}`}>
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-sans font-medium text-black mb-6 tracking-tight">
+                <div className={`relative z-10 flex flex-col gap-4 ${item.imagePosition === 'right' ? 'text-right' : 'text-left'}`}>
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-sans font-medium text-black mb-2 tracking-tight">
                     {item.title}
                   </h3>
-                  <p className="text-base md:text-lg text-black/90 leading-[1.8] font-sans whitespace-pre-line">
-                    {item.text}
-                  </p>
+                  {item.text.split('\n\n').map((paragraph, pIndex, array) => (
+                    <p 
+                      key={pIndex} 
+                      className={`text-base md:text-lg text-black/90 leading-[1.8] font-sans ${
+                        pIndex === array.length - 1 
+                          ? (item.imagePosition === 'right' ? 'md:pl-16 lg:pl-28' : 'md:pr-16 lg:pr-28') 
+                          : ''
+                      }`}
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
                 </div>
 
                 {/* Decorative Flower - positioned under the text */}

@@ -56,7 +56,7 @@ const FreeConsultationPage = () => {
 
       <FounderStatement />
 
-      <PhilosophySection /> 
+      <PhilosophySection />
 
       <SaminaHistory data={history} />
 
@@ -66,7 +66,7 @@ const FreeConsultationPage = () => {
 
       <SupportReasons data={supportReasons} />
 
-      <JourneySection 
+      <JourneySection
         title={howItWorks.title}
         description=""
         items={journeyItems}
@@ -76,7 +76,6 @@ const FreeConsultationPage = () => {
 
       <BenefitsSection data={benefits} />
 
-      <PractitionerSection data={practitioner} />
 
       <section className="py-24 px-6 md:px-12 lg:px-20">
         <div className="max-w-7xl mx-auto">

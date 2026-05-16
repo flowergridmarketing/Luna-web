@@ -83,13 +83,13 @@ const PhilosophySection = () => {
       ref={sectionRef}
       className="pt-10 md:pt-2 pb-16 md:pb-7 bg-[#f3e5cb] px-4 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-0">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-0">
         {/* Left Column */}
         <div
           ref={leftTextRef}
-          className="w-full md:w-[35%] text-center md:text-right md:pr-4 lg:pr-10"
+          className="w-full md:w-[40%] lg:w-[38%] text-center md:text-right md:pr-4 lg:pr-10"
         >
-          <p className="text-2xl md:text-3xl lg:text-4xl font-sans text-black! leading-[1.4] md:leading-normal whitespace-pre-line tracking-tight">
+          <p className="text-xl sm:text-2xl md:text-[22px] lg:text-3xl xl:text-4xl font-sans text-black! leading-[1.4] md:leading-snug lg:leading-normal whitespace-pre-line tracking-tight">
             {`As a holistic life coach and
 wellness is never a one-
 in this free consultation
@@ -99,10 +99,10 @@ the right support from`}
         </div>
 
         {/* Center Column: Portrait */}
-        <div className="w-full md:w-[30%] flex justify-center z-10 self-center">
+        <div className="w-full md:w-[20%] lg:w-[24%] flex justify-center z-10 self-center">
           <div
             ref={imageRef}
-            className="relative w-[320px] h-[320px] md:w-full md:h-[500px] lg:h-[600px]"
+            className="relative w-[280px] h-[320px] md:w-full md:h-[450px] lg:h-[550px] xl:h-[600px]"
           >
             <Image
               src={getImageUrl("about/person1/saminahalf.png")}
@@ -117,14 +117,14 @@ the right support from`}
         {/* Right Column */}
         <div
           ref={rightTextRef}
-          className="w-full md:w-[35%] text-center md:text-left md:pl-4 lg:pl-10"
+          className="w-full md:w-[40%] lg:w-[38%] text-center md:text-left md:pl-4 lg:pl-10"
         >
-          <p className="text-2xl md:text-3xl lg:text-4xl font-sans text-black! leading-[1.4] md:leading-normal whitespace-pre-line tracking-tight">
+          <p className="text-xl sm:text-2xl md:text-[22px] lg:text-3xl xl:text-4xl font-sans text-black! leading-[1.4] md:leading-snug lg:leading-normal whitespace-pre-line tracking-tight">
             {`practitioner, I know that true
-            -size-fits-all solution. My role
-            is to listen properly, help you
-            going on, and match you
-            our team of over 20 experts.`}
+-size-fits-all solution. My role
+is to listen properly, help you
+going on, and match you
+our team of over 20 experts.`}
           </p>
         </div>
       </div>
