@@ -154,22 +154,27 @@ export const personsData = {
       {
         image: getImageUrl("about/person1/s1.jpg"),
         title: "Personal & Professional Growth Coaching",
+        link: "/services/personal-development-coaching",
       },
       {
         image: getImageUrl("about/person1/s2.jpg"),
         title: "Leadership & Soft Skills Coaching",
+        link: "/services/professional-development-coaching",
       },
       {
         image: getImageUrl("about/person1/s3.jpg"),
         title: "Neuro-Linguistic Programming",
+        link: "/services/neuro-linguistic-programming-nlp",
       },
       {
         image: getImageUrl("about/person1/s4.jpg"),
         title: "Soul Reflection & Transformation Work",
+        link: "/services/conscious-living-coaching",
       },
       {
         image: getImageUrl("about/person1/s5.jpg"),
         title: "Rekhi Healing",
+        link: "/services/reiki-healing",
       },
     ],
   },
@@ -333,22 +338,27 @@ export const personsData = {
       {
         image: getImageUrl("about/person2/ps3.jpg"),
         title: "Hypnotherapy",
+        link: "/services/hypnotherapy",
       },
       {
         image: getImageUrl("about/person2/ps2.png"),
         title: "Rapid Transformational Therapy (RTT)",
+        link: "/services/hypnotherapy",
       },
       {
         image: getImageUrl("about/person1/s3.jpg"),
         title: "Neuro-Linguistic Programming (NLP)",
+        link: "/services/neuro-linguistic-programming-nlp",
       },
       {
         image: getImageUrl("about/person2/ps1.jpg"),
         title: "Anxiety & Stress Management Techniques",
+        link: "/services/stress-and-anxiety-support",
       },
       {
         image: getImageUrl("about/person1/s4.jpg"),
         title: "Soul Reflection & Transformation Work",
+        link: "/services/conscious-living-coaching",
       },
     ],
   },

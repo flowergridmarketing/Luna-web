@@ -16,7 +16,7 @@ const Connect = ({
     title, 
     description, 
     btnText = "Schedule Appointment",
-    redirectionLink = 'https://calendly.com/flowergridmarketing/30min?month=2026-02'
+    redirectionLink = '/booking'
 }: ConnectProps) => {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[500px] overflow-hidden p-10 rounded-2xl">

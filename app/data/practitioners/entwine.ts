@@ -16,7 +16,7 @@ export const entwine = {
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Available now",
     ctaButtons: [
-      { label: "Explore Entwine Products", href: "https://calendly.com/", isExternal: true, variant: "primary" }
+      { label: "Explore Entwine Products", href: "/booking", variant: "primary" }
     ],
     cta: {
       primary: "Book Consultation",
@@ -121,7 +121,7 @@ export const entwine = {
     cta: {
       primary: "Explore Product Range",
       secondary: "Book a Free Discovery Call",
-      calendly: "https://calendly.com/",
+      calendly: "/booking",
     },
 
     sections: [

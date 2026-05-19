@@ -54,7 +54,7 @@ export default function ServiceIntroBar({ data }: Props) {
           {/* Button reduced */}
           <div className="mt-8 flex justify-center md:mt-12">
             <Link
-              href="https://calendly.com/flowergridmarketing/30min?month=2026-05"
+              href="/booking"
               target="_blank"
               className="inline-flex min-w-[240px] items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-medium text-white transition duration-300 hover:opacity-90 sm:min-w-[300px] md:min-w-[380px] md:px-10 md:py-5 md:text-xl"
             >

@@ -11,7 +11,7 @@ export const freeConsultationData = {
   calendly: {
     title: "Calendly Reservation",
     subtitle: "Calendly Reservation Page",
-    url: "https://calendly.com/flowergridmarketing/30min"
+    url: "/booking"
   },
   benefits: {
     title: "What you will get from this free consultation",

@@ -30,7 +30,7 @@ export default function AuthorSidebar({ author }: { author: any }) {
             <p className="text-sm text-[#4A4A4A] font-sans leading-relaxed mb-6">
                 {author.bio || 'A passionate writer sharing insights on holistic living.'}
             </p>
-            <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" className="block" target="_blank" rel="noopener noreferrer">
+            <Link href="/booking" className="block">
                 <button className="w-full py-3 px-6 bg-[#8C7A65] text-white rounded-full text-xs uppercase tracking-widest hover:bg-[#726250] transition-colors">
                     Book Consultation
                 </button>
