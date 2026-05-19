@@ -257,7 +257,7 @@ export default function ProgramCarousel({ programs, onButtonClick }: ProgramCaro
                                     </div>
 
                                     <div className="flex justify-center">
-                                        <Link href={`https://calendly.com/flowergridmarketing/30min?month=2026-02`} target="_blank" rel="noopener noreferrer">
+                                        <Link href={`/booking`}>
                                             <button
                                                 onClick={() => handleButtonClick(program.id)}
                                                 className="px-8 py-3 bg-primary hover:opacity-90 text-white rounded-full font-medium text-sm md:text-base transition-all shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"

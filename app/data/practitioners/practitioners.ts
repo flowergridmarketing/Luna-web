@@ -98,12 +98,12 @@ const practitioners = allPractitionersData.map((p: any) => {
     booking: {
       heading: p.booking?.title,
       description: p.booking?.description,
-      calendly: p.booking?.cta?.calendly || "https://calendly.com/",
+      calendly: p.booking?.cta?.calendly || "/booking",
       video: p.profile?.cta?.video,
       microcopy: p.profile?.microcopy,
       ctaBox: p.profile?.ctaBox,
       buttons: p.profile?.ctaButtons || [
-        { label: "Book consultation", href: p.booking?.cta?.calendly || "https://calendly.com/", isExternal: true, variant: "primary" },
+        { label: "Book consultation", href: p.booking?.cta?.calendly || "/booking", variant: "primary" },
         ...(p.profile?.cta?.video ? [{ label: "Watch presentation video", href: p.profile.cta.video, isExternal: true, variant: "outline" }] : []),
         { label: "WhatsApp", href: "https://wa.me/447432211096", isExternal: true, variant: "primary" },
         { label: "Call", href: "tel:+447432211096", isExternal: true, variant: "primary" }

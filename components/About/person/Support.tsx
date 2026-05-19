@@ -216,7 +216,7 @@ const Support: React.FC<SupportProps> = ({ data, title = "Our Services" }) => {
                         hover:py-4 
                         hover:scale-105
                       "
-                        href={item.link || "/holistic-wellness-services"}
+                        href={item.link || `/services/${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '')}`}
                       >
                         Learn more
                       </Link>

@@ -126,7 +126,7 @@ export const nudratChagtai = {
         cta: {
             primary: "Book a Consultation",
             secondary: "Book a Free Discovery Call",
-            calendly: "https://calendly.com/",
+            calendly: "/booking",
         },
 
         sections: [

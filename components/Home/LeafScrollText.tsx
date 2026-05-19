@@ -101,7 +101,7 @@ export default function LeafScrollText({ lines }: { lines: string[] }) {
 
                 {isOurTeam && (
                     <div ref={ctaRef} className="mt-10 md:pt-10 w-full flex justify-center">
-                        <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target="_blank" rel="noopener noreferrer" className="sm:w-auto w-full sm:min-w-[280px] px-8 py-4 bg-primary text-[#f3e5cb] rounded-full font-medium text-sm md:text-base hover:opacity-90 transition-all active:scale-95 shadow-lg">
+                        <Link href="/booking" className="sm:w-auto w-full sm:min-w-[280px] px-8 py-4 bg-primary text-[#f3e5cb] rounded-full font-medium text-sm md:text-base hover:opacity-90 transition-all active:scale-95 shadow-lg">
                             Book a Discovery Session
                         </Link>
                     </div>

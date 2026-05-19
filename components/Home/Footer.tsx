@@ -96,7 +96,7 @@ export default function Footer() {
                             <a href="tel:+447432211096" className="hover:text-white transition-colors block">+44 7432 211096</a>
                             <a href="mailto:sk@flowergrid.co.uk" className="hover:text-white transition-colors block">sk@flowergrid.co.uk</a>
                             <p className="mt-6 text-[#D6CFC2]/80!">Coulsdon CR5 2JA</p>
-                            <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target='_blank' rel='noopener noreferrer' className="mt-6 hover:text-white transition-colors block font-medium text-[#F3EAD8]">Book a Discovery Call</Link>
+                            <Link href="/booking" className="mt-6 hover:text-white transition-colors block font-medium text-[#F3EAD8]">Book a Discovery Call</Link>
                         </div>
                         <div className="flex items-center gap-6 text-[#D6CFC2]">
                             <Link href="https://www.instagram.com/flowergridwellness/" target="_blank" className="hover:text-[#A58E62] transition-colors"><Instagram className="w-6 h-6" strokeWidth={1.5} /></Link>
