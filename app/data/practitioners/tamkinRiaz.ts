@@ -15,7 +15,7 @@ export const tamkinRiaz = {
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Available",
     ctaButtons: [
-      { label: "Book Consultation", href: "https://calendly.com/", isExternal: true, variant: "primary" },
+      { label: "Book Consultation", href: "/booking", variant: "primary" },
       { label: "WhatsApp Me", href: "https://wa.me/447432211096", isExternal: true, variant: "outline" }
     ],
     cta: {
@@ -121,7 +121,7 @@ export const tamkinRiaz = {
     cta: {
       primary: "Book a Session",
       secondary: "Book a Free Discovery Call",
-      calendly: "https://calendly.com/",
+      calendly: "/booking",
     },
 
     sections: [

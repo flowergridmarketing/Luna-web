@@ -15,7 +15,7 @@ export const angelinaRay = {
     location: "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     ctaButtons: [
-      { label: "Book a Session", href: "https://calendly.com/", isExternal: true, variant: "primary" }
+      { label: "Book a Session", href: "/booking", variant: "primary" }
     ],
     cta: {
       primary: "Book Consultation",
@@ -119,7 +119,7 @@ export const angelinaRay = {
     cta: {
       primary: "Book a Session",
       secondary: "Book a Free Discovery Call",
-      calendly: "https://calendly.com/",
+      calendly: "/booking",
     },
 
     sections: [

@@ -22,7 +22,7 @@ export const drHanaPatel = {
       "Online consults; In-person on request (Croydon, South London (Coulsdon Rd, Coulsdon CR5 2JA))",
     availability: "Accepting new clients",
     ctaButtons: [
-      { label: "Book consultation", href: "https://calendly.com/", isExternal: true, variant: "primary" },
+      { label: "Book consultation", href: "/booking", variant: "primary" },
       { label: "Watch presentation video", href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ", isExternal: true, variant: "outline" },
       { label: "WhatsApp", href: "https://wa.me/447432211096", isExternal: true, variant: "primary" },
       { label: "Call", href: "tel:+447432211096", isExternal: true, variant: "primary" }
@@ -144,7 +144,7 @@ export const drHanaPatel = {
     cta: {
       primary: "Book a Consultation",
       secondary: "Book a Free Discovery Call",
-      calendly: "https://calendly.com/",
+      calendly: "/booking",
     },
 
     sections: [

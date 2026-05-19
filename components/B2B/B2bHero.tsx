@@ -73,7 +73,7 @@ export default function B2bHero() {
 
           <motion.div variants={itemVariants} className="flex flex-col gap-5">
             {/* FIXED: Both buttons now use 'text-lg' and explicit leading-none to ensure identical height alignment */}
-            <Link href="https://calendly.com/flowergridmarketing/30min?month=2026-02" target='_blank' rel='noopener noreferrer' className="bg-primary text-center text-white font-medium text-lg leading-none py-5 px-8 max-w-full md:max-w-[20rem] rounded-full transition-colors duration-300">
+            <Link href="/booking" className="bg-primary text-center text-white font-medium text-lg leading-none py-5 px-8 max-w-full md:max-w-[20rem] rounded-full transition-colors duration-300">
               Book a Discovery Session
             </Link>
           </motion.div>

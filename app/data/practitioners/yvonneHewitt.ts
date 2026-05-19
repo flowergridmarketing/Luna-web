@@ -118,7 +118,7 @@ export const yvonneHewitt = {
     cta: {
       primary: "Schedule Your Session",
       secondary: "Book a Free Discovery Call",
-      calendly: "https://calendly.com/",
+      calendly: "/booking",
     },
 
     sections: [

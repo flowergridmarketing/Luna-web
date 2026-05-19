@@ -15,7 +15,7 @@ function HeaderSecrtion() {
                     Step-by-Step Experience:
                 </p>
                 <Link
-                    href={'https://calendly.com/flowergridmarketing/30min?month=2026-02'} target="_blank" rel="noopener noreferrer">
+                    href={'/booking'}>
                     <button className="bg-primary text-white px-8 py-4 rounded-full text-lg font-medium hover:opacity-90 transition-colors duration-300 shadow-lg">
                         Book Your Discovery Session
                     </button>
