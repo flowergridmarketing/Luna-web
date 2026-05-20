@@ -13,7 +13,8 @@ export async function POST(req: Request) {
       );
     }
 
-    const unitAmount = 11000;
+    const unitAmount = 100;
+    // const unitAmount = 11000;
 
     const origin = process.env.NEXT_PUBLIC_BASE_URL || new URL(req.url).origin;
 
