@@ -15,6 +15,7 @@ export async function POST(req: Request) {
       slug: body.slug,
       description: body.description,
       content: body.content,
+      category: body.category,
       tldr: body.tldr,
       faq: body.faq,
       author: body.author

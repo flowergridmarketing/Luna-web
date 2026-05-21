@@ -12,6 +12,8 @@ interface BlogPost {
 
 interface BlogListingSidebarProps {
     topPosts: BlogPost[];
+    selectedCategory?: string | null;
+    onSelectCategory?: (category: string | null) => void;
 }
 
 const CATEGORIES = [
@@ -24,7 +26,7 @@ const CATEGORIES = [
     { name: 'Workplace Wellness', image: getImageUrl("blog/c7.png") },
 ];
 
-export default function BlogListingSidebar({ topPosts }: BlogListingSidebarProps) {
+export default function BlogListingSidebar({ topPosts, selectedCategory, onSelectCategory }: BlogListingSidebarProps) {
     return (
         <aside className="space-y-12">
             {/* Categories Section */}
@@ -32,10 +34,10 @@ export default function BlogListingSidebar({ topPosts }: BlogListingSidebarProps
                 <h3 className="text-xl font-medium text-[#1C1C1C] mb-6 font-serif">Categories</h3>
                 <div className="space-y-3">
                     {CATEGORIES.map((category) => (
-                        <Link
+                        <button
                             key={category.name}
-                            href={`#`} // Placeholder until categories are implemented
-                            className="group relative block h-16 rounded-xl overflow-hidden cursor-pointer w-full max-w-[300px]"
+                            onClick={() => onSelectCategory && onSelectCategory(category.name)}
+                            className="group relative block h-16 rounded-xl overflow-hidden cursor-pointer w-full max-w-[300px] text-left transition-all"
                         >
                             {/* Background Image */}
                             <Image
@@ -45,12 +47,19 @@ export default function BlogListingSidebar({ topPosts }: BlogListingSidebarProps
                                 className="object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                             {/* Overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent flex items-center px-6 transition-opacity duration-300 group-hover:bg-black/50">
-                                <span className="text-white text-sm font-medium tracking-wide drop-shadow-md">
+                            <div className={`absolute inset-0 flex items-center justify-between px-6 transition-all duration-300 ${selectedCategory === category.name ? 'bg-black/75 border-4 border-[#8C7A65] rounded-xl' : 'bg-gradient-to-r from-black/60 to-transparent group-hover:bg-black/50'}`}>
+                                <span className={`text-white tracking-wide drop-shadow-md transition-all ${selectedCategory === category.name ? 'font-bold text-base' : 'font-medium text-sm'}`}>
                                     {category.name}
                                 </span>
+                                {selectedCategory === category.name && (
+                                    <div className="bg-[#8C7A65] rounded-full p-1.5 shadow-[0_0_10px_rgba(140,122,101,0.5)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                        </svg>
+                                    </div>
+                                )}
                             </div>
-                        </Link>
+                        </button>
                     ))}
                 </div>
             </div>

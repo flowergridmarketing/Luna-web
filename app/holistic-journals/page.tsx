@@ -21,14 +21,14 @@ async function getBlogs() {
     try {
         await connectDB();
         const blogs = await Blog.find({}).populate('author').sort({ createdAt: -1 }).lean();
-        return blogs.map(blog => ({
+        return JSON.parse(JSON.stringify(blogs.map(blog => ({
             ...blog,
-            _id: blog._id.toString(),
+            _id: blog._id?.toString(),
             author: blog.author && typeof blog.author === 'object' && 'name' in blog.author ? {
                 name: (blog.author as any).name,
             } : null,
-            createdAt: blog.createdAt.toISOString(),
-        }));
+            createdAt: blog.createdAt?.toISOString(),
+        }))));
     } catch (error) {
         console.error('Failed to fetch blogs:', error);
         return [];
