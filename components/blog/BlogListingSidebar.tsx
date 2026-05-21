@@ -22,7 +22,7 @@ const CATEGORIES = [
     { name: 'Healing Therapies', image: getImageUrl("blog/c3.png") },
     { name: 'Emotional Wellbeing', image: getImageUrl("blog/c4.png") },
     { name: 'Nutrition & Lifestyle', image: getImageUrl("blog/c5.png") },
-    { name: 'Eco-conscious Living', image: getImageUrl("blog/c6.png") },
+    { name: 'Personal Growth & Transformation', image: getImageUrl("blog/c6.png") },
     { name: 'Workplace Wellness', image: getImageUrl("blog/c7.png") },
 ];
 
