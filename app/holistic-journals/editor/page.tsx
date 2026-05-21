@@ -268,7 +268,7 @@ function EditorPageContent() {
                         <option value="Healing Therapies">Healing Therapies</option>
                         <option value="Emotional Wellbeing">Emotional Wellbeing</option>
                         <option value="Nutrition & Lifestyle">Nutrition & Lifestyle</option>
-                        <option value="Eco-conscious Living">Eco-conscious Living</option>
+                        <option value="Personal Growth & Transformation">Personal Growth & Transformation</option>
                         <option value="Workplace Wellness">Workplace Wellness</option>
                     </select>
                 </div>
