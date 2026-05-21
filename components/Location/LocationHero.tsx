@@ -62,7 +62,7 @@ const LocationHero = () => {
                 </p>
                 <div className="hero-text-element mt-10 flex flex-wrap md:flex-col gap-4">
                     <Link
-                        href="/contact-us"
+                        href="/booking"
                         className="w-full md:w-100 px-8 py-4 bg-primary text-white text-center rounded-full font-medium hover:opacity-90 transition-opacity"
                     >
                         Book a Discovery Session
