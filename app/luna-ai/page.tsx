@@ -79,7 +79,7 @@ export default function LunaPage() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
-            className="relative h-[550px] md:h-[600px]"
+            className="hidden md:block relative md:h-[600px]"
           >
             <Image 
               src={getImageUrl("luna/luna-friendly.png")} 
