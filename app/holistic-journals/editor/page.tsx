@@ -35,6 +35,7 @@ function EditorPageContent() {
     const [title, setTitle] = useState('');
     const [slug, setSlug] = useState('');
     const [description, setDescription] = useState('');
+    const [category, setCategory] = useState('');
     const [authorId, setAuthorId] = useState('');
     const [faq, setFaq] = useState<{ question: string; answer: string }[]>([]);
 
@@ -80,6 +81,7 @@ function EditorPageContent() {
                         setTitle(data.data.title);
                         setSlug(data.data.slug);
                         setDescription(data.data.description || '');
+                        setCategory(data.data.category || '');
                         setAuthorId(data.data.author?._id || '');
                         setFaq(data.data.faq || []);
 
@@ -111,6 +113,7 @@ function EditorPageContent() {
                     setTitle(parsed.title || '');
                     setSlug(parsed.slug || '');
                     setDescription(parsed.description || '');
+                    setCategory(parsed.category || '');
                     setAuthorId(parsed.authorId || '');
                     setFaq(parsed.faq || []);
                     setTldr(parsed.tldr || { time: new Date().getTime(), blocks: [] });
@@ -125,10 +128,10 @@ function EditorPageContent() {
 
     useEffect(() => {
         if (!id && isLoaded) {
-            const draft = { title, slug, description, authorId, tldr, content, faq };
+            const draft = { title, slug, description, category, authorId, tldr, content, faq };
             localStorage.setItem('blog-draft', JSON.stringify(draft));
         }
-    }, [title, slug, description, authorId, tldr, content, faq, id, isLoaded]);
+    }, [title, slug, description, category, authorId, tldr, content, faq, id, isLoaded]);
 
     const handleTitleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const newTitle = e.target.value;
@@ -156,6 +159,7 @@ function EditorPageContent() {
                 title,
                 slug,
                 description,
+                category,
                 author: authorId || undefined,
                 tldr,
                 content,
@@ -246,6 +250,27 @@ function EditorPageContent() {
                         className="w-full text-lg font-serif text-gray-800 placeholder-gray-400 border-l-4 border-blue-500 bg-blue-50/50 pl-4 py-3 outline-none resize-none focus:bg-blue-50 transition-colors"
                         rows={3}
                     />
+                </div>
+
+                {/* Category Dropdown */}
+                <div className="mb-6">
+                    <label className="block text-xs text-gray-500 uppercase tracking-wide mb-2">
+                        Category
+                    </label>
+                    <select
+                        value={category}
+                        onChange={(e) => setCategory(e.target.value)}
+                        className="w-full px-4 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-black focus:border-transparent bg-white"
+                    >
+                        <option value="">Select Category (Optional)</option>
+                        <option value="Holistic Wellness">Holistic Wellness</option>
+                        <option value="Mindfulness & Meditation">Mindfulness & Meditation</option>
+                        <option value="Healing Therapies">Healing Therapies</option>
+                        <option value="Emotional Wellbeing">Emotional Wellbeing</option>
+                        <option value="Nutrition & Lifestyle">Nutrition & Lifestyle</option>
+                        <option value="Personal Growth & Transformation">Personal Growth & Transformation</option>
+                        <option value="Workplace Wellness">Workplace Wellness</option>
+                    </select>
                 </div>
 
                 {/* Author Dropdown */}
