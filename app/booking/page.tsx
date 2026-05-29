@@ -329,7 +329,7 @@ export default function BookingPage() {
                     className="w-full bg-primary hover:bg-[#8b5630] text-white font-medium py-5 rounded-full shadow-lg shadow-primary/20 transition-all transform hover:translate-y-[-2px] active:translate-y-[0px] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-3 group overflow-hidden relative"
                   >
                     <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                    <span className="relative z-10 tracking-[0.2em] uppercase text-xs">Finalize Booking</span>
+                    <span className="relative z-10 tracking-[0.2em] uppercase text-xs">Finalise Booking</span>
                     <ChevronRight className="relative z-10 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>
                   <div className="flex items-center justify-center gap-4 mt-8 opacity-40">

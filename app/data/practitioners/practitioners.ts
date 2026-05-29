@@ -104,7 +104,6 @@ const practitioners = allPractitionersData.map((p: any) => {
       ctaBox: p.profile?.ctaBox,
       buttons: p.profile?.ctaButtons || [
         { label: "Book consultation", href: p.booking?.cta?.calendly || "/booking", variant: "primary" },
-        ...(p.profile?.cta?.video ? [{ label: "Watch presentation video", href: p.profile.cta.video, isExternal: true, variant: "outline" }] : []),
         { label: "WhatsApp", href: "https://wa.me/447432211096", isExternal: true, variant: "primary" },
         { label: "Call", href: "tel:+447432211096", isExternal: true, variant: "primary" }
       ]
