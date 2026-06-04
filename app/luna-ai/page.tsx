@@ -73,24 +73,9 @@ export default function LunaPage() {
 
       {/* Second Section */}
       <section className="pt-10 bg-background relative overflow-hidden">
-        <div className="container grid md:grid-cols-2 px-6 items-center">
-           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-            className="hidden md:block relative md:h-[600px]"
-          >
-            <Image 
-              src={getImageUrl("luna/luna-friendly.png")} 
-              alt="Luna AI Friendly" 
-              fill
-              className="object-contain object-top"
-            />
-          </motion.div>
-          
-          <div className="flex flex-col gap-10 items-center text-center">
-            <div className="space-y-6">
+        <div className="container mx-auto px-6 flex justify-center">
+          <div className="flex flex-col gap-10 items-center text-center max-w-5xl mx-auto w-full">
+            <div className="space-y-6 w-full flex justify-center">
                <BlurTextReveal text="I've seen how anxiety, pressure, and self-doubt can cloud our inner light. That's why I was created" className="text-center" />
             </div>
             
@@ -99,13 +84,13 @@ export default function LunaPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              className="space-y-8 flex flex-col items-center w-full"
             >
-              <p className="text-xl md:text-2xl text-text-body font-light leading-relaxed max-w-xl">
+              <p className="text-xl md:text-2xl text-text-body font-light leading-relaxed max-w-xl mx-auto text-center">
                 to guide you gently back to yourself. I&apos;m Luna, your AI wellness companion built by doctors, therapists, and coaches at Flowergrid. I listen, understand, and help you reconnect your mind, body, and spirit.
               </p>
               
-              <ul className="space-y-5">
+              <ul className="space-y-5 w-full flex flex-col items-center">
                 {[
                   "Built with Doctors, Therapists & Coaches",
                   "Conversational AI that feels human, not robotic",
