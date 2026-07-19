@@ -238,7 +238,7 @@ export default function Navbar() {
       <div className="z-50 relative flex items-center gap-3 md:gap-6">
 
         {/* Luna Chat Button */}
-        <Link href="https://flowergrid.vercel.app/" target="_blank" className="flex relative items-center gap-3 mr-2 px-2 md:pl-4 md:pr-12 py-1 h-12 md:h-auto rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
+        <Link href="https://luna.flowergrid.co.uk/" target="_blank" className="flex relative items-center gap-3 mr-2 px-2 md:pl-4 md:pr-12 py-1 h-12 md:h-auto rounded-full border border-white/20 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-colors">
           <span className="hidden md:inline text-xs md:text-sm font-sans tracking-wide">Chat with Luna</span>
           <div
             className="relative md:absolute md:-right-3 md:top-1/2 md:-translate-y-1/2 w-10 h-10 md:w-14 md:h-13 rounded-full flex items-center justify-center cursor-pointer"
